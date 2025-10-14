@@ -33,13 +33,13 @@ export default function Contact() {
       <Navigation currentPage="/contact" />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-20">
+      <section className="bg-[#547792] py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               We&apos;re here to help. Contact us to learn more about our services or to schedule a visit.
             </p>
           </div>
