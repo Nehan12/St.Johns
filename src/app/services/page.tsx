@@ -46,7 +46,7 @@ export default function Services() {
               </div>
               <h3 className="text-xl font-bold text-blue-900 mb-4">Personalized Care Plans</h3>
               <p className="text-gray-600">
-                Individualized care plans tailored to each resident's specific needs, preferences, and medical requirements.
+                Individualized care plans tailored to each resident&apos;s specific needs, preferences, and medical requirements.
               </p>
             </div>
 

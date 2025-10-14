@@ -29,7 +29,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Commitment</h2>
               <p className="text-lg text-gray-700 mb-6">
-                At St. John's Palliative & Wellness Residence, we understand that choosing a care facility is one of the most important decisions you'll make. Our dedicated team of healthcare professionals is committed to providing the highest quality of care while maintaining the dignity and comfort of each resident.
+                At St. John&apos;s Palliative & Wellness Residence, we understand that choosing a care facility is one of the most important decisions you&apos;ll make. Our dedicated team of healthcare professionals is committed to providing the highest quality of care while maintaining the dignity and comfort of each resident.
               </p>
               <p className="text-lg text-gray-700">
                 We believe that every individual deserves compassionate, person-centered care that respects their unique needs, preferences, and life experiences. Our approach combines medical expertise with heartfelt care to create an environment where residents can thrive.
