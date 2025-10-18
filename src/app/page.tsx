@@ -49,101 +49,87 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navigation currentPage="/" />
 
-      {/* Hero Section - Gallery Slider */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Hero Section - Auto Slider */}
+      <section className="relative h-[85vh] overflow-hidden">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-3000 ease-in-out ${
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
             {/* Background Image */}
             <div
-              className="absolute inset-0 w-full h-full transform transition-transform duration-[5000ms] ease-in-out"
+              className="absolute inset-0 w-full h-full transform transition-transform duration-[8000ms] ease-in-out"
               style={{
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                transform: index === currentSlide ? 'scale(1.1)' : 'scale(1)'
+                transform: index === currentSlide ? 'scale(1.05)' : 'scale(1)'
               }}
             />
             
-            {/* Gradient overlay that fades from dark left to transparent middle */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
         ))}
 
-        {/* Content */}
-        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 text-left text-white  px-8 sm:px-12 lg:px-16">
-          <div className="animate-fadeInUp">
-          <h1
-            key={`title-${currentSlide}`}
-            className="text-5xl md:text-7xl font-light mb-6 text-white drop-shadow-2xl transition-all duration-500"
-            style={{ fontFamily: 'Georgia, serif' }}
-          >
-            {slides[currentSlide].title}
-          </h1>
-            <p
-              key={`subtitle-${currentSlide}`}
-              className="text-xl md:text-2xl mb-8 max-w-2xl leading-relaxed text-gray-200 drop-shadow-lg transition-all duration-500"
-              style={{ fontFamily: 'Georgia, serif' }}
-            >
-              {slides[currentSlide].subtitle}
-            </p>
-          </div>
-
-          {/* Call-to-Action Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-start animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
-            <Link
-              href="/about"
-              className="group text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-              style={{ backgroundColor: '#1B3C53' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#456882';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#1B3C53';
-              }}
-            >
-              <span className="flex items-center justify-center space-x-2">
-                <span>Discover Our Story</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </Link>
-            <Link
-              href="/contact"
-              className="group font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-2"
+        {/* Center Text Content */}
+        <div className="absolute inset-0 flex items-center justify-center z-30 px-8">
+          <div className="text-center max-w-4xl">
+            <h2 
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fadeInUp"
               style={{ 
-                backgroundColor: '#F9F3EF',
-                color: '#1B3C53',
-                borderColor: '#D2C1B6'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#D2C1B6';
-                e.currentTarget.style.borderColor = '#456882';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#F9F3EF';
-                e.currentTarget.style.borderColor = '#D2C1B6';
+                fontFamily: 'Allrounder Monument Regular, serif',
+                animationDuration: '1s',
+                animationTimingFunction: 'ease-in-out'
               }}
             >
-              <span className="flex items-center justify-center space-x-2">
-                <span>Start Your Journey</span>
-                <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </span>
-            </Link>
+              Care beyond Compare
+            </h2>
+            {/* <p 
+              className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto animate-fadeInUp"
+              style={{ 
+                fontFamily: 'Source Sans 3, sans-serif',
+                animationDuration: '1s',
+                animationTimingFunction: 'ease-in-out',
+                animationDelay: '0.2s'
+              }}
+            >
+              Our commitment to care is uncompromising and never-ending. We&apos;re passionately devoted to providing the highest standards of 24 hour residential care, respite, day club experiences and memory care, all delivered with unparalleled standards of hospitality.
+            </p> */}
+            {/* <div className="flex space-x-4 justify-center">
+              <Link
+                href="/about"
+                className="group bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white/30 hover:scale-105"
+                style={{ fontFamily: 'Source Sans 3, sans-serif' }}
+              >
+                <span className="flex items-center space-x-2">
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </Link>
+              <Link
+                href="/contact"
+                className="group border-2 border-white/50 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105"
+                style={{ fontFamily: 'Source Sans 3, sans-serif' }}
+              >
+                <span className="flex items-center space-x-2">
+                  <span>Contact Us</span>
+                  <svg className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </span>
+              </Link>
+            </div> */}
           </div>
-
         </div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+        <div className="absolute bottom-8 right-8 flex flex-col space-y-3 z-30">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -154,26 +140,33 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
 
-        {/* Previous Button */}
-        <button
-          onClick={() => goToSlide((currentSlide - 1 + slides.length) % slides.length)}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300 z-30"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+      {/* Text Content Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Image */}
+            <div className="relative">
+              <div 
+                className="aspect-[4/3] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: 'url(/landing2.jpg)',
+                }}
+              />
+            </div>
 
-        {/* Next Button */}
-        <button
-          onClick={() => goToSlide((currentSlide + 1) % slides.length)}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-3 rounded-full transition-all duration-300 z-30"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+            {/* Right Side - Text Content */}
+            <div>
+                <h1 className="text-lg md:text-2xl font-bold text-gray-900 mb-8 leading-tight" style={{ fontFamily: 'Allrounder Monument Regular, serif' }}>
+                  Luxury nursing care in Sri Lanka: At Bredrock Care, care is at our core
+                </h1>
+              <p className="text-md text-gray-600 leading-relaxed" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+                Our commitment to care is uncompromising and never-ending. We&apos;re passionately devoted to providing the highest standards of 24 hour residential care, respite, day club experiences and memory care, all delivered with unparalleled standards of hospitality. Every element of our approach is meticulously curated to create a life of fulfilment, comfort and refinement. At Bredrock Care, excellence isn&apos;t just a standard, it&apos;s a promise. We simply couldn&apos;t care more.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Core Values Section */}
@@ -187,14 +180,14 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          {/* <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1B3C53' }}>
               Our Core Values
             </h2>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882' }}>
               The foundation of everything we do at St. John&apos;s
             </p>
-          </div>
+          </div> */}
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Connection */}

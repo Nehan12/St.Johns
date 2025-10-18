@@ -9,13 +9,21 @@ export default function Services() {
       <Navigation currentPage="/services" />
 
       {/* Hero Section */}
-      <section className="bg-[#547792] py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Services
+      <section 
+        className="relative py-[20%] pb-[5%] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/services.jpg)',
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-50 ">
+          <div className="text-center mb-1">
+            <h1 className="text-7xl space-x-2  md:text-7xl text-white " style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+              OUR SERVICES
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mt-4 mx-auto" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               Comprehensive care services designed to meet the unique needs of each resident.
             </p>
           </div>

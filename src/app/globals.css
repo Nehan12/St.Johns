@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Allrounder Monument Medium';
+  src: url('/fonts/AllrounderMonumentTest-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Allrounder Monument Light';
+  src: url('/fonts/AllrounderMonumentTest-Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Allrounder Monument Regular';
+  src: url('/fonts/AllrounderMonumentTest-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mochesa';
+  src: url('/fonts/Mochesa.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rosehot';
+  src: url('/fonts/Rosehot.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
