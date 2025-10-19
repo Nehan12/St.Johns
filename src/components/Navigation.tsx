@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-interface NavigationProps {
-  currentPage?: string;
-}
-
-export default function Navigation({ currentPage }: NavigationProps) {
+export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -74,7 +70,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 <div className="relative">
                   <img 
                     src="/logo5.png" 
-                    alt="St. John's Logo" 
+                    alt="Bredrock Care Logo" 
                     className={`transition-all duration-300 ${
                       isScrolled ? 'h-12 w-40' : 'h-16 w-52'
                     }`}
@@ -227,7 +223,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
                 {/* CTA Button */}
                 <Link
                   href="/contact"
-                  className={`px-6 py-2 rounded-lg font-light text-sm shadow-md hover:text- transition-all duration-300 border-2 border-gray-900 hover:bg-[#1E93AB] hover:text-white text-gray-900`}
+                  className={`px-6 py-2 rounded-lg font-light text-sm shadow-md hover:text- transition-all duration-300 border-2 border-gray-900 hover:bg-gray-700 hover:border-gray-700 hover:text-white text-gray-900`}
                   style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
                 >
                   Contact Us Today

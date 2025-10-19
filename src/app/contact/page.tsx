@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/contact" />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-[#547792] py-32">

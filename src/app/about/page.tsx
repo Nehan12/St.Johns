@@ -6,127 +6,264 @@ import Footer from '@/components/Footer';
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/about" />
+      <Navigation />
 
-      {/* Hero Section */}
-      <section className="bg-[#547792] py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Image */}
+      <section 
+        className="relative py-[20%] pb-[5%] bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/about.jpg)',
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-50">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About Our Facility
+            <h1 className="text-7xl space-x-2 md:text-7xl font-bold text-white relative inline-block pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
+              About Us              
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto">
-              Located in the heart of Sri Lanka, we provide exceptional care in a warm, welcoming environment.
+            <br />
+            <div className="underline mx-auto"></div>
+            <p className="text-xl text-white max-w-3xl mt-10 mx-auto" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
+              Excellence in luxury care, where compassion meets innovation in the heart of Sri Lanka.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Commitment</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                At St. John&apos;s Palliative & Wellness Residence, we understand that choosing a care facility is one of the most important decisions you&apos;ll make. Our dedicated team of healthcare professionals is committed to providing the highest quality of care while maintaining the dignity and comfort of each resident.
-              </p>
-              <p className="text-lg text-gray-700">
-                We believe that every individual deserves compassionate, person-centered care that respects their unique needs, preferences, and life experiences. Our approach combines medical expertise with heartfelt care to create an environment where residents can thrive.
-              </p>
-            </div>
-            <div className="bg-blue-50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">Why Choose Us?</h3>
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">24/7</div>
-                  <div className="text-sm text-gray-600">Nursing Care</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">100%</div>
-                  <div className="text-sm text-gray-600">Compassionate</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">50+</div>
-                  <div className="text-sm text-gray-600">Years Experience</div>
-                </div>
-                <div className="bg-white rounded-lg p-4">
-                  <div className="text-2xl font-bold text-blue-600">5★</div>
-                  <div className="text-sm text-gray-600">Quality Rating</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">Our Core Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Compassion</h3>
-                <p className="text-gray-600">Treating every resident with empathy, kindness, and understanding.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Excellence</h3>
-                <p className="text-gray-600">Maintaining the highest standards of care and professionalism.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Respect</h3>
-                <p className="text-gray-600">Honoring the dignity and autonomy of every individual.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Innovation</h3>
-                <p className="text-gray-600">Continuously improving our care through modern practices.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-blue-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6 text-center">Our Team</h2>
-            <p className="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto">
-              Our multidisciplinary team of healthcare professionals includes registered nurses, certified nursing assistants, 
-              physical therapists, occupational therapists, social workers, and spiritual care providers. Each team member 
-              is carefully selected for their expertise, compassion, and commitment to providing exceptional care.
+          {/* <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+              Our Story
+            </h2>
+            <p className="text-xl max-w-4xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              Founded on the principles of compassion, excellence, and innovation, Bredrock Care has been transforming lives through exceptional healthcare services.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Medical Team</h3>
-                <p className="text-gray-600">Board-certified physicians and specialists providing comprehensive medical care.</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#D2C1B6' }}>
+                  <span className="text-2xl font-bold" style={{ color: '#1B3C53' }}>2010</span>
+                </div>
+                <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-0.5 h-16 bg-gradient-to-b" style={{ background: 'linear-gradient(to bottom, #D2C1B6, transparent)' }}></div>
               </div>
-              <div className="bg-white rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Nursing Staff</h3>
-                <p className="text-gray-600">Experienced registered nurses and certified nursing assistants available 24/7.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Foundation</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+                Bredrock Care was established with a vision to provide world-class healthcare services in Sri Lanka.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#D2C1B6' }}>
+                  <span className="text-2xl font-bold" style={{ color: '#1B3C53' }}>2015</span>
+                </div>
+                <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-0.5 h-16 bg-gradient-to-b" style={{ background: 'linear-gradient(to bottom, #D2C1B6, transparent)' }}></div>
               </div>
-              <div className="bg-white rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-blue-900 mb-2">Support Services</h3>
-                <p className="text-gray-600">Therapists, social workers, and spiritual care providers supporting holistic wellness.</p>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Expansion</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+                Expanded our services to include specialized care programs and luxury amenities.
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#D2C1B6' }}>
+                  <span className="text-2xl font-bold" style={{ color: '#1B3C53' }}>2024</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Innovation</h3>
+              <p className="text-sm leading-relaxed" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+                Leading the industry with cutting-edge technology and personalized care approaches.
+              </p>
+            </div>
+          </div> */}
+
+          {/* Mission Statement */}
+          <div className="bg-gradient-to-r from-[#1B3C53] to-[#456882] rounded-2xl p-12 text-center">
+            <h3 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+              Our Mission
+            </h3>
+            <p className="text-xl text-white max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              To provide exceptional, compassionate care that enhances the quality of life for our residents while maintaining the highest standards of medical excellence and personal dignity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#F9F3EF' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+              Our Approach to Care
+            </h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              A holistic approach that combines medical expertise with personalized attention
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Content */}
+            <div>
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#1B3C53' }}>
+                      <span className="text-white font-bold text-lg">1</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Assessment & Planning</h3>
+                    <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+                      Comprehensive evaluation of each resident&apos;s needs, preferences, and medical requirements to create personalized care plans.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#456882' }}>
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Implementation</h3>
+                    <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+                      Dedicated care team works closely with residents and families to ensure all needs are met with compassion and expertise.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#D2C1B6' }}>
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Monitoring & Adjustment</h3>
+                    <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+                      Continuous monitoring and regular adjustments to care plans ensure optimal outcomes and resident satisfaction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="aspect-[4/3] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/landing2.jpg)' }}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+          
+              <div className="absolute -top-4 -right-4 bg-white rounded-lg shadow-lg p-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold" style={{ color: '#1B3C53' }}>98%</div>
+                  <div className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Satisfaction Rate</div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-lg shadow-lg p-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold" style={{ color: '#1B3C53' }}>24/7</div>
+                  <div className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Care Available</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+{/* 
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+              Leadership & Recognition
+            </h2>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              Recognized excellence in healthcare delivery and patient outcomes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#1B3C53' }}>
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Excellence Award</h3>
+              <p className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Healthcare Quality 2023</p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#456882' }}>
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Certification</h3>
+              <p className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>ISO 9001:2015</p>
+            </div>
+
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#D2C1B6' }}>
+                  <svg className="w-10 h-10" style={{ color: '#1B3C53' }} fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Patient Safety</h3>
+              <p className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Zero Incidents 2023</p>
+            </div>
+            <div className="text-center group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg" style={{ backgroundColor: '#1B3C53' }}>
+                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+              <h3 className="text-lg font-bold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Compassion Award</h3>
+              <p className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Family Choice 2023</p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-[#1B3C53] to-[#456882] rounded-2xl p-12">
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">50+</div>
+                <div className="text-white/80" style={{ fontFamily: 'Rosehot, sans-serif' }}>Healthcare Professionals</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">15+</div>
+                <div className="text-white/80" style={{ fontFamily: 'Rosehot, sans-serif' }}>Years Experience</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">1000+</div>
+                <div className="text-white/80" style={{ fontFamily: 'Rosehot, sans-serif' }}>Lives Touched</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-2">24/7</div>
+                <div className="text-white/80" style={{ fontFamily: 'Rosehot, sans-serif' }}>Care Available</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
       <Footer />
     </div>

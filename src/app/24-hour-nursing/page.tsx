@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export default function TwentyFourHourNursing() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/24-hour-nursing" />
+      <Navigation />
 
       {/* Hero Section */}
       <section 

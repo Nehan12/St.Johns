@@ -6,17 +6,17 @@ export default function Footer() {
           <div className="flex items-center justify-center mb-4">
             <img 
               src="/sjlogonew.png" 
-              alt="St. John&apos;s Logo" 
+              alt="Bredrock Care Logo" 
               className="h-12 w-12 mr-3"
             />
-            <h3 className="text-2xl font-bold">St. John&apos;s Palliative & Wellness Residence</h3>
+            <h3 className="text-2xl font-bold">Bredrock Care - Nursing & Wellness</h3>
           </div>
           <p className="mb-6 max-w-2xl mx-auto" style={{ color: '#D2C1B6' }}>
             Providing compassionate care with medical expertise and heartfelt dedication to ensure dignity, quality of life, and peace of mind for residents and their families.
           </p>
           <div className="pt-6" style={{ borderTop: '1px solid #456882' }}>
             <p style={{ color: '#D2C1B6' }}>
-              © 2024 St. John&apos;s Palliative & Wellness Residence. All rights reserved.
+              © 2024 Bredrock Care - Nursing & Wellness. All rights reserved.
             </p>
           </div>
         </div>

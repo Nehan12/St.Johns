@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export default function ResidentialCare() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/residential-care" />
+      <Navigation />
 
       {/* Hero Section */}
       <section 

@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export default function Respite() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/respite" />
+      <Navigation />
 
       {/* Hero Section */}
       <section 

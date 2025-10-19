@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 export default function SpecialistConditions() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation currentPage="/specialist-conditions" />
+      <Navigation />
 
       {/* Hero Section */}
       <section 
