@@ -27,6 +27,7 @@ const sourceSans3 = Source_Sans_3({
 export const metadata: Metadata = {
   title: "Bredrock Care - Nursing & Wellness",
   description: "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({

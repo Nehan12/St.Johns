@@ -1,16 +1,41 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 export default function About() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-[#1B3C53] text-lg" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+            Loading...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section with Image */}
       <section 
-        className="relative py-[20%] pb-[5%] bg-cover bg-center bg-no-repeat"
+        className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
         style={{
           backgroundImage: 'url(/about.jpg)',
         }}
@@ -18,14 +43,13 @@ export default function About() {
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-50">
-          <div className="text-center">
-            <h1 className="text-7xl space-x-2 md:text-7xl font-bold text-white relative inline-block pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="text-center w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
               About Us              
             </h1>
-            <br />
-            <div className="underline mx-auto"></div>
-            <p className="text-xl text-white max-w-3xl mt-10 mx-auto" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
+            <div className="underline mx-auto mt-2"></div>
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
               Excellence in luxury care, where compassion meets innovation in the heart of Sri Lanka.
             </p>
           </div>
@@ -33,7 +57,7 @@ export default function About() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
@@ -97,18 +121,18 @@ export default function About() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#F9F3EF' }}>
+      <section className="py-12 md:py-20 relative overflow-hidden" style={{ backgroundColor: '#F9F3EF' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 px-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               Our Approach to Care
             </h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto px-4" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
               A holistic approach that combines medical expertise with personalized attention
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left Side - Content */}
             <div>
               <div className="space-y-8">
@@ -181,7 +205,7 @@ export default function About() {
       </section>
 
 {/* 
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
