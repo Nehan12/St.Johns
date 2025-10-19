@@ -92,11 +92,13 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-hidden">
+
       <Navigation />
 
       {/* Hero Section - Auto Slider */}
-      <section className="relative h-[85vh] overflow-hidden">
+      <section className="relative h-[85vh] overflow-hidden w-full max-w-full">
+
         {slides.map((slide, index) => (
           <div
             key={index}
