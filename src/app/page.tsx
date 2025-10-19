@@ -191,30 +191,31 @@ export default function Home() {
       </section>
 
       {/* Text Content Section */}
-      <section className="py-20 bg-white" ref={textContentRef}>
-        <div className="max-w-full mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white" ref={textContentRef}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start md:items-center">
             {/* Left Side - Image */}
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-center order-2 md:order-1 w-full">
               <div 
-                className={`aspect-[4/2] max-w-lg bg-cover bg-center bg-no-repeat rounded-lg shadow-lg transform transition-all duration-1000 hover:scale-105 hover:shadow-2xl ${
+                className={`aspect-[3/4] sm:aspect-[4/3] md:aspect-[4/2] w-full max-w-sm sm:max-w-md md:max-w-lg bg-cover bg-center bg-no-repeat rounded-lg shadow-lg transform transition-all duration-1000 hover:scale-105 hover:shadow-2xl ${
                   isVisible.textContent ? 'animate-slideInLeft' : 'opacity-0 translate-x-[-50px]'
                 }`}
                 style={{
                   backgroundImage: 'url(/landing2.jpg)',
-                  minHeight: '40vh',
+                  minHeight: '200px',
+                  maxHeight: '400px',
                 }}
               />
             </div>
 
             {/* Right Side - Text Content */}
-            <div className={`transition-all duration-1000 ${
+            <div className={`order-1 md:order-2 w-full transition-all duration-1000 ${
               isVisible.textContent ? 'animate-slideInRight' : 'opacity-0 translate-x-[50px]'
             }`}>
-                <h1 className="text-lg md:text-2xl font-bold text-gray-900 mb-8 leading-tight transform transition-all duration-500 hover:scale-105" style={{ fontFamily: 'Allrounder Monument Regular, serif' }}>
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105" style={{ fontFamily: 'Allrounder Monument Regular, serif' }}>
                   Luxury nursing care in Sri Lanka: At Bredrock Care, care is at our core
                 </h1>
-              <p className="text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ fontFamily: 'Rosehot, sans-serif' }}>
                 Our commitment to care is uncompromising and never-ending. We&apos;re passionately devoted to providing the highest standards of 24 hour residential care, respite, day club experiences and memory care, all delivered with unparalleled standards of hospitality. Every element of our approach is meticulously curated to create a life of fulfilment, comfort and refinement. At Bredrock Care, excellence isn&apos;t just a standard, it&apos;s a promise. We simply couldn&apos;t care more.
               </p>
             </div>
@@ -313,7 +314,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Nurse Image */}
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -354,11 +355,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* 24/7 Care Section */}
             <div className="text-center group animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
-                <div className="aspect-[4/3] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/nunrse1.jpg)' }}></div>
+                <div className="aspect-[4/3] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/landing1.jpg)' }}></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>

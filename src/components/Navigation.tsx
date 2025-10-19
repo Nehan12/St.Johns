@@ -107,7 +107,7 @@ export default function Navigation() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute top-full left-0 mt-2 w-80 rounded-lg shadow-lg border border-gray-200 bg-white/90 backdrop-blur-lg z-40"
+                    className="absolute top-full left-0 mt-2 w-80 rounded-lg shadow-lg border border-gray-200 bg-white/90 backdrop-blur-lg z-50"
                     onMouseEnter={() => setIsServicesDropdownOpen(true)}
                     onMouseLeave={() => setIsServicesDropdownOpen(false)}
                   >

@@ -33,13 +33,26 @@ export default function Contact() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="bg-[#547792] py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section 
+        className="relative py-20 md:py-32 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/landing3.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          imageRendering: 'crisp-edges'
+        } as React.CSSProperties}
+      >
+        {/* Colorful Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="text-center w-full">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
               Contact Us
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rosehot, sans-serif' }}>
               We&apos;re here to help. Contact us to learn more about our services or to schedule a visit.
             </p>
           </div>
@@ -47,73 +60,75 @@ export default function Contact() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#F8F9FA] to-[#E8F4FD] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#456882]/20 to-transparent rounded-full -translate-x-48 -translate-y-48"></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-[#1B3C53]/20 to-transparent rounded-full translate-x-40 translate-y-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Details */}
-            <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-8">Get in Touch</h2>
+            <div className="relative">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Get in Touch</h2>
               <div className="space-y-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-lg flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
-                    <p className="text-gray-600">123 Care Street<br />Colombo, Sri Lanka 01000</p>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Location</h3>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>123 Care Street<br />Colombo, Sri Lanka 01000</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.1s' }}>
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-lg flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                    <p className="text-gray-600">+94 (0) 11 234 5678</p>
-                    <p className="text-gray-600">+94 (0) 11 234 5679 (Emergency)</p>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Phone</h3>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>+94 (0) 11 234 5678</p>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>+94 (0) 11 234 5679 (Emergency)</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.2s' }}>
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] rounded-lg flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-                    <p className="text-gray-600">info@stjohnspalliative.lk</p>
-                    <p className="text-gray-600">admissions@stjohnspalliative.lk</p>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Email</h3>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>info@stjohnspalliative.lk</p>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>admissions@stjohnspalliative.lk</p>
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.3s' }}>
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-lg flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Visiting Hours</h3>
-                    <p className="text-gray-600">Monday - Sunday: 9:00 AM - 7:00 PM</p>
-                    <p className="text-gray-600">Emergency visits available 24/7</p>
+                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Visiting Hours</h3>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Monday - Sunday: 9:00 AM - 7:00 PM</p>
+                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Emergency visits available 24/7</p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-blue-50 rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-blue-900 mb-6">Send us a Message</h2>
+            <div className="bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/30 rounded-lg p-8 shadow-lg border border-[#D2C1B6]/20">
+              <h2 className="text-3xl font-bold mb-6" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                     Full Name *
                   </label>
                   <input
@@ -123,12 +138,13 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-[#D2C1B6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#456882] focus:border-transparent transition-all duration-300"
+                    style={{ fontFamily: 'Rosehot, sans-serif', color: '#1B3C53' }}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                     Email Address *
                   </label>
                   <input
@@ -138,12 +154,13 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-[#D2C1B6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#456882] focus:border-transparent transition-all duration-300"
+                    style={{ fontFamily: 'Rosehot, sans-serif', color: '#1B3C53' }}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                     Phone Number
                   </label>
                   <input
@@ -152,12 +169,13 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-[#D2C1B6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#456882] focus:border-transparent transition-all duration-300"
+                    style={{ fontFamily: 'Rosehot, sans-serif', color: '#1B3C53' }}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="inquiryType" className="block text-sm font-medium mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                     Type of Inquiry
                   </label>
                   <select
@@ -165,7 +183,8 @@ export default function Contact() {
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-[#D2C1B6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#456882] focus:border-transparent transition-all duration-300"
+                    style={{ fontFamily: 'Rosehot, sans-serif', color: '#1B3C53' }}
                   >
                     <option value="general">General Information</option>
                     <option value="admission">Admission Inquiry</option>
@@ -176,7 +195,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                     Message *
                   </label>
                   <textarea
@@ -186,14 +205,16 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-[#D2C1B6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#456882] focus:border-transparent transition-all duration-300"
                     placeholder="Please tell us how we can help you..."
+                    style={{ fontFamily: 'Rosehot, sans-serif', color: '#1B3C53'  }}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-gradient-to-r from-[#1B3C53] to-[#456882] hover:from-[#456882] hover:to-[#1B3C53] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                 >
                   Send Message
                 </button>
@@ -204,24 +225,28 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#456882]/20 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#1B3C53]/15 to-transparent rounded-full translate-y-36 -translate-x-36"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Find Us</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Find Us</h2>
+            <p className="text-lg md:text-xl" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
               Visit our facility to see the warm, welcoming environment we provide for our residents.
             </p>
           </div>
           
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+          <div className="bg-gradient-to-br from-white via-[#F8F9FA] to-[#E8F4FD] rounded-lg shadow-lg p-8 border border-[#D2C1B6]/20">
+            <div className="bg-gradient-to-br from-[#D2C1B6]/20 to-[#456882]/10 rounded-lg h-64 flex items-center justify-center">
               <div className="text-center">
-                <svg className="w-16 h-16 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-gray-500">Interactive Map Coming Soon</p>
-                <p className="text-sm text-gray-400 mt-2">123 Care Street, Colombo, Sri Lanka 01000</p>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#1B3C53] to-[#456882] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <p className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Interactive Map Coming Soon</p>
+                <p className="text-sm" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>123 Care Street, Colombo, Sri Lanka 01000</p>
               </div>
             </div>
           </div>
