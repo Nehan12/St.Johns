@@ -186,10 +186,10 @@ export default function Respite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              What's Included in Our Respite Services
+              What&apos;s Included in Our Respite Services
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rosehot, sans-serif' }}>
-              Bredrock Care's respite care services provide an elevated experience, tailored to your needs
+                Bredrock Care&apos;s respite care services provide an elevated experience, tailored to your needs
             </p>
           </div>
           

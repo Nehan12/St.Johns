@@ -54,7 +54,7 @@ export default function SpecialistConditions() {
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
-              At Bredrock Care, specialist care means so much more than clinical support – it's the art of delivering exceptional, personalised care with warmth and professionalism.
+              At Bredrock Care, specialist care means so much more than clinical support – it&apos;s the art of delivering exceptional, personalised care with warmth and professionalism.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function SpecialistConditions() {
                 Specialist Care Designed Around You
               </h2>
               <p className="text-lg mb-8" style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>
-                As a Bredrock Care Member, you'll be supported by expert teams who specialise in complex and long-term conditions including Alzheimer's, Parkinson's and end-of-life care. Every element of your care is guided by clinical precision and heartfelt understanding, tailored to enhance both your health and happiness.
+                As a Bredrock Care Member, you&apos;ll be supported by expert teams who specialise in complex and long-term conditions including Alzheimer&apos;s, Parkinson&apos;s and end-of-life care. Every element of your care is guided by clinical precision and heartfelt understanding, tailored to enhance both your health and happiness.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2">
@@ -81,7 +81,7 @@ export default function SpecialistConditions() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Alzheimer's and dementia care</span>
+                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Alzheimer&apos;s and dementia care</span>
                 </div>
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.1s' }}>
                   <div className="w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-[#456882] to-[#1B3C53] shadow-lg">
@@ -89,7 +89,7 @@ export default function SpecialistConditions() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Parkinson's disease management</span>
+                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Parkinson&apos;s disease management</span>
                 </div>
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.2s' }}>
                   <div className="w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] shadow-lg">
@@ -189,7 +189,7 @@ export default function SpecialistConditions() {
               Private Care Specialists for Complex Conditions
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rosehot, sans-serif' }}>
-              You might benefit from private care specialists if you're managing conditions such as Alzheimer's, Parkinson's, stroke recovery, heart disease, multiple sclerosis, cancer or frailty-related illnesses.
+              You might benefit from private care specialists if you&apos;re managing conditions such as Alzheimer&apos;s, Parkinson&apos;s, stroke recovery, heart disease, multiple sclerosis, cancer or frailty-related illnesses.
             </p>
           </div>
           

@@ -108,18 +108,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.3s' }}>
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-lg flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-all duration-300">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Visiting Hours</h3>
-                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Monday - Sunday: 9:00 AM - 7:00 PM</p>
-                    <p style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Emergency visits available 24/7</p>
-                  </div>
-                </div> */}
               </div>
             </div>
 
