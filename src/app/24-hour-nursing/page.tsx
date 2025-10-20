@@ -43,9 +43,9 @@ export default function TwentyFourHourNursing() {
         } as React.CSSProperties}
       >
         {/* Colorful Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div>
-        
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div> */}
+         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
@@ -70,8 +70,8 @@ export default function TwentyFourHourNursing() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
               What is 24-Hour Nursing Care?
             </h2>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto px-4" style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>
-              24-hour nursing care is a specialized service that provides round-the-clock medical supervision for those with complex medical needs. At Bredrock Care, you receive the highest level of care, tailored precisely to your health requirements and lifestyle choices.
+            <p className="text-lg md:text-xl max-w-4xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
+              24-hour nursing care is a specialised service that provides round-the-clock medical supervision for those with complex medical needs. At Bedrock Care, you receive the highest level of care, tailored precisely to your health requirements and lifestyle choices.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function TwentyFourHourNursing() {
               <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
                 Who is 24-Hour Nursing Care For?
               </h2>
-              <p className="text-lg mb-8" style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>
+              <p className="text-lg mb-8" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
                 Our 24-hour nursing care is designed for individuals who require ongoing medical supervision due to chronic illnesses, post-surgical recovery, neurological conditions, or complex needs such as dementia care.
               </p>
               <div className="space-y-4">
@@ -98,7 +98,7 @@ export default function TwentyFourHourNursing() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Chronic illness management</span>
+                  <span style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>Chronic illness management</span>
                 </div>
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.1s' }}>
                   <div className="w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-[#456882] to-[#1B3C53] shadow-lg">
@@ -106,7 +106,7 @@ export default function TwentyFourHourNursing() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Post-surgical recovery</span>
+                  <span style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>Post-surgical recovery</span>
                 </div>
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.2s' }}>
                   <div className="w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] shadow-lg">
@@ -114,7 +114,7 @@ export default function TwentyFourHourNursing() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Neurological conditions</span>
+                  <span style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>Neurological conditions</span>
                 </div>
                 <div className="flex items-start group transform transition-all duration-300 hover:translate-x-2" style={{ transitionDelay: '0.3s' }}>
                   <div className="w-6 h-6 rounded-full flex items-center justify-center mr-4 mt-1 group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-[#D2C1B6] to-[#456882] shadow-lg">
@@ -122,7 +122,7 @@ export default function TwentyFourHourNursing() {
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
-                  <span style={{ fontFamily: 'Rosehot, sans-serif', color: '#456882' }}>Dementia and memory care</span>
+                  <span style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>Dementia and memory care</span>
                 </div>
               </div>
             </div>
@@ -144,14 +144,14 @@ export default function TwentyFourHourNursing() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               Our Approach to 24-Hour Nursing Care
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
               A refined approach combining world-class clinical expertise with exceptional hospitality
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -159,7 +159,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Individuality Honoured
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Your choices, personal journey and voice guide your care. Every detail is tailored with thoughtfulness and intuition, anticipating your every need and preference.
               </p>
             </div>
@@ -173,21 +173,21 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Clinical Excellence
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Your care is informed by the latest advancements in healthcare, delivered by highly skilled professionals and underpinned by our commitment to continual refinement.
               </p>
             </div>
             
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="text-center group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Holistic Wellbeing
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Every experience is curated to inspire joy, stimulate the senses and nurture both body and mind, ensuring daily life is enriched with purpose and fulfilment.
               </p>
             </div>
@@ -204,8 +204,8 @@ export default function TwentyFourHourNursing() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               What We Offer in 24-Hour Nursing Care
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Rosehot, sans-serif' }}>
-              Bredrock Care provides a fully comprehensive care experience tailored to you
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
+              Bedrock Care provides a fully comprehensive care experience tailored to you
             </p>
           </div>
           
@@ -214,7 +214,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 24/7 Nursing Care Services
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Expert-led medical oversight for complete reassurance and peace of mind.
               </p>
             </div>
@@ -223,7 +223,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Complex Care Management
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Tailored support for dementia, stroke recovery and neurological conditions.
               </p>
             </div>
@@ -232,7 +232,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Rehabilitative Therapy
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Physiotherapy, speech therapy and occupational therapy to enhance mobility and independence.
               </p>
             </div>
@@ -241,7 +241,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Luxury Accommodation
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Spacious, wheelchair-accessible suites designed for your comfort and independence.
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Gourmet Nutrition
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Exquisite, chef-inspired cuisine tailored to your dietary preferences and health needs.
               </p>
             </div>
@@ -259,7 +259,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Bespoke Experiences
               </h3>
-              <p className="text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Personalized activities and programs designed to enrich your wellbeing and quality of life.
               </p>
             </div>
@@ -267,14 +267,14 @@ export default function TwentyFourHourNursing() {
         </div>
       </section>
 
-      {/* Why Choose Bredrock Care */}
+      {/* Why Choose Bedrock Care */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[#456882]/15 to-transparent rounded-full -translate-x-40 -translate-y-40"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#1B3C53]/10 to-transparent rounded-full translate-x-48 translate-y-48"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              Why Choose Bredrock Care for 24-Hour Nursing Care?
+              Why Choose Bedrock Care for 24-Hour Nursing Care?
             </h2>
           </div>
           
@@ -288,7 +288,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Unparalleled Luxury
               </h3>
-              <p className="text-sm text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Elegant surroundings, premium amenities and a warm community atmosphere.
               </p>
             </div>
@@ -302,7 +302,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Expert-Led Care
               </h3>
-              <p className="text-sm text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Care delivered by specialists in nursing home care with years of experience.
               </p>
             </div>
@@ -316,7 +316,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Bespoke Experiences
               </h3>
-              <p className="text-sm text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Tailored programmes to enrich your lifestyle and enhance your wellbeing.
               </p>
             </div>
@@ -330,7 +330,7 @@ export default function TwentyFourHourNursing() {
               <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Award-Winning Care
               </h3>
-              <p className="text-sm text-gray-600" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-sm text-gray-600" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Recognised for excellence in nursing care and exceptional service delivery.
               </p>
             </div> */}

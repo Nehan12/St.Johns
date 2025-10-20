@@ -24,6 +24,7 @@ export default function Navigation() {
   ];
 
   const servicesItems = [
+    
     { href: '/residential-care', label: 'Residential Care', hasSubDropdown: true },
     { href: '/respite', label: 'Respite' },
     { href: '/specialist-conditions', label: 'Specialist Conditions' },
@@ -50,7 +51,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300"
-                style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
+                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
               >
                 {item.label}
               </Link>
@@ -66,10 +67,10 @@ export default function Navigation() {
           >
             <Link href="/" className="flex items-center hover:opacity-80 transition-all">
               <img
-                src="/logo5.png"
-                alt="Bredrock Care Logo"
+                src="/logo6.png"
+                alt="Bedrock Care Logo"
                 loading="lazy"
-                className="h-14 w-auto transition-all duration-300"
+                className="h-40 w-auto transition-all duration-300"
               />
             </Link>
           </motion.div>
@@ -79,26 +80,27 @@ export default function Navigation() {
 
             {/* Services Dropdown */}
             <div className="relative">
-              <button
-                className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300 flex items-center"
+              <div
+                className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300 flex items-center cursor-pointer"
                 onMouseEnter={() => setIsServicesDropdownOpen(true)}
                 onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                aria-haspopup="true"
-                aria-expanded={isServicesDropdownOpen}
-                style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
+                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
               >
-                SERVICES
+                <Link href="/services" className="hover:text-[#1E93AB] transition-all duration-300">
+                  SERVICES
+                </Link>
                 <motion.svg
                   animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className="w-4 h-4 ml-2 text-gray-700"
+                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </motion.svg>
-              </button>
+              </div>
 
               <AnimatePresence>
                 {isServicesDropdownOpen && (
@@ -108,6 +110,7 @@ export default function Navigation() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
                     className="absolute top-full left-0 mt-2 w-80 rounded-lg shadow-lg border border-gray-200 bg-white/90 backdrop-blur-lg z-50"
+                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                     onMouseEnter={() => setIsServicesDropdownOpen(true)}
                     onMouseLeave={() => setIsServicesDropdownOpen(false)}
                   >
@@ -115,12 +118,18 @@ export default function Navigation() {
                       {servicesItems.map((service) =>
                         service.hasSubDropdown ? (
                           <div key={service.href} className="relative">
-                            <button
+                            <div
                               className="w-full flex justify-between items-center px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 group"
+                              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                               onMouseEnter={() => setIsResidentialDropdownOpen(true)}
                               onMouseLeave={() => setIsResidentialDropdownOpen(false)}
                             >
-                              <span className="group-hover:text-[#1E93AB]">{service.label}</span>
+                              <Link 
+                                href={service.href} 
+                                className="flex-1 group-hover:text-[#1E93AB] transition-all duration-300"
+                              >
+                                {service.label}
+                              </Link>
                               <motion.svg
                                 animate={{ rotate: isResidentialDropdownOpen ? 90 : 0 }}
                                 transition={{ duration: 0.3 }}
@@ -131,7 +140,7 @@ export default function Navigation() {
                               >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                               </motion.svg>
-                            </button>
+                            </div>
 
                             {/* Residential Submenu */}
                             <AnimatePresence>
@@ -150,6 +159,7 @@ export default function Navigation() {
                                       key={item.href}
                                       href={item.href}
                                       className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#1E93AB] rounded-lg"
+                                      style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#1B3C53' }}
                                     >
                                       {item.label}
                                     </Link>
@@ -178,7 +188,7 @@ export default function Navigation() {
             <Link
               href="/contact"
               className="px-6 py-2 rounded-lg font-light text-sm border-2 border-gray-900 hover:bg-gray-800 hover:border-gray-800 hover:text-white text-gray-900 shadow-md transition-all duration-300"
-              style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
+              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
             >
               Contact Us Today
             </Link>
@@ -234,7 +244,7 @@ export default function Navigation() {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100 transition-all"
-                  style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
+                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                 >
                   {item.label}
                 </Link>
@@ -242,23 +252,31 @@ export default function Navigation() {
 
               {/* Mobile Services Accordion */}
               <div className="px-2">
-                <button
-                  onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                  className="flex justify-between items-center w-full px-2 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100"
-                  style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}
-                >
-                  <span>SERVICES</span>
-                  <motion.svg
-                    animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-4 h-4 text-gray-700"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                <div className="flex justify-between items-center w-full px-2 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100">
+                  <Link 
+                    href="/services" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex-1"
+                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </motion.svg>
-                </button>
+                    SERVICES
+                  </Link>
+                  <button
+                    onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
+                    className="ml-2"
+                  >
+                    <motion.svg
+                      animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="w-4 h-4 text-gray-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </motion.svg>
+                  </button>
+                </div>
 
                 <AnimatePresence>
                   {isServicesDropdownOpen && (
@@ -273,24 +291,32 @@ export default function Navigation() {
                         <div key={service.href}>
                           {service.hasSubDropdown ? (
                             <>
-                              <button
-                                onClick={() =>
-                                  setIsResidentialDropdownOpen(!isResidentialDropdownOpen)
-                                }
-                                className="flex justify-between items-center w-full py-2 text-gray-700 hover:text-[#1E93AB]"
-                              >
-                                {service.label}
-                                <motion.svg
-                                  animate={{ rotate: isResidentialDropdownOpen ? 90 : 0 }}
-                                  transition={{ duration: 0.3 }}
-                                  className="w-3 h-3 text-gray-700"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
+                              <div className="flex justify-between items-center w-full py-2 text-gray-700 hover:text-[#1E93AB]">
+                                <Link 
+                                  href={service.href}
+                                  onClick={() => setIsMenuOpen(false)}
+                                  className="flex-1"
                                 >
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </motion.svg>
-                              </button>
+                                  {service.label}
+                                </Link>
+                                <button
+                                  onClick={() =>
+                                    setIsResidentialDropdownOpen(!isResidentialDropdownOpen)
+                                  }
+                                  className="ml-2"
+                                >
+                                  <motion.svg
+                                    animate={{ rotate: isResidentialDropdownOpen ? 90 : 0 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="w-3 h-3 text-gray-700"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                  </motion.svg>
+                                </button>
+                              </div>
 
                               <AnimatePresence>
                                 {isResidentialDropdownOpen && (

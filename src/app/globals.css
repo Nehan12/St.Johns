@@ -35,6 +35,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Libre Baskerville Regular';
+  src: url('/fonts/LibreBaskerville-Regular.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville Bold';
+  src: url('/fonts/LibreBaskerville-Bold.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville Italic';
+  src: url('/fonts/LibreBaskerville-Italic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

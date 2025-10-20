@@ -18,21 +18,21 @@ export default function Home() {
   const slides = [
     { 
       image: '/landing1.jpg', 
-      alt: 'Bredrock Care Facility - Main Building',
+      alt: 'Bedrock Care Facility - Main Building',
       title: 'Care Beyond Boundarie',
       subtitle: 'Dedicated to delivering personalized comfort, dignity, and unwavering support for every resident',
       description: 'Experience world-class palliative care in a warm, welcoming environment designed for comfort and dignity.'
     },
     { 
       image: '/landing2.jpg', 
-      alt: 'Bredrock Care Facility - Garden Area',
+      alt: 'Bedrock Care Facility - Garden Area',
       title: 'Excellence in Every Moment',
       subtitle: 'Wh ere compassion, professionalism, and innovation come together for holistic care',
       description: 'Our beautiful outdoor spaces provide the perfect setting for relaxation, reflection, and recovery.'
     },
     { 
       image: '/landing3.jpg', 
-      alt: 'Bredrock Care Facility - Interior',
+      alt: 'Bedrock Care Facility - Interior',
       title: 'Home Away From Home',
       subtitle: 'Elegant interiors designed with love, comfort, and the highest standards of care',
       description: 'Every detail has been thoughtfully crafted to create a haven of peace and healing for our residents.'
@@ -212,12 +212,11 @@ export default function Home() {
             <div className={`order-1 md:order-2 w-full transition-all duration-1000 ${
               isVisible.textContent ? 'animate-slideInRight' : 'opacity-0 translate-x-[50px]'
             }`}>
-                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105" style={{ fontFamily: 'Allrounder Monument Regular, serif' }}>
-                  Luxury nursing care in Sri Lanka: At Bredrock Care, care is at our core
+                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105" style={{ fontFamily: 'Allrounder Monument Regular, serif' }}>
+                Luxury Care, Rooted in Compassion
                 </h1>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ fontFamily: 'Rosehot, sans-serif' }}>
-                Our commitment to care is uncompromising and never-ending. We&apos;re passionately devoted to providing the highest standards of 24 hour residential care, respite, day club experiences and memory care, all delivered with unparalleled standards of hospitality. Every element of our approach is meticulously curated to create a life of fulfilment, comfort and refinement. At Bredrock Care, excellence isn&apos;t just a standard, it&apos;s a promise. We simply couldn&apos;t care more.
-              </p>
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ fontFamily: 'Libre Baskerville Regular, sans-serif' }}>
+              At Bedrock Care, we&apos;re devoted to providing exceptional 24-hour residential, respite, and memory care. Every detail is crafted to bring comfort, fulfilment, and refined living — because we simply couldn&apos;t care more.              </p>
             </div>
           </div>
         </div>
@@ -247,7 +246,7 @@ export default function Home() {
               Our Core Values
             </h2>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882' }}>
-              The foundation of everything we do at Bredrock Care
+              The foundation of everything we do at Bedrock Care
             </p>
           </div> */}
 
@@ -262,7 +261,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Connection</h3>
-              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Building meaningful relationships between residents, families, and our compassionate care team.
               </p>
             </div>
@@ -277,7 +276,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Well-being</h3>
-              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Promoting physical, emotional, and spiritual wellness through personalized care and support.
               </p>
             </div>
@@ -292,7 +291,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>Security</h3>
-              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
                 Providing a safe, secure environment where residents and families feel protected and at peace.
               </p>
             </div>
@@ -307,9 +306,9 @@ export default function Home() {
             isVisible.whyChoose ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              Why Choose Bredrock Care?
+              Why Choose Bedrock Care?
             </h2>
-            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+            <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
               Experience the difference of compassionate, professional care in a warm, welcoming environment.
             </p>
           </div>
@@ -320,7 +319,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
                   src="/nunrse1.jpg" 
-                  alt="Compassionate nursing care at Bredrock Care" 
+                  alt="Compassionate nursing care at Bedrock Care" 
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -332,8 +331,8 @@ export default function Home() {
               <h3 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Our Dedicated Care Team
               </h3>
-              <p className="text-lg leading-relaxed mb-6" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
-                At Bredrock Care, our experienced nursing staff provides round-the-clock care with compassion, 
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, sans-serif' }}>
+                At Bedrock Care, our experienced nursing staff provides round-the-clock care with compassion, 
                 expertise, and genuine concern for each resident&apos;s well-being. We understand that quality 
                 care goes beyond medical treatment—it&apos;s about creating meaningful connections and ensuring 
                 comfort in every moment.
@@ -341,15 +340,15 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>24/7 Professional Nursing Care</span>
+                  <span style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>24/7 Professional Nursing Care</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Personalized Care Plans</span>
+                  <span style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>Personalized Care Plans</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Family-Centered Approach</span>
+                  <span style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>Family-Centered Approach</span>
                 </div>
               </div>
             </div>
@@ -365,23 +364,9 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 24/7 Professional Nursing Care
               </h3>
-              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
-                Round-the-clock professional nursing care ensuring residents receive immediate attention whenever needed.
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
+                Round-the-clock professional nursing care with continuous monitoring, emergency response, and medication management ensuring residents receive immediate attention whenever needed.
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1">
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Continuous monitoring</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.1s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Emergency response</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.2s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Medication management</span>
-                </div>
-              </div>
             </div>
 
             {/* Compassionate Care Section */}
@@ -393,23 +378,9 @@ export default function Home() {
               <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
                 Compassionate Care
               </h3>
-              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
-                Personalized care plans tailored to each resident&apos;s specific needs and preferences.
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
+                Personalized care plans with individual assessments, personal preferences, and regular reviews tailored to each resident&apos;s specific needs.
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1">
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Individual assessments</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.1s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Personal preferences</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.2s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Regular reviews</span>
-                </div>
-              </div>
             </div>
 
             {/* Comfort Environment Section */}
@@ -419,25 +390,11 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-                Comfort Environment
+                Comfortable Environment
               </h3>
-              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
-                A warm, welcoming environment designed to promote healing and a sense of home.
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
+                A warm, welcoming environment with home-like spaces, garden areas, and common areas designed to promote healing and a sense of home.
               </p>
-              <div className="space-y-2">
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1">
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Home-like spaces</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.1s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Garden areas</span>
-                </div>
-                <div className="flex items-center justify-center transform transition-all duration-300 group-hover:translate-x-1" style={{ transitionDelay: '0.2s' }}>
-                  <div className="w-1.5 h-1.5 rounded-full mr-2" style={{ backgroundColor: '#1B3C53' }}></div>
-                  <span className="text-xs" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>Common areas</span>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -468,7 +425,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               Luxury Care, Redefined
             </h2>
-            <p className="text-lg md:text-xl" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
+            <p className="text-lg md:text-xl" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
               Experience the pinnacle of luxury care where every detail is crafted for comfort, dignity, and exceptional living.
             </p>
           </div>
@@ -477,8 +434,9 @@ export default function Home() {
           <div className={`text-center mb-16 transition-all duration-1000 ${
             isVisible.luxury ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'
           }`} style={{ animationDelay: '0.2s' }}>
-            <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#456882', fontFamily: 'Rosehot, sans-serif' }}>
-              At Bredrock Care, we redefine luxury care through our exclusive boutique estate designed for discerning families. 
+            <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
+              At Bedrock Care, we redefine luxury care through our exclusive boutique estat
+              e designed for discerning families. 
               Our concierge-level medical oversight, white-glove lifestyle services, and gourmet culinary experiences create 
               an unparalleled environment where every detail reflects our commitment to exceptional living. From bespoke memory 
               care programs to curated wellness experiences, we provide the highest standard of personalized care in an intimate, 
