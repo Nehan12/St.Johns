@@ -34,7 +34,7 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section 
-        className="relative py-20 md:py-32 overflow-hidden"
+        className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
         style={{
           backgroundImage: 'url(/landing3.jpg)',
           backgroundSize: 'cover',
@@ -44,15 +44,16 @@ export default function Contact() {
         } as React.CSSProperties}
       >
         {/* Colorful Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
               Contact Us
             </h1>
-            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rosehot, sans-serif' }}>
+            <br />
+            <div className="underline mx-auto mt-2"></div>
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
               We&apos;re here to help. Contact us to learn more about our services or to schedule a visit.
             </p>
           </div>

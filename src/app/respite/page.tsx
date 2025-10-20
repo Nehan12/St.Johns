@@ -35,7 +35,7 @@ export default function Respite() {
       <section 
         className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
         style={{
-          backgroundImage: 'url(/new2.jpg)',
+          backgroundImage: 'url(/new4.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
