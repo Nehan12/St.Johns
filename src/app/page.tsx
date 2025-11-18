@@ -18,21 +18,21 @@ export default function Home() {
   const slides = [
     { 
       image: '/landing1.jpg', 
-      alt: 'Bedrock Care Facility - Main Building',
+      alt: 'Heritage Care Facility - Main Building',
       title: 'Care Beyond Boundarie',
       subtitle: 'Dedicated to delivering personalized comfort, dignity, and unwavering support for every resident',
       description: 'Experience world-class palliative care in a warm, welcoming environment designed for comfort and dignity.'
     },
     { 
       image: '/landing2.jpg', 
-      alt: 'Bedrock Care Facility - Garden Area',
+      alt: 'Heritage Care Facility - Garden Area',
       title: 'Excellence in Every Moment',
       subtitle: 'Wh ere compassion, professionalism, and innovation come together for holistic care',
       description: 'Our beautiful outdoor spaces provide the perfect setting for relaxation, reflection, and recovery.'
     },
     { 
       image: '/landing3.jpg', 
-      alt: 'Bedrock Care Facility - Interior',
+      alt: 'Heritage Care Facility - Interior',
       title: 'Home Away From Home',
       subtitle: 'Elegant interiors designed with love, comfort, and the highest standards of care',
       description: 'Every detail has been thoughtfully crafted to create a haven of peace and healing for our residents.'
@@ -216,7 +216,7 @@ export default function Home() {
                 Luxury Care, Rooted in Compassion
                 </h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ fontFamily: 'Libre Baskerville Regular, sans-serif' }}>
-              At Bedrock Care, we&apos;re devoted to providing exceptional 24-hour residential, respite, and memory care. Every detail is crafted to bring comfort, fulfilment, and refined living — because we simply couldn&apos;t care more.              </p>
+              At Heritage Care, we&apos;re devoted to providing exceptional 24-hour residential, respite, and memory care. Every detail is crafted to bring comfort, fulfilment, and refined living — because we simply couldn&apos;t care more.              </p>
             </div>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Home() {
               Our Core Values
             </h2>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882' }}>
-              The foundation of everything we do at Bedrock Care
+              The foundation of everything we do at Heritage Care
             </p>
           </div> */}
 
@@ -306,7 +306,7 @@ export default function Home() {
             isVisible.whyChoose ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'
           }`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#1B3C53', fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              Why Choose Bedrock Care?
+              Why Choose Heritage Care?
             </h2>
             <p className="text-xl max-w-3xl mx-auto" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
               Experience the difference of compassionate, professional care in a warm, welcoming environment.
@@ -319,7 +319,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
                   src="/nunrse1.jpg" 
-                  alt="Compassionate nursing care at Bedrock Care" 
+                  alt="Compassionate nursing care at Heritage Care" 
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
@@ -332,7 +332,7 @@ export default function Home() {
                 Our Dedicated Care Team
               </h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed transform transition-all duration-500 hover:translate-x-2" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, sans-serif' }}>
-                At Bedrock Care, our experienced nursing staff provides round-the-clock care with compassion, 
+                At Heritage Care, our experienced nursing staff provides round-the-clock care with compassion, 
                 expertise, and genuine concern for each resident&apos;s well-being. We understand that quality 
                 care goes beyond medical treatment—it&apos;s about creating meaningful connections and ensuring 
                 comfort in every moment.
@@ -435,7 +435,7 @@ export default function Home() {
             isVisible.luxury ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'
           }`} style={{ animationDelay: '0.2s' }}>
             <p className="text-xl leading-relaxed max-w-4xl mx-auto" style={{ color: '#456882', fontFamily: 'Libre Baskerville Regular, serif' }}>
-              At Bedrock Care, we redefine luxury care through our exclusive boutique estat
+              At Heritage Care, we redefine luxury care through our exclusive boutique estat
               e designed for discerning families. 
               Our concierge-level medical oversight, white-glove lifestyle services, and gourmet culinary experiences create 
               an unparalleled environment where every detail reflects our commitment to exceptional living. From bespoke memory 

@@ -32,7 +32,7 @@ export default function Services() {
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-              Comprehensive care services designed to meet the unique needs of each resident at Bedrock Care.
+              Comprehensive care services designed to meet the unique needs of each resident at Heritage Care.
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function Services() {
               Our Core Services
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              At Bedrock Care, we provide comprehensive care services tailored to meet the unique needs of each resident.
+              At Heritage Care, we provide comprehensive care services tailored to meet the unique needs of each resident.
             </p>
           </div>
 
@@ -299,10 +299,10 @@ export default function Services() {
             </div>
           </div>
 
-          {/* Why Choose Bedrock Care */}
+          {/* Why Choose Heritage Care */}
           <div className="bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 rounded-lg p-8 border border-[#D2C1B6]/30">
             <h2 className="text-3xl font-bold mb-8 text-center" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-              Why Choose Bedrock Care?
+              Why Choose Heritage Care?
             </h2>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>

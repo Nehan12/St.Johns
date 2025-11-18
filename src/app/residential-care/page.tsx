@@ -93,7 +93,7 @@ export default function ResidentialCare() {
                 Our Approach to Professional Care
               </h3>
               <p className="text-gray-600 mb-6" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Bedrock Care sets the benchmark for residential care by blending expert-led healthcare with uncompromising comfort and wellbeing. Our holistic approach ensures you receive outstanding physical, emotional and social support.
+                Heritage Care sets the benchmark for residential care by blending expert-led healthcare with uncompromising comfort and wellbeing. Our holistic approach ensures you receive outstanding physical, emotional and social support.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -134,7 +134,7 @@ export default function ResidentialCare() {
               Our Professional Care Services
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              With a dedication to excellence, Bedrock Care offers care services that are highly personalized. Our approach respects your individuality, supporting independence while providing the highest standard of professional care.
+              With a dedication to excellence, Heritage Care offers care services that are highly personalized. Our approach respects your individuality, supporting independence while providing the highest standard of professional care.
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function ResidentialCare() {
               Types of Residential Care
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              Bedrock Care offers tailored types of residential care to suit your personal needs and preferences.
+              Heritage Care offers tailored types of residential care to suit your personal needs and preferences.
             </p>
           </div>
 

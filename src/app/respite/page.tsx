@@ -54,7 +54,7 @@ export default function Respite() {
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Allrounder Monument Medium, sans-serif' }}>
-              At Bedrock Care, we recognise that respite care can be a transformative experience, elevating your overall wellbeing, promoting recovery and enriching your quality of life.
+              At Heritage Care, we recognise that respite care can be a transformative experience, elevating your overall wellbeing, promoting recovery and enriching your quality of life.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Respite() {
               Our Approach to Quality Respite Care
             </h2>
             <p className="text-lg md:text-xl max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              At Bedrock Care, we are dedicated to delivering excellence in respite care, offering a truly bespoke approach tailored to your needs. Our philosophy seamlessly blends medical expertise with a commitment to world-class hospitality.
+              At Heritage Care, we are dedicated to delivering excellence in respite care, offering a truly bespoke approach tailored to your needs. Our philosophy seamlessly blends medical expertise with a commitment to world-class hospitality.
             </p>
           </div>
           
@@ -189,7 +189,7 @@ export default function Respite() {
               What&apos;s Included in Our Respite Services
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Bedrock Care&apos;s respite care services provide an elevated experience, tailored to your needs
+                Heritage Care&apos;s respite care services provide an elevated experience, tailored to your needs
             </p>
           </div>
           
@@ -251,14 +251,14 @@ export default function Respite() {
         </div>
       </section>
 
-      {/* Why Choose Bedrock Care for Respite Care */}
+      {/* Why Choose Heritage Care for Respite Care */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[#456882]/15 to-transparent rounded-full -translate-x-40 -translate-y-40"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#1B3C53]/10 to-transparent rounded-full translate-x-48 translate-y-48"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              Why Choose Bedrock Care for 24-Hour Nursing Care?
+              Why Choose Heritage Care for 24-Hour Nursing Care?
             </h2>
           </div>
           

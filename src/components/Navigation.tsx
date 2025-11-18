@@ -42,7 +42,7 @@ export default function Navigation() {
       }`}
     >
       <div className="relative max-w-12xl mx-auto px-8 sm:px-8 lg:px-32">
-        <div className="flex items-center h-16 justify-between">
+        <div className="flex items-center h-24 justify-between">
 
           {/* Left Nav */}
           <div className="hidden lg:flex items-center space-x-48">
@@ -60,15 +60,15 @@ export default function Navigation() {
 
           {/* Logo */}
           <motion.div
-            initial={{ scale: 1, y: 0 }}
-            animate={isScrolled ? { scale: 0.9, y: 2 } : { scale: 1, y: 0 }}
+            initial={{ scale: 1, y: -20 }}
+            animate={isScrolled ? { scale: 0.9, y: -18 } : { scale: 1, y: -20 }}
             transition={{ type: 'spring', stiffness: 100 }}
             className="flex items-center justify-center flex-shrink-0"
           >
             <Link href="/" className="flex items-center hover:opacity-80 transition-all">
               <img
-                src="/logo6.png"
-                alt="Bedrock Care Logo"
+                src="/heritageCarelogo.png"
+                alt="Heritage Care Logo"
                 loading="lazy"
                 className="h-40 w-auto transition-all duration-300"
               />

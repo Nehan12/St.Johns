@@ -71,7 +71,7 @@ export default function TwentyFourHourNursing() {
               What is 24-Hour Nursing Care?
             </h2>
             <p className="text-lg md:text-xl max-w-4xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              24-hour nursing care is a specialised service that provides round-the-clock medical supervision for those with complex medical needs. At Bedrock Care, you receive the highest level of care, tailored precisely to your health requirements and lifestyle choices.
+              24-hour nursing care is a specialised service that provides round-the-clock medical supervision for those with complex medical needs. At Heritage Care, you receive the highest level of care, tailored precisely to your health requirements and lifestyle choices.
             </p>
           </div>
         </div>
@@ -205,7 +205,7 @@ export default function TwentyFourHourNursing() {
               What We Offer in 24-Hour Nursing Care
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-              Bedrock Care provides a fully comprehensive care experience tailored to you
+              Heritage Care provides a fully comprehensive care experience tailored to you
             </p>
           </div>
           
@@ -267,14 +267,14 @@ export default function TwentyFourHourNursing() {
         </div>
       </section>
 
-      {/* Why Choose Bedrock Care */}
+      {/* Why Choose Heritage Care */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[#456882]/15 to-transparent rounded-full -translate-x-40 -translate-y-40"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#1B3C53]/10 to-transparent rounded-full translate-x-48 translate-y-48"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
-              Why Choose Bedrock Care for 24-Hour Nursing Care?
+              Why Choose Heritage Care for 24-Hour Nursing Care?
             </h2>
           </div>
           
