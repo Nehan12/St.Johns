@@ -97,7 +97,10 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden" style={{ backgroundColor: "#ffffff" }}>
+    <div
+      className="flex flex-col min-h-screen overflow-x-hidden"
+      style={{ backgroundColor: "#ffffff" }}
+    >
       <Navigation />
 
       {/* Hero Section - Carousel with Navigation Anchors */}
@@ -119,7 +122,10 @@ export default function Home() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  animation: index === currentSlide ? "backgroundMove 20s infinite ease-in-out" : "none",
+                  animation:
+                    index === currentSlide
+                      ? "backgroundMove 20s infinite ease-in-out"
+                      : "none",
                 }}
               />
 
@@ -153,12 +159,12 @@ export default function Home() {
                       <Link
                         href="/about"
                         className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                        style={{ backgroundColor: "#5F7F7A" }}
+                        style={{ backgroundColor: "#E7A98B" }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#4E6E68";
+                          e.currentTarget.style.backgroundColor = "#D46A1F";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#5F7F7A";
+                          e.currentTarget.style.backgroundColor = "#E7A98B";
                         }}
                       >
                         About
@@ -166,12 +172,12 @@ export default function Home() {
                       <Link
                         href="/services"
                         className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                        style={{ backgroundColor: "#5F7F7A" }}
+                        style={{ backgroundColor: "#E7A98B" }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#4E6E68";
+                          e.currentTarget.style.backgroundColor = "#D46A1F";
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#5F7F7A";
+                          e.currentTarget.style.backgroundColor = "#E7A98B";
                         }}
                       >
                         Services
@@ -186,7 +192,11 @@ export default function Home() {
 
         {/* Left Navigation Anchor */}
         <button
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+          onClick={() =>
+            setCurrentSlide(
+              (prev) => (prev - 1 + slides.length) % slides.length,
+            )
+          }
           className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110"
           aria-label="Previous slide"
         >
@@ -286,6 +296,13 @@ export default function Home() {
                   href="#"
                   key={index}
                   className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full`}
+                  style={{ color: "#E7A98B" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "#D46A1F";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#E7A98B";
+                  }}
                 >
                   <div
                     className="flex flex-col items-center text-center p-4 rounded-2xl cursor-pointer 
@@ -293,13 +310,7 @@ export default function Home() {
                   >
                     <div
                       className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors"
-                      style={{ backgroundColor: "#8FA68E" }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#2F3A34";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#8FA68E";
-                      }}
+                      style={{ backgroundColor: "#D46A1F" }}
                     >
                       <img
                         src={card.icon}
@@ -307,13 +318,31 @@ export default function Home() {
                         className="w-12 h-12 group-hover:filter group-hover:brightness-125 transition-all"
                       />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 transition-colors break-words" style={{ color: "#5A5A5A" }} onMouseEnter={(e) => { e.currentTarget.style.color = "#8FA68E"; }} onMouseLeave={(e) => { e.currentTarget.style.color = "#5A5A5A"; }}>
+                    <h3 className="text-xl font-bold mb-2 transition-colors break-words">
                       {card.title}
                     </h3>
-                    <p className="mb-4 transition-colors break-words" style={{ color: "#6B6B6B" }} onMouseEnter={(e) => { e.currentTarget.style.color = "#5A5A5A"; }} onMouseLeave={(e) => { e.currentTarget.style.color = "#6B6B6B"; }}>
+                    <p
+                      className="mb-4 transition-colors break-words"
+                      style={{ color: "#3F2A1E" }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#060606";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#3F2A1E";
+                      }}
+                    >
                       {card.description}
                     </p>
-                    <span className="text-sm font-medium mt-4 transition-colors" style={{ color: "#5F6B65" }} onMouseEnter={(e) => { e.currentTarget.style.color = "#2E3B34"; }} onMouseLeave={(e) => { e.currentTarget.style.color = "#5F6B65"; }}>
+                    <span
+                      className="text-sm font-medium mt-4 transition-colors"
+                      style={{ color: "#060606" }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#D46A1F";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#060606";
+                      }}
+                    >
                       Read more
                     </span>
                   </div>
@@ -357,13 +386,21 @@ export default function Home() {
             >
               <h1
                 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105"
-                style={{ color: "#5A5A5A", fontFamily: "'Open Sans', sans-serif", fontWeight: 700 }}
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: 700,
+                }}
               >
                 Luxury Care, Rooted in Compassion
               </h1>
               <p
                 className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
-                style={{ color: "#6B6B6B", fontFamily: "'Open Sans', sans-serif", fontWeight: 400 }}
+                style={{
+                  color: "#6B6B6B",
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: 400,
+                }}
               >
                 At Heritage Care, we&apos;re devoted to providing exceptional
                 24-hour residential, respite, and memory care. Every detail is
@@ -378,7 +415,7 @@ export default function Home() {
       {/* Core Values Section */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ backgroundColor: "#F7F4F0" }}
+        style={{ backgroundColor: "#FBF3EE" }}
         ref={coreValuesRef}
       >
         {/* Background Pattern */}
@@ -387,30 +424,29 @@ export default function Home() {
             className={`absolute top-10 left-10 w-32 h-32 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#F7F8F5", animationDelay: "0.1s" }}
+            style={{ backgroundColor: "#FBF3EE", animationDelay: "0.1s" }}
           ></div>
           <div
             className={`absolute top-32 right-20 w-24 h-24 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#8FA68E", animationDelay: "0.3s" }}
+            style={{ backgroundColor: "#E7A98B", animationDelay: "0.3s" }}
           ></div>
           <div
             className={`absolute bottom-20 left-1/4 w-20 h-20 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#8FA68E", animationDelay: "0.5s" }}
+            style={{ backgroundColor: "#E7A98B", animationDelay: "0.5s" }}
           ></div>
           <div
             className={`absolute bottom-32 right-1/3 w-28 h-28 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#8FA68E", animationDelay: "0.7s" }}
+            style={{ backgroundColor: "#E7A98B", animationDelay: "0.7s" }}
           ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-
           <div className="grid md:grid-cols-3 gap-8">
             {/* Connection */}
             <div
@@ -420,7 +456,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#8FA68E" }}
+                  style={{ backgroundColor: "#E7A98B" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -441,7 +477,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#B85C2E",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -450,7 +486,7 @@ export default function Home() {
               <p
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
+                  color: "#3F2A1E",
                   fontFamily: "Libre Baskerville Regular, serif",
                 }}
               >
@@ -467,7 +503,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#8FA68E" }}
+                  style={{ backgroundColor: "#E7A98B" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -488,7 +524,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#B85C2E",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -497,7 +533,7 @@ export default function Home() {
               <p
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
+                  color: "#3F2A1E",
                   fontFamily: "Libre Baskerville Regular, serif",
                 }}
               >
@@ -514,7 +550,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#8FA68E" }}
+                  style={{ backgroundColor: "#E7A98B" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -535,7 +571,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#B85C2E",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -544,7 +580,7 @@ export default function Home() {
               <p
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
+                  color: "#3F2A1E",
                   fontFamily: "Libre Baskerville Regular, serif",
                 }}
               >
@@ -557,7 +593,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-2 mt-4" style={{ backgroundColor: "#ffffff" }} ref={whyChooseRef}>
+      <section
+        className="py-2 mt-6"
+        style={{ backgroundColor: "#ffffff" }}
+        ref={whyChooseRef}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`text-center mb-4 transition-all duration-1000 ${
@@ -569,7 +609,7 @@ export default function Home() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{
-                color: "#6F7F6A",
+                color: "#B85C2E",
                 fontFamily: "Allrounder Monument Regular, sans-serif",
               }}
             >
@@ -578,7 +618,7 @@ export default function Home() {
             <p
               className="text-xl max-w-3xl mx-auto"
               style={{
-                color: "#9DB4B8",
+                color: "#5A3A2E",
                 fontFamily: "Libre Baskerville Regular, serif",
               }}
             >
@@ -702,7 +742,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20" style={{ backgroundColor: "#ffffff" }} ref={whyChooseRef}>
+      <section
+        className="py-5"
+        style={{ backgroundColor: "#ffffff" }}
+        ref={whyChooseRef}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Nurse Image */}
@@ -722,7 +766,7 @@ export default function Home() {
               <h3
                 className="text-2xl md:text-3xl font-bold mb-6"
                 style={{
-                  color: "#6F7F6A",
+                  color: "#B85C2E",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -731,9 +775,9 @@ export default function Home() {
               <p
                 className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
                 style={{
-                  color: "#9DB4B8",
-                      fontFamily: "'Open Sans', sans-serif",
-                      fontWeight: 400,
+                  color: "#5A3A2E",
+                  fontFamily: "'Open Sans', sans-serif",
+                  fontWeight: 400,
                 }}
               >
                 At Heritage Care, our experienced nursing staff provides
@@ -743,16 +787,17 @@ export default function Home() {
                 creating meaningful connections and ensuring comfort in every
                 moment.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-4 mt-2">
                 <div className="flex items-center">
                   <div
                     className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#6F7F6A" }}
+                    style={{ backgroundColor: "#B85C2E" }}
                   ></div>
                   <span
                     style={{
-                      color: "#9DB4B8",
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      color: "#5A3A2E",
+                      fontFamily: "'Open Sans', sans-serif",
+                      fontWeight: 400,
                     }}
                   >
                     24/7 Professional Nursing Care
@@ -761,12 +806,13 @@ export default function Home() {
                 <div className="flex items-center">
                   <div
                     className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#6F7F6A" }}
+                    style={{ backgroundColor: "#B85C2E" }}
                   ></div>
                   <span
                     style={{
-                      color: "#9DB4B8",
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      color: "#5A3A2E",
+                      fontWeight: 400,
+                      fontFamily: "'Open Sans', sans-serif",
                     }}
                   >
                     Personalized Care Plans
@@ -775,12 +821,13 @@ export default function Home() {
                 <div className="flex items-center">
                   <div
                     className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#6F7F6A" }}
+                    style={{ backgroundColor: "#B85C2E" }}
                   ></div>
                   <span
                     style={{
-                      color: "#9DB4B8",
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      color: "#5A3A2E",
+                      fontWeight: 400,
+                      fontFamily: "'Open Sans', sans-serif",
                     }}
                   >
                     Family-Centered Approach
@@ -791,10 +838,10 @@ export default function Home() {
           </div>
 
           <div>
-          <h2
+            <h2
               className="text-3xl md:text-4xl font-bold mb-6 text-center"
               style={{
-                color: "#6F7F6A",
+                color: "#B85C2E",
                 fontFamily: "Allrounder Monument Regular, sans-serif",
               }}
             >
@@ -818,7 +865,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#E7A98B",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -852,7 +899,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#E7A98B",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -886,7 +933,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#8FA68E",
+                  color: "#E7A98B",
                   fontFamily: "Allrounder Monument Regular, sans-serif",
                 }}
               >
@@ -910,12 +957,12 @@ export default function Home() {
             <Link
               href="/services"
               className="text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              style={{ backgroundColor: "#8FA68E" }}
+              style={{ backgroundColor: "#E7A98B" }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#6F7F6A";
+                e.currentTarget.style.backgroundColor = "#B85C2E";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#8FA68E";
+                e.currentTarget.style.backgroundColor = "#E7A98B";
               }}
             >
               View All Services
@@ -926,30 +973,52 @@ export default function Home() {
 
       {/* Care Highlights Section */}
       <section
-        className="py-20"
-        style={{ backgroundColor: "#F7F4F0" }}
         ref={luxuryRef}
+        className="relative py-40 overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage: "url(/luxury2.png)",
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50 z-0" />
+
+        {/* TOP DOWNWARD ARC */}
+        <div className="absolute -top-[0.5px] left-0 w-full z-10 pointer-events-none">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1600 165"
+            preserveAspectRatio="none"
+            className="w-full h-[160px]"
+          >
+            <path
+              d="M-3,49S398.468,152.5,799.951,152.5C1201.47,152.5,1603,49,1603,49V0H-3V49Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+
+        {/* CONTENT */}
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
           <div
             className={`mb-12 text-center transition-all duration-1000 ${
               isVisible.luxury ? "animate-fadeInUp" : "opacity-0 translate-y-10"
             }`}
           >
             <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
+              className="text-3xl md:text-5xl font-bold mb-4 mt-4"
               style={{
-                color: "#6F7F6A",
+                color: "#F7F4F0",
                 fontFamily: "Allrounder Monument Regular, sans-serif",
               }}
             >
               Luxury Care, Redefined
             </h2>
             <p
-              className="text-lg md:text-xl"
+              className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
-                color: "#9DB4B8",
-                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#EFE9E2",
+                fontFamily: "'Open Sans', sans-serif",
               }}
             >
               Experience the pinnacle of luxury care where every detail is
@@ -957,9 +1026,9 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Luxury Care Description */}
+          {/* Description */}
           <div
-            className={`text-center mb-16 transition-all duration-1000 ${
+            className={`text-center mb-32 transition-all duration-1000 ${
               isVisible.luxury ? "animate-fadeInUp" : "opacity-0 translate-y-10"
             }`}
             style={{ animationDelay: "0.2s" }}
@@ -967,34 +1036,47 @@ export default function Home() {
             <p
               className="text-xl leading-relaxed max-w-4xl mx-auto"
               style={{
-                color: "#9DB4B8",
-                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#F1ECE6",
+                fontFamily: "'Open Sans', sans-serif",
               }}
             >
               At Heritage Care, we redefine luxury care through our exclusive
-              boutique estat e designed for discerning families. Our
+              boutique estate designed for discerning families. Our
               concierge-level medical oversight, white-glove lifestyle services,
               and gourmet culinary experiences create an unparalleled
               environment where every detail reflects our commitment to
-              exceptional living. From bespoke memory care programs to curated
-              wellness experiences, we provide the highest standard of
-              personalized care in an intimate, elegant setting that feels like
-              home.
+              exceptional living.
             </p>
           </div>
 
-          {/* Luxury Estate Image */}
+          {/* TAGLINE */}
           <div
-            className={`relative overflow-hidden rounded-2xl shadow-2xl group transition-all duration-1000 ${
+            className={`flex flex-col items-center justify-center text-center transition-all duration-1000 ${
               isVisible.luxury ? "animate-fadeInUp" : "opacity-0 translate-y-10"
             }`}
             style={{ animationDelay: "0.4s" }}
           >
-            <div
-              className="aspect-[16/9] bg-cover bg-center bg-no-repeat transform transition-all duration-700 group-hover:scale-105"
-              style={{ backgroundImage: "url(/luxury2.png)" }}
-            ></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="flex items-center gap-4 mb-4">
+              {/* HANDS SVG */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 64 64"
+                className="w-14 h-14 text-[#F7F4F0]"
+                fill="currentColor"
+              >
+                <path d="M32 34c-2.5-3.5-6-7-10-7-3 0-5 2-5 5 0 6 8 12 15 18 7-6 15-12 15-18 0-3-2-5-5-5-4 0-7.5 3.5-10 7z" />
+              </svg>
+
+              <h3
+                className="text-3xl md:text-5xl font-bold"
+                style={{
+                  color: "#F7F4F0",
+                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                }}
+              >
+                We are ready to lend a hand
+              </h3>
+            </div>
           </div>
         </div>
       </section>
