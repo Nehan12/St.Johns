@@ -51,7 +51,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300"
-                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
               >
                 {item.label}
               </Link>
@@ -81,10 +81,10 @@ export default function Navigation() {
             {/* Services Dropdown */}
             <div className="relative">
               <div
-                className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300 flex items-center cursor-pointer"
+                className="relative font-light text-sm text-gray-700 hover:text-[#D97757] transition-all duration-300 flex items-center cursor-pointer"
                 onMouseEnter={() => setIsServicesDropdownOpen(true)}
                 onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
               >
                 <Link href="/services" className="hover:text-[#1E93AB] transition-all duration-300">
                   SERVICES
@@ -93,7 +93,7 @@ export default function Navigation() {
                   animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className="w-4 h-4 ml-2 text-gray-700"
-                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                  style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -110,7 +110,7 @@ export default function Navigation() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3 }}
                     className="absolute top-full left-0 mt-2 w-80 rounded-lg shadow-lg border border-gray-200 bg-white/90 backdrop-blur-lg z-50"
-                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                    style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
                     onMouseEnter={() => setIsServicesDropdownOpen(true)}
                     onMouseLeave={() => setIsServicesDropdownOpen(false)}
                   >
@@ -120,13 +120,13 @@ export default function Navigation() {
                           <div key={service.href} className="relative">
                             <div
                               className="w-full flex justify-between items-center px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 group"
-                              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                              style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
                               onMouseEnter={() => setIsResidentialDropdownOpen(true)}
                               onMouseLeave={() => setIsResidentialDropdownOpen(false)}
                             >
                               <Link 
                                 href={service.href} 
-                                className="flex-1 group-hover:text-[#1E93AB] transition-all duration-300"
+                                className="flex-1 group-hover:text-[#D97757] transition-all duration-300"
                               >
                                 {service.label}
                               </Link>
@@ -159,7 +159,7 @@ export default function Navigation() {
                                       key={item.href}
                                       href={item.href}
                                       className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#1E93AB] rounded-lg"
-                                      style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#1B3C53' }}
+                                      style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 400, color: '#D97757' }}
                                     >
                                       {item.label}
                                     </Link>
@@ -172,7 +172,7 @@ export default function Navigation() {
                           <Link
                             key={service.href}
                             href={service.href}
-                            className="block px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 hover:text-[#1E93AB]"
+                            className="block px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 hover:text-[#D97757]"
                           >
                             {service.label}
                           </Link>
@@ -244,7 +244,7 @@ export default function Navigation() {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100 transition-all"
-                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                  style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
                 >
                   {item.label}
                 </Link>
@@ -252,12 +252,12 @@ export default function Navigation() {
 
               {/* Mobile Services Accordion */}
               <div className="px-2">
-                <div className="flex justify-between items-center w-full px-2 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100">
+                  <div className="flex justify-between items-center w-full px-2 py-3 rounded-lg text-gray-700 hover:text-[#D97757] hover:bg-gray-100">
                   <Link 
                     href="/services" 
                     onClick={() => setIsMenuOpen(false)}
                     className="flex-1"
-                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                    style={{ fontFamily: "'Open Sans', sans-serif", fontWeight: 600 }}
                   >
                     SERVICES
                   </Link>
@@ -332,7 +332,7 @@ export default function Navigation() {
                                         key={sub.href}
                                         href={sub.href}
                                         onClick={() => setIsMenuOpen(false)}
-                                        className="block py-2 text-gray-700 hover:text-[#1E93AB]"
+                                        className="block py-2 text-gray-700 hover:text-[#D97757]"
                                       >
                                         {sub.label}
                                       </Link>
@@ -362,7 +362,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="block w-full text-center px-6 py-3 rounded-lg bg-[#1E93AB] hover:bg-[#147C90] text-white font-medium shadow-md transition-all duration-300"
+                  className="block w-full text-center px-6 py-3 rounded-lg bg-[#D97757] hover:bg-[#C65D3D] text-white font-medium shadow-md transition-all duration-300"
                 >
                   Contact Us
                 </Link>
