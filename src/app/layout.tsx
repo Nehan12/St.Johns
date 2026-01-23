@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: "Heritage Care - Nursing & Wellness",
   description: "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  verification: {
+    google: 'rxjpf-0hGqC3Y-irMSiwAykhERydUm4GK40Hyk2iqiU'
+  },
   icons: {
     icon: '/logo4.png',  // Use your existing logo
     shortcut: '/logo4.png',
