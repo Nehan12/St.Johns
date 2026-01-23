@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function ResidentialCare() {
   return (
@@ -9,239 +9,405 @@ export default function ResidentialCare() {
       <Navigation />
 
       {/* Hero Section */}
-      <section 
-        className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
-        style={{
-          backgroundImage: 'url(/services.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          imageRendering: 'crisp-edges'
-        } as React.CSSProperties}
+      <section
+        className="relative py-10 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        style={
+          {
+            backgroundImage: "url(/services.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            imageRendering: "crisp-edges",
+          } as React.CSSProperties
+        }
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}>
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
+              style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+            >
               Residential Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-              Long-term residential care in a comfortable, home-like environment with 24/7 support.
+            <p
+              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
+              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+            >
+              Long-term residential care in a comfortable, home-like environment
+              with 24/7 support.
             </p>
           </div>
         </div>
       </section>
 
       {/* What is Residential Care */}
-      <section className="py-20 bg-gradient-to-br from-white via-[#F8F9FA] to-[#E8F4FD]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
+            <h2
+              className="text-4xl font-semibold mb-6"
+              style={{
+                fontFamily: "Allrounder Monument Regular, sans-serif",
+                color: "#B85C2E",
+              }}
+            >
               What is Residential Care?
             </h2>
-            <p className="text-lg md:text-xl max-w-4xl mx-auto" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              Residential care offers a warm, supportive environment where you can enjoy professional assistance with daily living while preserving your independence and living a fulfilled life. Unlike domiciliary care, which takes place in your own home, residential care provides continuous support within a dedicated setting, ensuring expert care, enriching experiences and a lifestyle tailored to your wellbeing.
+            <p
+              className="text-xl leading-relaxed max-w-4xl"
+              style={{
+                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#5A3A2E",
+              }}
+            >
+              Residential care offers a warm, supportive environment where you
+              can enjoy professional assistance with daily living while
+              preserving your independence. It provides continuous support
+              within a dedicated setting, ensuring expert care, enriching
+              experiences and a lifestyle tailored to your wellbeing.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Who is Residential Care for */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Who is Residential Care for?
-              </h2>
-              <p className="text-lg text-gray-600 mb-6" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                If living independently has become challenging due to physical health, mobility limitations or cognitive conditions, residential care offers the perfect balance of support and independence. More than just assistance, it offers a lively and welcoming environment, expert-led professional care services and a lifestyle designed to enhance your wellbeing.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-6 h-6 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Physical health challenges requiring ongoing support</span>
+      {/* Who it’s for – Split Editorial */}
+      <section className="py-24 bg-[#E7A98B]/10">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
+          {/* Left narrative */}
+          <div className="lg:col-span-2">
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-6"
+              style={{
+                fontFamily: "Allrounder Monument Regular, sans-serif",
+                color: "#B85C2E",
+              }}
+            >
+              Who is Residential Care for?
+            </h2>
+            <p
+              className="text-lg leading-relaxed mb-10 max-w-3xl"
+              style={{
+                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#5A3A2E",
+              }}
+            >
+              When living independently becomes challenging due to physical
+              health, mobility or cognitive conditions, residential care offers
+              the reassurance of support without sacrificing dignity or
+              independence.
+            </p>
+
+            <div className="space-y-5">
+              {[
+                "Physical health challenges requiring ongoing support",
+                "Mobility limitations needing assistance",
+                "Cognitive conditions requiring specialized care",
+              ].map((item, i) => (
+                <div key={i} className="flex items-center">
+                  <span
+                    className="w-3 h-3 rounded-full mr-4"
+                    style={{ backgroundColor: "#B85C2E" }}
+                  />
+                  <span
+                    style={{
+                      fontFamily: "Libre Baskerville Regular, serif",
+                      color: "#5A3A2E",
+                    }}
+                  >
+                    {item}
+                  </span>
                 </div>
-                <div className="flex items-start">
-                  <div className="w-6 h-6 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Mobility limitations needing assistance</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-6 h-6 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] rounded-full flex items-center justify-center mr-4 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Cognitive conditions requiring specialized care</span>
-                </div>
-              </div>
+              ))}
             </div>
-            <div className="bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 rounded-lg p-8 border border-[#D2C1B6]/30">
-              <h3 className="text-2xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Our Approach to Professional Care
-              </h3>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Heritage Care sets the benchmark for residential care by blending expert-led healthcare with uncompromising comfort and wellbeing. Our holistic approach ensures you receive outstanding physical, emotional and social support.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Personalized care plans</span>
+          </div>
+
+          {/* Right floating card */}
+          <div className="bg-white rounded-3xl p-10 border border-[#E7A98B]/40 shadow-sm">
+            <h3
+              className="text-2xl font-semibold mb-6"
+              style={{
+                fontFamily: "Allrounder Monument Regular, sans-serif",
+                color: "#B85C2E",
+              }}
+            >
+              Our Care Philosophy
+            </h3>
+
+            <div className="space-y-6">
+              {[
+                "Personalized care plans",
+                "24/7 professional support",
+                "Enriching social experiences",
+              ].map((point, i) => (
+                <div key={i} className="flex items-start">
+                  <span
+                    className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white"
+                    style={{ backgroundColor: "#E7A98B" }}
+                  >
+                    ✓
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "Libre Baskerville Regular, serif",
+                      color: "#5A3A2E",
+                    }}
+                  >
+                    {point}
+                  </span>
                 </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>24/7 professional support</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] rounded-full flex items-center justify-center mr-4">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Enriching social experiences</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Professional Care Services */}
-      <section className="py-20 bg-gradient-to-br from-[#1B3C53]/5 to-[#D2C1B6]/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
+      {/* Services – Horizontal Card Flow */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-16 max-w-3xl">
+            <h2
+              className="text-4xl font-semibold mb-6"
+              style={{
+                fontFamily: "Allrounder Monument Regular, sans-serif",
+                color: "#B85C2E",
+              }}
+            >
               Our Professional Care Services
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              With a dedication to excellence, Heritage Care offers care services that are highly personalized. Our approach respects your individuality, supporting independence while providing the highest standard of professional care.
+            <p
+              className="text-lg"
+              style={{
+                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#5A3A2E",
+              }}
+            >
+              Expert-led services designed to support independence, comfort and
+              peace of mind.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg border border-[#D2C1B6]/20 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#D2C1B6] to-[#456882] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-center" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Personal Care
-              </h3>
-              <p className="text-gray-600 text-center" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Assistance with daily living activities, personal hygiene, and maintaining dignity and independence.
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Personal Care",
+                desc: "Daily living assistance delivered with dignity and respect.",
+                icon: (
+                  <svg
+                    className="w-10 h-10"
+                    fill="none"
+                    stroke="#B85C2E"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-6 2.01-6 4.5V20h12v-2.5c0-2.49-2.69-4.5-6-4.5z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Medication Management",
+                desc: "Professional monitoring and safe administration of medications.",
+                icon: (
+                  <svg
+                    className="w-10 h-10"
+                    fill="none"
+                    stroke="#B85C2E"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8 7h8M8 11h8M9 21h6a2 2 0 002-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Social Engagement",
+                desc: "Activities that encourage connection, joy and fulfilment.",
+                icon: (
+                  <svg
+                    className="w-10 h-10"
+                    fill="none"
+                    stroke="#B85C2E"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 20h5v-2a4 4 0 00-4-4h-1m-10 6H2v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8zm6 0a3 3 0 100-6 3 3 0 000 6z"
+                    />
+                  </svg>
+                ),
+              },
+            ].map((s, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-8 border border-[#E7A98B]/40 hover:shadow-xl transition-all duration-300"
+              >
+                {/* Icon */}
+                <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-full bg-[#E7A98B]/20 group-hover:bg-[#E7A98B]/30 transition">
+                  {s.icon}
+                </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg border border-[#D2C1B6]/20 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#456882] to-[#1B3C53] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-center" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Medication Management
-              </h3>
-              <p className="text-gray-600 text-center" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Professional oversight of medication schedules, administration, and health monitoring.
-              </p>
-            </div>
+                {/* Title */}
+                <h3
+                  className="text-xl font-semibold mb-4"
+                  style={{
+                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {s.title}
+                </h3>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg border border-[#D2C1B6]/20 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#1B3C53] to-[#D2C1B6] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                {/* Description */}
+                <p
+                  style={{
+                    fontFamily: "Libre Baskerville Regular, serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {s.desc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-center" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Social Engagement
-              </h3>
-              <p className="text-gray-600 text-center" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                Enriching activities, social events, and opportunities to build meaningful relationships.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Types of Residential Care */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Types – Vertical Comparison */}
+      <section className="py-10 bg-gradient-to-br from-white via-[#E7A98B]/10 to-[#FDF5F0]">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Section Title */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
+            <h2
+              className="text-4xl font-semibold mb-6"
+              style={{
+                fontFamily: "Allrounder Monument Regular, sans-serif",
+                color: "#B85C2E",
+              }}
+            >
               Types of Residential Care
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto" style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#456882' }}>
-              Heritage Care offers tailored types of residential care to suit your personal needs and preferences.
+            <p
+              className="mt-4 text-lg md:text-xl max-w-2xl mx-auto"
+              style={{
+                fontFamily: "Libre Baskerville Regular, serif",
+                color: "#5A3A2E",
+              }}
+            >
+              Heritage Care offers tailored types of residential care to suit
+              your personal needs and preferences.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-[#F8F9FA] via-[#E8F4FD] to-[#D2C1B6]/20 rounded-lg p-8 border border-[#D2C1B6]/30">
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Long-term Residential Care
-              </h3>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                A permanent, supportive home with 24-hour nursing care, designed for those who need ongoing assistance and a comfortable living environment.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#456882] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Permanent accommodation</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#456882] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>24/7 nursing support</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#456882] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Personalized care plans</span>
-                </li>
-              </ul>
-            </div>
+          {/* Grid of Types */}
+          <div className="grid md:grid-cols-2 gap-16">
+            {[
+              {
+                title: "Long-term Residential Care",
+                points: [
+                  "Permanent accommodation",
+                  "24/7 nursing support",
+                  "Personalized care plans",
+                ],
+                icon: (
+                  <svg
+                    className="w-10 h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6m-7 6h.01M12 20v-4"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Short-term Respite Care",
+                points: [
+                  "Recovery support",
+                  "Carer respite",
+                  "Flexible duration",
+                ],
+                icon: (
+                  <svg
+                    className="w-10 h-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 8v4m0 4h.01M4.5 19a9 9 0 1115 0H4.5z"
+                    />
+                  </svg>
+                ),
+              },
+            ].map((type, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-3xl p-8 border border-[#E7A98B]/40 shadow-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+              >
+                {/* Decorative top-left circle */}
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] rounded-full opacity-30 animate-pulse"></div>
+                {/* Decorative bottom-right circle */}
+                <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-tr from-[#5A3A2E] to-[#E7A98B] rounded-full opacity-20 animate-pulse"></div>
 
-            <div className="bg-gradient-to-br from-[#E8F4FD] via-[#F8F9FA] to-[#D2C1B6]/20 rounded-lg p-8 border border-[#456882]/30">
-              <h3 className="text-2xl font-bold mb-4" style={{ fontFamily: 'Allrounder Monument Regular, sans-serif', color: '#1B3C53' }}>
-                Short-term Respite Care
-              </h3>
-              <p className="text-gray-600 mb-6" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>
-                For recovery after illness or surgery, or when primary carers need a break. Short-term stays with full care support.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1B3C53] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Recovery support</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1B3C53] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Carer respite</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-[#1B3C53] rounded-full mt-2 mr-3"></div>
-                  <span className="text-gray-700" style={{ fontFamily: 'Libre Baskerville Regular, serif' }}>Flexible duration</span>
-                </li>
-              </ul>
-            </div>
+                {/* Icon */}
+                <div className="flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] rounded-full mb-6 shadow-md">
+                  {type.icon}
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="text-2xl font-bold mb-6"
+                  style={{
+                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {type.title}
+                </h3>
+
+                {/* Points */}
+                <ul className="space-y-4">
+                  {type.points.map((p, j) => (
+                    <li
+                      key={j}
+                      className="flex items-center group hover:translate-x-2 transition-transform duration-300"
+                    >
+                      <div className="w-3 h-3 rounded-full bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] mr-4 flex-shrink-0 shadow-sm"></div>
+                      <span
+                        style={{
+                          fontFamily: "Libre Baskerville Regular, serif",
+                          color: "#5A3A2E",
+                        }}
+                      >
+                        {p}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
