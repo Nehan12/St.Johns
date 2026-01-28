@@ -960,6 +960,8 @@ export default function Services() {
               <div className="relative">
                 <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
                   <Image
+                    width={64}
+                    height={64}
                     src="/nunrse1.jpg"
                     alt="Professional healthcare team providing compassionate care"
                     className="w-full h-full object-cover"

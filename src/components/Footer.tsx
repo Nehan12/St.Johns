@@ -10,6 +10,8 @@ export default function Footer() {
           {/* Logo & Description */}
           <div>
             <Image
+              height={24}
+              width={48}
               src="/mainLogo.png"
               alt="Heritage Care Logo"
               className="h-24 w-auto mb-3"

@@ -245,6 +245,8 @@ export default function Home() {
                       <Image
                         src={card.icon}
                         alt={card.title}
+                        width={12}
+                        height={12}
                         className="w-12 h-12 group-hover:filter group-hover:brightness-125 transition-all"
                       />
                     </div>
@@ -638,6 +640,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
+                  fill
                   src="/nunrse1.jpg"
                   alt="Compassionate nursing care at Heritage Care"
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"

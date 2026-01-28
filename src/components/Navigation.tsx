@@ -31,7 +31,13 @@ export default function Navigation() {
           <div className="flex items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <Image src="/mainLogo.png" alt="Heritage Care" className="h-16" />
+              <Image
+                src="/mainLogo.png"
+                alt="Heritage Care"
+                className="h-16"
+                width={64}
+                height={64}
+              />
             </Link>
 
             {/* DESKTOP NAV */}

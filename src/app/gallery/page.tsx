@@ -108,6 +108,8 @@ export default function Gallery() {
                   className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
                 >
                   <Image
+                    width={100}
+                    height={64}
                     src={room.image}
                     alt={room.name}
                     className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
@@ -150,6 +152,8 @@ export default function Gallery() {
                     className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
                   >
                     <Image
+                      width={100}
+                      height={64}
                       src={room.image}
                       alt={room.name}
                       className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
@@ -197,6 +201,8 @@ export default function Gallery() {
 
                     {/* Image */}
                     <Image
+                      width={100}
+                      height={64}
                       src={selectedRoom.image}
                       alt={selectedRoom.name}
                       className="w-full h-64 md:h-96 object-cover"
