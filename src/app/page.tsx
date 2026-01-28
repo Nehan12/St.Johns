@@ -1,10 +1,19 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+
+const stats = useMemo(
+  () => [
+    { value: 25, suffix: "+", label: "Rooms" },
+    { value: 25, suffix: "+", label: "Happy Seniors" },
+    { value: 10, suffix: "+", label: "Expert Nurses" },
+  ],
+  [],
+);
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
@@ -59,14 +68,7 @@ export default function Home() {
   }, []);
 
   // Statistics Counter Section
-  const stats = [
-    { value: 25, suffix: "+", label: "Rooms" },
-    { value: 25, suffix: "+", label: "Happy Seniors" },
-    { value: 10, suffix: "+", label: "Expert Nurses" },
-  ];
-
   const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
-
   useEffect(() => {
     if (!isVisible.whyChoose) return;
 
@@ -90,7 +92,7 @@ export default function Home() {
         });
       }, stepTime);
     });
-  }, [isVisible.whyChoose, stats]);
+  }, [isVisible.whyChoose]);
 
   return (
     <div
