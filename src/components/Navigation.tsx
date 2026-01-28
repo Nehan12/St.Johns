@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +31,7 @@ export default function Navigation() {
           <div className="flex items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0">
-              <img src="/mainLogo.png" alt="Heritage Care" className="h-16" />
+              <Image src="/mainLogo.png" alt="Heritage Care" className="h-16" />
             </Link>
 
             {/* DESKTOP NAV */}

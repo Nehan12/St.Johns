@@ -139,11 +139,9 @@ export default function About() {
                   title: "Ongoing Support",
                   text: "Continuous monitoring and close communication with families ensure peace of mind.",
                 },
-              ].map((item) => (
-                <div className="relative mb-14 flex gap-6">
-                  {/* Dot */}
+              ].map((item, index) => (
+                <div key={index} className="relative mb-14 flex gap-6">
                   <div className="w-4 h-4 mt-2 rounded-full bg-[#E67E5A]" />
-
                   <div>
                     <h3
                       className="text-xl font-semibold mb-2"

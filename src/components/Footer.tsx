@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {/* Logo & Description */}
           <div>
-            <img
+            <Image
               src="/mainLogo.png"
               alt="Heritage Care Logo"
               className="h-24 w-auto mb-3"

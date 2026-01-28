@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
 
   // Refs for scroll animations
@@ -14,6 +14,8 @@ export default function Home() {
   const coreValuesRef = useRef<HTMLElement>(null);
   const whyChooseRef = useRef<HTMLElement>(null);
   const luxuryRef = useRef<HTMLElement>(null);
+  const statsRef = useRef<HTMLElement>(null);
+  const servicesRef = useRef<HTMLElement>(null);
 
   // Scroll animation observer
   useEffect(() => {
@@ -41,6 +43,8 @@ export default function Home() {
       { ref: textContentRef, id: "textContent" },
       { ref: coreValuesRef, id: "coreValues" },
       { ref: whyChooseRef, id: "whyChoose" },
+      { ref: statsRef, id: "stats" },
+      { ref: servicesRef, id: "services" },
       { ref: luxuryRef, id: "luxury" },
     ];
 
@@ -53,6 +57,40 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Statistics Counter Section
+  const stats = [
+    { value: 25, suffix: "+", label: "Rooms" },
+    { value: 25, suffix: "+", label: "Happy Seniors" },
+    { value: 10, suffix: "+", label: "Expert Nurses" },
+  ];
+
+  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
+
+  useEffect(() => {
+    if (!isVisible.whyChoose) return;
+
+    const duration = 2000;
+
+    stats.forEach((stat, index) => {
+      let start = 0;
+      const stepTime = Math.max(Math.floor(duration / stat.value), 20);
+
+      const counter = setInterval(() => {
+        start += Math.ceil(stat.value / (duration / stepTime));
+        if (start >= stat.value) {
+          start = stat.value;
+          clearInterval(counter);
+        }
+
+        setCounts((prev) => {
+          const newCounts = [...prev];
+          newCounts[index] = start;
+          return newCounts;
+        });
+      }, stepTime);
+    });
+  }, [isVisible.whyChoose, stats]);
 
   return (
     <div
@@ -146,7 +184,7 @@ export default function Home() {
 
       <section
         className="relative bg-fixed bg-cover bg-center mt-12"
-        ref={whyChooseRef}
+        ref={servicesRef}
       >
         <div className="relative z-10 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-start gap-8">
@@ -204,7 +242,7 @@ export default function Home() {
                       className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors"
                       style={{ backgroundColor: "#D46A1F" }}
                     >
-                      <img
+                      <Image
                         src={card.icon}
                         alt={card.title}
                         className="w-12 h-12 group-hover:filter group-hover:brightness-125 transition-all"
@@ -511,7 +549,7 @@ export default function Home() {
 
       {/* Statistics Counter Section */}
       <section
-        ref={whyChooseRef}
+        ref={statsRef}
         className="relative py-64 overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage: "url('/landing1.jpg')",
@@ -538,41 +576,12 @@ export default function Home() {
         {/* CONTENT */}
         <div className="relative z-20 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-end gap-32 mt-24">
-            {[
-              { value: 25, suffix: "+", label: "Rooms" },
-              { value: 25, suffix: "+", label: "Happy Seniors" },
-              { value: 10, suffix: "+", label: "Expert Nurses" },
-            ].map((stat, index) => {
+            {stats.map((stat, index) => {
               const offsets = [
                 "sm:-translate-y-20",
                 "sm:translate-y-0",
                 "sm:-translate-y-20",
               ];
-
-              const [count, setCount] = useState(0);
-
-              useEffect(() => {
-                if (!isVisible.whyChoose) return;
-
-                let start = 0;
-                const duration = 2000;
-                const stepTime = Math.max(
-                  Math.floor(duration / stat.value),
-                  20,
-                );
-
-                const counter = setInterval(() => {
-                  start += Math.ceil(stat.value / (duration / stepTime));
-                  if (start >= stat.value) {
-                    start = stat.value;
-                    clearInterval(counter);
-                  }
-                  setCount(start);
-                }, stepTime);
-
-                return () => clearInterval(counter);
-              }, [isVisible.whyChoose, stat.value]);
-
               return (
                 <div
                   key={index}
@@ -585,7 +594,7 @@ export default function Home() {
                       fontWeight: 700,
                     }}
                   >
-                    {count}
+                    {counts[index]}
                     {stat.suffix}
                   </span>
                   <p
@@ -621,14 +630,14 @@ export default function Home() {
       <section
         className="py-5"
         style={{ backgroundColor: "#ffffff" }}
-        ref={whyChooseRef}
+        ref={luxuryRef}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Nurse Image */}
             <div className="order-2 lg:order-1">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
+                <Image
                   src="/nunrse1.jpg"
                   alt="Compassionate nursing care at Heritage Care"
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"

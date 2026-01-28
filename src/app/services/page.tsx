@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -958,7 +959,7 @@ export default function Services() {
               </div>
               <div className="relative">
                 <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <Image
                     src="/nunrse1.jpg"
                     alt="Professional healthcare team providing compassionate care"
                     className="w-full h-full object-cover"

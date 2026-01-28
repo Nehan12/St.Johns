@@ -3,10 +3,17 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 
 export default function Gallery() {
+  type Room = {
+    name: string;
+    image: string;
+    details: string;
+  };
+
   const pdfUrl = "/room-plan.pdf";
-  const [selectedRoom, setSelectedRoom] = useState<any | null>(null);
+  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
 
   const typeIRooms = [
     {
@@ -100,7 +107,7 @@ export default function Gallery() {
                   key={i}
                   className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
                 >
-                  <img
+                  <Image
                     src={room.image}
                     alt={room.name}
                     className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
@@ -142,7 +149,7 @@ export default function Gallery() {
                     key={i}
                     className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
                   >
-                    <img
+                    <Image
                       src={room.image}
                       alt={room.name}
                       className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
@@ -189,7 +196,7 @@ export default function Gallery() {
                     </button>
 
                     {/* Image */}
-                    <img
+                    <Image
                       src={selectedRoom.image}
                       alt={selectedRoom.name}
                       className="w-full h-64 md:h-96 object-cover"
