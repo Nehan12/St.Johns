@@ -549,7 +549,7 @@ export default function SpecialistConditions() {
                 </h3>
                 <p
                   className="text-sm text-[#5A3A2E]"
-                  style={{ fontFamily: "Rosehot, sans-serif" }}
+                  style={{ fontFamily: "Poppins, sans-serif" }}
                 >
                   {item.text}
                 </p>

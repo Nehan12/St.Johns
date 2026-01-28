@@ -18,10 +18,10 @@ export default function TwentyFourHourNursing() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#1B3C53] text-lg"
-            style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Loading...
           </p>
@@ -55,7 +55,7 @@ export default function TwentyFourHourNursing() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               24-Hour Nursing Care
             </h1>
@@ -63,7 +63,7 @@ export default function TwentyFourHourNursing() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Expert-led medical oversight with compassionate, bespoke support
               meticulously curated around your needs. Experience nursing care
@@ -80,7 +80,7 @@ export default function TwentyFourHourNursing() {
             <h2
               className="text-4xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -89,7 +89,7 @@ export default function TwentyFourHourNursing() {
             <p
               className="text-xl leading-relaxed max-w-4xl"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -117,7 +117,7 @@ export default function TwentyFourHourNursing() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -125,7 +125,7 @@ export default function TwentyFourHourNursing() {
             </h2>
             <p
               className="text-lg md:text-xl text-[#5A3A2E] mb-6"
-              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Our 24-hour nursing care is designed for individuals who require
               ongoing medical supervision due to chronic illnesses,
@@ -152,7 +152,7 @@ export default function TwentyFourHourNursing() {
                       </span>
                       <span
                         style={{
-                          fontFamily: "Libre Baskerville Regular, serif",
+                          fontFamily: "Poppins, sans-serif",
                           color: "#5A3A2E",
                         }}
                       >
@@ -186,7 +186,7 @@ export default function TwentyFourHourNursing() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -194,7 +194,7 @@ export default function TwentyFourHourNursing() {
             </h2>
             <p
               className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4"
-              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               A refined approach combining world-class clinical expertise with
               exceptional hospitality
@@ -221,7 +221,7 @@ export default function TwentyFourHourNursing() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -229,7 +229,7 @@ export default function TwentyFourHourNursing() {
               </h3>
               <p
                 style={{
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#5A3A2E",
                 }}
               >
@@ -258,7 +258,7 @@ export default function TwentyFourHourNursing() {
               <h3
                 className="text-xl font-bold text-gray-900 mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -267,7 +267,7 @@ export default function TwentyFourHourNursing() {
               <p
                 className="text-gray-600"
                 style={{
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#5A3A2E",
                 }}
               >
@@ -296,7 +296,7 @@ export default function TwentyFourHourNursing() {
               <h3
                 className="text-xl font-bold text-gray-900 mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -305,7 +305,7 @@ export default function TwentyFourHourNursing() {
               <p
                 className="text-gray-600"
                 style={{
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#5A3A2E",
                 }}
               >
@@ -325,7 +325,7 @@ export default function TwentyFourHourNursing() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -333,7 +333,7 @@ export default function TwentyFourHourNursing() {
             </h2>
             <p
               className="text-lg md:text-xl text-[#5A3A2E] max-w-3xl mx-auto px-4"
-              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Heritage Care provides a fully comprehensive care experience
               tailored to you
@@ -374,7 +374,7 @@ export default function TwentyFourHourNursing() {
                 <h3
                   className="text-xl font-bold mb-4"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -382,7 +382,7 @@ export default function TwentyFourHourNursing() {
                 </h3>
                 <p
                   className="text-[#5A3A2E]"
-                  style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+                  style={{ fontFamily: "Poppins, sans-serif" }}
                 >
                   {item.desc}
                 </p>
@@ -399,7 +399,7 @@ export default function TwentyFourHourNursing() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -480,7 +480,7 @@ export default function TwentyFourHourNursing() {
                 <h3
                   className="text-lg font-bold mb-2"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -488,7 +488,7 @@ export default function TwentyFourHourNursing() {
                 </h3>
                 <p
                   className="text-sm text-[#5A3A2E]"
-                  style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+                  style={{ fontFamily: "Poppins, sans-serif" }}
                 >
                   {item.desc}
                 </p>

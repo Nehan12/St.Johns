@@ -18,10 +18,10 @@ export default function Respite() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#1B3C53] text-lg"
-            style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Loading...
           </p>
@@ -55,7 +55,7 @@ export default function Respite() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Respite Care
             </h1>
@@ -63,7 +63,7 @@ export default function Respite() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               At Heritage Care, we recognise that respite care can be a
               transformative experience, elevating your overall wellbeing,
@@ -86,7 +86,7 @@ export default function Respite() {
               <h2
                 className="text-3xl md:text-4xl font-bold mb-6"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -96,7 +96,7 @@ export default function Respite() {
               <p
                 className="text-lg mb-8"
                 style={{
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#5A3A2E",
                 }}
               >
@@ -138,7 +138,7 @@ export default function Respite() {
                     <span
                       className="text-sm md:text-base"
                       style={{
-                        fontFamily: "Libre Baskerville Regular, serif",
+                        fontFamily: "Poppins, sans-serif",
                         color: "#5A3A2E",
                       }}
                     >
@@ -174,7 +174,7 @@ export default function Respite() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -184,7 +184,7 @@ export default function Respite() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -235,7 +235,7 @@ export default function Respite() {
                 <h3
                   className="text-xl font-semibold mb-3"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -245,7 +245,7 @@ export default function Respite() {
                 <p
                   className="text-sm leading-relaxed"
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -269,7 +269,7 @@ export default function Respite() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -278,7 +278,7 @@ export default function Respite() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -346,7 +346,7 @@ export default function Respite() {
                 <h3
                   className="text-xl font-semibold mb-3"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -356,7 +356,7 @@ export default function Respite() {
                 <p
                   className="text-sm leading-relaxed"
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -380,7 +380,7 @@ export default function Respite() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -433,7 +433,7 @@ export default function Respite() {
                 <h3
                   className="text-xl font-semibold mb-4"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -443,7 +443,7 @@ export default function Respite() {
                 <p
                   className="text-sm leading-relaxed"
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >

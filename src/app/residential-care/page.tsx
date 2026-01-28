@@ -28,7 +28,7 @@ export default function ResidentialCare() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Residential Care
             </h1>
@@ -36,7 +36,7 @@ export default function ResidentialCare() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Long-term residential care in a comfortable, home-like environment
               with 24/7 support.
@@ -52,7 +52,7 @@ export default function ResidentialCare() {
             <h2
               className="text-4xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -61,7 +61,7 @@ export default function ResidentialCare() {
             <p
               className="text-xl leading-relaxed max-w-4xl"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -83,7 +83,7 @@ export default function ResidentialCare() {
             <h2
               className="text-3xl md:text-4xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -92,7 +92,7 @@ export default function ResidentialCare() {
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -115,7 +115,7 @@ export default function ResidentialCare() {
                   />
                   <span
                     style={{
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      fontFamily: "Poppins, sans-serif",
                       color: "#5A3A2E",
                     }}
                   >
@@ -131,7 +131,7 @@ export default function ResidentialCare() {
             <h3
               className="text-2xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -153,7 +153,7 @@ export default function ResidentialCare() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      fontFamily: "Poppins, sans-serif",
                       color: "#5A3A2E",
                     }}
                   >
@@ -173,7 +173,7 @@ export default function ResidentialCare() {
             <h2
               className="text-4xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -182,7 +182,7 @@ export default function ResidentialCare() {
             <p
               className="text-lg"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -264,7 +264,7 @@ export default function ResidentialCare() {
                 <h3
                   className="text-xl font-semibold mb-4"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -274,7 +274,7 @@ export default function ResidentialCare() {
                 {/* Description */}
                 <p
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -294,7 +294,7 @@ export default function ResidentialCare() {
             <h2
               className="text-4xl font-semibold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -303,7 +303,7 @@ export default function ResidentialCare() {
             <p
               className="mt-4 text-lg md:text-xl max-w-2xl mx-auto"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -380,7 +380,7 @@ export default function ResidentialCare() {
                 <h3
                   className="text-2xl font-bold mb-6"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -397,7 +397,7 @@ export default function ResidentialCare() {
                       <div className="w-3 h-3 rounded-full bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] mr-4 flex-shrink-0 shadow-sm"></div>
                       <span
                         style={{
-                          fontFamily: "Libre Baskerville Regular, serif",
+                          fontFamily: "Poppins, sans-serif",
                           color: "#5A3A2E",
                         }}
                       >

@@ -18,10 +18,10 @@ export default function PalliativeCare() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#1B3C53] text-lg"
-            style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Loading...
           </p>
@@ -55,7 +55,7 @@ export default function PalliativeCare() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Palliative Care
             </h1>
@@ -63,7 +63,7 @@ export default function PalliativeCare() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               At Bredrock Care, palliative care is our calling. We offer
               comfort, respect, and emotional support to individuals and
@@ -86,7 +86,7 @@ export default function PalliativeCare() {
               <h2
                 className="text-3xl md:text-4xl font-bold mb-6"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -96,7 +96,7 @@ export default function PalliativeCare() {
               <p
                 className="text-lg mb-8 max-w-xl"
                 style={{
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#5A3A2E",
                 }}
               >
@@ -133,7 +133,7 @@ export default function PalliativeCare() {
 
                     <span
                       style={{
-                        fontFamily: "Libre Baskerville Regular, serif",
+                        fontFamily: "Poppins, sans-serif",
                         color: "#5A3A2E",
                       }}
                     >
@@ -169,7 +169,7 @@ export default function PalliativeCare() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -178,7 +178,7 @@ export default function PalliativeCare() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -246,7 +246,7 @@ export default function PalliativeCare() {
                 <h3
                   className="text-lg font-bold mb-3"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -256,7 +256,7 @@ export default function PalliativeCare() {
                 <p
                   className="text-sm"
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >
@@ -280,7 +280,7 @@ export default function PalliativeCare() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -289,7 +289,7 @@ export default function PalliativeCare() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#5A3A2E",
               }}
             >
@@ -357,7 +357,7 @@ export default function PalliativeCare() {
                 <h3
                   className="text-lg font-bold mb-3"
                   style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#B85C2E",
                   }}
                 >
@@ -367,7 +367,7 @@ export default function PalliativeCare() {
                 <p
                   className="text-sm"
                   style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
+                    fontFamily: "Poppins, sans-serif",
                     color: "#5A3A2E",
                   }}
                 >

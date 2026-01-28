@@ -15,44 +15,6 @@ export default function Home() {
   const whyChooseRef = useRef<HTMLElement>(null);
   const luxuryRef = useRef<HTMLElement>(null);
 
-  const slides = [
-    {
-      image: "/landing1.jpg",
-      alt: "Heritage Care Facility - Main Building",
-      title: "Care Beyond Boundaries",
-      subtitle:
-        "Dedicated to delivering personalized comfort, dignity, and unwavering support for every resident",
-      description:
-        "Experience world-class palliative care in a warm, welcoming environment designed for comfort and dignity.",
-    },
-    {
-      image: "/landing2.jpg",
-      alt: "Heritage Care Facility - Garden Area",
-      title: "Excellence in Every Moment",
-      subtitle:
-        "Where compassion, professionalism, and innovation come together for holistic care",
-      description:
-        "Our beautiful outdoor spaces provide the perfect setting for relaxation, reflection, and recovery.",
-    },
-    {
-      image: "/landing3.jpg",
-      alt: "Heritage Care Facility - Interior",
-      title: "Home Away From Home",
-      subtitle:
-        "Elegant interiors designed with love, comfort, and the highest standards of care",
-      description:
-        "Every detail has been thoughtfully crafted to create a haven of peace and healing for our residents.",
-    },
-  ];
-
-  // Auto-advance slides every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
-
   // Scroll animation observer
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,10 +54,6 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <div
       className="flex flex-col min-h-screen overflow-x-hidden"
@@ -105,136 +63,70 @@ export default function Home() {
 
       {/* Hero Section - Carousel with Navigation Anchors */}
       <section className="relative h-[85vh] overflow-hidden w-full">
-        {/* Slides Container */}
-        <div className="relative w-full h-full">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-5000 ease-in-out ${
-                index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-              }`}
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: "url(/landing3.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center justify-start z-20 px-8 md:px-16">
+          <div className="text-left max-w-4xl">
+            <h2
+              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+              style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}
             >
-              {/* Moving Background Image */}
-              <div
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  animation:
-                    index === currentSlide
-                      ? "backgroundMove 20s infinite ease-in-out"
-                      : "none",
-                }}
-              />
+              Home Away From Home
+            </h2>
+            <p
+              className="text-base md:text-lg text-white/90 mb-8 leading-relaxed"
+              style={{ fontFamily: "Poppins, sans-serif", fontWeight: 200 }}
+            >
+              Elegant interiors designed with love, comfort, and the highest
+              standards of care. Every detail has been thoughtfully crafted to
+              create a haven of peace and healing for our residents.
+            </p>
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black/40"></div>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/about"
+                className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
+                style={{ backgroundColor: "#D46A1F" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#E7A98B")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#D46A1F")
+                }
+              >
+                About
+              </Link>
 
-              {/* Content */}
-              <div className="absolute inset-0 flex items-center justify-center z-20 px-8">
-                <div className="text-center max-w-4xl">
-                  <h2
-                    className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-                    style={{
-                      fontFamily: "'Open Sans', sans-serif",
-                      fontWeight: 700,
-                    }}
-                  >
-                    {slide.title}
-                  </h2>
-                  <p
-                    className="text-lg md:text-xl text-white/90 mb-8"
-                    style={{
-                      fontFamily: "'Open Sans', sans-serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    {slide.subtitle}
-                  </p>
-                  {/* Buttons - Only show on first slide */}
-                  {index === 0 && (
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link
-                        href="/about"
-                        className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                        style={{ backgroundColor: "#E7A98B" }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#D46A1F";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#E7A98B";
-                        }}
-                      >
-                        About
-                      </Link>
-                      <Link
-                        href="/services"
-                        className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                        style={{ backgroundColor: "#E7A98B" }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#D46A1F";
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#E7A98B";
-                        }}
-                      >
-                        Services
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              </div>
+              <Link
+                href="/services"
+                className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
+                style={{ backgroundColor: "#D46A1F" }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#E7A98B")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = "#D46A1F")
+                }
+              >
+                Services
+              </Link>
             </div>
-          ))}
+          </div>
         </div>
-
-        {/* Left Navigation Anchor */}
-        <button
-          onClick={() =>
-            setCurrentSlide(
-              (prev) => (prev - 1 + slides.length) % slides.length,
-            )
-          }
-          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110"
-          aria-label="Previous slide"
-        >
-          <svg
-            className="w-6 h-6 md:w-8 md:h-8 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-        </button>
-
-        {/* Right Navigation Anchor */}
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full p-3 md:p-4 transition-all duration-300 hover:scale-110"
-          aria-label="Next slide"
-        >
-          <svg
-            className="w-6 h-6 md:w-8 md:h-8 text-white"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </button>
 
         {/* Curved SVG */}
         <div className="absolute bottom-0 left-0 w-full z-30">
@@ -333,18 +225,6 @@ export default function Home() {
                     >
                       {card.description}
                     </p>
-                    <span
-                      className="text-sm font-medium mt-4 transition-colors"
-                      style={{ color: "#060606" }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#D46A1F";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#060606";
-                      }}
-                    >
-                      Read more
-                    </span>
                   </div>
                 </a>
               );
@@ -388,7 +268,7 @@ export default function Home() {
                 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105"
                 style={{
                   color: "#B85C2E",
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: 700,
                 }}
               >
@@ -398,7 +278,7 @@ export default function Home() {
                 className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
                 style={{
                   color: "#6B6B6B",
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: 400,
                 }}
               >
@@ -478,7 +358,7 @@ export default function Home() {
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
                   color: "#B85C2E",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Connection
@@ -487,7 +367,7 @@ export default function Home() {
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
                   color: "#3F2A1E",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Building meaningful relationships between residents, families,
@@ -525,7 +405,7 @@ export default function Home() {
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
                   color: "#B85C2E",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Well-being
@@ -534,7 +414,7 @@ export default function Home() {
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
                   color: "#3F2A1E",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Promoting physical, emotional, and spiritual wellness through
@@ -572,7 +452,7 @@ export default function Home() {
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
                   color: "#B85C2E",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Security
@@ -581,7 +461,7 @@ export default function Home() {
                 className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
                   color: "#3F2A1E",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Providing a safe, secure environment where residents and
@@ -610,7 +490,7 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{
                 color: "#B85C2E",
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Why Choose Heritage Care?
@@ -619,7 +499,7 @@ export default function Home() {
               className="text-xl max-w-3xl mx-auto"
               style={{
                 color: "#5A3A2E",
-                fontFamily: "Libre Baskerville Regular, serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Experience the difference of compassionate, professional care in a
@@ -659,18 +539,14 @@ export default function Home() {
         <div className="relative z-20 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-end gap-32 mt-24">
             {[
-              { value: 1, suffix: "+", label: "Years of Experience" },
-              { value: 25, suffix: "+", label: "Happy Families" },
+              { value: 25, suffix: "+", label: "Rooms" },
+              { value: 25, suffix: "+", label: "Happy Seniors" },
               { value: 10, suffix: "+", label: "Expert Nurses" },
-              { value: 6, suffix: "+", label: "Awards Winning" },
-              { value: 37, suffix: "+", label: "Happy Seniors" },
             ].map((stat, index) => {
               const offsets = [
-                "sm:-translate-y-35",
                 "sm:-translate-y-20",
                 "sm:translate-y-0",
                 "sm:-translate-y-20",
-                "sm:-translate-y-35",
               ];
 
               const [count, setCount] = useState(0);
@@ -705,7 +581,7 @@ export default function Home() {
                   <span
                     className="text-4xl md:text-5xl font-bold mb-2 text-white"
                     style={{
-                      fontFamily: "'Open Sans', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       fontWeight: 700,
                     }}
                   >
@@ -715,7 +591,7 @@ export default function Home() {
                   <p
                     className="text-white text-sm md:text-base font-medium opacity-90 text-center"
                     style={{
-                      fontFamily: "Libre Baskerville Regular, serif",
+                      fontFamily: "Poppins, sans-serif",
                     }}
                   >
                     {stat.label}
@@ -767,7 +643,7 @@ export default function Home() {
                 className="text-2xl md:text-3xl font-bold mb-6"
                 style={{
                   color: "#B85C2E",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Our Dedicated Care Team
@@ -776,7 +652,7 @@ export default function Home() {
                 className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
                 style={{
                   color: "#5A3A2E",
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   fontWeight: 400,
                 }}
               >
@@ -796,7 +672,7 @@ export default function Home() {
                   <span
                     style={{
                       color: "#5A3A2E",
-                      fontFamily: "'Open Sans', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                       fontWeight: 400,
                     }}
                   >
@@ -812,7 +688,7 @@ export default function Home() {
                     style={{
                       color: "#5A3A2E",
                       fontWeight: 400,
-                      fontFamily: "'Open Sans', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                     }}
                   >
                     Personalized Care Plans
@@ -827,7 +703,7 @@ export default function Home() {
                     style={{
                       color: "#5A3A2E",
                       fontWeight: 400,
-                      fontFamily: "'Open Sans', sans-serif",
+                      fontFamily: "Poppins, sans-serif",
                     }}
                   >
                     Family-Centered Approach
@@ -842,7 +718,7 @@ export default function Home() {
               className="text-3xl md:text-4xl font-bold mb-6 text-center"
               style={{
                 color: "#B85C2E",
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Extra services for your family are here
@@ -865,8 +741,8 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#E7A98B",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 24/7 Professional Nursing Care
@@ -874,8 +750,8 @@ export default function Home() {
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Round-the-clock professional nursing care with continuous
@@ -899,8 +775,8 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#E7A98B",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Compassionate Care
@@ -908,8 +784,8 @@ export default function Home() {
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Personalized care plans with individual assessments, personal
@@ -933,8 +809,8 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#E7A98B",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Comfortable Environment
@@ -942,8 +818,8 @@ export default function Home() {
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
                 style={{
-                  color: "#9DB4B8",
-                  fontFamily: "Libre Baskerville Regular, serif",
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 A warm, welcoming environment with home-like spaces, garden
@@ -957,12 +833,12 @@ export default function Home() {
             <Link
               href="/services"
               className="text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              style={{ backgroundColor: "#E7A98B" }}
+              style={{ backgroundColor: "#B85C2E" }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#B85C2E";
+                e.currentTarget.style.backgroundColor = "#E7A98B";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#E7A98B";
+                e.currentTarget.style.backgroundColor = "#B85C2E";
               }}
             >
               View All Services
@@ -1009,7 +885,7 @@ export default function Home() {
               className="text-3xl md:text-5xl font-bold mb-4 mt-4"
               style={{
                 color: "#F7F4F0",
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Luxury Care, Redefined
@@ -1018,7 +894,7 @@ export default function Home() {
               className="text-lg md:text-xl max-w-3xl mx-auto"
               style={{
                 color: "#EFE9E2",
-                fontFamily: "'Open Sans', sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Experience the pinnacle of luxury care where every detail is
@@ -1037,7 +913,7 @@ export default function Home() {
               className="text-xl leading-relaxed max-w-4xl mx-auto"
               style={{
                 color: "#F1ECE6",
-                fontFamily: "'Open Sans', sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               At Heritage Care, we redefine luxury care through our exclusive
@@ -1071,7 +947,7 @@ export default function Home() {
                 className="text-3xl md:text-5xl font-bold"
                 style={{
                   color: "#F7F4F0",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 We are ready to lend a hand

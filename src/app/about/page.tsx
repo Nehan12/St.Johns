@@ -20,10 +20,10 @@ export default function About() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#1B3C53] text-lg"
-            style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Loading...
           </p>
@@ -51,7 +51,7 @@ export default function About() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               About Us
             </h1>
@@ -59,7 +59,7 @@ export default function About() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Excellence in luxury care, where compassion meets innovation in
               the heart of Sri Lanka.
@@ -80,7 +80,7 @@ export default function About() {
                 className="text-3xl font-bold mb-6"
                 style={{
                   color: "#3A2A23",
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Our Mission
@@ -88,7 +88,7 @@ export default function About() {
 
               <p
                 className="text-lg md:text-xl leading-relaxed max-w-4xl"
-                style={{ color: "#5C4033", fontFamily: "Rosehot, sans-serif" }}
+                style={{ color: "#5C4033", fontFamily: "Poppins, sans-serif" }}
               >
                 To provide exceptional, compassionate care that enhances quality
                 of life while honoring dignity, comfort, and personal wellbeing
@@ -106,14 +106,14 @@ export default function About() {
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{
                 color: "#3A2A23",
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
               }}
             >
               Our Approach to Care
             </h2>
             <p
               className="text-lg"
-              style={{ color: "#5C4033", fontFamily: "Rosehot, sans-serif" }}
+              style={{ color: "#5C4033", fontFamily: "Poppins, sans-serif" }}
             >
               A carefully guided process designed to ensure comfort, trust, and
               continuous support at every stage.
@@ -149,7 +149,7 @@ export default function About() {
                       className="text-xl font-semibold mb-2"
                       style={{
                         color: "#3A2A23",
-                        fontFamily: "Allrounder Monument Regular, sans-serif",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
                       {item.title}
@@ -157,7 +157,7 @@ export default function About() {
                     <p
                       style={{
                         color: "#5C4033",
-                        fontFamily: "Rosehot, sans-serif",
+                        fontFamily: "Poppins, sans-serif",
                       }}
                     >
                       {item.text}

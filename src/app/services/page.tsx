@@ -28,16 +28,13 @@ export default function Services() {
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Our Services
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Libre Baskerville Regular, serif" }}
-            >
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               Comprehensive care services designed to meet the unique needs of
               each resident at Heritage Care.
             </p>
@@ -55,7 +52,6 @@ export default function Services() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -64,7 +60,6 @@ export default function Services() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto px-4"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
                 color: "#372e29",
               }}
             >
@@ -97,7 +92,6 @@ export default function Services() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -106,7 +100,6 @@ export default function Services() {
               <p
                 className="mb-6"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#372e29",
                 }}
               >
@@ -116,9 +109,6 @@ export default function Services() {
               <Link
                 href="/24-hour-nursing"
                 className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                }}
               >
                 Learn More
               </Link>
@@ -147,7 +137,6 @@ export default function Services() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -156,7 +145,6 @@ export default function Services() {
               <p
                 className="mb-6"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#372e29",
                 }}
               >
@@ -167,9 +155,6 @@ export default function Services() {
               <Link
                 href="/24-hour-nursing"
                 className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                }}
               >
                 Learn More
               </Link>
@@ -198,7 +183,6 @@ export default function Services() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -207,7 +191,6 @@ export default function Services() {
               <p
                 className="text-gray-600 mb-6"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#372e29",
                 }}
               >
@@ -217,9 +200,6 @@ export default function Services() {
               <Link
                 href="/24-hour-nursing"
                 className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                }}
               >
                 Learn More
               </Link>
@@ -250,7 +230,6 @@ export default function Services() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -259,7 +238,6 @@ export default function Services() {
               <p
                 className="text-gray-600 mb-6"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#372e29",
                 }}
               >
@@ -270,9 +248,6 @@ export default function Services() {
               <Link
                 href="/24-hour-nursing"
                 className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                }}
               >
                 Learn More
               </Link>
@@ -301,8 +276,8 @@ export default function Services() {
               <h3
                 className="text-xl font-bold mb-4"
                 style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
                   color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Palliative Care
@@ -310,8 +285,8 @@ export default function Services() {
               <p
                 className="mb-6"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#372e29",
+                  fontFamily: "Poppins, sans-serif",
                 }}
               >
                 Compassionate care focused on comfort, dignity, and quality of
@@ -320,9 +295,6 @@ export default function Services() {
               <Link
                 href="/24-hour-nursing"
                 className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                }}
               >
                 Learn More
               </Link>
@@ -334,7 +306,6 @@ export default function Services() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -343,7 +314,6 @@ export default function Services() {
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto px-4"
               style={{
-                fontFamily: "Libre Baskerville Regular, serif",
                 color: "#372e29",
               }}
             >
@@ -382,7 +352,7 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -392,7 +362,7 @@ export default function Services() {
               {/* Short intro */}
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Thoughtfully planned meals for healthier living
               </p>
@@ -400,7 +370,7 @@ export default function Services() {
               {/* Description */}
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Our nutrition services focus on creating balanced, enjoyable
                 meal plans tailored to individual health goals, preferences, and
@@ -430,7 +400,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                    <span style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item}
                     </span>
                   </li>
@@ -467,7 +437,7 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -477,7 +447,7 @@ export default function Services() {
               {/* Short intro */}
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Restoring strength, balance, and everyday mobility
               </p>
@@ -485,7 +455,7 @@ export default function Services() {
               {/* Main description */}
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Our physiotherapy services are designed to support recovery,
                 reduce discomfort, and improve movement through guided,
@@ -493,7 +463,10 @@ export default function Services() {
               </p>
 
               {/* Benefits */}
-              <ul className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto">
+              <ul
+                className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
                 {[
                   "Improves mobility and flexibility",
                   "Supports pain relief and recovery",
@@ -515,9 +488,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
-                      {item}
-                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -552,7 +523,7 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -562,7 +533,7 @@ export default function Services() {
               {/* Short intro */}
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Helping residents maintain independence and quality of life
               </p>
@@ -570,14 +541,17 @@ export default function Services() {
               {/* Description */}
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Support for daily living activities and cognitive rehabilitation
                 tailored to individual needs.
               </p>
 
               {/* Benefits */}
-              <ul className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto">
+              <ul
+                className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
                 {[
                   "Daily living skills",
                   "Cognitive rehabilitation",
@@ -599,9 +573,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
-                      {item}
-                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -634,7 +606,6 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -643,7 +614,7 @@ export default function Services() {
 
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 On-site support ensuring residents have safe and accurate
                 medication.
@@ -651,7 +622,7 @@ export default function Services() {
 
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Comprehensive medication management, drug interaction
                 monitoring, and prescription coordination for peace of mind.
@@ -679,7 +650,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                    <span style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item}
                     </span>
                   </li>
@@ -714,7 +685,7 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -723,14 +694,14 @@ export default function Services() {
 
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Fun activities that promote mental health and social engagement
               </p>
 
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Engaging programs for cognitive stimulation, social interaction,
                 and creative expression.
@@ -758,7 +729,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                    <span style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item}
                     </span>
                   </li>
@@ -793,7 +764,7 @@ export default function Services() {
               <h3
                 className="text-xl font-semibold mb-2 tracking-wide"
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
+                  fontFamily: "Poppins, sans-serif",
                   color: "#B85C2E",
                 }}
               >
@@ -802,14 +773,14 @@ export default function Services() {
 
               <p
                 className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Always there to ensure safety and peace of mind
               </p>
 
               <p
                 className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "'Open Sans', sans-serif" }}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Round-the-clock assistance and emergency response, keeping
                 residents and families confident and secure.
@@ -837,7 +808,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "'Open Sans', sans-serif" }}>
+                    <span style={{ fontFamily: "Poppins, sans-serif" }}>
                       {item}
                     </span>
                   </li>
@@ -851,7 +822,7 @@ export default function Services() {
             <h2
               className="text-3xl font-bold mb-8 text-center"
               style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
+                fontFamily: "Poppins, sans-serif",
                 color: "#B85C2E",
               }}
             >
@@ -883,7 +854,7 @@ export default function Services() {
                       <h3
                         className="text-xl font-bold mb-2"
                         style={{
-                          fontFamily: "Allrounder Monument Regular, sans-serif",
+                          fontFamily: "Poppins, sans-serif",
                           color: "#B85C2E",
                         }}
                       >
@@ -892,7 +863,7 @@ export default function Services() {
                       <p
                         className="text-gray-600"
                         style={{
-                          fontFamily: "Libre Baskerville Regular, serif",
+                          fontFamily: "Poppins, sans-serif",
                         }}
                       >
                         Our dedicated healthcare professionals bring years of
@@ -924,7 +895,7 @@ export default function Services() {
                       <h3
                         className="text-xl font-bold mb-2"
                         style={{
-                          fontFamily: "Allrounder Monument Regular, sans-serif",
+                          fontFamily: "Poppins, sans-serif",
                           color: "#B85C2E",
                         }}
                       >
@@ -933,7 +904,7 @@ export default function Services() {
                       <p
                         className="text-gray-600"
                         style={{
-                          fontFamily: "Libre Baskerville Regular, serif",
+                          fontFamily: "Poppins, sans-serif",
                         }}
                       >
                         We believe in treating every resident with dignity,
@@ -965,7 +936,7 @@ export default function Services() {
                       <h3
                         className="text-xl font-bold mb-2"
                         style={{
-                          fontFamily: "Allrounder Monument Regular, sans-serif",
+                          fontFamily: "Poppins, sans-serif",
                           color: "#B85C2E",
                         }}
                       >
@@ -974,7 +945,7 @@ export default function Services() {
                       <p
                         className="text-gray-600"
                         style={{
-                          fontFamily: "Libre Baskerville Regular, serif",
+                          fontFamily: "Poppins, sans-serif",
                         }}
                       >
                         Every resident receives a customized care plan tailored

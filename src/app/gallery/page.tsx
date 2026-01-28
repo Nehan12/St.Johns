@@ -1,34 +1,72 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
+import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Gallery() {
-  const images = ['/room1.jpeg', '/room2.jpeg', '/room3.jpeg'];
-  const pdfUrl = '/room-plan.pdf';
+  const pdfUrl = "/room-plan.pdf";
+  const [selectedRoom, setSelectedRoom] = useState<any | null>(null);
+
+  const typeIRooms = [
+    {
+      name: "Type I Room A",
+      image: "/room3.jpeg",
+      details: "Single bed, ensuite bathroom, city view, free Wi-Fi.",
+    },
+    {
+      name: "Type I Room B",
+      image: "/room3.jpeg",
+      details: "Single bed, private balcony, garden view, free Wi-Fi.",
+    },
+    {
+      name: "Type I Room C",
+      image: "/room3.jpeg",
+      details: "Single bed, ensuite bathroom, air conditioning, TV.",
+    },
+  ];
+
+  const typeIIRooms = [
+    {
+      name: "Type II Room A",
+      image: "/room3.jpeg",
+      details: "Double bed, shared bathroom, garden view, free Wi-Fi.",
+    },
+    {
+      name: "Type II Room B",
+      image: "/room3.jpeg",
+      details: "Double bed, private balcony, sea view, TV & Wi-Fi.",
+    },
+    {
+      name: "Type II Room C",
+      image: "/room3.jpeg",
+      details: "Double bed, ensuite bathroom, modern interiors.",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
-        style={{
-          backgroundImage: 'url(/landing3.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          imageRendering: 'crisp-edges'
-        } as React.CSSProperties}
+        style={
+          {
+            backgroundImage: "url(/landing3.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            imageRendering: "crisp-edges",
+          } as React.CSSProperties
+        }
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Gallery
             </h1>
@@ -36,36 +74,161 @@ export default function Gallery() {
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: 'Libre Baskerville Regular, serif' }}
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Explore our comfortable and modern rooms designed for your wellbeing and peace of mind.
+              Explore our comfortable and modern rooms designed for your
+              wellbeing and peace of mind.
             </p>
-            <a
-              href={pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 px-6 py-3 rounded-lg bg-[#E67E5A] text-white font-semibold shadow-md hover:bg-[#D86A45] transition"
-            >
-              View Room Plan PDF
-            </a>
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {images.map((src, i) => (
-              <div key={i} className="overflow-hidden rounded-2xl shadow-lg">
-                <img
-                  src={src}
-                  alt={`Room ${i + 1}`}
-                  className="w-full h-full object-cover transform transition duration-500 hover:scale-105"
-                />
-              </div>
-            ))}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
+          {/* Type I Rooms */}
+          <div>
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-6 text-center"
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
+            >
+              Type I Rooms
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {typeIRooms.map((room, i) => (
+                <div
+                  key={i}
+                  className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+                >
+                  <img
+                    src={room.image}
+                    alt={room.name}
+                    className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
+                  />
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
+                    <h3
+                      className="text-white text-lg md:text-xl font-bold mb-2"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
+                      {room.name}
+                    </h3>
+                    <p
+                      className="text-white/90 text-sm md:text-base"
+                      style={{ fontFamily: "Poppins, sans-serif" }}
+                    >
+                      {room.details}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Type II Rooms */}
+          <div>
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-6 text-center"
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
+            >
+              Type II Rooms
+            </h2>
+            <div>
+              {/* Grid */}
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {typeIIRooms.map((room, i) => (
+                  <div
+                    key={i}
+                    className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+                  >
+                    <img
+                      src={room.image}
+                      alt={room.name}
+                      className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
+                    />
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
+                      <h3
+                        className="text-white text-lg md:text-xl font-bold mb-2"
+                        style={{ fontFamily: "Poppins, sans-serif" }}
+                      >
+                        {room.name}
+                      </h3>
+                      <p
+                        className="text-white/90 text-sm md:text-base mb-4"
+                        style={{ fontFamily: "Poppins, sans-serif" }}
+                      >
+                        {room.details.substring(0, 50)}...
+                      </p>
+
+                      {/* View More Button */}
+                      <button
+                        onClick={() => setSelectedRoom(room)}
+                        className="bg-[#E67E5A] hover:bg-[#D86A45] text-white px-4 py-2 rounded-lg text-sm font-semibold transition"
+                      >
+                        View More Details
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Modal */}
+              {selectedRoom && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+                  <div className="relative bg-white rounded-2xl overflow-hidden max-w-3xl w-full mx-4 md:mx-0 shadow-xl">
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setSelectedRoom(null)}
+                      className="absolute top-4 right-4 text-3xl font-bold text-gray-700 hover:text-gray-900 transition"
+                      aria-label="Close modal"
+                    >
+                      ✕
+                    </button>
+
+                    {/* Image */}
+                    <img
+                      src={selectedRoom.image}
+                      alt={selectedRoom.name}
+                      className="w-full h-64 md:h-96 object-cover"
+                    />
+
+                    {/* Details */}
+                    <div className="p-6">
+                      <h3
+                        className="text-2xl font-bold mb-4"
+                        style={{
+                          fontFamily: "Poppins, sans-serif",
+                          color: "#3A2A23",
+                        }}
+                      >
+                        {selectedRoom.name}
+                      </h3>
+                      <p
+                        className="text-gray-700 text-base md:text-lg"
+                        style={{ fontFamily: "Poppins, sans-serif" }}
+                      >
+                        {selectedRoom.details}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center w-full">
+          <a
+            href={pdfUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-6 px-6 py-3 rounded-lg bg-[#E67E5A] text-white font-semibold shadow-md hover:bg-[#D86A45] transition"
+          >
+            View Room Plan PDF
+          </a>
         </div>
       </section>
 
