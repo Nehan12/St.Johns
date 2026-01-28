@@ -9,15 +9,6 @@ import Image from "next/image";
 export default function Home() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
 
-  const stats = useMemo(
-    () => [
-      { value: 25, suffix: "+", label: "Rooms" },
-      { value: 25, suffix: "+", label: "Happy Seniors" },
-      { value: 10, suffix: "+", label: "Expert Nurses" },
-    ],
-    [],
-  );
-
   // Refs for scroll animations
   const textContentRef = useRef<HTMLElement>(null);
   const coreValuesRef = useRef<HTMLElement>(null);
@@ -66,33 +57,6 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
-
-  // Statistics Counter Section
-  const [counts, setCounts] = useState<number[]>(stats.map(() => 0));
-  useEffect(() => {
-    if (!isVisible.whyChoose) return;
-
-    const duration = 2000;
-
-    stats.forEach((stat, index) => {
-      let start = 0;
-      const stepTime = Math.max(Math.floor(duration / stat.value), 20);
-
-      const counter = setInterval(() => {
-        start += Math.ceil(stat.value / (duration / stepTime));
-        if (start >= stat.value) {
-          start = stat.value;
-          clearInterval(counter);
-        }
-
-        setCounts((prev) => {
-          const newCounts = [...prev];
-          newCounts[index] = start;
-          return newCounts;
-        });
-      }, stepTime);
-    });
-  }, [isVisible.whyChoose]);
 
   return (
     <div
@@ -580,7 +544,11 @@ export default function Home() {
         {/* CONTENT */}
         <div className="relative z-20 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-end gap-32 mt-24">
-            {stats.map((stat, index) => {
+            {[
+              { value: 25, suffix: "+", label: "Rooms" },
+              { value: 25, suffix: "+", label: "Happy Seniors" },
+              { value: 10, suffix: "+", label: "Expert Nurses" },
+            ].map((stat, index) => {
               const offsets = [
                 "sm:-translate-y-20",
                 "sm:translate-y-0",
@@ -598,7 +566,7 @@ export default function Home() {
                       fontWeight: 700,
                     }}
                   >
-                    {counts[index]}
+                    {stat.value}
                     {stat.suffix}
                   </span>
                   <p
