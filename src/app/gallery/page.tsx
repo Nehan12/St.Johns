@@ -9,6 +9,7 @@ export default function Gallery() {
   type Room = {
     name: string;
     image: string;
+
     details: string;
   };
 
