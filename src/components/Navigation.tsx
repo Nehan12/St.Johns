@@ -1,376 +1,298 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isResidentialDropdownOpen, setIsResidentialDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [desktopResidentialOpen, setDesktopResidentialOpen] = useState(false);
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileResidentialOpen, setMobileResidentialOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navItems = [
-    { href: '/', label: 'HOME' },
-    { href: '/about', label: 'ABOUT US' },
-  ];
-
-  const servicesItems = [
-    
-    { href: '/residential-care', label: 'Residential Care', hasSubDropdown: true },
-    { href: '/respite', label: 'Respite' },
-    { href: '/specialist-conditions', label: 'Specialist Conditions' },
-  ];
-
-  const residentialCareItems = [
-    { href: '/24-hour-nursing', label: '24-Hour Nursing Care' },
-    { href: '/palliative-care', label: 'Palliative Care' },
-  ];
-
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 backdrop-blur-md ${
-        isScrolled ? 'bg-white/60 shadow-md' : 'bg-white/90'
-      }`}
-    >
-      <div className="relative max-w-12xl mx-auto px-8 sm:px-8 lg:px-32">
-        <div className="flex items-center h-24 justify-between">
+    <>
+      {/* NAV BAR */}
+      <nav
+        className={`fixed top-0 z-50 w-full transition ${
+          scrolled ? "bg-white shadow-md" : "bg-white"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center h-20">
+            {/* Logo */}
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src="/mainLogo.png"
+                alt="Heritage Care"
+                className="h-16"
+                width={64}
+                height={64}
+              />
+            </Link>
 
-          {/* Left Nav */}
-          <div className="hidden lg:flex items-center space-x-48">
-            {navItems.slice(0, 2).map((item) => (
+            {/* DESKTOP NAV */}
+            <div className="hidden lg:flex flex-1 justify-center gap-10 text-sm font-semibold text-gray-700">
               <Link
-                key={item.href}
-                href={item.href}
-                className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300"
-                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                href="/"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
               >
-                {item.label}
+                Home
               </Link>
-            ))}
-          </div>
 
-          {/* Logo */}
-          <motion.div
-            initial={{ scale: 1, y: -20 }}
-            animate={isScrolled ? { scale: 0.9, y: -18 } : { scale: 1, y: -20 }}
-            transition={{ type: 'spring', stiffness: 100 }}
-            className="flex items-center justify-center flex-shrink-0"
-          >
-            <Link href="/" className="flex items-center hover:opacity-80 transition-all">
-              <img
-                src="/heritageCarelogo.png"
-                alt="Heritage Care Logo"
-                loading="lazy"
-                className="h-40 w-auto transition-all duration-300"
-              />
-            </Link>
-          </motion.div>
-
-          {/* Right Nav */}
-          <div className="hidden lg:flex items-center space-x-24">
-
-            {/* Services Dropdown */}
-            <div className="relative">
-              <div
-                className="relative font-light text-sm text-gray-700 hover:text-[#1E93AB] transition-all duration-300 flex items-center cursor-pointer"
-                onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+              <Link
+                href="/about"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
               >
-                <Link href="/services" className="hover:text-[#1E93AB] transition-all duration-300">
-                  SERVICES
-                </Link>
-                <motion.svg
-                  animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-4 h-4 ml-2 text-gray-700"
-                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </motion.svg>
-              </div>
+                About Us
+              </Link>
 
-              <AnimatePresence>
-                {isServicesDropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute top-full left-0 mt-2 w-80 rounded-lg shadow-lg border border-gray-200 bg-white/90 backdrop-blur-lg z-50"
-                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
-                    onMouseEnter={() => setIsServicesDropdownOpen(true)}
-                    onMouseLeave={() => setIsServicesDropdownOpen(false)}
-                  >
-                    <div className="p-4">
-                      {servicesItems.map((service) =>
-                        service.hasSubDropdown ? (
-                          <div key={service.href} className="relative">
-                            <div
-                              className="w-full flex justify-between items-center px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 group"
-                              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
-                              onMouseEnter={() => setIsResidentialDropdownOpen(true)}
-                              onMouseLeave={() => setIsResidentialDropdownOpen(false)}
-                            >
-                              <Link 
-                                href={service.href} 
-                                className="flex-1 group-hover:text-[#1E93AB] transition-all duration-300"
-                              >
-                                {service.label}
-                              </Link>
-                              <motion.svg
-                                animate={{ rotate: isResidentialDropdownOpen ? 90 : 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="w-4 h-4 text-gray-700"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                              </motion.svg>
-                            </div>
-
-                            {/* Residential Submenu */}
-                            <AnimatePresence>
-                              {isResidentialDropdownOpen && (
-                                <motion.div
-                                  initial={{ opacity: 0, x: -10 }}
-                                  animate={{ opacity: 1, x: 0 }}
-                                  exit={{ opacity: 0, x: -10 }}
-                                  transition={{ duration: 0.25 }}
-                                  className="absolute top-0 left-full ml-2 w-64 rounded-lg shadow-lg border border-gray-200 bg-white/95 backdrop-blur-lg z-30"
-                                  onMouseEnter={() => setIsResidentialDropdownOpen(true)}
-                                  onMouseLeave={() => setIsResidentialDropdownOpen(false)}
-                                >
-                                  {residentialCareItems.map((item) => (
-                                    <Link
-                                      key={item.href}
-                                      href={item.href}
-                                      className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#1E93AB] rounded-lg"
-                                      style={{ fontFamily: 'Libre Baskerville Regular, serif', color: '#1B3C53' }}
-                                    >
-                                      {item.label}
-                                    </Link>
-                                  ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
-                          </div>
-                        ) : (
-                          <Link
-                            key={service.href}
-                            href={service.href}
-                            className="block px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-900 hover:text-[#1E93AB]"
-                          >
-                            {service.label}
-                          </Link>
-                        )
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* CTA */}
-            <Link
-              href="/contact"
-              className="px-6 py-2 rounded-lg font-light text-sm border-2 border-gray-900 hover:bg-gray-800 hover:border-gray-800 hover:text-white text-gray-900 shadow-md transition-all duration-300"
-              style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
-            >
-              Contact Us Today
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-all"
-            aria-label="Toggle menu"
-          >
-            <motion.div animate={isMenuOpen ? 'open' : 'closed'}>
-              <motion.span
-                variants={{
-                  closed: { rotate: 0, y: 0 },
-                  open: { rotate: 45, y: 6 },
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setDesktopServicesOpen(true)}
+                onMouseLeave={() => {
+                  setDesktopServicesOpen(false);
+                  setDesktopResidentialOpen(false);
                 }}
-                className="block w-6 h-0.5 bg-gray-700 mb-1"
-              />
-              <motion.span
-                variants={{
-                  closed: { opacity: 1 },
-                  open: { opacity: 0 },
-                }}
-                className="block w-6 h-0.5 bg-gray-700 mb-1"
-              />
-              <motion.span
-                variants={{
-                  closed: { rotate: 0, y: 0 },
-                  open: { rotate: -45, y: -6 },
-                }}
-                className="block w-6 h-0.5 bg-gray-700"
-              />
-            </motion.div>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50 shadow-lg overflow-hidden"
-          >
-            <div className="px-6 py-4 space-y-2">
-              {navItems.map((item) => (
+              >
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-4 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100 transition-all"
-                  style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
+                  href="/services"
+                  className="hover:text-[#E67E5A] flex items-center gap-1 transition-colors duration-200"
                 >
-                  {item.label}
+                  Services ▾
                 </Link>
-              ))}
-
-              {/* Mobile Services Accordion */}
-              <div className="px-2">
-                <div className="flex justify-between items-center w-full px-2 py-3 rounded-lg text-gray-700 hover:text-[#1E93AB] hover:bg-gray-100">
-                  <Link 
-                    href="/services" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className="flex-1"
-                    style={{ fontFamily: 'Allrounder Monument Regular, sans-serif' }}
-                  >
-                    SERVICES
-                  </Link>
-                  <button
-                    onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
-                    className="ml-2"
-                  >
-                    <motion.svg
-                      animate={{ rotate: isServicesDropdownOpen ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="w-4 h-4 text-gray-700"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </motion.svg>
-                  </button>
-                </div>
 
                 <AnimatePresence>
-                  {isServicesDropdownOpen && (
+                  {desktopServicesOpen && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="pl-6"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      className="absolute top-full left-0 mt-3 w-80 bg-white border rounded-xl shadow-lg p-5"
                     >
-                      {servicesItems.map((service) => (
-                        <div key={service.href}>
-                          {service.hasSubDropdown ? (
-                            <>
-                              <div className="flex justify-between items-center w-full py-2 text-gray-700 hover:text-[#1E93AB]">
-                                <Link 
-                                  href={service.href}
-                                  onClick={() => setIsMenuOpen(false)}
-                                  className="flex-1"
-                                >
-                                  {service.label}
-                                </Link>
-                                <button
-                                  onClick={() =>
-                                    setIsResidentialDropdownOpen(!isResidentialDropdownOpen)
-                                  }
-                                  className="ml-2"
-                                >
-                                  <motion.svg
-                                    animate={{ rotate: isResidentialDropdownOpen ? 90 : 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="w-3 h-3 text-gray-700"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                  </motion.svg>
-                                </button>
-                              </div>
+                      <div className="flex flex-col gap-4 text-sm text-gray-700">
+                        {/* Residential */}
+                        <div
+                          onMouseEnter={() => setDesktopResidentialOpen(true)}
+                          onMouseLeave={() => setDesktopResidentialOpen(false)}
+                        >
+                          <Link
+                            href="/residential-care"
+                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                          >
+                            Residential Care ▸
+                          </Link>
 
-                              <AnimatePresence>
-                                {isResidentialDropdownOpen && (
-                                  <motion.div
-                                    initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: 'auto' }}
-                                    exit={{ opacity: 0, height: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="pl-6"
-                                  >
-                                    {residentialCareItems.map((sub) => (
-                                      <Link
-                                        key={sub.href}
-                                        href={sub.href}
-                                        onClick={() => setIsMenuOpen(false)}
-                                        className="block py-2 text-gray-700 hover:text-[#1E93AB]"
-                                      >
-                                        {sub.label}
-                                      </Link>
-                                    ))}
-                                  </motion.div>
-                                )}
-                              </AnimatePresence>
-                            </>
-                          ) : (
-                            <Link
-                              href={service.href}
-                              onClick={() => setIsMenuOpen(false)}
-                              className="block py-2 text-gray-700 hover:text-[#1E93AB]"
-                            >
-                              {service.label}
-                            </Link>
-                          )}
+                          {/* Nested items */}
+                          <AnimatePresence>
+                            {desktopResidentialOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                                className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
+                              >
+                                <Link
+                                  href="/24-hour-nursing"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  24×7 Nursing Care
+                                </Link>
+                                <Link
+                                  href="/palliative-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Palliative Care
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
                         </div>
-                      ))}
+
+                        <Link
+                          href="/respite"
+                          className="hover:text-[#E67E5A] transition-colors duration-200"
+                        >
+                          Respite Care
+                        </Link>
+
+                        <Link
+                          href="/specialist-conditions"
+                          className="hover:text-[#E67E5A] transition-colors duration-200"
+                        >
+                          Specialist Conditions
+                        </Link>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              {/* CTA */}
-              <div className="pt-4">
+              <Link
+                href="/gallery"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Gallery
+              </Link>
+            </div>
+
+            {/* CTA */}
+            <div className="hidden lg:block ml-auto">
+              <Link
+                href="/contact"
+                className="bg-[#D46A1F] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#E67E5A] transition-colors duration-200"
+              >
+                Speak to Our Care Team
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="lg:hidden ml-auto text-4xl font-bold text-[#3A2A23]"
+              onClick={() => setMobileOpen(true)}
+            >
+              ☰
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* MOBILE MENU */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setMobileOpen(false)}
+            />
+
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ duration: 0.3 }}
+              className="fixed top-0 right-0 z-50 h-full w-[80%] bg-white shadow-xl"
+            >
+              <div className="p-6 flex flex-col gap-6 text-lg font-medium">
+                <button
+                  className="self-end text-2xl"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  ✕
+                </button>
+
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#000000] transition-colors duration-200"
+                >
+                  Home
+                </Link>
+
+                <Link
+                  href="/about"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  About Us
+                </Link>
+
+                <Link
+                  href="/services"
+                  onClick={() => setMobileOpen(false)}
+                  className="font-semibold hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Services
+                </Link>
+
+                {/* Residential Toggle */}
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/residential-care"
+                    onClick={() => setMobileOpen(false)}
+                    className="font-semibold text-lg hover:text-[#D46A1F] transition-colors"
+                  >
+                    Residential Care
+                  </Link>
+
+                  {/* Toggle */}
+                  <button
+                    onClick={() =>
+                      setMobileResidentialOpen(!mobileResidentialOpen)
+                    }
+                    className="text-xl text-[#E67E5A] px-2"
+                    aria-label="Toggle Residential Care submenu"
+                  >
+                    {mobileResidentialOpen ? "−" : "+"}
+                  </button>
+                </div>
+
+                {mobileResidentialOpen && (
+                  <div className="pl-8 flex flex-col gap-2 text-base">
+                    <Link
+                      href="/24-hour-nursing"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      24×7 Nursing Care
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Palliative Care
+                    </Link>
+                  </div>
+                )}
+
+                <Link
+                  href="/respite"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                >
+                  Respite Care
+                </Link>
+
+                <Link
+                  href="/specialist-conditions"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                >
+                  Specialist Conditions
+                </Link>
+
+                <Link
+                  href="/gallery"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Gallery
+                </Link>
+
                 <Link
                   href="/contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block w-full text-center px-6 py-3 rounded-lg bg-[#1E93AB] hover:bg-[#147C90] text-white font-medium shadow-md transition-all duration-300"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Contact Us
                 </Link>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 }
