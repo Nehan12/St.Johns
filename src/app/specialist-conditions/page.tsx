@@ -18,9 +18,9 @@ export default function SpecialistConditions() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#1B3C53] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#1B3C53] text-lg"
+            className="text-[#B85C2E] text-lg"
             style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
           >
             Loading...
@@ -36,7 +36,7 @@ export default function SpecialistConditions() {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        className="relative pt-32 md:pt-0 py-20 md:py-[20%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
         style={
           {
             backgroundImage: "url(/new3.jpg)",

@@ -99,8 +99,7 @@ export default function Home() {
               create a haven of peace and healing for our residents.
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-row gap-4 justify-center">
               <Link
                 href="/about"
                 className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"

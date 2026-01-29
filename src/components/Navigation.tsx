@@ -194,7 +194,7 @@ export default function Navigation() {
                 <Link
                   href="/"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[#000000] transition-colors duration-200"
                 >
                   Home
                 </Link>
@@ -216,15 +216,27 @@ export default function Navigation() {
                 </Link>
 
                 {/* Residential Toggle */}
-                <button
-                  onClick={() =>
-                    setMobileResidentialOpen(!mobileResidentialOpen)
-                  }
-                  className="flex justify-between items-center pl-4 hover:text-[#E67E5A] transition-colors duration-200"
-                >
-                  Residential Care
-                  <span>{mobileResidentialOpen ? "−" : "+"}</span>
-                </button>
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/residential-care"
+                    onClick={() => setMobileOpen(false)}
+                    className="font-semibold text-lg hover:text-[#D46A1F] transition-colors"
+                  >
+                    Residential Care
+                  </Link>
+
+                  {/* Toggle */}
+                  <button
+                    onClick={() =>
+                      setMobileResidentialOpen(!mobileResidentialOpen)
+                    }
+                    className="text-xl text-[#E67E5A] px-2"
+                    aria-label="Toggle Residential Care submenu"
+                  >
+                    {mobileResidentialOpen ? "−" : "+"}
+                  </button>
+                </div>
 
                 {mobileResidentialOpen && (
                   <div className="pl-8 flex flex-col gap-2 text-base">
@@ -248,7 +260,7 @@ export default function Navigation() {
                 <Link
                   href="/respite"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
                 >
                   Respite Care
                 </Link>
@@ -256,7 +268,7 @@ export default function Navigation() {
                 <Link
                   href="/specialist-conditions"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
                 >
                   Specialist Conditions
                 </Link>

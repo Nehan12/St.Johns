@@ -12,7 +12,7 @@ export default function Services() {
 
       {/* Hero Section */}
       <section
-        className="relative py-20 md:py-[20%] pb-10 md:pb-[5%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        className="relative pt-32 md:pt-0 py-20 md:py-[20%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
         style={
           {
             backgroundImage: "url(/services.jpg)",
