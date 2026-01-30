@@ -99,7 +99,7 @@ export default function Home() {
               create a haven of peace and healing for our residents.
             </p>
 
-            <div className="flex flex-row gap-4 justify-center">
+            <div className="flex flex-row gap-4">
               <Link
                 href="/about"
                 className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
@@ -607,14 +607,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
             {/* Nurse Image */}
             <div className="order-2 lg:order-1">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <div className="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   fill
-                  src="/nunrse1.jpg"
+                  src="/luxury.jpg"
                   alt="Compassionate nursing care at Heritage Care"
-                  className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
             </div>
 

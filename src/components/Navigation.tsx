@@ -210,7 +210,7 @@ export default function Navigation() {
                 <Link
                   href="/services"
                   onClick={() => setMobileOpen(false)}
-                  className="font-semibold hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Services
                 </Link>
@@ -221,7 +221,7 @@ export default function Navigation() {
                   <Link
                     href="/residential-care"
                     onClick={() => setMobileOpen(false)}
-                    className="font-semibold text-lg hover:text-[#D46A1F] transition-colors"
+                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
                   >
                     Residential Care
                   </Link>
