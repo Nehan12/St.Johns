@@ -231,7 +231,7 @@ export default function Navigation() {
                     onClick={() =>
                       setMobileResidentialOpen(!mobileResidentialOpen)
                     }
-                    className="text-xl text-[#E67E5A] px-2"
+                    className="text-xl px-2"
                     aria-label="Toggle Residential Care submenu"
                   >
                     {mobileResidentialOpen ? "−" : "+"}
