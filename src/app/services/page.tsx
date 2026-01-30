@@ -1,18 +1,51 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Services() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
+          <p
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Loading...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
       <section
-        className="relative pt-32 md:pt-0 py-20 md:py-[20%] bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        className="
+          relative
+          flex items-center
+          pt-32 md:pt-24
+          bg-cover bg-center bg-no-repeat
+          min-h-[60vh] md:min-h-[85vh]
+        "
         style={
           {
             backgroundImage: "url(/services.jpg)",
@@ -69,239 +102,170 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {/* 24-Hour Nursing Care */}
-            <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          {/* 24-Hour Nursing Care */}
+          <section className="max-w-7xl mx-auto px-4 mb-20">
+            <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+              {/* 24-Hour Nursing Care */}
+              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-32 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                  24-Hour Nursing Care
+                </h3>
+                <p className="mb-6 text-[#372e29]">
+                  Round-the-clock professional nursing care ensuring immediate
+                  medical support whenever needed.
+                </p>
+                <Link
+                  href="/24-hour-nursing"
+                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
+                  Learn More
+                </Link>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  color: "#B85C2E",
-                }}
-              >
-                24-Hour Nursing Care
-              </h3>
-              <p
-                className="mb-6"
-                style={{
-                  color: "#372e29",
-                }}
-              >
-                Round-the-clock professional nursing care ensuring residents
-                receive immediate attention and medical support whenever needed.
-              </p>
-              <Link
-                href="/24-hour-nursing"
-                className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn More
-              </Link>
-            </div>
 
-            {/* Palliative Care */}
-            <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Residential Care */}
+              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                  Residential Care
+                </h3>
+                <p className="mb-6 text-[#372e29]">
+                  Long-term residential care with full support for daily living
+                  and medical needs.
+                </p>
+                <Link
+                  href="/residential-care"
+                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
+                  Learn More
+                </Link>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  color: "#B85C2E",
-                }}
-              >
-                Residential Care
-              </h3>
-              <p
-                className="mb-6"
-                style={{
-                  color: "#372e29",
-                }}
-              >
-                Long-term residential care providing comprehensive support for
-                residents who need ongoing assistance with daily activities and
-                medical care.
-              </p>
-              <Link
-                href="/24-hour-nursing"
-                className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn More
-              </Link>
-            </div>
 
-            {/* Respite Care */}
-            <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Respite Care */}
+              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                  Respite Care
+                </h3>
+                <p className="mb-6 text-[#372e29]">
+                  Short-term professional care giving carers time to rest and
+                  recharge.
+                </p>
+                <Link
+                  href="/respite"
+                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                  Learn More
+                </Link>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  color: "#B85C2E",
-                }}
-              >
-                Respite Care
-              </h3>
-              <p
-                className="text-gray-600 mb-6"
-                style={{
-                  color: "#372e29",
-                }}
-              >
-                Short-term support providing professional nursing care while
-                offering carers the opportunity to rest and recharge.
-              </p>
-              <Link
-                href="/24-hour-nursing"
-                className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
 
-          {/* Specialist Conditions Care */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 ml-[20%]">
-            <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Specialist Conditions Care */}
+              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                  Specialist Conditions Care
+                </h3>
+                <p className="mb-6 text-[#372e29]">
+                  Expert care for dementia, Alzheimer’s, Parkinson’s, and
+                  complex conditions.
+                </p>
+                <Link
+                  href="/specialist-conditions"
+                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                  Learn More
+                </Link>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  color: "#B85C2E",
-                }}
-              >
-                Specialist Conditions Care
-              </h3>
-              <p
-                className="text-gray-600 mb-6"
-                style={{
-                  color: "#372e29",
-                }}
-              >
-                Specialized care for residents with dementia, Alzheimer&apos;s,
-                Parkinson&apos;s, and other complex conditions requiring expert
-                attention.
-              </p>
-              <Link
-                href="/24-hour-nursing"
-                className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn More
-              </Link>
-            </div>
 
-            {/* Palliative Care */}
-            <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 hover:shadow-lg transition-all duration-300 hover:scale-105 text-center">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
-                <svg
-                  className="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Palliative Care */}
+              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+                  <svg
+                    className="w-8 h-8 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 21C12 21 4 13.5 4 8.5a4.5 4.5 0 019-2.5 4.5 4.5 0 019 2.5C20 13.5 12 21 12 21z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                  Palliative Care
+                </h3>
+                <p className="mb-6 text-[#372e29]">
+                  Compassionate care focused on comfort, dignity, and quality of
+                  life.
+                </p>
+                <Link
+                  href="/palliative-care"
+                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
+                  Learn More
+                </Link>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  color: "#B85C2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                Palliative Care
-              </h3>
-              <p
-                className="mb-6"
-                style={{
-                  color: "#372e29",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                Compassionate care focused on comfort, dignity, and quality of
-                life for residents with serious illnesses.
-              </p>
-              <Link
-                href="/24-hour-nursing"
-                className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                Learn More
-              </Link>
             </div>
-          </div>
-
+          </section>
           {/* Additional Services */}
           <div className="text-center mb-16">
             <h2
