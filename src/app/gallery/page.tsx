@@ -7,29 +7,7 @@ import Image from "next/image";
 
 export default function Gallery() {
   const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
-        </div>
-      </div>
-    );
-  }
+  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
 
   type Room = {
     name: string;
@@ -39,7 +17,6 @@ export default function Gallery() {
   };
 
   const pdfUrl = "/room-plan.pdf";
-  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
 
   const typeIRooms = [
     {
@@ -76,6 +53,29 @@ export default function Gallery() {
       details: "Double bed, ensuite bathroom, modern interiors.",
     },
   ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
+          <p
+            className="text-[#B85C2E] text-lg"
+            style={{ fontFamily: "Poppins, sans-serif" }}
+          >
+            Loading...
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-white">
