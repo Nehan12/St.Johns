@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Playfair_Display, Source_Sans_3 } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Playfair_Display,
+  Source_Sans_3,
+} from "next/font/google";
 import "./globals.css";
+import WhatsAppFloatingButton from "@/components/floatingButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,24 +32,27 @@ const sourceSans3 = Source_Sans_3({
 
 export const metadata: Metadata = {
   title: "Heritage Care - Nursing & Wellness",
-  description: "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+  description:
+    "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   icons: {
-    icon: '/logo4.png',  // Use your existing logo
-    shortcut: '/logo4.png',
-    apple: '/logo4.png',
+    icon: "/logo4.png", // Use your existing logo
+    shortcut: "/logo4.png",
+    apple: "/logo4.png",
   },
   openGraph: {
     title: "Heritage Care - Nursing & Wellness",
-    description: "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-    images: ['/logo4.png'],
-    type: 'website',
+    description:
+      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+    images: ["/logo4.png"],
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Heritage Care - Nursing & Wellness",
-    description: "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-    images: ['/logo4.png'],
+    description:
+      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+    images: ["/logo4.png"],
   },
 };
 
@@ -58,6 +67,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${sourceSans3.variable} antialiased`}
       >
         {children}
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );
