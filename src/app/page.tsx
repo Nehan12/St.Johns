@@ -156,27 +156,27 @@ export default function Home() {
             {[
               {
                 icon: "/1.png",
-                title: "Home Care",
+                title: "Luxury Senior Residential Care",
                 description:
-                  "Our primary goal is to help individuals maintain a familiar lifestyle in the comfort of home.",
+                  "Our primary goal is to help seniors maintain a familiar lifestyle in the comfort of home.",
               },
               {
                 icon: "/2.png",
-                title: "Personal Care",
+                title: "24/7 Nursing",
                 description:
-                  "We provide exceptional, compassionate care to your loved ones in the comfort of home.",
+                  "We provide exceptional, compassionate care to your loved ones in the comfort of home 24/7.",
               },
               {
                 icon: "/3.png",
-                title: "Reminders",
+                title: "Memory Care",
                 description:
-                  "Responsible for health & safety issues, notifying next of kin & keeping them informed.",
+                  "Provides specialized dementia support, ensuring safety, structured care & family communication.",
               },
               {
-                icon: "4.png",
-                title: "Medical Services",
+                icon: "/4.png",
+                title: "Rehabilitation",
                 description:
-                  "Our therapy team works with you, your physician, and nursing staff to ensure care.",
+                  "Focused on recovery & restoring independence through therapy, personalized care & progress monitoring.",
               },
             ].map((card, index) => {
               const offsets = [
@@ -287,10 +287,14 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                At Heritage Care, we&apos;re devoted to providing exceptional
-                24-hour residential, respite, and memory care. Every detail is
-                crafted to bring comfort, fulfilment, and refined living —
-                because we simply couldn&apos;t care more.{" "}
+                Our commitment to care is unwavering and continuous. We are
+                deeply dedicated to delivering the highest standards of 24-hour
+                residential care, respite services, day programmes, and memory
+                care, all supported by exceptional hospitality. Every aspect of
+                our service is thoughtfully designed to promote comfort,
+                dignity, and a meaningful quality of life. For us, excellence is
+                not just a benchmark it is a commitment we uphold every day.
+                Caring more is at the heart of everything we do.{" "}
               </p>
             </div>
           </div>
@@ -708,7 +712,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* 24/7 Care Section */}
+            {/* Doctor Visits Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.1s" }}
@@ -716,7 +720,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing1.jpg)" }}
+                  style={{ backgroundImage: "url(/es1.jpg)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -727,7 +731,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                24/7 Professional Nursing Care
+                Doctor Visits
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -736,13 +740,14 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Round-the-clock professional nursing care with continuous
-                monitoring, emergency response, and medication management
-                ensuring residents receive immediate attention whenever needed.
+                Comprehensive coordination of medical appointments with regular
+                follow-ups, detailed health monitoring, and clear communication
+                to ensure each resident&apos;s ongoing medical needs are
+                carefully managed.
               </p>
             </div>
 
-            {/* Compassionate Care Section */}
+            {/* Physiotherapy Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.2s" }}
@@ -750,7 +755,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing2.jpg)" }}
+                  style={{ backgroundImage: "url(/es2.png)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -761,7 +766,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Compassionate Care
+                Physiotherapy
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -770,13 +775,13 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Personalized care plans with individual assessments, personal
-                preferences, and regular reviews tailored to each
-                resident&apos;s specific needs.
+                Personalized therapy programs developed through professional
+                assessments, focusing on mobility improvement, strength
+                building, pain management, and continuous progress evaluation.
               </p>
             </div>
 
-            {/* Comfort Environment Section */}
+            {/* Special Diets Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.3s" }}
@@ -784,7 +789,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing3.jpg)" }}
+                  style={{ backgroundImage: "url(/es3.png)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -795,7 +800,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Comfortable Environment
+                Special Diets
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -804,9 +809,113 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                A warm, welcoming environment with home-like spaces, garden
-                areas, and common areas designed to promote healing and a sense
-                of home.
+                Individually planned nutrition programs based on medical
+                requirements, dietary preferences, and ongoing health reviews to
+                support overall wellness and specific conditions.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Transport Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es4.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Transportation Services
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Organized and reliable transportation services arranged with
+                safety considerations, scheduling flexibility, and assistance to
+                support medical visits and personal outings.
+              </p>
+            </div>
+
+            {/* Dedicated Night Care Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es5.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Dedicated Night Carer
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Dedicated overnight support providing continuous supervision,
+                immediate response assistance, comfort care, and regular
+                monitoring to ensure safety and peace of mind.
+              </p>
+            </div>
+
+            {/* Medication Management Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es6.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Medication Management
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Structured medication plans including timely administration,
+                dosage monitoring, coordination with healthcare professionals,
+                and regular reviews to maintain optimal health outcomes.
               </p>
             </div>
           </div>

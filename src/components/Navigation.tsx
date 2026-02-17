@@ -9,9 +9,13 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [desktopResidentialOpen, setDesktopResidentialOpen] = useState(false);
+  const [desktopRespiteOpen, setDesktopRespiteOpen] = useState(false);
+  const [desktopSpecialOpen, setDesktopSpecialOpen] = useState(false);
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileResidentialOpen, setMobileResidentialOpen] = useState(false);
+  const [mobileRespiteOpen, setMobileRespiteOpen] = useState(false);
+  const [mobileSpecialOpen, setMobileSpecialOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -63,6 +67,8 @@ export default function Navigation() {
                 onMouseLeave={() => {
                   setDesktopServicesOpen(false);
                   setDesktopResidentialOpen(false);
+                  setDesktopRespiteOpen(false);
+                  setDesktopSpecialOpen(false);
                 }}
               >
                 <Link
@@ -112,26 +118,98 @@ export default function Navigation() {
                                   href="/palliative-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
-                                  Palliative Care
+                                  Couples Care
                                 </Link>
                               </motion.div>
                             )}
                           </AnimatePresence>
                         </div>
 
-                        <Link
-                          href="/respite"
-                          className="hover:text-[#E67E5A] transition-colors duration-200"
+                        <div
+                          onMouseEnter={() => setDesktopRespiteOpen(true)}
+                          onMouseLeave={() => setDesktopRespiteOpen(false)}
                         >
-                          Respite Care
-                        </Link>
+                          <Link
+                            href="/respite"
+                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                          >
+                            Respite Care ▸
+                          </Link>
 
-                        <Link
-                          href="/specialist-conditions"
-                          className="hover:text-[#E67E5A] transition-colors duration-200"
+                          {/* Nested items */}
+                          <AnimatePresence>
+                            {desktopRespiteOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                                className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
+                              >
+                                <Link
+                                  href="/24-hour-nursing"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Rehabiliation
+                                </Link>
+                                <Link
+                                  href="/24-hour-nursing"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Holiday Stays
+                                </Link>
+                                <Link
+                                  href="/palliative-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Post Surgery
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        <div
+                          onMouseEnter={() => setDesktopSpecialOpen(true)}
+                          onMouseLeave={() => setDesktopSpecialOpen(false)}
                         >
-                          Specialist Conditions
-                        </Link>
+                          <Link
+                            href="/specialist-conditions"
+                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                          >
+                            Specialist Conditions ▸
+                          </Link>
+
+                          {/* Nested items */}
+                          <AnimatePresence>
+                            {desktopSpecialOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                                className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
+                              >
+                                <Link
+                                  href="/24-hour-nursing"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Dementia Care
+                                </Link>
+                                <Link
+                                  href="/24-hour-nursing"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Parkinsons Care
+                                </Link>
+                                <Link
+                                  href="/palliative-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Alzeihmrs Care
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
                       </div>
                     </motion.div>
                   )}
@@ -252,26 +330,104 @@ export default function Navigation() {
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
-                      Palliative Care
+                      Couples Care
                     </Link>
                   </div>
                 )}
 
-                <Link
-                  href="/respite"
-                  onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
-                >
-                  Respite Care
-                </Link>
+                {/* Respite Toggle */}
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/respite"
+                    onClick={() => setMobileOpen(false)}
+                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                  >
+                    Respite Care
+                  </Link>
 
-                <Link
-                  href="/specialist-conditions"
-                  onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
-                >
-                  Specialist Conditions
-                </Link>
+                  {/* Toggle */}
+                  <button
+                    onClick={() => setMobileRespiteOpen(!mobileRespiteOpen)}
+                    className="text-xl px-2"
+                    aria-label="Toggle Respite Care submenu"
+                  >
+                    {mobileRespiteOpen ? "−" : "+"}
+                  </button>
+                </div>
+
+                {mobileRespiteOpen && (
+                  <div className="pl-8 flex flex-col gap-2 text-base">
+                    <Link
+                      href="/24-hour-nursing"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Rehabiliation
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Holiday Stays
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Post Surgery
+                    </Link>
+                  </div>
+                )}
+
+                {/* Specialist Conditions Toggle */}
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/specialist-conditions"
+                    onClick={() => setMobileOpen(false)}
+                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                  >
+                    Specialist Conditions
+                  </Link>
+
+                  {/* Toggle */}
+                  <button
+                    onClick={() => setMobileSpecialOpen(!mobileSpecialOpen)}
+                    className="text-xl px-2"
+                    aria-label="Toggle Special Conditions submenu"
+                  >
+                    {mobileSpecialOpen ? "−" : "+"}
+                  </button>
+                </div>
+
+                {mobileSpecialOpen && (
+                  <div className="pl-8 flex flex-col gap-2 text-base">
+                    <Link
+                      href="/24-hour-nursing"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Dementia Care
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Parkinsons Care
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Alzeihmrs Care
+                    </Link>
+                  </div>
+                )}
 
                 <Link
                   href="/gallery"

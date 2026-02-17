@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppFloatingButton() {
-  const phoneNumber = "94740601617";
+  const phoneNumber = "94771654202";
   const message = encodeURIComponent(
     "Hello, I’d like to know more about Heritage Care services.",
   );
