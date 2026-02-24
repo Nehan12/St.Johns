@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export default function CouplesCare() {
+export default function HolidayRespite() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function CouplesCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/couples-care.jpg)",
+            backgroundImage: "url(/holiday-respite.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -53,7 +53,7 @@ export default function CouplesCare() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Luxury Couples Care
+              Holiday Respite Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
@@ -61,37 +61,32 @@ export default function CouplesCare() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Continue living together with bespoke support, comfort and
-              meaningful experiences in a beautifully appointed environment.
+              Short-term luxury stays with expert care, tailored support and
+              enriching experiences for older adults or couples.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is Couples Care */}
+      {/* What is Holiday Respite */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
             <h2
               className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              What is Couples Care?
+              What is Holiday Respite at Loveday?
             </h2>
             <p
               className="text-xl leading-relaxed max-w-4xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Couples care ensures both partners can continue living together
-              while receiving tailored support. Loveday provides personalised
-              care plans, luxurious private suites, and enriching activities
-              that nurture connection, wellbeing and independence.
+              Loveday Holiday Respite offers short-term stays in London’s most
+              distinguished residences, combining luxury living, professional
+              care and enriching experiences. Ideal for post-surgical recovery,
+              caregiver breaks, or simply a rejuvenating getaway with expert
+              support on hand.
             </p>
           </div>
         </div>
@@ -103,30 +98,28 @@ export default function CouplesCare() {
           <div className="lg:col-span-2">
             <h2
               className="text-3xl md:text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Who is Couples Care for?
+              Is Holiday Respite Right for You?
             </h2>
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Ideal for partners with varying care needs, from mild support to
-              complex conditions including memory care. Loveday ensures each
-              couple’s routine, privacy and preferences are fully respected.
+              Perfect for older adults needing short-term care or temporary
+              support. Whether recovering from illness, requiring memory care,
+              or seeking a luxury break, Loveday provides expert support with
+              personalised plans. Couples can remain together, maintaining
+              continuity and connection.
             </p>
 
             <div className="space-y-5">
               {[
-                "Partners needing different levels of support",
-                "Memory or cognitive care requirements",
-                "Post-hospital recovery or respite stays",
+                "Post-surgical recovery",
+                "Memory or cognitive care support",
+                "Temporary caregiver respite",
+                "Short-term luxury stays",
+                "Couples staying together",
               ].map((item, i) => (
                 <div key={i} className="flex items-center">
                   <span
@@ -149,19 +142,17 @@ export default function CouplesCare() {
           <div className="bg-white rounded-3xl p-10 border border-[#E7A98B]/40 shadow-sm">
             <h3
               className="text-2xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Our Care Philosophy
+              Our Approach
             </h3>
-
             <div className="space-y-6">
               {[
-                "Tailored care plans for both partners",
-                "24/7 expert support and monitoring",
-                "Shared activities to nurture connection",
+                "Personalised short-term care plans",
+                "Luxury private suites with ensuite bathrooms",
+                "24/7 nursing and holistic wellness support",
+                "Daily enrichment and cultural activities",
+                "Optional rehabilitation packages including physiotherapy & hydrotherapy",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span
@@ -185,44 +176,50 @@ export default function CouplesCare() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services / Features */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
             <h2
               className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Our Couples Care Services
+              What’s Included in Luxury Holiday Respite
             </h2>
             <p
               className="text-lg"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Comprehensive services designed to support wellbeing, comfort, and
-              togetherness.
+              Every stay includes all the elegance of a five-star hotel,
+              underpinned by expert care and tailored support.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Personalised Care Plans",
-                desc: "Plans designed for both partners’ individual and shared needs.",
+                title: "Private Suites",
+                desc: "Elegantly furnished rooms with ensuite bathrooms, designed for comfort and privacy.",
               },
               {
-                title: "Memory & Health Support",
-                desc: "Specialist dementia and clinical care delivered with dignity.",
+                title: "24/7 Nursing Care",
+                desc: "Professional support and medication management to ensure safety and wellbeing.",
               },
               {
-                title: "Shared Activities",
-                desc: "Meaningful engagement including arts, gardening, and social events.",
+                title: "Tailored Wellness Plans",
+                desc: "Personalised care and therapy plans for recovery, rejuvenation or memory support.",
+              },
+              {
+                title: "Cultural & Lifestyle Activities",
+                desc: "Daily enrichment including music, art, excursions, and social events.",
+              },
+              {
+                title: "Gourmet Dining",
+                desc: "Seasonal, nutritious meals crafted by in-house chefs to meet dietary needs.",
+              },
+              {
+                title: "Optional Rehabilitation",
+                desc: "Access to physiotherapy, hydrotherapy, and specialist therapy packages.",
               },
             ].map((s, i) => (
               <div
@@ -246,6 +243,55 @@ export default function CouplesCare() {
                 >
                   {s.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Short Term Care Details */}
+      <section className="py-24 bg-[#FDF5F0]/70">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-semibold mb-6 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
+          >
+            Short Term & Flexible Care
+          </h2>
+          <p
+            className="text-lg mb-12 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
+          >
+            Loveday Holiday Respite can be as short as two weeks or several
+            months. Perfect for exploring residential care options, bridging
+            between hospital and home, or simply enjoying a luxury short-term
+            break with complete care support.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              "Full assessment and personalised care planning",
+              "Seamless collaboration with hospitals and GPs",
+              "Daily activities and wellness support",
+              "Post-surgery or illness recovery packages",
+              "Couples care and continuity support",
+              "Transparent, all-inclusive pricing with no hidden costs",
+            ].map((point, i) => (
+              <div key={i} className="flex items-start">
+                <span
+                  className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white"
+                  style={{ backgroundColor: "#E7A98B" }}
+                >
+                  ✓
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Poppins, sans-serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {point}
+                </span>
               </div>
             ))}
           </div>

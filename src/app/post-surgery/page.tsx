@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export default function CouplesCare() {
+export default function PostSurgeryCare() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function CouplesCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/couples-care.jpg)",
+            backgroundImage: "url(/post-surgery.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -53,7 +53,7 @@ export default function CouplesCare() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Luxury Couples Care
+              Post Surgery Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
@@ -61,72 +61,42 @@ export default function CouplesCare() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Continue living together with bespoke support, comfort and
-              meaningful experiences in a beautifully appointed environment.
+              Restorative, personalised recovery support in luxury surroundings
+              for seniors and adults recovering from surgery.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is Couples Care */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
-            <h2
-              className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
-              What is Couples Care?
-            </h2>
-            <p
-              className="text-xl leading-relaxed max-w-4xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
-            >
-              Couples care ensures both partners can continue living together
-              while receiving tailored support. Loveday provides personalised
-              care plans, luxurious private suites, and enriching activities
-              that nurture connection, wellbeing and independence.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Who it's for */}
+      {/* Who it’s for */}
       <section className="py-24 bg-[#E7A98B]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2
               className="text-3xl md:text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Who is Couples Care for?
+              Who is Post-Surgery Care For?
             </h2>
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Ideal for partners with varying care needs, from mild support to
-              complex conditions including memory care. Loveday ensures each
-              couple’s routine, privacy and preferences are fully respected.
+              Loveday post-surgery care is ideal for seniors recovering from
+              complex surgeries, those requiring support after chemotherapy or
+              cardiac procedures, individuals living alone during early
+              recovery, or people with mobility or cognitive challenges.
+              Families seeking respite support also benefit from our bespoke,
+              personalised approach.
             </p>
 
             <div className="space-y-5">
               {[
-                "Partners needing different levels of support",
-                "Memory or cognitive care requirements",
-                "Post-hospital recovery or respite stays",
+                "Hip, knee, or cardiac procedure recovery",
+                "Post-chemotherapy or radiotherapy support",
+                "Early-stage recovery for those living alone",
+                "Mobility and cognitive assistance",
+                "Family carer respite support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center">
                   <span
@@ -149,19 +119,18 @@ export default function CouplesCare() {
           <div className="bg-white rounded-3xl p-10 border border-[#E7A98B]/40 shadow-sm">
             <h3
               className="text-2xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Our Care Philosophy
+              Our Approach
             </h3>
-
             <div className="space-y-6">
               {[
-                "Tailored care plans for both partners",
-                "24/7 expert support and monitoring",
-                "Shared activities to nurture connection",
+                "Personalised recovery plans tailored to your needs",
+                "24/7 nursing and clinical support",
+                "Private suites with ensuite bathrooms",
+                "Therapies including physiotherapy and mobility assistance",
+                "Curated social, wellness and cultural programmes",
+                "Chef-prepared meals designed for healing",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span
@@ -185,44 +154,51 @@ export default function CouplesCare() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services / Features */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
             <h2
               className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Our Couples Care Services
+              What’s Included in Our Post-Surgery Care
             </h2>
             <p
               className="text-lg"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Comprehensive services designed to support wellbeing, comfort, and
-              togetherness.
+              Every stay combines world-class clinical care with luxury
+              hotel-style surroundings, helping you heal faster, stronger, and
+              in comfort.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Personalised Care Plans",
-                desc: "Plans designed for both partners’ individual and shared needs.",
+                title: "Private Luxury Suites",
+                desc: "Fully furnished suites with ensuite bathrooms and state-of-the-art care technology.",
               },
               {
-                title: "Memory & Health Support",
-                desc: "Specialist dementia and clinical care delivered with dignity.",
+                title: "24/7 Nursing Care",
+                desc: "Personalised support from a multidisciplinary team including nurses, physiotherapists and occupational therapists.",
               },
               {
-                title: "Shared Activities",
-                desc: "Meaningful engagement including arts, gardening, and social events.",
+                title: "Tailored Recovery Plans",
+                desc: "Care plans designed to meet your medical, physical and emotional recovery needs.",
+              },
+              {
+                title: "Therapies & Support",
+                desc: "Physiotherapy, mobility assistance, cognitive support, and specialist rehabilitation therapies.",
+              },
+              {
+                title: "Gourmet Healing Cuisine",
+                desc: "Chef-prepared nutritious meals designed to support recovery and wellbeing.",
+              },
+              {
+                title: "Wellness & Activities",
+                desc: "Spa, salon, gardens, cultural programmes and social events to enhance mental and emotional recovery.",
               },
             ].map((s, i) => (
               <div
@@ -246,6 +222,54 @@ export default function CouplesCare() {
                 >
                   {s.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recovery Details */}
+      <section className="py-24 bg-[#FDF5F0]/70">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-semibold mb-6 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
+          >
+            Structured Recovery Support
+          </h2>
+          <p
+            className="text-lg mb-12 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
+          >
+            Loveday’s post-surgery care ensures a seamless, supportive journey
+            from hospital to home, with everything needed to restore strength,
+            confidence and independence.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              "Pre-admission consultation and personalised assessment",
+              "Daily support from multidisciplinary medical team",
+              "Specialist therapies including physiotherapy and mobility programmes",
+              "Cognitive engagement and support where needed",
+              "Access to spa, salon, library, and gardens",
+              "Laundry, housekeeping and concierge services",
+            ].map((point, i) => (
+              <div key={i} className="flex items-start">
+                <span
+                  className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white"
+                  style={{ backgroundColor: "#E7A98B" }}
+                >
+                  ✓
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Poppins, sans-serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {point}
+                </span>
               </div>
             ))}
           </div>

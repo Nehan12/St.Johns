@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export default function CouplesCare() {
+export default function RehabilitationCare() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function CouplesCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/couples-care.jpg)",
+            backgroundImage: "url(/rehab-care.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -53,7 +53,7 @@ export default function CouplesCare() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Luxury Couples Care
+              Luxury Rehabilitation Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
@@ -61,37 +61,33 @@ export default function CouplesCare() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Continue living together with bespoke support, comfort and
-              meaningful experiences in a beautifully appointed environment.
+              Personalized rehabilitation programmes with clinical excellence,
+              world-class hospitality, and holistic support to restore your
+              strength, confidence, and independence.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is Couples Care */}
+      {/* What is Rehabilitation Care */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
             <h2
               className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              What is Couples Care?
+              What is Rehabilitation Care?
             </h2>
             <p
               className="text-xl leading-relaxed max-w-4xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Couples care ensures both partners can continue living together
-              while receiving tailored support. Loveday provides personalised
-              care plans, luxurious private suites, and enriching activities
-              that nurture connection, wellbeing and independence.
+              Rehabilitation care at Loveday provides structured, specialist
+              support for recovery after surgery, illness, or injury. Each stay
+              combines clinical excellence, personalised therapy plans and
+              luxurious surroundings to create a healing environment that
+              promotes independence, wellbeing, and confidence.
             </p>
           </div>
         </div>
@@ -103,30 +99,27 @@ export default function CouplesCare() {
           <div className="lg:col-span-2">
             <h2
               className="text-3xl md:text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Who is Couples Care for?
+              Who is Rehabilitation Care for?
             </h2>
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Ideal for partners with varying care needs, from mild support to
-              complex conditions including memory care. Loveday ensures each
-              couple’s routine, privacy and preferences are fully respected.
+              Suitable for older adults recovering from orthopaedic or
+              neurological conditions, post-operative care, or hospital
+              discharge. It’s also ideal for temporary respite stays, caregiver
+              breaks, or anyone seeking structured rehabilitation in a luxury
+              environment.
             </p>
 
             <div className="space-y-5">
               {[
-                "Partners needing different levels of support",
-                "Memory or cognitive care requirements",
-                "Post-hospital recovery or respite stays",
+                "Post-surgery recovery",
+                "Neurological or musculoskeletal rehabilitation",
+                "Temporary respite or caregiver support",
+                "Falls prevention and strength rebuilding",
               ].map((item, i) => (
                 <div key={i} className="flex items-center">
                   <span
@@ -149,19 +142,15 @@ export default function CouplesCare() {
           <div className="bg-white rounded-3xl p-10 border border-[#E7A98B]/40 shadow-sm">
             <h3
               className="text-2xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
               Our Care Philosophy
             </h3>
-
             <div className="space-y-6">
               {[
-                "Tailored care plans for both partners",
-                "24/7 expert support and monitoring",
-                "Shared activities to nurture connection",
+                "Tailored rehabilitation programmes",
+                "24/7 clinical support from specialist therapists",
+                "Holistic care including physical, cognitive & emotional support",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span
@@ -191,38 +180,44 @@ export default function CouplesCare() {
           <div className="mb-16 max-w-3xl">
             <h2
               className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Our Couples Care Services
+              Our Rehabilitation Services
             </h2>
             <p
               className="text-lg"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
+              style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Comprehensive services designed to support wellbeing, comfort, and
-              togetherness.
+              Loveday combines world-class hospitality with clinical excellence
+              for a truly restorative experience.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Personalised Care Plans",
-                desc: "Plans designed for both partners’ individual and shared needs.",
+                title: "Hydrotherapy & Hydro Treadmill",
+                desc: "Advanced water-based therapy to rebuild strength, improve balance, and support recovery from surgery or neurological conditions.",
               },
               {
-                title: "Memory & Health Support",
-                desc: "Specialist dementia and clinical care delivered with dignity.",
+                title: "Physiotherapy & Occupational Therapy",
+                desc: "Specialist rehabilitation sessions tailored to your mobility, strength and daily living goals.",
               },
               {
-                title: "Shared Activities",
-                desc: "Meaningful engagement including arts, gardening, and social events.",
+                title: "Structured Recovery Plans",
+                desc: "Clinical assessment, therapy scheduling, progress tracking, and collaborative reviews with your medical team.",
+              },
+              {
+                title: "Cognitive Rehabilitation",
+                desc: "Therapies designed to support memory, focus, and mental resilience during recovery.",
+              },
+              {
+                title: "Luxury Accommodation",
+                desc: "Private suites with en-suite bathrooms, award-winning meals, concierge and chauffeur services.",
+              },
+              {
+                title: "Wellbeing & Social Engagement",
+                desc: "Curated cultural and social activities to support emotional and holistic recovery.",
               },
             ].map((s, i) => (
               <div
@@ -246,6 +241,54 @@ export default function CouplesCare() {
                 >
                   {s.desc}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Structured Care Plans */}
+      <section className="py-24 bg-[#FDF5F0]/70">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-semibold mb-6 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
+          >
+            Structured Care Plans
+          </h2>
+          <p
+            className="text-lg mb-12 text-center"
+            style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
+          >
+            Every rehabilitation plan at Loveday is tailored to your pace,
+            needs, and personal goals, combining clinical guidance with
+            emotional and social support.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            {[
+              "Clinical assessment and hospital discharge planning",
+              "Collaboration with GP and medical team",
+              "Therapy scheduling: physio, occupational & cognitive rehab",
+              "Progress monitoring and outcome tracking",
+              "Regular family updates and collaborative reviews",
+              "Holistic support for physical, cognitive and emotional recovery",
+            ].map((point, i) => (
+              <div key={i} className="flex items-start">
+                <span
+                  className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white"
+                  style={{ backgroundColor: "#E7A98B" }}
+                >
+                  ✓
+                </span>
+                <span
+                  style={{
+                    fontFamily: "Poppins, sans-serif",
+                    color: "#5A3A2E",
+                  }}
+                >
+                  {point}
+                </span>
               </div>
             ))}
           </div>

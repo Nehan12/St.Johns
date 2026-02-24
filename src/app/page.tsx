@@ -88,15 +88,13 @@ export default function Home() {
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
               style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}
             >
-              Home Away From Home
+              Care Beyond Compare
             </h2>
             <p
-              className="text-base md:text-lg text-white/90 mb-8 leading-relaxed"
+              className="text-xl md:text-4xl text-white/90 mb-8 leading-relaxed italic"
               style={{ fontFamily: "Poppins, sans-serif", fontWeight: 200 }}
             >
-              Elegant interiors designed with love, comfort, and the highest
-              standards of care. Every detail has been thoughtfully crafted to
-              create a haven of peace and healing for our residents.
+              It must be Heritage Care.
             </p>
 
             <div className="flex flex-row gap-4">

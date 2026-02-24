@@ -115,7 +115,7 @@ export default function Navigation() {
                                   24×7 Nursing Care
                                 </Link>
                                 <Link
-                                  href="/palliative-care"
+                                  href="/couples-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Couples Care
@@ -146,19 +146,19 @@ export default function Navigation() {
                                 className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
                               >
                                 <Link
-                                  href="/24-hour-nursing"
+                                  href="/rehabiliation-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Rehabiliation
                                 </Link>
                                 <Link
-                                  href="/24-hour-nursing"
+                                  href="/holiday-stay"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Holiday Stays
                                 </Link>
                                 <Link
-                                  href="/palliative-care"
+                                  href="/post-surgery"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Post Surgery
@@ -189,19 +189,19 @@ export default function Navigation() {
                                 className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
                               >
                                 <Link
-                                  href="/24-hour-nursing"
+                                  href="/dementia-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Dementia Care
                                 </Link>
                                 <Link
-                                  href="/24-hour-nursing"
+                                  href="/parkinsons-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Parkinsons Care
                                 </Link>
                                 <Link
-                                  href="/palliative-care"
+                                  href="/alzeihmrs-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
                                   Alzeihmrs Care
@@ -326,7 +326,7 @@ export default function Navigation() {
                       24×7 Nursing Care
                     </Link>
                     <Link
-                      href="/palliative-care"
+                      href="/couples-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
@@ -359,21 +359,21 @@ export default function Navigation() {
                 {mobileRespiteOpen && (
                   <div className="pl-8 flex flex-col gap-2 text-base">
                     <Link
-                      href="/24-hour-nursing"
+                      href="/rehabiliation-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
                       Rehabiliation
                     </Link>
                     <Link
-                      href="/palliative-care"
+                      href="/holiday-stay"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
                       Holiday Stays
                     </Link>
                     <Link
-                      href="/palliative-care"
+                      href="post-surgery"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
@@ -406,21 +406,21 @@ export default function Navigation() {
                 {mobileSpecialOpen && (
                   <div className="pl-8 flex flex-col gap-2 text-base">
                     <Link
-                      href="/24-hour-nursing"
+                      href="/dementia-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
                       Dementia Care
                     </Link>
                     <Link
-                      href="/palliative-care"
+                      href="/parkinsons-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
                       Parkinsons Care
                     </Link>
                     <Link
-                      href="/palliative-care"
+                      href="/alzeihmrs-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
