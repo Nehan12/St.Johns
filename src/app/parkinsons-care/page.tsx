@@ -85,8 +85,8 @@ export default function ParkinsonsCare() {
             affecting movement, cognition, and emotional wellbeing. Symptoms
             evolve over time and can include tremors, rigidity, balance
             challenges, cognitive changes, anxiety, depression, and disrupted
-            sleep. At Loveday, our approach evolves with your needs, ensuring
-            personalised, compassionate care at every stage.
+            sleep. At Heritage Care, our approach evolves with your needs,
+            ensuring personalised, compassionate care at every stage.
           </p>
         </div>
       </section>
@@ -105,9 +105,9 @@ export default function ParkinsonsCare() {
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday’s Parkinson’s care is tailored for individuals at all
-              stages of the condition. Whether you need assistance with daily
-              routines, medication, cognitive support, or therapeutic
+              Heritage Care's Parkinson’s care is tailored for individuals at
+              all stages of the condition. Whether you need assistance with
+              daily routines, medication, cognitive support, or therapeutic
               interventions, our specialist team delivers care with meticulous
               attention to detail in an environment designed for comfort and
               enrichment.

@@ -82,8 +82,8 @@ export default function AlzheimersCare() {
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
             Alzheimer’s disease is the most common cause of dementia, affecting
-            memory, cognition, and daily living skills. Loveday provides bespoke
-            Alzheimer’s care tailored to every stage, helping you enjoy
+            memory, cognition, and daily living skills. Heritage Care provides
+            bespoke Alzheimer’s care tailored to every stage, helping you enjoy
             enriched, meaningful days while supporting both you and your family.
           </p>
         </div>
@@ -103,11 +103,12 @@ export default function AlzheimersCare() {
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday’s specialist Alzheimer’s care is designed for all stages,
-              from early diagnosis to advanced progression. Whether you require
-              daily living assistance, cognitive engagement, or long-term memory
-              care solutions, our expert team provides personalised support in
-              an environment designed for familiarity, comfort, and enrichment.
+              Heritage Care's specialist Alzheimer’s care is designed for all
+              stages, from early diagnosis to advanced progression. Whether you
+              require daily living assistance, cognitive engagement, or
+              long-term memory care solutions, our expert team provides
+              personalised support in an environment designed for familiarity,
+              comfort, and enrichment.
             </p>
 
             <div className="space-y-5">
@@ -185,10 +186,10 @@ export default function AlzheimersCare() {
             className="text-lg mb-12"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Loveday’s services blend clinical excellence with luxury living.
-            Every resident benefits from bespoke memory care, therapeutic
-            engagement, nutritional support, and an enriched lifestyle designed
-            to enhance quality of life.
+            Heritage Care's services blend clinical excellence with luxury
+            living. Every resident benefits from bespoke memory care,
+            therapeutic engagement, nutritional support, and an enriched
+            lifestyle designed to enhance quality of life.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -235,8 +236,8 @@ export default function AlzheimersCare() {
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
             Each resident receives a bespoke care plan, continuously refined to
-            adapt to evolving needs. Loveday integrates medical expertise with
-            therapeutic engagement to ensure meaningful, fulfilling days.
+            adapt to evolving needs. Heritage Care integrates medical expertise
+            with therapeutic engagement to ensure meaningful, fulfilling days.
           </p>
 
           <div className="grid md:grid-cols-3 gap-10">

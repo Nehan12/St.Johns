@@ -63,12 +63,8 @@ export default function Navigation() {
               {/* Services Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setDesktopServicesOpen(true)}
-                onMouseLeave={() => {
-                  setDesktopServicesOpen(false);
-                  setDesktopResidentialOpen(false);
-                  setDesktopRespiteOpen(false);
-                  setDesktopSpecialOpen(false);
+                onClick={() => {
+                  setDesktopServicesOpen((prev) => !prev);
                 }}
               >
                 <Link
@@ -198,13 +194,13 @@ export default function Navigation() {
                                   href="/parkinsons-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
-                                  Parkinsons Care
+                                  Parkinson's Care
                                 </Link>
                                 <Link
                                   href="/alzeihmrs-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
-                                  Alzeihmrs Care
+                                  Alzeihmr's Care
                                 </Link>
                               </motion.div>
                             )}
@@ -221,6 +217,18 @@ export default function Navigation() {
                 className="hover:text-[#E67E5A] transition-colors duration-200"
               >
                 Gallery
+              </Link>
+              <Link
+                href="/costs"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Fee & Pricing Breakdown
+              </Link>
+              <Link
+                href="/activities"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Activities
               </Link>
             </div>
 

@@ -252,7 +252,7 @@ export default function Home() {
                     : "opacity-0 translate-x-[-50px]"
                 }`}
                 style={{
-                  backgroundImage: "url(/landing2.jpg)",
+                  backgroundImage: "url(/new9.jpg)",
                   minHeight: "200px",
                   maxHeight: "400px",
                 }}
@@ -520,9 +520,6 @@ export default function Home() {
       <section
         ref={statsRef}
         className="relative py-64 overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/landing1.jpg')",
-        }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0" />
@@ -540,48 +537,6 @@ export default function Home() {
               fill="#ffffff"
             />
           </svg>
-        </div>
-
-        {/* CONTENT */}
-        <div className="relative z-20 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-end gap-32 mt-24">
-            {[
-              { value: 25, suffix: "+", label: "Rooms" },
-              { value: 25, suffix: "+", label: "Happy Seniors" },
-              { value: 10, suffix: "+", label: "Expert Nurses" },
-            ].map((stat, index) => {
-              const offsets = [
-                "sm:-translate-y-20",
-                "sm:translate-y-0",
-                "sm:-translate-y-20",
-              ];
-              return (
-                <div
-                  key={index}
-                  className={`flex flex-col items-center justify-center p-6 bg-transparent rounded-xl transition-all duration-300 hover:bg-black/60 cursor-pointer ${offsets[index]}`}
-                >
-                  <span
-                    className="text-4xl md:text-5xl font-bold mb-2 text-white"
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 700,
-                    }}
-                  >
-                    {stat.value}
-                    {stat.suffix}
-                  </span>
-                  <p
-                    className="text-white text-sm md:text-base font-medium opacity-90 text-center"
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    {stat.label}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
         </div>
 
         {/* BOTTOM DOWNWARD ARC (DECORATIVE) */}
@@ -941,7 +896,7 @@ export default function Home() {
         ref={luxuryRef}
         className="relative py-40 overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url(/luxury2.png)",
+          backgroundImage: "url(/image.png)",
         }}
       >
         {/* Dark Overlay */}
@@ -974,7 +929,7 @@ export default function Home() {
               className="text-3xl md:text-5xl font-bold mb-4 mt-4"
               style={{
                 color: "#F7F4F0",
-                fontFamily: "Poppins, sans-serif",
+                fontFamily: "Roboto, sans-serif",
               }}
             >
               Luxury Care, Redefined
@@ -1022,16 +977,6 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="flex items-center gap-4 mb-4">
-              {/* HANDS SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                className="w-14 h-14 text-[#F7F4F0]"
-                fill="currentColor"
-              >
-                <path d="M32 34c-2.5-3.5-6-7-10-7-3 0-5 2-5 5 0 6 8 12 15 18 7-6 15-12 15-18 0-3-2-5-5-5-4 0-7.5 3.5-10 7z" />
-              </svg>
-
               <h3
                 className="text-3xl md:text-5xl font-bold"
                 style={{

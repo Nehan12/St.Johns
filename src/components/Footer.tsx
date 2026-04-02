@@ -3,7 +3,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="py-6" style={{ backgroundColor: "#E7A98B" }}>
+    <footer className="py-6" style={{ backgroundColor: "#D46A1F" }}>
+      {" "}
+      {/**E67E5A */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* MAIN FOOTER CONTENT — HIDDEN ON MOBILE */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">

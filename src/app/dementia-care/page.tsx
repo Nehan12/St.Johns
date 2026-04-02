@@ -84,7 +84,7 @@ export default function DementiaCare() {
             className="text-xl leading-relaxed max-w-4xl"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Loveday’s dementia care, under the Luminare philosophy, is a
+            Heritage Care's dementia care, under the Luminare philosophy, is a
             personalised approach designed to enhance daily life, provide
             comfort, support cognitive function, and nurture emotional
             wellbeing. Each plan is carefully tailored to the individual,
@@ -108,7 +108,7 @@ export default function DementiaCare() {
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday’s expert team includes specialist dementia nurses,
+              Heritage Care's expert team includes specialist dementia nurses,
               therapists, and hospitality professionals, all trained to deliver
               a world-class, personalised care experience. Their goal is to
               ensure every resident receives compassionate, highly tailored

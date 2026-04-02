@@ -4,6 +4,7 @@ import {
   Geist_Mono,
   Playfair_Display,
   Source_Sans_3,
+  Roboto,
 } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloatingButton from "@/components/floatingButton";
@@ -28,6 +29,12 @@ const sourceSans3 = Source_Sans_3({
   variable: "--font-source-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -64,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${sourceSans3.variable} antialiased`}
+        className={`${roboto.variable}${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${sourceSans3.variable} antialiased`}
       >
         {children}
         <WhatsAppFloatingButton />

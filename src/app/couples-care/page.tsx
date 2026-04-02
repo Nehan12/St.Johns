@@ -89,9 +89,9 @@ export default function CouplesCare() {
               }}
             >
               Couples care ensures both partners can continue living together
-              while receiving tailored support. Loveday provides personalised
-              care plans, luxurious private suites, and enriching activities
-              that nurture connection, wellbeing and independence.
+              while receiving tailored support. Heritage Care provides
+              personalised care plans, luxurious private suites, and enriching
+              activities that nurture connection, wellbeing and independence.
             </p>
           </div>
         </div>
@@ -118,8 +118,9 @@ export default function CouplesCare() {
               }}
             >
               Ideal for partners with varying care needs, from mild support to
-              complex conditions including memory care. Loveday ensures each
-              couple’s routine, privacy and preferences are fully respected.
+              complex conditions including memory care. Heritage Care ensures
+              each couple’s routine, privacy and preferences are fully
+              respected.
             </p>
 
             <div className="space-y-5">

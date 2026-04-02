@@ -83,10 +83,10 @@ export default function RehabilitationCare() {
               className="text-xl leading-relaxed max-w-4xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Rehabilitation care at Loveday provides structured, specialist
-              support for recovery after surgery, illness, or injury. Each stay
-              combines clinical excellence, personalised therapy plans and
-              luxurious surroundings to create a healing environment that
+              Rehabilitation care at Heritage Care provides structured,
+              specialist support for recovery after surgery, illness, or injury.
+              Each stay combines clinical excellence, personalised therapy plans
+              and luxurious surroundings to create a healing environment that
               promotes independence, wellbeing, and confidence.
             </p>
           </div>
@@ -188,8 +188,8 @@ export default function RehabilitationCare() {
               className="text-lg"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday combines world-class hospitality with clinical excellence
-              for a truly restorative experience.
+              Heritage Care combines world-class hospitality with clinical
+              excellence for a truly restorative experience.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export default function RehabilitationCare() {
             className="text-lg mb-12 text-center"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Every rehabilitation plan at Loveday is tailored to your pace,
+            Every rehabilitation plan at Heritage Care is tailored to your pace,
             needs, and personal goals, combining clinical guidance with
             emotional and social support.
           </p>

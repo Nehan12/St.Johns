@@ -82,9 +82,9 @@ export default function PostSurgeryCare() {
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday post-surgery care is ideal for seniors recovering from
-              complex surgeries, those requiring support after chemotherapy or
-              cardiac procedures, individuals living alone during early
+              Heritage Care post-surgery care is ideal for seniors recovering
+              from complex surgeries, those requiring support after chemotherapy
+              or cardiac procedures, individuals living alone during early
               recovery, or people with mobility or cognitive challenges.
               Families seeking respite support also benefit from our bespoke,
               personalised approach.
@@ -241,9 +241,9 @@ export default function PostSurgeryCare() {
             className="text-lg mb-12 text-center"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Loveday’s post-surgery care ensures a seamless, supportive journey
-            from hospital to home, with everything needed to restore strength,
-            confidence and independence.
+            Heritage Care's post-surgery care ensures a seamless, supportive
+            journey from hospital to home, with everything needed to restore
+            strength, confidence and independence.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">

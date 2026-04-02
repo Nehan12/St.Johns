@@ -76,17 +76,17 @@ export default function HolidayRespite() {
               className="text-4xl font-semibold mb-6"
               style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              What is Holiday Respite at Loveday?
+              What is Holiday Respite at Heritage Care?
             </h2>
             <p
               className="text-xl leading-relaxed max-w-4xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Loveday Holiday Respite offers short-term stays in London’s most
-              distinguished residences, combining luxury living, professional
-              care and enriching experiences. Ideal for post-surgical recovery,
-              caregiver breaks, or simply a rejuvenating getaway with expert
-              support on hand.
+              Heritage Care Holiday Respite offers short-term stays in London’s
+              most distinguished residences, combining luxury living,
+              professional care and enriching experiences. Ideal for
+              post-surgical recovery, caregiver breaks, or simply a rejuvenating
+              getaway with expert support on hand.
             </p>
           </div>
         </div>
@@ -108,8 +108,8 @@ export default function HolidayRespite() {
             >
               Perfect for older adults needing short-term care or temporary
               support. Whether recovering from illness, requiring memory care,
-              or seeking a luxury break, Loveday provides expert support with
-              personalised plans. Couples can remain together, maintaining
+              or seeking a luxury break, Heritage Care provides expert support
+              with personalised plans. Couples can remain together, maintaining
               continuity and connection.
             </p>
 
@@ -262,10 +262,10 @@ export default function HolidayRespite() {
             className="text-lg mb-12 text-center"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Loveday Holiday Respite can be as short as two weeks or several
-            months. Perfect for exploring residential care options, bridging
-            between hospital and home, or simply enjoying a luxury short-term
-            break with complete care support.
+            Heritage Care Holiday Respite can be as short as two weeks or
+            several months. Perfect for exploring residential care options,
+            bridging between hospital and home, or simply enjoying a luxury
+            short-term break with complete care support.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">
