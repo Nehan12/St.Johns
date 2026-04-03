@@ -37,7 +37,7 @@ export default function AlzheimersCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/alzheimers-care.jpg)",
+            backgroundImage: "url(/alzeihmrs-care.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           } as React.CSSProperties
@@ -97,16 +97,16 @@ export default function AlzheimersCare() {
               className="text-3xl md:text-4xl font-semibold mb-6"
               style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
             >
-              Who is Alzheimer’s Care For?
+              Who is Alzheimer&apos;s Care For?
             </h2>
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Heritage Care's specialist Alzheimer’s care is designed for all
-              stages, from early diagnosis to advanced progression. Whether you
-              require daily living assistance, cognitive engagement, or
-              long-term memory care solutions, our expert team provides
+              Heritage Care&apos;s specialist Alzheimer&apos;s care is designed
+              for all stages, from early diagnosis to advanced progression.
+              Whether you require daily living assistance, cognitive engagement,
+              or long-term memory care solutions, our expert team provides
               personalised support in an environment designed for familiarity,
               comfort, and enrichment.
             </p>
@@ -148,14 +148,11 @@ export default function AlzheimersCare() {
               {[
                 "Clinical excellence with specialist Alzheimer’s nurses and carers",
                 "Cognitive engagement through music, art, and reminiscence therapy",
-                "Personalised, evolving care plans",
+                "Personalised, evolving care plans which fits you the most",
                 "Refined, comfortable living environments for enhanced wellbeing",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
-                  <span
-                    className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white"
-                    style={{ backgroundColor: "#E7A98B" }}
-                  >
+                  <span className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-E7A98B">
                     ✓
                   </span>
                   <span
@@ -180,13 +177,13 @@ export default function AlzheimersCare() {
             className="text-4xl font-semibold mb-6"
             style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
           >
-            Our Alzheimer’s Care Services
+            Our Alzheimer&apos;s Care Services
           </h2>
           <p
             className="text-lg mb-12"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Heritage Care's services blend clinical excellence with luxury
+            Heritage Care&apos;s services blend clinical excellence with luxury
             living. Every resident benefits from bespoke memory care,
             therapeutic engagement, nutritional support, and an enriched
             lifestyle designed to enhance quality of life.

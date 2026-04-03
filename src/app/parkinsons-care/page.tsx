@@ -37,7 +37,7 @@ export default function ParkinsonsCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/parkinsons-care.jpg)",
+            backgroundImage: "url(/parkinson-care.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           } as React.CSSProperties
@@ -75,15 +75,15 @@ export default function ParkinsonsCare() {
             className="text-4xl font-semibold mb-6"
             style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
           >
-            Understanding Parkinson’s Disease
+            Understanding Parkinson&apos;s Disease
           </h2>
           <p
             className="text-xl leading-relaxed max-w-4xl"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Parkinson’s disease (PD) is a progressive neurological condition
-            affecting movement, cognition, and emotional wellbeing. Symptoms
-            evolve over time and can include tremors, rigidity, balance
+            Parkinson&apos;s disease (PD) is a progressive neurological
+            condition affecting movement, cognition, and emotional wellbeing.
+            Symptoms evolve over time and can include tremors, rigidity, balance
             challenges, cognitive changes, anxiety, depression, and disrupted
             sleep. At Heritage Care, our approach evolves with your needs,
             ensuring personalised, compassionate care at every stage.
@@ -105,12 +105,12 @@ export default function ParkinsonsCare() {
               className="text-lg leading-relaxed mb-10 max-w-3xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Heritage Care's Parkinson’s care is tailored for individuals at
-              all stages of the condition. Whether you need assistance with
-              daily routines, medication, cognitive support, or therapeutic
-              interventions, our specialist team delivers care with meticulous
-              attention to detail in an environment designed for comfort and
-              enrichment.
+              Heritage Care&apos;s Parkinson&apos;s care is tailored for
+              individuals at all stages of the condition. Whether you need
+              assistance with daily routines, medication, cognitive support, or
+              therapeutic interventions, our specialist team delivers care with
+              meticulous attention to detail in an environment designed for
+              comfort and enrichment.
             </p>
 
             <div className="space-y-5">

@@ -145,7 +145,7 @@ export default function Contact() {
                   },
                   {
                     title: "Email",
-                    content: <>info@heritagecare.lk</>,
+                    content: <>heritagecarelk@gmail.com</>,
                     icon: <path d="M3 7l9 6 9-6v10H3V7zM3 7l9-5 9 5" />,
                   },
                 ].map((item, i) => (

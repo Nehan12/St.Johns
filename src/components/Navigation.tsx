@@ -34,13 +34,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex items-center space-x-2 flex-shrink-0"
+            >
               <Image
-                src="/mainLogo.png"
+                src="/half-logo.png"
                 alt="Heritage Care"
-                className="h-16"
-                width={64}
-                height={64}
+                width={72}
+                height={20}
               />
             </Link>
 
@@ -69,7 +71,7 @@ export default function Navigation() {
               >
                 <Link
                   href="/services"
-                  className="hover:text-[#E67E5A] flex items-center gap-1 transition-colors duration-200"
+                  className="hover:text-[#E67E5A] flex items-center gap-5 transition-colors duration-200"
                 >
                   Services ▾
                 </Link>
@@ -172,7 +174,7 @@ export default function Navigation() {
                             href="/specialist-conditions"
                             className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
                           >
-                            Specialist Conditions ▸
+                            Specialized Conditions ▸
                           </Link>
 
                           {/* Nested items */}
@@ -194,13 +196,19 @@ export default function Navigation() {
                                   href="/parkinsons-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
-                                  Parkinson's Care
+                                  Parkinson&apos;s Care
                                 </Link>
                                 <Link
                                   href="/alzeihmrs-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
-                                  Alzeihmr's Care
+                                  Alzeihmr&apos;s Care
+                                </Link>
+                                <Link
+                                  href="/palliative-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Palliative Care
                                 </Link>
                               </motion.div>
                             )}
@@ -398,7 +406,7 @@ export default function Navigation() {
                     onClick={() => setMobileOpen(false)}
                     className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
                   >
-                    Specialist Conditions
+                    Specialized Conditions
                   </Link>
 
                   {/* Toggle */}
@@ -425,14 +433,21 @@ export default function Navigation() {
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
-                      Parkinsons Care
+                      Parkinson&apos;s Care
                     </Link>
                     <Link
                       href="/alzeihmrs-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
-                      Alzeihmrs Care
+                      Alzeihmr&apos;s Care
+                    </Link>
+                    <Link
+                      href="/palliative-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Palliative Care
                     </Link>
                   </div>
                 )}
@@ -443,6 +458,22 @@ export default function Navigation() {
                   className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Gallery
+                </Link>
+
+                <Link
+                  href="/costs"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Fee & Pricing Breakdown
+                </Link>
+
+                <Link
+                  href="/activities"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Activities
                 </Link>
 
                 <Link

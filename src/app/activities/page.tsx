@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -17,27 +18,30 @@ export default function ActivitiesPage() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <p className="text-[#B85C2E] text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
+  const cardAnimation = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+    viewport: { once: true },
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section
         className="relative flex items-center pt-32 md:pt-24 min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url(/about.jpg)" }}
+        style={{ backgroundImage: "url(/activities.png)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
+
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Activities at Heritage Care
@@ -70,145 +74,119 @@ export default function ActivitiesPage() {
         </div>
       </section>
 
-      {/* Sections */}
-      <section className="py-20 bg-[#FFF4EE]">
+      {/* Main Section */}
+      <section className="relative py-20 bg-[#FFF4EE] overflow-hidden">
+        {/* Floating background */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-[#FFE7D9] rounded-full blur-3xl opacity-40 animate-pulse"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#FFD1B5] rounded-full blur-3xl opacity-40 animate-pulse"></div>
+
         <div className="max-w-6xl mx-auto px-6 space-y-12">
-          {/* Holistic Approach */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              A Holistic Approach to Activities
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              Every activity at Heritage Care is thoughtfully designed to engage
-              the senses and support wellbeing. Our programmes are:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Creative</li>
-              <li>Emotional</li>
-              <li>Recreational</li>
-              <li>Physical</li>
-              <li>Reminiscent</li>
-              <li>Relaxing</li>
-              <li>Sensory</li>
-              <li>Social</li>
-            </ul>
-          </div>
+          {[
+            {
+              title: "A Holistic Approach to Activities",
+              text: "Every activity at Heritage Care is thoughtfully designed to engage the senses and support wellbeing. Our programmes are:",
+              items: [
+                "Creative",
+                "Emotional",
+                "Recreational",
+                "Physical",
+                "Reminiscent",
+                "Relaxing",
+                "Sensory",
+                "Social",
+                ,
+              ],
+            },
+            {
+              title: "Everyday Engagement",
+              text: "Across our homes, a variety of resources and materials are always available to keep residents engaged and entertained. Popular favourites include:",
+              items: [
+                "Quizzes",
+                "Word games",
+                "Jigsaws",
+                "Poetry and literary sessions",
+                "Storytelling",
+                "Documentary viewings and discussions",
+                "Guest talks from external experts (e.g. gardening, health, lifestyle)",
+              ],
+            },
+            {
+              title: "Always Available",
+              text: "We believe that meaningful engagement should not be limited to scheduled activities. Residents have continuous access to:",
+              items: [
+                "Magazines covering a wide range of interests",
+                "Fiction and non-fiction books",
+                "Dementia-friendly resources and materials",
+                "Reminiscence tools and memory aids",
+                "Board games, puzzles, crosswords, and cards",
+                "Television, radio, and films",
+                "Knitting and craft materials",
+              ],
+            },
+            {
+              title: "Social Activities",
+              text: "Building friendships and fostering a sense of community is at the heart of life at Heritage Care. Throughout the week, residents can enjoy a variety of social experiences, including:",
+              items: [
+                "Coffee mornings and afternoon tea",
+                "Music sessions and workshops",
+                "Singing and karaoke",
+                "Hobby and interest clubs",
+                "Themed social gatherings",
+              ],
+            },
+            {
+              title: "Physical Activities",
+              text: "We place strong emphasis on maintaining physical activity, as it supports independence, boosts wellbeing, and can be highly enjoyable. Activities include:",
+              items: [
+                "Gentle chair-based exercises",
+                "Indoor games such as carpet bowls",
+                "Dancing and movement sessions",
+                "Gardening activities",
+                "Organised outings and trips",
+                "Creative sessions such as decorating and flower arranging",
+              ],
+            },
+            {
+              title: "Reminiscence and Memory Support",
+              text: "Reminiscence plays an important role in emotional wellbeing, particularly for residents living with dementia. At Heritage Care, we offer a range of experiences designed to spark memories and encourage meaningful conversations, including:",
+              items: [
+                "Music and songs from past eras",
+                "Memory boxes and themed memorabilia",
+                "Sensory and themed spaces",
+                "“On this day” historical discussions",
+                "Traditional activities and pastimes",
+                "Classic foods and cultural experiences",
+              ],
+            },
+          ].map((section, idx) => (
+            <motion.div
+              key={idx}
+              {...cardAnimation}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition"
+            >
+              <h2 className="text-3xl font-bold mb-6 text-[#3A2A23]">
+                {section.title}
+              </h2>
 
-          {/* Everyday Engagement */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              Everyday Engagement
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              Across our homes, a variety of resources and materials are always
-              available to keep residents engaged and entertained. Popular
-              favourites include:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Quizzes</li>
-              <li>Word games</li>
-              <li>Jigsaws</li>
-              <li>Poetry and literary sessions</li>
-              <li>Storytelling</li>
-              <li>Documentary viewings and discussions</li>
-              <li>
-                Guest talks from external experts (e.g. gardening, health,
-                lifestyle)
-              </li>
-            </ul>
-          </div>
+              <p className="text-lg text-[#5C4033] mb-6 leading-relaxed">
+                {section.text}
+              </p>
 
-          {/* Always Available */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              Always Available
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              We believe that meaningful engagement should not be limited to
-              scheduled activities. Residents have continuous access to:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Magazines covering a wide range of interests</li>
-              <li>Fiction and non-fiction books</li>
-              <li>Dementia-friendly resources and materials</li>
-              <li>Reminiscence tools and memory aids</li>
-              <li>Board games, puzzles, crosswords, and cards</li>
-              <li>Television, radio, and films</li>
-              <li>Knitting and craft materials</li>
-            </ul>
-          </div>
-
-          {/* Social Activities */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              Social Activities
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              Building friendships and fostering a sense of community is at the
-              heart of life at Heritage Care. Throughout the week, residents can
-              enjoy a variety of social experiences, including:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Coffee mornings and afternoon tea</li>
-              <li>Music sessions and workshops</li>
-              <li>Singing and karaoke</li>
-              <li>Hobby and interest clubs</li>
-              <li>Themed social gatherings</li>
-            </ul>
-          </div>
-
-          {/* Physical Activities */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              Physical Activities
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              We place strong emphasis on maintaining physical activity, as it
-              supports independence, boosts wellbeing, and can be highly
-              enjoyable. Activities include:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Gentle chair-based exercises</li>
-              <li>Indoor games such as carpet bowls</li>
-              <li>Dancing and movement sessions</li>
-              <li>Gardening activities</li>
-              <li>Organised outings and trips</li>
-              <li>Creative sessions such as decorating and flower arranging</li>
-            </ul>
-          </div>
-
-          {/* Reminiscence & Memory Support */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-[#F1D1C4]">
-            <h2 className="text-3xl font-bold mb-6 text-[#3A2A23] flex items-center gap-2">
-              Reminiscence and Memory Support
-            </h2>
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed mb-4">
-              Reminiscence plays an important role in emotional wellbeing,
-              particularly for residents living with dementia. At Heritage Care,
-              we offer a range of experiences designed to spark memories and
-              encourage meaningful conversations, including:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-[#5C4033] text-lg md:text-xl">
-              <li>Music and songs from past eras</li>
-              <li>Memory boxes and themed memorabilia</li>
-              <li>Sensory and themed spaces</li>
-              <li>“On this day” historical discussions</li>
-              <li>Traditional activities and pastimes</li>
-              <li>Classic foods and cultural experiences</li>
-            </ul>
-          </div>
-
-          {/* Closing Statement */}
-          <div className="text-center py-12">
-            <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed">
-              At Heritage Care, our activities programme is more than just
-              entertainment — it’s about creating purpose, connection, and joy
-              in everyday life.
-            </p>
-          </div>
+              {/* TAG STYLE (same as your holistic section) */}
+              <div className="flex flex-wrap gap-3">
+                {section.items.map((item, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 rounded-full bg-[#FFE7D9] text-[#5C4033] shadow-sm hover:scale-105 transition"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
-
       <Footer />
     </div>
   );

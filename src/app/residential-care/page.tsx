@@ -4,13 +4,11 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export default function CouplesCare() {
+export default function ResidentialCare() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +37,7 @@ export default function CouplesCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/couples-care.jpg)",
+            backgroundImage: "url(/residential-care.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -53,7 +51,7 @@ export default function CouplesCare() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Luxury Couples Care
+              Residential Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
@@ -61,14 +59,14 @@ export default function CouplesCare() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Continue living together with bespoke support, comfort and
-              meaningful experiences in a beautifully appointed environment.
+              Experience a supportive, safe, and welcoming environment designed
+              for comfort, independence, and a vibrant community life.
             </p>
           </div>
         </div>
       </section>
 
-      {/* What is Couples Care */}
+      {/* What is Residential Care */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
@@ -79,7 +77,7 @@ export default function CouplesCare() {
                 color: "#B85C2E",
               }}
             >
-              What is Couples Care?
+              What is Residential Care?
             </h2>
             <p
               className="text-xl leading-relaxed max-w-4xl"
@@ -88,10 +86,10 @@ export default function CouplesCare() {
                 color: "#5A3A2E",
               }}
             >
-              Couples care ensures both partners can continue living together
-              while receiving tailored support. Heritage Care provides
-              personalised care plans, luxurious private suites, and enriching
-              activities that nurture connection, wellbeing and independence.
+              Residential care provides a safe, comfortable, and nurturing
+              environment where residents receive personalised support for daily
+              living. Heritage Care focuses on maintaining dignity,
+              independence, and a true sense of home for every resident.
             </p>
           </div>
         </div>
@@ -108,7 +106,7 @@ export default function CouplesCare() {
                 color: "#B85C2E",
               }}
             >
-              Who is Couples Care for?
+              Who is Residential Care for?
             </h2>
             <p
               className="text-lg leading-relaxed mb-10 max-w-3xl"
@@ -117,17 +115,16 @@ export default function CouplesCare() {
                 color: "#5A3A2E",
               }}
             >
-              Ideal for partners with varying care needs, from mild support to
-              complex conditions including memory care. Heritage Care ensures
-              each couple’s routine, privacy and preferences are fully
-              respected.
+              Ideal for individuals who need support with daily living, memory
+              care, or recovery after hospital stays. Our residential care
+              ensures personalised routines, privacy, and compassionate support.
             </p>
 
             <div className="space-y-5">
               {[
-                "Partners needing different levels of support",
-                "Memory or cognitive care requirements",
-                "Post-hospital recovery or respite stays",
+                "Individuals needing assistance with daily tasks",
+                "Memory or cognitive care support",
+                "Post-hospital recovery or short-term respite",
               ].map((item, i) => (
                 <div key={i} className="flex items-center">
                   <span
@@ -160,9 +157,9 @@ export default function CouplesCare() {
 
             <div className="space-y-6">
               {[
-                "Tailored care plans for both partners",
-                "24/7 expert support and monitoring",
-                "Shared activities to nurture connection",
+                "Individualised care plans tailored to each resident",
+                "24/7 professional support and monitoring",
+                "Activities to encourage social engagement and wellbeing",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span
@@ -186,7 +183,7 @@ export default function CouplesCare() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* Residential Care Services */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
@@ -197,7 +194,7 @@ export default function CouplesCare() {
                 color: "#B85C2E",
               }}
             >
-              Our Couples Care Services
+              Our Residential Care Services
             </h2>
             <p
               className="text-lg"
@@ -206,24 +203,24 @@ export default function CouplesCare() {
                 color: "#5A3A2E",
               }}
             >
-              Comprehensive services designed to support wellbeing, comfort, and
-              togetherness.
+              Comprehensive support designed to ensure comfort, safety, and a
+              fulfilling daily life.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Personalised Care Plans",
-                desc: "Plans designed for both partners’ individual and shared needs.",
+                title: "Tailored Living Plans",
+                desc: "Personalised care plans that meet each resident’s needs, routines, and preferences.",
               },
               {
-                title: "Memory & Health Support",
-                desc: "Specialist dementia and clinical care delivered with dignity.",
+                title: "24/7 Skilled Support",
+                desc: "Professional care and monitoring available at all times, ensuring safety and wellbeing.",
               },
               {
-                title: "Shared Activities",
-                desc: "Meaningful engagement including arts, gardening, and social events.",
+                title: "Enriching Community Life",
+                desc: "Social, recreational, and wellness activities that foster engagement and connection.",
               },
             ].map((s, i) => (
               <div

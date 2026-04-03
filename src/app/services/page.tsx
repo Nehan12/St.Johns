@@ -101,42 +101,8 @@ export default function Services() {
               to meet the unique needs of each resident.
             </p>
           </div>
-
-          {/* 24-Hour Nursing Care */}
           <section className="max-w-7xl mx-auto px-4 mb-20">
             <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
-              {/* 24-Hour Nursing Care */}
-              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="w-32 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
-                  24-Hour Nursing Care
-                </h3>
-                <p className="mb-6 text-[#372e29]">
-                  Round-the-clock professional nursing care ensuring immediate
-                  medical support whenever needed.
-                </p>
-                <Link
-                  href="/24-hour-nursing"
-                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  Learn More
-                </Link>
-              </div>
-
               {/* Residential Care */}
               <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
                 <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
@@ -219,7 +185,7 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
-                  Specialist Conditions Care
+                  Specialized Conditions Care
                 </h3>
                 <p className="mb-6 text-[#372e29]">
                   Expert care for dementia, Alzheimer’s, Parkinson’s, and
@@ -227,38 +193,6 @@ export default function Services() {
                 </p>
                 <Link
                   href="/specialist-conditions"
-                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
-                >
-                  Learn More
-                </Link>
-              </div>
-
-              {/* Palliative Care */}
-              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
-                  <svg
-                    className="w-8 h-8 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 21C12 21 4 13.5 4 8.5a4.5 4.5 0 019-2.5 4.5 4.5 0 019 2.5C20 13.5 12 21 12 21z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
-                  Palliative Care
-                </h3>
-                <p className="mb-6 text-[#372e29]">
-                  Compassionate care focused on comfort, dignity, and quality of
-                  life.
-                </p>
-                <Link
-                  href="/palliative-care"
                   className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   Learn More

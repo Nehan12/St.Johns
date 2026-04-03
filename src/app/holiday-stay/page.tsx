@@ -39,7 +39,7 @@ export default function HolidayRespite() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/holiday-respite.jpg)",
+            backgroundImage: "url(/hoilday-respite.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -53,7 +53,7 @@ export default function HolidayRespite() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Holiday Respite Care
+              Holiday Stays
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>

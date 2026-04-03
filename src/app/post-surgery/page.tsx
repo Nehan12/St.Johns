@@ -39,7 +39,7 @@ export default function PostSurgeryCare() {
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
         style={
           {
-            backgroundImage: "url(/post-surgery.jpg)",
+            backgroundImage: "url(/post-surgery.webp)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             imageRendering: "crisp-edges",
@@ -241,9 +241,9 @@ export default function PostSurgeryCare() {
             className="text-lg mb-12 text-center"
             style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
           >
-            Heritage Care's post-surgery care ensures a seamless, supportive
-            journey from hospital to home, with everything needed to restore
-            strength, confidence and independence.
+            Heritage Care&apos;s post-surgery care ensures a seamless,
+            supportive journey from hospital to home, with everything needed to
+            restore strength, confidence and independence.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12">

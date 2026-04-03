@@ -480,14 +480,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section
-        className="py-2 mt-6"
-        style={{ backgroundColor: "#ffffff" }}
-        ref={whyChooseRef}
-      >
+      <section className="py-16 mt-6 bg-white" ref={whyChooseRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
           <div
-            className={`text-center mb-4 transition-all duration-1000 ${
+            className={`text-center mb-12 transition-all duration-1000 ${
               isVisible.whyChoose
                 ? "animate-fadeInUp"
                 : "opacity-0 translate-y-10"
@@ -513,45 +510,78 @@ export default function Home() {
               warm, welcoming environment.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Statistics Counter Section */}
-      <section
-        ref={statsRef}
-        className="relative py-64 overflow-hidden bg-cover bg-center"
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0" />
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-3 gap-10">
+            {[
+              {
+                title: "Professional Team",
+                text: "Skilled caregivers available 24/7, dedicated to personalised support and wellbeing.",
+              },
+              {
+                title: "Safe & Comfortable",
+                text: "Modern, secure living spaces designed for comfort, accessibility, and peace of mind.",
+              },
+              {
+                title: "Holistic Wellbeing",
+                text: "Engaging programs supporting physical, emotional, and social health.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`text-center p-6 rounded-xl shadow-md border border-[#F1D1C4] transition-transform duration-500 hover:scale-105 ${
+                  isVisible.whyChoose
+                    ? "animate-fadeInUp"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+                  {item.title}
+                </h3>
+                <p className="text-[#5A3A2E]">{item.text}</p>
+              </div>
+            ))}
+          </div>
 
-        {/* TOP DOWNWARD ARC (DECORATIVE) */}
-        <div className="absolute -top-[1px] left-0 w-full z-10 pointer-events-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1600 165"
-            preserveAspectRatio="none"
-            className="w-full h-[140px]"
-          >
-            <path
-              d="M-3,49S398.468,152.5,799.951,152.5C1201.47,152.5,1603,49,1603,49V0H-3V49Z"
-              fill="#ffffff"
-            />
-          </svg>
-        </div>
+          {/* Certification Logos */}
+          <div className="mt-16 text-center">
+            {/* Heading */}
+            <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+              Certified & Trusted
+            </h3>
 
-        {/* BOTTOM DOWNWARD ARC (DECORATIVE) */}
-        <div className="absolute -bottom-[1px] left-0 w-full z-10 pointer-events-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1600 165"
-            preserveAspectRatio="none"
-            className="w-full h-[140px]"
-          >
-            <path
-              d="M-3,49S398.468,152.5,799.951,152.5C1201.47,152.5,1603,49,1603,49V165H-3V49Z"
-              fill="#ffffff"
-            />
-          </svg>
+            {/* Catchy line */}
+            <p className="text-lg md:text-xl text-[#5A3A2E] max-w-2xl mx-auto leading-relaxed">
+              Recognised and approved by leading authorities, giving you
+              complete confidence in the quality, safety, and standards of care
+              we provide.
+            </p>
+
+            {/* Logos */}
+            <div className="mt-12 flex justify-center items-center gap-16 md:gap-32 flex-wrap">
+              <Image
+                src="clogo1.png"
+                width={140}
+                height={32}
+                alt="Government Certified"
+                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+              <Image
+                width={150}
+                height={64}
+                src="clogo2.png"
+                alt="NHRC Certified"
+                className="h-64 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+              <Image
+                width={140}
+                height={32}
+                src="clogo3.png"
+                alt="Medical Council Certified"
+                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -561,97 +591,6 @@ export default function Home() {
         ref={luxuryRef}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
-            {/* Nurse Image */}
-            <div className="order-2 lg:order-1">
-              <div className="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden rounded-2xl shadow-2xl">
-                <Image
-                  fill
-                  src="/luxury.jpg"
-                  alt="Compassionate nursing care at Heritage Care"
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="order-1 lg:order-2">
-              <h3
-                className="text-2xl md:text-3xl font-bold mb-6"
-                style={{
-                  color: "#B85C2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                Our Dedicated Care Team
-              </h3>
-              <p
-                className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 400,
-                }}
-              >
-                At Heritage Care, our experienced nursing staff provides
-                round-the-clock care with compassion, expertise, and genuine
-                concern for each resident&apos;s well-being. We understand that
-                quality care goes beyond medical treatment—it&apos;s about
-                creating meaningful connections and ensuring comfort in every
-                moment.
-              </p>
-              <div className="space-y-4 mt-2">
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    24/7 Professional Nursing Care
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontWeight: 400,
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    Personalized Care Plans
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontWeight: 400,
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    Family-Centered Approach
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div>
             <h2
               className="text-3xl md:text-4xl font-bold mb-6 text-center"
