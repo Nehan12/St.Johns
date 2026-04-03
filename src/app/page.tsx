@@ -88,15 +88,13 @@ export default function Home() {
               className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
               style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}
             >
-              Home Away From Home
+              Care Beyond Compare
             </h2>
             <p
-              className="text-base md:text-lg text-white/90 mb-8 leading-relaxed"
+              className="text-xl md:text-4xl text-white/90 mb-8 leading-relaxed italic"
               style={{ fontFamily: "Poppins, sans-serif", fontWeight: 200 }}
             >
-              Elegant interiors designed with love, comfort, and the highest
-              standards of care. Every detail has been thoughtfully crafted to
-              create a haven of peace and healing for our residents.
+              It must be Heritage Care.
             </p>
 
             <div className="flex flex-row gap-4">
@@ -156,27 +154,27 @@ export default function Home() {
             {[
               {
                 icon: "/1.png",
-                title: "Home Care",
+                title: "Luxury Senior Residential Care",
                 description:
-                  "Our primary goal is to help individuals maintain a familiar lifestyle in the comfort of home.",
+                  "Our primary goal is to help seniors maintain a familiar lifestyle in the comfort of home.",
               },
               {
                 icon: "/2.png",
-                title: "Personal Care",
+                title: "24/7 Nursing",
                 description:
-                  "We provide exceptional, compassionate care to your loved ones in the comfort of home.",
+                  "We provide exceptional, compassionate care to your loved ones in the comfort of home 24/7.",
               },
               {
                 icon: "/3.png",
-                title: "Reminders",
+                title: "Memory Care",
                 description:
-                  "Responsible for health & safety issues, notifying next of kin & keeping them informed.",
+                  "Provides specialized dementia support, ensuring safety, structured care & family communication.",
               },
               {
-                icon: "4.png",
-                title: "Medical Services",
+                icon: "/4.png",
+                title: "Rehabilitation",
                 description:
-                  "Our therapy team works with you, your physician, and nursing staff to ensure care.",
+                  "Focused on recovery & restoring independence through therapy, personalized care & progress monitoring.",
               },
             ].map((card, index) => {
               const offsets = [
@@ -254,7 +252,7 @@ export default function Home() {
                     : "opacity-0 translate-x-[-50px]"
                 }`}
                 style={{
-                  backgroundImage: "url(/landing2.jpg)",
+                  backgroundImage: "url(/new9.jpg)",
                   minHeight: "200px",
                   maxHeight: "400px",
                 }}
@@ -287,10 +285,14 @@ export default function Home() {
                   fontWeight: 400,
                 }}
               >
-                At Heritage Care, we&apos;re devoted to providing exceptional
-                24-hour residential, respite, and memory care. Every detail is
-                crafted to bring comfort, fulfilment, and refined living —
-                because we simply couldn&apos;t care more.{" "}
+                Our commitment to care is unwavering and continuous. We are
+                deeply dedicated to delivering the highest standards of 24-hour
+                residential care, respite services, day programmes, and memory
+                care, all supported by exceptional hospitality. Every aspect of
+                our service is thoughtfully designed to promote comfort,
+                dignity, and a meaningful quality of life. For us, excellence is
+                not just a benchmark it is a commitment we uphold every day.
+                Caring more is at the heart of everything we do.{" "}
               </p>
             </div>
           </div>
@@ -478,14 +480,11 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section
-        className="py-2 mt-6"
-        style={{ backgroundColor: "#ffffff" }}
-        ref={whyChooseRef}
-      >
+      <section className="py-16 mt-6 bg-white" ref={whyChooseRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
           <div
-            className={`text-center mb-4 transition-all duration-1000 ${
+            className={`text-center mb-12 transition-all duration-1000 ${
               isVisible.whyChoose
                 ? "animate-fadeInUp"
                 : "opacity-0 translate-y-10"
@@ -511,90 +510,78 @@ export default function Home() {
               warm, welcoming environment.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Statistics Counter Section */}
-      <section
-        ref={statsRef}
-        className="relative py-64 overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/landing1.jpg')",
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0" />
-
-        {/* TOP DOWNWARD ARC (DECORATIVE) */}
-        <div className="absolute -top-[1px] left-0 w-full z-10 pointer-events-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1600 165"
-            preserveAspectRatio="none"
-            className="w-full h-[140px]"
-          >
-            <path
-              d="M-3,49S398.468,152.5,799.951,152.5C1201.47,152.5,1603,49,1603,49V0H-3V49Z"
-              fill="#ffffff"
-            />
-          </svg>
-        </div>
-
-        {/* CONTENT */}
-        <div className="relative z-20 max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center items-end gap-32 mt-24">
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-3 gap-10">
             {[
-              { value: 25, suffix: "+", label: "Rooms" },
-              { value: 25, suffix: "+", label: "Happy Seniors" },
-              { value: 10, suffix: "+", label: "Expert Nurses" },
-            ].map((stat, index) => {
-              const offsets = [
-                "sm:-translate-y-20",
-                "sm:translate-y-0",
-                "sm:-translate-y-20",
-              ];
-              return (
-                <div
-                  key={index}
-                  className={`flex flex-col items-center justify-center p-6 bg-transparent rounded-xl transition-all duration-300 hover:bg-black/60 cursor-pointer ${offsets[index]}`}
-                >
-                  <span
-                    className="text-4xl md:text-5xl font-bold mb-2 text-white"
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 700,
-                    }}
-                  >
-                    {stat.value}
-                    {stat.suffix}
-                  </span>
-                  <p
-                    className="text-white text-sm md:text-base font-medium opacity-90 text-center"
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    {stat.label}
-                  </p>
-                </div>
-              );
-            })}
+              {
+                title: "Professional Team",
+                text: "Skilled caregivers available 24/7, dedicated to personalised support and wellbeing.",
+              },
+              {
+                title: "Safe & Comfortable",
+                text: "Modern, secure living spaces designed for comfort, accessibility, and peace of mind.",
+              },
+              {
+                title: "Holistic Wellbeing",
+                text: "Engaging programs supporting physical, emotional, and social health.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className={`text-center p-6 rounded-xl shadow-md border border-[#F1D1C4] transition-transform duration-500 hover:scale-105 ${
+                  isVisible.whyChoose
+                    ? "animate-fadeInUp"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+                  {item.title}
+                </h3>
+                <p className="text-[#5A3A2E]">{item.text}</p>
+              </div>
+            ))}
           </div>
-        </div>
 
-        {/* BOTTOM DOWNWARD ARC (DECORATIVE) */}
-        <div className="absolute -bottom-[1px] left-0 w-full z-10 pointer-events-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1600 165"
-            preserveAspectRatio="none"
-            className="w-full h-[140px]"
-          >
-            <path
-              d="M-3,49S398.468,152.5,799.951,152.5C1201.47,152.5,1603,49,1603,49V165H-3V49Z"
-              fill="#ffffff"
-            />
-          </svg>
+          {/* Certification Logos */}
+          <div className="mt-16 text-center">
+            {/* Heading */}
+            <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+              Certified & Trusted
+            </h3>
+
+            {/* Catchy line */}
+            <p className="text-lg md:text-xl text-[#5A3A2E] max-w-2xl mx-auto leading-relaxed">
+              Recognised and approved by leading authorities, giving you
+              complete confidence in the quality, safety, and standards of care
+              we provide.
+            </p>
+
+            {/* Logos */}
+            <div className="mt-12 flex justify-center items-center gap-16 md:gap-32 flex-wrap">
+              <Image
+                src="clogo1.png"
+                width={140}
+                height={32}
+                alt="Government Certified"
+                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+              <Image
+                width={150}
+                height={64}
+                src="clogo2.png"
+                alt="NHRC Certified"
+                className="h-64 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+              <Image
+                width={140}
+                height={32}
+                src="clogo3.png"
+                alt="Medical Council Certified"
+                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -604,97 +591,6 @@ export default function Home() {
         ref={luxuryRef}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
-            {/* Nurse Image */}
-            <div className="order-2 lg:order-1">
-              <div className="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden rounded-2xl shadow-2xl">
-                <Image
-                  fill
-                  src="/luxury.jpg"
-                  alt="Compassionate nursing care at Heritage Care"
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="order-1 lg:order-2">
-              <h3
-                className="text-2xl md:text-3xl font-bold mb-6"
-                style={{
-                  color: "#B85C2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                Our Dedicated Care Team
-              </h3>
-              <p
-                className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 400,
-                }}
-              >
-                At Heritage Care, our experienced nursing staff provides
-                round-the-clock care with compassion, expertise, and genuine
-                concern for each resident&apos;s well-being. We understand that
-                quality care goes beyond medical treatment—it&apos;s about
-                creating meaningful connections and ensuring comfort in every
-                moment.
-              </p>
-              <div className="space-y-4 mt-2">
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontFamily: "Poppins, sans-serif",
-                      fontWeight: 400,
-                    }}
-                  >
-                    24/7 Professional Nursing Care
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontWeight: 400,
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    Personalized Care Plans
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div
-                    className="w-2 h-2 rounded-full mr-3"
-                    style={{ backgroundColor: "#B85C2E" }}
-                  ></div>
-                  <span
-                    style={{
-                      color: "#5A3A2E",
-                      fontWeight: 400,
-                      fontFamily: "Poppins, sans-serif",
-                    }}
-                  >
-                    Family-Centered Approach
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div>
             <h2
               className="text-3xl md:text-4xl font-bold mb-6 text-center"
@@ -708,7 +604,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* 24/7 Care Section */}
+            {/* Doctor Visits Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.1s" }}
@@ -716,7 +612,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing1.jpg)" }}
+                  style={{ backgroundImage: "url(/es1.jpg)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -727,7 +623,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                24/7 Professional Nursing Care
+                Doctor Visits
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -736,13 +632,14 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Round-the-clock professional nursing care with continuous
-                monitoring, emergency response, and medication management
-                ensuring residents receive immediate attention whenever needed.
+                Comprehensive coordination of medical appointments with regular
+                follow-ups, detailed health monitoring, and clear communication
+                to ensure each resident&apos;s ongoing medical needs are
+                carefully managed.
               </p>
             </div>
 
-            {/* Compassionate Care Section */}
+            {/* Physiotherapy Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.2s" }}
@@ -750,7 +647,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing2.jpg)" }}
+                  style={{ backgroundImage: "url(/es2.png)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -761,7 +658,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Compassionate Care
+                Physiotherapy
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -770,13 +667,13 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Personalized care plans with individual assessments, personal
-                preferences, and regular reviews tailored to each
-                resident&apos;s specific needs.
+                Personalized therapy programs developed through professional
+                assessments, focusing on mobility improvement, strength
+                building, pain management, and continuous progress evaluation.
               </p>
             </div>
 
-            {/* Comfort Environment Section */}
+            {/* Special Diets Section */}
             <div
               className="text-center group animate-fadeInUp"
               style={{ animationDelay: "0.3s" }}
@@ -784,7 +681,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/landing3.jpg)" }}
+                  style={{ backgroundImage: "url(/es3.png)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -795,7 +692,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Comfortable Environment
+                Special Diets
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
@@ -804,9 +701,113 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                A warm, welcoming environment with home-like spaces, garden
-                areas, and common areas designed to promote healing and a sense
-                of home.
+                Individually planned nutrition programs based on medical
+                requirements, dietary preferences, and ongoing health reviews to
+                support overall wellness and specific conditions.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {/* Transport Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es4.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Transportation Services
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Organized and reliable transportation services arranged with
+                safety considerations, scheduling flexibility, and assistance to
+                support medical visits and personal outings.
+              </p>
+            </div>
+
+            {/* Dedicated Night Care Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es5.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Dedicated Night Carer
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Dedicated overnight support providing continuous supervision,
+                immediate response assistance, comfort care, and regular
+                monitoring to ensure safety and peace of mind.
+              </p>
+            </div>
+
+            {/* Medication Management Section */}
+            <div
+              className="text-center group animate-fadeInUp"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
+                <div
+                  className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: "url(/es6.png)" }}
+                ></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+              <h3
+                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
+                style={{
+                  color: "#B85C2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Medication Management
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
+                style={{
+                  color: "#5A3A2E",
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                Structured medication plans including timely administration,
+                dosage monitoring, coordination with healthcare professionals,
+                and regular reviews to maintain optimal health outcomes.
               </p>
             </div>
           </div>
@@ -834,7 +835,7 @@ export default function Home() {
         ref={luxuryRef}
         className="relative py-40 overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url(/luxury2.png)",
+          backgroundImage: "url(/image.png)",
         }}
       >
         {/* Dark Overlay */}
@@ -867,7 +868,7 @@ export default function Home() {
               className="text-3xl md:text-5xl font-bold mb-4 mt-4"
               style={{
                 color: "#F7F4F0",
-                fontFamily: "Poppins, sans-serif",
+                fontFamily: "Roboto, sans-serif",
               }}
             >
               Luxury Care, Redefined
@@ -915,16 +916,6 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="flex items-center gap-4 mb-4">
-              {/* HANDS SVG */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 64 64"
-                className="w-14 h-14 text-[#F7F4F0]"
-                fill="currentColor"
-              >
-                <path d="M32 34c-2.5-3.5-6-7-10-7-3 0-5 2-5 5 0 6 8 12 15 18 7-6 15-12 15-18 0-3-2-5-5-5-4 0-7.5 3.5-10 7z" />
-              </svg>
-
               <h3
                 className="text-3xl md:text-5xl font-bold"
                 style={{

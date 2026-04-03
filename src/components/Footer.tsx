@@ -1,23 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaClock,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="py-6" style={{ backgroundColor: "#E7A98B" }}>
+    <footer className="py-6" style={{ backgroundColor: "#D46A1F" }}>
+      {" "}
+      {/**E67E5A */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* MAIN FOOTER CONTENT — HIDDEN ON MOBILE */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {/* Logo & Description */}
           <div>
             <Image
-              height={24}
-              width={48}
-              src="/mainLogo.png"
+              height={90}
+              width={200}
+              src="/mainlogo-white.png"
               alt="Heritage Care Logo"
-              className="h-24 w-auto mb-3"
+              className="mb-3"
             />
             <p
-              className="text-sm leading-relaxed text-black"
+              className="text-sm leading-relaxed text-white"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Providing compassionate care with medical expertise and heartfelt
@@ -32,10 +41,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
                 { href: "/services", label: "Services" },
-                { href: "/contact", label: "Contact" },
+                { href: "/gallery", label: "Gallery" },
+                { href: "/costs", label: "Fee & Pricing Breakdown" },
+                { href: "/activities", label: "Activities" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -51,7 +61,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-base font-semibold mb-3 text-white">
+            <h4 className="text-bold font-semibold mb-3 text-white">
               Services
             </h4>
             <ul className="space-y-2">
@@ -80,24 +90,52 @@ export default function Footer() {
             <h4 className="text-base font-semibold mb-3 text-white">
               Contact Us
             </h4>
+
             <ul className="space-y-2 text-sm text-white">
-              <li>
-                <strong>Phone:</strong> (555) 123-4567
+              <li className="flex items-center gap-2">
+                <FaPhone />
+                <a href="tel:+94771654202">+94 77 165 4202 /+94 77 725 3873</a>
               </li>
-              <li>
-                <strong>Email:</strong> info@heritagecare.com
+              <li className="flex items-center gap-2">
+                <FaEnvelope />
+                <a href="mailto:heritagecarelk@gmail.com">
+                  heritagecarelk@gmail.com
+                </a>
               </li>
-              <li>
-                <strong>Hours:</strong> 24/7 Care Available
+
+              <li className="flex items-center gap-2">
+                <FaClock />
+                <span>24/7 Care Available</span>
               </li>
             </ul>
+
+            {/* Social Icons */}
+            <div className="flex gap-6 mt-8 text-white">
+              <a
+                href="https://www.facebook.com/share/1FcQ1eSrEM/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition transform hover:scale-120"
+              >
+                <FaFacebook size={25} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/heritagecarelk?igsh=dWZkNDljMmEwMXNq&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition transform hover:scale-120"
+              >
+                <FaInstagram size={25} />
+              </a>
+            </div>
           </div>
         </div>
 
         {/* COPYRIGHT — ALWAYS VISIBLE */}
         <div className="pt-0 md:pt-4 border-t-0 md:border-t border-[rgba(255,244,230,0.3)]">
           <p className="text-center text-xs text-white">
-            © 2025 Heritage Care - Nursing & Wellness. All rights reserved.
+            © 2026 Heritage Care - Nursing & Wellness. All rights reserved.
           </p>
         </div>
       </div>

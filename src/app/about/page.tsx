@@ -179,17 +179,6 @@ export default function About() {
                   style={{ backgroundImage: "url(/landing2.jpg)" }}
                 />
               </div>
-
-              {/* Stats */}
-              <div className="absolute bottom-6 left-6 bg-white rounded-2xl p-5 shadow-md border border-[#F1D1C4]">
-                <p className="text-2xl font-bold text-[#E67E5A]">24/7</p>
-                <p className="text-sm text-[#5C4033]">Care & Support</p>
-              </div>
-
-              <div className="absolute top-6 right-6 bg-white rounded-2xl p-5 shadow-md border border-[#F1D1C4]">
-                <p className="text-2xl font-bold text-[#E67E5A]">98%</p>
-                <p className="text-sm text-[#5C4033]">Family Satisfaction</p>
-              </div>
             </div>
           </div>
         </div>

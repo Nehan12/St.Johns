@@ -120,9 +120,10 @@ export default function Contact() {
                     title: "Location",
                     content: (
                       <>
-                        123 Care Street
+                        Heritage Care Residence
                         <br />
-                        Colombo, Sri Lanka 01000
+                        Diyagala Boys Town <br />
+                        Ragama, Sri Lanka
                       </>
                     ),
                     icon: (
@@ -133,9 +134,9 @@ export default function Contact() {
                     title: "Phone",
                     content: (
                       <>
-                        +94 (0) 11 234 5678
+                        +94 77 165 4202
                         <br />
-                        +94 (0) 11 234 5679 (Emergency)
+                        +94 77 725 3873
                       </>
                     ),
                     icon: (
@@ -144,13 +145,7 @@ export default function Contact() {
                   },
                   {
                     title: "Email",
-                    content: (
-                      <>
-                        info@stjohnspalliative.lk
-                        <br />
-                        admissions@stjohnspalliative.lk
-                      </>
-                    ),
+                    content: <>heritagecarelk@gmail.com</>,
                     icon: <path d="M3 7l9 6 9-6v10H3V7zM3 7l9-5 9 5" />,
                   },
                 ].map((item, i) => (

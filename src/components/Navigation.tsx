@@ -9,9 +9,13 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [desktopResidentialOpen, setDesktopResidentialOpen] = useState(false);
+  const [desktopRespiteOpen, setDesktopRespiteOpen] = useState(false);
+  const [desktopSpecialOpen, setDesktopSpecialOpen] = useState(false);
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileResidentialOpen, setMobileResidentialOpen] = useState(false);
+  const [mobileRespiteOpen, setMobileRespiteOpen] = useState(false);
+  const [mobileSpecialOpen, setMobileSpecialOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -30,13 +34,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link
+              href="/"
+              className="flex items-center space-x-2 flex-shrink-0"
+            >
               <Image
-                src="/mainLogo.png"
+                src="/half-logo.png"
                 alt="Heritage Care"
-                className="h-16"
-                width={64}
-                height={64}
+                width={72}
+                height={20}
               />
             </Link>
 
@@ -59,15 +65,13 @@ export default function Navigation() {
               {/* Services Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setDesktopServicesOpen(true)}
-                onMouseLeave={() => {
-                  setDesktopServicesOpen(false);
-                  setDesktopResidentialOpen(false);
+                onClick={() => {
+                  setDesktopServicesOpen((prev) => !prev);
                 }}
               >
                 <Link
                   href="/services"
-                  className="hover:text-[#E67E5A] flex items-center gap-1 transition-colors duration-200"
+                  className="hover:text-[#E67E5A] flex items-center gap-5 transition-colors duration-200"
                 >
                   Services ▾
                 </Link>
@@ -109,6 +113,98 @@ export default function Navigation() {
                                   24×7 Nursing Care
                                 </Link>
                                 <Link
+                                  href="/couples-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Couples Care
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        <div
+                          onMouseEnter={() => setDesktopRespiteOpen(true)}
+                          onMouseLeave={() => setDesktopRespiteOpen(false)}
+                        >
+                          <Link
+                            href="/respite"
+                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                          >
+                            Respite Care ▸
+                          </Link>
+
+                          {/* Nested items */}
+                          <AnimatePresence>
+                            {desktopRespiteOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                                className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
+                              >
+                                <Link
+                                  href="/rehabiliation-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Rehabiliation
+                                </Link>
+                                <Link
+                                  href="/holiday-stay"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Holiday Stays
+                                </Link>
+                                <Link
+                                  href="/post-surgery"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Post Surgery
+                                </Link>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+
+                        <div
+                          onMouseEnter={() => setDesktopSpecialOpen(true)}
+                          onMouseLeave={() => setDesktopSpecialOpen(false)}
+                        >
+                          <Link
+                            href="/specialist-conditions"
+                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                          >
+                            Specialized Conditions ▸
+                          </Link>
+
+                          {/* Nested items */}
+                          <AnimatePresence>
+                            {desktopSpecialOpen && (
+                              <motion.div
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 5 }}
+                                className="mt-2 ml-4 flex flex-col gap-1 text-gray-500"
+                              >
+                                <Link
+                                  href="/dementia-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Dementia Care
+                                </Link>
+                                <Link
+                                  href="/parkinsons-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Parkinson&apos;s Care
+                                </Link>
+                                <Link
+                                  href="/alzeihmrs-care"
+                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                >
+                                  Alzeihmr&apos;s Care
+                                </Link>
+                                <Link
                                   href="/palliative-care"
                                   className="hover:text-[#E67E5A] transition-colors duration-200"
                                 >
@@ -118,20 +214,6 @@ export default function Navigation() {
                             )}
                           </AnimatePresence>
                         </div>
-
-                        <Link
-                          href="/respite"
-                          className="hover:text-[#E67E5A] transition-colors duration-200"
-                        >
-                          Respite Care
-                        </Link>
-
-                        <Link
-                          href="/specialist-conditions"
-                          className="hover:text-[#E67E5A] transition-colors duration-200"
-                        >
-                          Specialist Conditions
-                        </Link>
                       </div>
                     </motion.div>
                   )}
@@ -143,6 +225,18 @@ export default function Navigation() {
                 className="hover:text-[#E67E5A] transition-colors duration-200"
               >
                 Gallery
+              </Link>
+              <Link
+                href="/costs"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Fee & Pricing Breakdown
+              </Link>
+              <Link
+                href="/activities"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Activities
               </Link>
             </div>
 
@@ -248,6 +342,107 @@ export default function Navigation() {
                       24×7 Nursing Care
                     </Link>
                     <Link
+                      href="/couples-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Couples Care
+                    </Link>
+                  </div>
+                )}
+
+                {/* Respite Toggle */}
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/respite"
+                    onClick={() => setMobileOpen(false)}
+                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                  >
+                    Respite Care
+                  </Link>
+
+                  {/* Toggle */}
+                  <button
+                    onClick={() => setMobileRespiteOpen(!mobileRespiteOpen)}
+                    className="text-xl px-2"
+                    aria-label="Toggle Respite Care submenu"
+                  >
+                    {mobileRespiteOpen ? "−" : "+"}
+                  </button>
+                </div>
+
+                {mobileRespiteOpen && (
+                  <div className="pl-8 flex flex-col gap-2 text-base">
+                    <Link
+                      href="/rehabiliation-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Rehabiliation
+                    </Link>
+                    <Link
+                      href="/holiday-stay"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Holiday Stays
+                    </Link>
+                    <Link
+                      href="post-surgery"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Post Surgery
+                    </Link>
+                  </div>
+                )}
+
+                {/* Specialist Conditions Toggle */}
+                <div className="flex items-center justify-between pl-4">
+                  {/* Link */}
+                  <Link
+                    href="/specialist-conditions"
+                    onClick={() => setMobileOpen(false)}
+                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                  >
+                    Specialized Conditions
+                  </Link>
+
+                  {/* Toggle */}
+                  <button
+                    onClick={() => setMobileSpecialOpen(!mobileSpecialOpen)}
+                    className="text-xl px-2"
+                    aria-label="Toggle Special Conditions submenu"
+                  >
+                    {mobileSpecialOpen ? "−" : "+"}
+                  </button>
+                </div>
+
+                {mobileSpecialOpen && (
+                  <div className="pl-8 flex flex-col gap-2 text-base">
+                    <Link
+                      href="/dementia-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Dementia Care
+                    </Link>
+                    <Link
+                      href="/parkinsons-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Parkinson&apos;s Care
+                    </Link>
+                    <Link
+                      href="/alzeihmrs-care"
+                      onClick={() => setMobileOpen(false)}
+                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                    >
+                      Alzeihmr&apos;s Care
+                    </Link>
+                    <Link
                       href="/palliative-care"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
@@ -258,27 +453,27 @@ export default function Navigation() {
                 )}
 
                 <Link
-                  href="/respite"
-                  onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
-                >
-                  Respite Care
-                </Link>
-
-                <Link
-                  href="/specialist-conditions"
-                  onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
-                >
-                  Specialist Conditions
-                </Link>
-
-                <Link
                   href="/gallery"
                   onClick={() => setMobileOpen(false)}
                   className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Gallery
+                </Link>
+
+                <Link
+                  href="/costs"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Fee & Pricing Breakdown
+                </Link>
+
+                <Link
+                  href="/activities"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Activities
                 </Link>
 
                 <Link
