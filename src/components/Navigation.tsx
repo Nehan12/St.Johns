@@ -238,6 +238,12 @@ export default function Navigation() {
               >
                 Activities
               </Link>
+              <Link
+                href="/knowledge-hub"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Knowledge Hub
+              </Link>
             </div>
 
             {/* CTA */}
@@ -474,6 +480,13 @@ export default function Navigation() {
                   className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Activities
+                </Link>
+                <Link
+                  href="/knowledge-hub"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Knowledge Hub
                 </Link>
 
                 <Link

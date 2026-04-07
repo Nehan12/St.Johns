@@ -288,11 +288,7 @@ export default function Home() {
                 Our commitment to care is unwavering and continuous. We are
                 deeply dedicated to delivering the highest standards of 24-hour
                 residential care, respite services, day programmes, and memory
-                care, all supported by exceptional hospitality. Every aspect of
-                our service is thoughtfully designed to promote comfort,
-                dignity, and a meaningful quality of life. For us, excellence is
-                not just a benchmark it is a commitment we uphold every day.
-                Caring more is at the heart of everything we do.{" "}
+                care, all supported by exceptional hospitality.{" "}
               </p>
             </div>
           </div>
@@ -561,24 +557,24 @@ export default function Home() {
             <div className="mt-12 flex justify-center items-center gap-16 md:gap-32 flex-wrap">
               <Image
                 src="clogo1.png"
-                width={140}
-                height={32}
+                width={100}
+                height={24}
                 alt="Government Certified"
-                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+                className="h-24 sm:h-16 md:h-24 w-auto transition-transform duration-300 hover:scale-110"
               />
               <Image
-                width={150}
-                height={64}
                 src="clogo2.png"
+                width={110}
+                height={32}
                 alt="NHRC Certified"
-                className="h-64 md:h-40 transition-transform duration-300 hover:scale-110"
+                className="h-24 sm:h-16 md:h-24 w-auto transition-transform duration-300 hover:scale-110"
               />
               <Image
-                width={140}
-                height={32}
                 src="clogo3.png"
+                width={100}
+                height={24}
                 alt="Medical Council Certified"
-                className="h-32 md:h-40 transition-transform duration-300 hover:scale-110"
+                className="h-24 sm:h-16 md:h-24 w-auto transition-transform duration-300 hover:scale-110"
               />
             </div>
           </div>
