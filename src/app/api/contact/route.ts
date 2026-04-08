@@ -27,25 +27,31 @@ const emailHtml = `
       port: 587,
       secure: false,
       auth: {
-        user: "hirunipraveesha18@gmail.com",      
-        pass: "ikaswdbxgmmopsvi",          
+        user: "heritagecarelk@gmail.com",      
+        pass: "tiqzig-1sumqa-zYndoq",          
       },
     });
 
     // Send email
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: "hirunipraveesha18@gmail.com",
+      to: "heritagecarelk@gmail.com",
       subject: `New Contact Form Message from ${name}`,
       html: emailHtml,
     });
 
     return NextResponse.json({ success: true, message: "Email sent successfully" });
-  } catch (error: any) {
-    console.error("Email sending error:", error);
-    return NextResponse.json(
-      { success: false, message: "Failed to send email", error: error.message },
-      { status: 500 }
-    );
+  } catch (error: unknown) {
+  console.error("Email sending error:", error);
+
+  let message = "Failed to send email";
+  if (error instanceof Error) {
+    message = error.message;
   }
+
+  return NextResponse.json(
+    { success: false, message },
+    { status: 500 }
+  );
+}
 }

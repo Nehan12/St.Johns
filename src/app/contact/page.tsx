@@ -112,8 +112,8 @@ export default function Contact() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              We're here to help. Contact us to learn more about our services or
-              to schedule a visit.
+              We&apos;re here to help. Contact us to learn more about our
+              services or to schedule a visit.
             </p>
           </div>
         </div>
