@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 export default function Contact() {
-  // Form data type-safe
   type FormData = {
     name: string;
     email: string;
@@ -22,36 +21,72 @@ export default function Contact() {
     inquiryType: "general",
   });
 
-  // Handle input changes
+  const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
+  const [isValid, setIsValid] = useState(false);
+
+  // Enable button only if required fields are filled
+  useEffect(() => {
+    const { name, email, message } = formData;
+    setIsValid(
+      name.trim() !== "" && email.trim() !== "" && message.trim() !== "",
+    );
+  }, [formData]);
+
   const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // prevent page reload
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    // Show a temporary alert
-    alert("Thank you for your message. We will get back to you soon!");
+    if (!isValid) return; // Do not submit if fields are empty
 
-    // Optional: reset form fields
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      inquiryType: "general",
-    });
+    setLoading(true);
+    setAlert(null);
 
-    console.log("Form submitted:", formData);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setAlert({
+          type: "success",
+          message: "Thank you! Your message has been sent.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          inquiryType: "general",
+        });
+      } else {
+        setAlert({
+          type: "error",
+          message: "Failed to send email. Please try again.",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      setAlert({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -60,35 +95,18 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section
-        className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/landing3.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        style={{ backgroundImage: "url(/landing3.jpg)" }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white pb-4 md:pb-6"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
               Contact Us
             </h1>
-            <br />
             <div className="underline mx-auto mt-2"></div>
             <p
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
@@ -101,7 +119,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact Form Section */}
       <section className="py-16 md:py-24 bg-[#FFF4EE]">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
@@ -186,7 +204,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Form */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#F1D1C4]">
               <h2
                 className="text-2xl font-bold mb-6"
@@ -195,7 +213,7 @@ export default function Contact() {
                 Send us a Message
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 relative">
                 {[
                   { id: "name", label: "Full Name *", type: "text" },
                   { id: "email", label: "Email Address *", type: "email" },
@@ -239,10 +257,44 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#E67E5A] hover:bg-[#D86A45] text-white py-3 rounded-lg font-semibold shadow-md transition"
+                  disabled={!isValid || loading}
+                  className={`w-full bg-[#E67E5A] hover:bg-[#D86A45] text-white py-3 rounded-lg font-semibold shadow-md transition flex justify-center items-center gap-2 ${
+                    !isValid || loading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
                 >
-                  Send Message
+                  {loading && (
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      ></path>
+                    </svg>
+                  )}
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
+
+                {/* Alert */}
+                {alert && (
+                  <div
+                    className={`mt-4 p-4 rounded-lg text-white ${alert.type === "success" ? "bg-green-500" : "bg-red-500"}`}
+                  >
+                    {alert.message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
