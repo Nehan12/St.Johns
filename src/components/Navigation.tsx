@@ -219,13 +219,6 @@ export default function Navigation() {
                   )}
                 </AnimatePresence>
               </div>
-
-              <Link
-                href="/gallery"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
-              >
-                Gallery
-              </Link>
               <Link
                 href="/costs"
                 className="hover:text-[#E67E5A] transition-colors duration-200"
@@ -237,6 +230,12 @@ export default function Navigation() {
                 className="hover:text-[#E67E5A] transition-colors duration-200"
               >
                 Activities
+              </Link>
+              <Link
+                href="/gallery"
+                className="hover:text-[#E67E5A] transition-colors duration-200"
+              >
+                Gallery
               </Link>
               <Link
                 href="/knowledge-hub"
@@ -395,7 +394,7 @@ export default function Navigation() {
                       Holiday Stays
                     </Link>
                     <Link
-                      href="post-surgery"
+                      href="/post-surgery"
                       onClick={() => setMobileOpen(false)}
                       className="hover:text-[#E67E5A] transition-colors duration-200"
                     >
@@ -459,14 +458,6 @@ export default function Navigation() {
                 )}
 
                 <Link
-                  href="/gallery"
-                  onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
-                >
-                  Gallery
-                </Link>
-
-                <Link
                   href="/costs"
                   onClick={() => setMobileOpen(false)}
                   className="hover:text-[#E67E5A] transition-colors duration-200"
@@ -480,6 +471,13 @@ export default function Navigation() {
                   className="hover:text-[#E67E5A] transition-colors duration-200"
                 >
                   Activities
+                </Link>
+                <Link
+                  href="/gallery"
+                  onClick={() => setMobileOpen(false)}
+                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                >
+                  Gallery
                 </Link>
                 <Link
                   href="/knowledge-hub"
