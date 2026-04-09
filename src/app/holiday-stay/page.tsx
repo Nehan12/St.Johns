@@ -82,7 +82,7 @@ export default function HolidayRespite() {
               className="text-xl leading-relaxed max-w-4xl"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Heritage Care Holiday Respite offers short-term stays in London’s
+              Heritage Care Holiday Respite offers short-term stays in Ragama’s
               most distinguished residences, combining luxury living,
               professional care and enriching experiences. Ideal for
               post-surgical recovery, caregiver breaks, or simply a rejuvenating
@@ -190,7 +190,7 @@ export default function HolidayRespite() {
               className="text-lg"
               style={{ fontFamily: "Poppins, sans-serif", color: "#5A3A2E" }}
             >
-              Every stay includes all the elegance of a five-star hotel,
+              Every stay includes all the elegance of a luxury hotel standard,
               underpinned by expert care and tailored support.
             </p>
           </div>

@@ -71,7 +71,7 @@ export default function PalliativeCare() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              At Bredrock Care, palliative care is our calling. We offer
+              At Heritage Care, palliative care is our calling. We offer
               comfort, respect, and emotional support to individuals and
               families during life’s most delicate moments.
             </p>
@@ -188,7 +188,7 @@ export default function PalliativeCare() {
                 color: "#5A3A2E",
               }}
             >
-              At Bredrock Care, we uphold the highest standards of palliative
+              At Heritage Care, we uphold the highest standards of palliative
               care, following the accredited Gold Standards Framework.
             </p>
           </div>
@@ -274,7 +274,7 @@ export default function PalliativeCare() {
         </div>
       </section>
 
-      {/* Why Choose Bredrock Care for Palliative Care */}
+      {/* Why Choose Heritage Care for Palliative Care */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
         {/* Soft decorative shapes */}
         <div className="absolute top-0 left-0 w-80 h-80 bg-[#E7A98B]/30 rounded-full -translate-x-40 -translate-y-40"></div>
@@ -290,7 +290,7 @@ export default function PalliativeCare() {
                 color: "#B85C2E",
               }}
             >
-              Why Choose Bredrock Care for Palliative Care?
+              Why Choose Heritage Care for Palliative Care?
             </h2>
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"

@@ -21,17 +21,17 @@ export default function Gallery() {
   const typeIRooms = [
     {
       name: "Type I Room A",
-      image: "/room3.jpeg",
+      image: "/type1-room1.jpeg",
       details: "Single bed, ensuite bathroom, city view, free Wi-Fi.",
     },
     {
       name: "Type I Room B",
-      image: "/room3.jpeg",
+      image: "/type-room2.jpeg",
       details: "Single bed, private balcony, garden view, free Wi-Fi.",
     },
     {
       name: "Type I Room C",
-      image: "/room3.jpeg",
+      image: "/type-room3.jpeg",
       details: "Single bed, ensuite bathroom, air conditioning, TV.",
     },
   ];
@@ -39,12 +39,12 @@ export default function Gallery() {
   const typeIIRooms = [
     {
       name: "Type II Room A",
-      image: "/room3.jpeg",
+      image: "/room1.jpeg",
       details: "Double bed, shared bathroom, garden view, free Wi-Fi.",
     },
     {
       name: "Type II Room B",
-      image: "/room3.jpeg",
+      image: "/room2.jpeg",
       details: "Double bed, private balcony, sea view, TV & Wi-Fi.",
     },
     {
