@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
     // Create the email HTML
 const emailHtml = `
   <div style="font-family: 'Poppins', sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #FFF4EE; border-radius: 10px; border: 1px solid #E67E5A;">
-    <h2 style="text-align: center; color: #3A2A23;">Heritage Care Contact Form</h2>
+    <h2 style="text-align: center; color: #3A2A23;">Heritage Care Contact Form Response</h2>
     <p style="color: #5C4033;"><strong>Name:</strong> ${name}</p>
     <p style="color: #5C4033;"><strong>Email:</strong> ${email}</p>
     <p style="color: #5C4033;"><strong>Phone:</strong> ${phone || "N/A"}</p>
@@ -28,7 +28,7 @@ const emailHtml = `
       secure: false,
       auth: {
         user: "heritagecarelk@gmail.com",      
-        pass: "tiqzig-1sumqa-zYndoq",          
+        pass: "ghst jonv gkya vmpd",          
       },
     });
 
