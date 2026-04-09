@@ -26,12 +26,12 @@ export default function Gallery() {
     },
     {
       name: "Type I Room B",
-      image: "/type-room2.jpeg",
+      image: "/type1-room2.jpeg",
       details: "Single bed, private balcony, garden view, free Wi-Fi.",
     },
     {
       name: "Type I Room C",
-      image: "/type-room3.jpeg",
+      image: "/type1-room3.jpeg",
       details: "Single bed, ensuite bathroom, air conditioning, TV.",
     },
   ];
