@@ -38,29 +38,64 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Care - Nursing & Wellness",
+  metadataBase: new URL("https://heritagecare.lk"),
+  title: {
+    default: "Heritage Care - Nursing & Wellness Sri Lanka",
+    template: "%s | Heritage Care Sri Lanka",
+  },
   description:
-    "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+    "Premium care facility in Ragama, Sri Lanka providing compassionate palliative, dementia, and long-term residential care with 24/7 nursing and personalised care plans.",
+  keywords: [
+    "nursing home Sri Lanka",
+    "care home Ragama",
+    "dementia care Sri Lanka",
+    "palliative care Sri Lanka",
+    "elderly care Sri Lanka",
+    "residential care Colombo",
+    "Heritage Care",
+  ],
+  alternates: { canonical: "/" },
   icons: {
-    icon: "/logo4.png", // Use your existing logo
+    icon: "/logo4.png",
     shortcut: "/logo4.png",
     apple: "/logo4.png",
   },
   openGraph: {
-    title: "Heritage Care - Nursing & Wellness",
+    title: "Heritage Care - Nursing & Wellness Sri Lanka",
     description:
-      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-    images: ["/logo4.png"],
+      "Premium care facility in Ragama, Sri Lanka providing compassionate palliative, dementia, and long-term residential care with 24/7 nursing and personalised care plans.",
+    images: [{ url: "/logo4.png", width: 800, height: 800, alt: "Heritage Care Logo" }],
     type: "website",
+    locale: "en_LK",
+    siteName: "Heritage Care",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heritage Care - Nursing & Wellness",
+    title: "Heritage Care - Nursing & Wellness Sri Lanka",
     description:
-      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+      "Premium care facility in Ragama, Sri Lanka providing compassionate palliative, dementia, and long-term residential care with 24/7 nursing and personalised care plans.",
     images: ["/logo4.png"],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NursingHome",
+  name: "Heritage Care",
+  url: "https://heritagecare.lk",
+  logo: "https://heritagecare.lk/logo4.png",
+  description:
+    "Premium care facility in Ragama, Sri Lanka providing compassionate palliative, dementia, and long-term residential care with 24/7 nursing.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Diyagala Boys Town",
+    addressLocality: "Ragama",
+    addressCountry: "LK",
+  },
+  telephone: ["+94771654202", "+94777253873"],
+  email: "heritagecarelk@gmail.com",
+  openingHours: "Mo-Su 00:00-23:59",
+  priceRange: "$$",
 };
 
 export default function RootLayout({
@@ -70,6 +105,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${roboto.variable}${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${sourceSans3.variable} antialiased`}
       >
