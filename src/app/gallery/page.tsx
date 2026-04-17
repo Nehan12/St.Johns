@@ -22,17 +22,17 @@ export default function Gallery() {
     {
       name: "Type I Room A",
       image: "/type1-room1.jpeg",
-      details: "Single bed, ensuite bathroom, city view, free Wi-Fi.",
+      details: "Single bed, shared bathroom facility, city view, free Wi-Fi.",
     },
     {
       name: "Type I Room B",
       image: "/type1-room2.jpeg",
-      details: "Single bed, private balcony, garden view, free Wi-Fi.",
+      details: "Single bed, shared bathroom facility, garden view, free Wi-Fi.",
     },
     {
       name: "Type I Room C",
       image: "/type1-room3.jpeg",
-      details: "Single bed, ensuite bathroom, air conditioning, TV.",
+      details: "Single bed, shared bathroom facility, city view, free Wi-Fi.",
     },
   ];
 
@@ -40,12 +40,12 @@ export default function Gallery() {
     {
       name: "Type II Room A",
       image: "/room1.jpeg",
-      details: "Double bed, shared bathroom, garden view, free Wi-Fi.",
+      details: "Double bed, ensuite bathroom, garden view, free Wi-Fi.",
     },
     {
       name: "Type II Room B",
       image: "/room2.jpeg",
-      details: "Double bed, private balcony, sea view, TV & Wi-Fi.",
+      details: "Double bed, ensuite bathroom, garden view, free Wi-Fi.",
     },
     {
       name: "Type II Room C",
@@ -207,12 +207,12 @@ export default function Gallery() {
                       </p>
 
                       {/* View More Button */}
-                      <button
+                      {/* <button
                         onClick={() => setSelectedRoom(room)}
                         className="bg-[#E67E5A] hover:bg-[#D86A45] text-white px-4 py-2 rounded-lg text-sm font-semibold transition"
                       >
                         View More Details
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 ))}
