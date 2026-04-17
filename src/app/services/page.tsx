@@ -185,14 +185,14 @@ export default function Services() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
-                  Specialized Conditions Care
+                  Specialised Conditions Care
                 </h3>
                 <p className="mb-6 text-[#372e29]">
                   Expert care for dementia, Alzheimer’s, Parkinson’s, and
                   complex conditions.
                 </p>
                 <Link
-                  href="/specialist-conditions"
+                  href="/specialised-conditions"
                   className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   Learn More
@@ -766,7 +766,7 @@ export default function Services() {
                         }}
                       >
                         Our dedicated healthcare professionals bring years of
-                        experience in specialized care, ensuring your loved ones
+                        experience in specialised care, ensuring your loved ones
                         receive the highest quality support.
                       </p>
                     </div>

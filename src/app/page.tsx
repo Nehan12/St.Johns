@@ -71,7 +71,7 @@ export default function Home() {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage: "url(/landing3.jpg)",
+            backgroundImage: "url(/landingImage.jpeg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -154,7 +154,7 @@ export default function Home() {
             {[
               {
                 icon: "/1.png",
-                title: "Luxury Senior Residential Care",
+                title: "Senior Residential Care",
                 description:
                   "Our primary goal is to help seniors maintain a familiar lifestyle in the comfort of home.",
               },
@@ -168,13 +168,13 @@ export default function Home() {
                 icon: "/3.png",
                 title: "Memory Care",
                 description:
-                  "Provides specialized dementia support, ensuring safety, structured care & family communication.",
+                  "Provides specialised dementia support, ensuring safety, structured care & family communication.",
               },
               {
                 icon: "/4.png",
                 title: "Rehabilitation",
                 description:
-                  "Focused on recovery & restoring independence through therapy, personalized care & progress monitoring.",
+                  "Focused on recovery & restoring independence through therapy, personalised care & progress monitoring.",
               },
             ].map((card, index) => {
               const offsets = [
@@ -275,7 +275,7 @@ export default function Home() {
                   fontWeight: 700,
                 }}
               >
-                Luxury Care, Rooted in Compassion
+                Care, Rooted in Compassion
               </h1>
               <p
                 className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
@@ -373,7 +373,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Building meaningful relationships between residents, families,
+                Building meaningful relationships between residents, families
                 and our compassionate care team.
               </p>
             </div>
@@ -420,8 +420,8 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Promoting physical, emotional, and spiritual wellness through
-                personalized care and support.
+                Promoting physical, emotional and spiritual wellness through
+                personalised care and support.
               </p>
             </div>
 
@@ -467,7 +467,7 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Providing a safe, secure environment where residents and
+                Providing a safe and secure environment where residents and
                 families feel protected and at peace.
               </p>
             </div>
@@ -629,7 +629,7 @@ export default function Home() {
                 }}
               >
                 Comprehensive coordination of medical appointments with regular
-                follow-ups, detailed health monitoring, and clear communication
+                follow-ups, detailed health monitoring and clear communication
                 to ensure each resident&apos;s ongoing medical needs are
                 carefully managed.
               </p>
@@ -663,9 +663,9 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Personalized therapy programs developed through professional
+                Personalised therapy programs developed through professional
                 assessments, focusing on mobility improvement, strength
-                building, pain management, and continuous progress evaluation.
+                building, pain management and continuous progress evaluation.
               </p>
             </div>
 
@@ -698,7 +698,7 @@ export default function Home() {
                 }}
               >
                 Individually planned nutrition programs based on medical
-                requirements, dietary preferences, and ongoing health reviews to
+                requirements, dietary preferences and ongoing health reviews to
                 support overall wellness and specific conditions.
               </p>
             </div>
@@ -733,8 +733,8 @@ export default function Home() {
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
-                Organized and reliable transportation services arranged with
-                safety considerations, scheduling flexibility, and assistance to
+                Organised and reliable transportation services arranged with
+                safety considerations, scheduling flexibility and assistance to
                 support medical visits and personal outings.
               </p>
             </div>
@@ -768,7 +768,7 @@ export default function Home() {
                 }}
               >
                 Dedicated overnight support providing continuous supervision,
-                immediate response assistance, comfort care, and regular
+                immediate response assistance, comfort care and regular
                 monitoring to ensure safety and peace of mind.
               </p>
             </div>
@@ -802,7 +802,7 @@ export default function Home() {
                 }}
               >
                 Structured medication plans including timely administration,
-                dosage monitoring, coordination with healthcare professionals,
+                dosage monitoring, coordination with healthcare professionals
                 and regular reviews to maintain optimal health outcomes.
               </p>
             </div>
@@ -876,8 +876,16 @@ export default function Home() {
                 fontFamily: "Poppins, sans-serif",
               }}
             >
-              Experience the pinnacle of luxury care where every detail is
-              crafted for comfort, dignity, and exceptional living.
+              Care that feels like home.{" "}
+            </p>
+            <p
+              className="text-lg md:text-xl max-w-3xl mx-auto"
+              style={{
+                color: "#EFE9E2",
+                fontFamily: "Poppins, sans-serif",
+              }}
+            >
+              Dignity, independence, and meaningful living every single day.
             </p>
           </div>
 
@@ -895,12 +903,10 @@ export default function Home() {
                 fontFamily: "Poppins, sans-serif",
               }}
             >
-              At Heritage Care, we redefine luxury care through our exclusive
-              boutique estate designed for discerning families. Our
-              concierge-level medical oversight, white-glove lifestyle services,
-              and gourmet culinary experiences create an unparalleled
-              environment where every detail reflects our commitment to
-              exceptional living.
+              At Heritage Care, we go beyond routine support to create a place
+              where life continues with purpose and familiarity. Every resident
+              is treated as an individual, with care shaped around their
+              personal history, preferences, and daily rhythms.
             </p>
           </div>
 
@@ -911,7 +917,7 @@ export default function Home() {
             }`}
             style={{ animationDelay: "0.4s" }}
           >
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-4 mb-2">
               <h3
                 className="text-3xl md:text-5xl font-bold"
                 style={{

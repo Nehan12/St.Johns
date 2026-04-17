@@ -171,10 +171,10 @@ export default function Navigation() {
                           onMouseLeave={() => setDesktopSpecialOpen(false)}
                         >
                           <Link
-                            href="/specialist-conditions"
+                            href="/specialised-conditions"
                             className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
                           >
-                            Specialized Conditions ▸
+                            Specialised Conditions ▸
                           </Link>
 
                           {/* Nested items */}
@@ -220,7 +220,7 @@ export default function Navigation() {
                 </AnimatePresence>
               </div>
               <Link
-                href="/costs"
+                href="/fee-and-pricing-breakdown"
                 className="hover:text-[#E67E5A] transition-colors duration-200"
               >
                 Fee & Pricing Breakdown
@@ -410,11 +410,11 @@ export default function Navigation() {
                 <div className="flex items-center justify-between pl-4">
                   {/* Link */}
                   <Link
-                    href="/specialist-conditions"
+                    href="/specialised-conditions"
                     onClick={() => setMobileOpen(false)}
                     className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
                   >
-                    Specialized Conditions
+                    Specialised Conditions
                   </Link>
 
                   {/* Toggle */}
@@ -461,7 +461,7 @@ export default function Navigation() {
                 )}
 
                 <Link
-                  href="/costs"
+                  href="/fee-and-pricing-breakdown"
                   onClick={() => setMobileOpen(false)}
                   className="hover:text-[#E67E5A] transition-colors duration-200"
                 >

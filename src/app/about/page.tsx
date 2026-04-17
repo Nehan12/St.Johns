@@ -46,7 +46,7 @@ export default function About() {
           min-h-[60vh] md:min-h-[85vh]
         "
         style={{
-          backgroundImage: "url(/about.jpg)",
+          backgroundImage: "url(/about.jpeg)",
         }}
       >
         {/* Dark Overlay */}
@@ -67,10 +67,27 @@ export default function About() {
               className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
               style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              Excellence in luxury care, where compassion meets innovation in
-              the heart of Sri Lanka.
+              Care that feels like home, rooted in dignity and meaningful
+              living.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="pt-20 bg-white">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed">
+            Heritage Care was created on the belief that growing older should
+            never mean losing the essence of who you are. We provide thoughtful,
+            personalised care in an environment that prioritises comfort,
+            familiarity, and genuine human connection.
+            <br />
+            <br />
+            Every detail is shaped around the individual from daily routines to
+            social engagement ensuring our residents feel valued, understood,
+            and truly at home. By blending attentive clinical support with a
+            warm, community-focused approach, we create a space where life
+            continues with purpose, dignity, and belonging.
+          </p>
         </div>
       </section>
 
@@ -96,9 +113,9 @@ export default function About() {
                 className="text-lg md:text-xl leading-relaxed max-w-4xl"
                 style={{ color: "#5C4033", fontFamily: "Poppins, sans-serif" }}
               >
-                To provide exceptional, compassionate care that enhances quality
-                of life while honoring dignity, comfort, and personal wellbeing
-                for every individual we serve.
+                To provide personalised, compassionate care that enhances
+                everyday living while preserving dignity, independence, and a
+                strong sense of identity.
               </p>
             </div>
           </div>
@@ -135,10 +152,10 @@ export default function About() {
               {[
                 {
                   title: "Assessment & Planning",
-                  text: "We carefully assess medical needs, emotional wellbeing, and personal preferences.",
+                  text: "We carefully assess medical needs, emotional wellbeing and personal preferences.",
                 },
                 {
-                  title: "Personalized Care",
+                  title: "Personalised Care",
                   text: "Dedicated caregivers deliver compassionate support tailored to each resident.",
                 },
                 {
@@ -176,7 +193,7 @@ export default function About() {
               <div className="rounded-3xl overflow-hidden shadow-xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center"
-                  style={{ backgroundImage: "url(/landing2.jpg)" }}
+                  style={{ backgroundImage: "url(/about2.jpeg)" }}
                 />
               </div>
             </div>

@@ -96,7 +96,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
-        style={{ backgroundImage: "url(/landing3.jpg)" }}
+        style={{ backgroundImage: "url(/contactPage.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
