@@ -867,7 +867,7 @@ export default function Home() {
                 fontFamily: "Roboto, sans-serif",
               }}
             >
-              Luxury Care, Redefined
+              Care, Redefined
             </h2>
             <p
               className="text-lg md:text-xl max-w-3xl mx-auto"

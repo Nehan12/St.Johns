@@ -265,6 +265,9 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
+      <div className="fixed top-20 md:top-20 w-full z-40 bg-gradient-to-r from-[#D46A1F] to-[#E67E5A] text-white text-center px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+        Senior residential, nursing, memory & rehabilitation care
+      </div>
 
       {/* MOBILE MENU */}
       <AnimatePresence>
