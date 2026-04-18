@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { FaPhone } from "react-icons/fa";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -249,8 +250,9 @@ export default function Navigation() {
             <div className="hidden lg:block ml-auto">
               <Link
                 href="/contact"
-                className="bg-[#D46A1F] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#E67E5A] transition-colors duration-200"
+                className="bg-[#D46A1F] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#E67E5A] transition-colors duration-200 flex items-center gap-2"
               >
+                <FaPhone />
                 Speak to Our Care Team
               </Link>
             </div>
