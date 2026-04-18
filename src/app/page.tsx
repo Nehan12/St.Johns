@@ -59,10 +59,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      className="flex flex-col min-h-screen overflow-x-hidden"
-      style={{ backgroundColor: "#ffffff" }}
-    >
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg-normal">
       <Navigation />
 
       {/* Hero Section - Carousel with Navigation Anchors */}
@@ -84,44 +81,24 @@ export default function Home() {
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-start z-20 px-8 md:px-16">
           <div className="text-left max-w-4xl">
-            <h2
-              className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-              style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700 }}
-            >
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Care Beyond Compare
             </h2>
-            <p
-              className="text-xl md:text-4xl text-white/90 mb-8 leading-relaxed italic"
-              style={{ fontFamily: "Poppins, sans-serif", fontWeight: 200 }}
-            >
+            <p className="text-xl md:text-4xl text-white/90 mb-8 leading-relaxed italic">
               It must be Heritage Care.
             </p>
 
             <div className="flex flex-row gap-4">
               <Link
                 href="/about"
-                className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                style={{ backgroundColor: "#89986D" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#9CAB84")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#89986D")
-                }
+                className="text-white font-semibold py-3 px-8 rounded-lg bg-primary transition-all hover:scale-105 hover:brightness-90"
               >
                 About
               </Link>
 
               <Link
                 href="/services"
-                className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                style={{ backgroundColor: "#89986D" }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#9CAB84")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#89986D")
-                }
+                className="text-white font-semibold py-3 px-8 rounded-lg bg-primary transition-all hover:scale-105 hover:brightness-90"
               >
                 Services
               </Link>
@@ -188,23 +165,13 @@ export default function Home() {
                 <a
                   href="#"
                   key={index}
-                  className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full`}
-                  style={{ color: "#9CAB84" }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = "#89986D";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = "#9CAB84";
-                  }}
+                  className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full text-[var(--primary)] hover:brightness-90`}
                 >
                   <div
                     className="flex flex-col items-center text-center p-4 rounded-2xl cursor-pointer 
                             hover:scale-105 group"
                   >
-                    <div
-                      className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors"
-                      style={{ backgroundColor: "#89986D" }}
-                    >
+                    <div className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors bg-primary">
                       <Image
                         src={card.icon}
                         alt={card.title}
@@ -217,7 +184,7 @@ export default function Home() {
                       {card.title}
                     </h3>
                     <p
-                      className="mb-4 transition-colors break-words"
+                      className="mb-4 transition-colors break-words "
                       style={{ color: "#3F2A1E" }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.color = "#060606";
@@ -268,9 +235,8 @@ export default function Home() {
               }`}
             >
               <h1
-                className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105"
+                className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105 text-primary"
                 style={{
-                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 700,
                 }}
@@ -297,35 +263,34 @@ export default function Home() {
 
       {/* Core Values Section */}
       <section
-        className="py-20 relative overflow-hidden"
-        style={{ backgroundColor: "#F6F0D7" }}
+        className="py-20 relative overflow-hidden bg-light"
         ref={coreValuesRef}
       >
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
-            className={`absolute top-10 left-10 w-32 h-32 rounded-full transition-all duration-1000 ${
+            className={`absolute top-10 left-10 w-32 h-32 rounded-full transition-all duration-1000 bg-primary ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#C5D89D", animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.1s" }}
           ></div>
           <div
-            className={`absolute top-32 right-20 w-24 h-24 rounded-full transition-all duration-1000 ${
+            className={`absolute top-32 right-20 w-24 h-24 rounded-full transition-all duration-1000 bg-primary ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#C5D89D", animationDelay: "0.3s" }}
+            style={{ animationDelay: "0.3s" }}
           ></div>
           <div
-            className={`absolute bottom-20 left-1/4 w-20 h-20 rounded-full transition-all duration-1000 ${
+            className={`absolute bottom-20 left-1/4 w-20 h-20 rounded-full transition-all duration-1000 bg-primary ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#C5D89D", animationDelay: "0.5s" }}
+            style={{ animationDelay: "0.5s" }}
           ></div>
           <div
-            className={`absolute bottom-32 right-1/3 w-28 h-28 rounded-full transition-all duration-1000 ${
+            className={`absolute bottom-32 right-1/3 w-28 h-28 rounded-full transition-all duration-1000 bg-primary${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#C5D89D", animationDelay: "0.7s" }}
+            style={{ animationDelay: "0.7s" }}
           ></div>
         </div>
 
@@ -337,10 +302,7 @@ export default function Home() {
               style={{ animationDelay: "0.1s" }}
             >
               <div className="mb-8">
-                <div
-                  className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#C5D89D" }}
-                >
+                <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg bg-primary">
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
                     fill="none"
@@ -357,22 +319,10 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3
-                className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Connection
               </h3>
-              <p
-                className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#3F2A1E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1">
                 Building meaningful relationships between residents, families
                 and our compassionate care team.
               </p>
@@ -384,10 +334,7 @@ export default function Home() {
               style={{ animationDelay: "0.2s" }}
             >
               <div className="mb-8">
-                <div
-                  className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#C5D89D" }}
-                >
+                <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg bg-primary">
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
                     fill="none"
@@ -404,22 +351,10 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3
-                className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Well-being
               </h3>
-              <p
-                className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#3F2A1E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1">
                 Promoting physical, emotional and spiritual wellness through
                 personalised care and support.
               </p>
@@ -431,10 +366,7 @@ export default function Home() {
               style={{ animationDelay: "0.3s" }}
             >
               <div className="mb-8">
-                <div
-                  className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#C5D89D" }}
-                >
+                <div className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg bg-primary">
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
                     fill="none"
@@ -451,22 +383,10 @@ export default function Home() {
                   </svg>
                 </div>
               </div>
-              <h3
-                className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Security
               </h3>
-              <p
-                className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#3F2A1E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-lg leading-relaxed transform transition-all duration-300 group-hover:translate-y-1">
                 Providing a safe and secure environment where residents and
                 families feel protected and at peace.
               </p>
@@ -486,22 +406,10 @@ export default function Home() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{
-                color: "#89986D",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Why Choose Heritage Care?
             </h2>
-            <p
-              className="text-xl max-w-3xl mx-auto"
-              style={{
-                color: "#5A3A2E",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <p className="text-xl max-w-3xl mx-auto">
               Experience the difference of compassionate, professional care in a
               warm, welcoming environment.
             </p>
@@ -525,13 +433,13 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`text-center p-6 rounded-xl shadow-md border border-[#C5D89D] transition-transform duration-500 hover:scale-105 ${
+                className={`text-center p-6 rounded-xl shadow-md border border-[#D9E9CF] transition-transform duration-500 hover:scale-105 ${
                   isVisible.whyChoose
                     ? "animate-fadeInUp"
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                <h3 className="text-xl font-semibold mb-2 text-[#89986D]">
+                <h3 className="text-xl font-semibold mb-2 text-primary">
                   {item.title}
                 </h3>
                 <p className="text-[#5A3A2E]">{item.text}</p>
@@ -542,7 +450,7 @@ export default function Home() {
           {/* Certification Logos */}
           <div className="mt-16 text-center">
             {/* Heading */}
-            <h3 className="text-xl font-semibold mb-2 text-[#89986D]">
+            <h3 className="text-xl font-semibold mb-2 text-primary">
               Certified & Trusted
             </h3>
 
@@ -581,20 +489,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="py-5"
-        style={{ backgroundColor: "#ffffff" }}
-        ref={luxuryRef}
-      >
+      <section className="py-5 bg-normal" ref={luxuryRef}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6 text-center"
-              style={{
-                color: "#89986D",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-primary">
               Extra services for your family are here
             </h2>
           </div>
@@ -612,22 +510,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Doctor Visits
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Comprehensive coordination of medical appointments with regular
                 follow-ups, detailed health monitoring and clear communication
                 to ensure each resident&apos;s ongoing medical needs are
@@ -647,22 +533,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Physiotherapy
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Personalised therapy programs developed through professional
                 assessments, focusing on mobility improvement, strength
                 building, pain management and continuous progress evaluation.
@@ -681,22 +555,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Special Diets
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Individually planned nutrition programs based on medical
                 requirements, dietary preferences and ongoing health reviews to
                 support overall wellness and specific conditions.
@@ -717,22 +579,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Transportation Services
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Organised and reliable transportation services arranged with
                 safety considerations, scheduling flexibility and assistance to
                 support medical visits and personal outings.
@@ -751,22 +601,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Dedicated Night Carer
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Dedicated overnight support providing continuous supervision,
                 immediate response assistance, comfort care and regular
                 monitoring to ensure safety and peace of mind.
@@ -785,22 +623,10 @@ export default function Home() {
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3
-                className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
-                style={{
-                  color: "#89986D",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105 text-primary">
                 Medication Management
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1"
-                style={{
-                  color: "#5A3A2E",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <p className="text-sm leading-relaxed mb-4 transform transition-all duration-300 group-hover:translate-y-1">
                 Structured medication plans including timely administration,
                 dosage monitoring, coordination with healthcare professionals
                 and regular reviews to maintain optimal health outcomes.
@@ -811,14 +637,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/services"
-              className="text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              style={{ backgroundColor: "#89986D" }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#9CAB84";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#89986D";
-              }}
+              className="text-white font-semibold py-3 px-8 rounded-lg transition-colors bg-primary"
             >
               View All Services
             </Link>
@@ -831,7 +650,7 @@ export default function Home() {
         ref={luxuryRef}
         className="relative py-40 overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: "url(/image.png)",
+          backgroundImage: "url(/page1.png)",
         }}
       >
         {/* Dark Overlay */}
@@ -853,38 +672,20 @@ export default function Home() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-secondary">
           {/* Heading */}
           <div
             className={`mb-12 text-center transition-all duration-1000 ${
               isVisible.luxury ? "animate-fadeInUp" : "opacity-0 translate-y-10"
             }`}
           >
-            <h2
-              className="text-3xl md:text-5xl font-bold mb-4 mt-4"
-              style={{
-                color: "#F7F4F0",
-                fontFamily: "Roboto, sans-serif",
-              }}
-            >
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 mt-4">
               Care, Redefined
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto"
-              style={{
-                color: "#EFE9E2",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <p className="text-lg md:text-xl max-w-3xl mx-auto">
               Care that feels like home.{" "}
             </p>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto"
-              style={{
-                color: "#EFE9E2",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <p className="text-lg md:text-xl max-w-3xl mx-auto">
               Dignity, independence, and meaningful living every single day.
             </p>
           </div>
@@ -896,13 +697,7 @@ export default function Home() {
             }`}
             style={{ animationDelay: "0.2s" }}
           >
-            <p
-              className="text-xl leading-relaxed max-w-4xl mx-auto"
-              style={{
-                color: "#F1ECE6",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <p className="text-xl leading-relaxed max-w-4xl mx-auto">
               At Heritage Care, we go beyond routine support to create a place
               where life continues with purpose and familiarity. Every resident
               is treated as an individual, with care shaped around their
@@ -918,13 +713,7 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <div className="flex items-center gap-4 mb-2">
-              <h3
-                className="text-3xl md:text-5xl font-bold"
-                style={{
-                  color: "#F7F4F0",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
+              <h3 className="text-3xl md:text-5xl font-bold">
                 We are ready to lend a hand
               </h3>
             </div>

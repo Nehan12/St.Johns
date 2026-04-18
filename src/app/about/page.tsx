@@ -20,13 +20,8 @@ export default function About() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#89986D] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#89986D] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
@@ -50,23 +45,15 @@ export default function About() {
         }}
       >
         {/* Dark Overlay */}
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div> */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               About Us
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               Care that feels like home, rooted in dignity and meaningful
               living.
             </p>
@@ -75,7 +62,7 @@ export default function About() {
       </section>
       <section className="pt-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-lg md:text-xl text-[#5C4033] leading-relaxed">
+          <p className="text-lg md:text-xl text-main leading-relaxed">
             Heritage Care was created on the belief that growing older should
             never mean losing the essence of who you are. We provide thoughtful,
             personalised care in an environment that prioritises comfort,
@@ -94,9 +81,9 @@ export default function About() {
       {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden border border-[#C5D89D] shadow-sm">
+          <div className="relative rounded-3xl overflow-hidden border border-[#D9E9CF] shadow-sm">
             {/* Accent strip */}
-            <div className="absolute inset-y-0 left-0 w-2 bg-[#89986D]" />
+            <div className="absolute inset-y-0 left-0 w-2 bg-primary" />
 
             <div className="p-10 md:p-14 pl-12 md:pl-16">
               <h2
@@ -121,7 +108,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-[#F6F0D7]">
+      <section className="py-24 bg-light">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-3xl mb-20">
@@ -147,7 +134,7 @@ export default function About() {
             {/* Timeline */}
             <div className="relative pl-8">
               {/* Vertical line */}
-              <div className="absolute left-2 top-0 bottom-0 w-px bg-[#89986D]/40" />
+              <div className="absolute left-2 top-0 bottom-0 w-px bg-secondary" />
 
               {[
                 {
@@ -164,7 +151,7 @@ export default function About() {
                 },
               ].map((item, index) => (
                 <div key={index} className="relative mb-14 flex gap-6">
-                  <div className="w-4 h-4 mt-2 rounded-full bg-[#89986D]" />
+                  <div className="w-4 h-4 mt-2 rounded-full bg-primary" />
                   <div>
                     <h3
                       className="text-xl font-semibold mb-2"

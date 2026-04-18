@@ -51,14 +51,14 @@ export default function Navigation() {
             <div className="hidden lg:flex flex-1 justify-center gap-10 text-sm font-semibold text-gray-700">
               <Link
                 href="/"
-                className="hover:text-[#9CAB84] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 Home
               </Link>
 
               <Link
                 href="/about"
-                className="hover:text-[#9CAB84] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 About Us
               </Link>
@@ -72,7 +72,7 @@ export default function Navigation() {
               >
                 <Link
                   href="/services"
-                  className="hover:text-[#E67E5A] flex items-center gap-5 transition-colors duration-200"
+                  className="hover:text-[var(--primary)] flex items-center gap-5 transition-colors duration-200"
                 >
                   Services ▾
                 </Link>
@@ -93,7 +93,7 @@ export default function Navigation() {
                         >
                           <Link
                             href="/residential-care"
-                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                            className="font-semibold flex justify-between items-center hover:text-[var(--primary)] transition-colors duration-200"
                           >
                             Residential Care ▸
                           </Link>
@@ -109,13 +109,13 @@ export default function Navigation() {
                               >
                                 <Link
                                   href="/24-hour-nursing"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   24×7 Nursing Care
                                 </Link>
                                 <Link
                                   href="/couples-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Couples Care
                                 </Link>
@@ -130,7 +130,7 @@ export default function Navigation() {
                         >
                           <Link
                             href="/respite"
-                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                            className="font-semibold flex justify-between items-center hover:text-[var(--primary)] transition-colors duration-200"
                           >
                             Respite Care ▸
                           </Link>
@@ -146,19 +146,19 @@ export default function Navigation() {
                               >
                                 <Link
                                   href="/rehabiliation-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Rehabiliation
                                 </Link>
                                 <Link
                                   href="/holiday-stay"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Holiday Stays
                                 </Link>
                                 <Link
                                   href="/post-surgery"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Post Surgery
                                 </Link>
@@ -173,7 +173,7 @@ export default function Navigation() {
                         >
                           <Link
                             href="/specialised-conditions"
-                            className="font-semibold flex justify-between items-center hover:text-[#E67E5A] transition-colors duration-200"
+                            className="font-semibold flex justify-between items-center hover:text-[var(--primary)] transition-colors duration-200"
                           >
                             Specialised Conditions ▸
                           </Link>
@@ -189,25 +189,25 @@ export default function Navigation() {
                               >
                                 <Link
                                   href="/dementia-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Dementia Care
                                 </Link>
                                 <Link
                                   href="/parkinsons-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Parkinson&apos;s Care
                                 </Link>
                                 <Link
                                   href="/alzeihmrs-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Alzeihmr&apos;s Care
                                 </Link>
                                 <Link
                                   href="/palliative-care"
-                                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                                  className="hover:text-[var(--primary)] transition-colors duration-200"
                                 >
                                   Palliative Care
                                 </Link>
@@ -222,25 +222,25 @@ export default function Navigation() {
               </div>
               <Link
                 href="/fee-and-pricing-breakdown"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 Fee & Pricing Breakdown
               </Link>
               <Link
                 href="/activities"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 Activities
               </Link>
               <Link
                 href="/gallery"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 Gallery
               </Link>
               <Link
                 href="/knowledge-hub"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 Knowledge Hub
               </Link>
@@ -250,7 +250,7 @@ export default function Navigation() {
             <div className="hidden lg:block ml-auto">
               <Link
                 href="/contact"
-                className="bg-[#89986D] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#9CAB84] transition-colors duration-200 flex items-center gap-2"
+                className="bg-primary text-white px-6 py-3 rounded-full text-sm font-semibold hover:brightness-95 transition-colors duration-200 flex items-center gap-2"
               >
                 <FaPhone />
                 Speak to Our Care Team
@@ -267,7 +267,7 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-      <div className="fixed top-20 md:top-20 w-full z-40 bg-gradient-to-r from-[#89986D] to-[#9CAB84] text-white text-center px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+      <div className="fixed top-20 md:top-20 w-full z-40 bg-primary text-white text-center px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
         Senior residential, nursing, memory & rehabilitation care
       </div>
 
@@ -306,7 +306,7 @@ export default function Navigation() {
                 <Link
                   href="/about"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   About Us
                 </Link>
@@ -314,7 +314,7 @@ export default function Navigation() {
                 <Link
                   href="/services"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Services
                 </Link>
@@ -325,7 +325,7 @@ export default function Navigation() {
                   <Link
                     href="/residential-care"
                     onClick={() => setMobileOpen(false)}
-                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                    className="hover:text-[var(--primary)] transition-colors duration-200 pl-4"
                   >
                     Residential Care
                   </Link>
@@ -347,14 +347,14 @@ export default function Navigation() {
                     <Link
                       href="/24-hour-nursing"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       24×7 Nursing Care
                     </Link>
                     <Link
                       href="/couples-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Couples Care
                     </Link>
@@ -367,7 +367,7 @@ export default function Navigation() {
                   <Link
                     href="/respite"
                     onClick={() => setMobileOpen(false)}
-                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                    className="hover:text-[var(--primary)] transition-colors duration-200 pl-4"
                   >
                     Respite Care
                   </Link>
@@ -387,21 +387,21 @@ export default function Navigation() {
                     <Link
                       href="/rehabiliation-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Rehabiliation
                     </Link>
                     <Link
                       href="/holiday-stay"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Holiday Stays
                     </Link>
                     <Link
                       href="/post-surgery"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Post Surgery
                     </Link>
@@ -414,7 +414,7 @@ export default function Navigation() {
                   <Link
                     href="/specialised-conditions"
                     onClick={() => setMobileOpen(false)}
-                    className="hover:text-[#E67E5A] transition-colors duration-200 pl-4"
+                    className="hover:text-[var(--primary)] transition-colors duration-200 pl-4"
                   >
                     Specialised Conditions
                   </Link>
@@ -434,28 +434,28 @@ export default function Navigation() {
                     <Link
                       href="/dementia-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Dementia Care
                     </Link>
                     <Link
                       href="/parkinsons-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Parkinson&apos;s Care
                     </Link>
                     <Link
                       href="/alzeihmrs-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Alzeihmr&apos;s Care
                     </Link>
                     <Link
                       href="/palliative-care"
                       onClick={() => setMobileOpen(false)}
-                      className="hover:text-[#E67E5A] transition-colors duration-200"
+                      className="hover:text-[var(--primary)] transition-colors duration-200"
                     >
                       Palliative Care
                     </Link>
@@ -465,7 +465,7 @@ export default function Navigation() {
                 <Link
                   href="/fee-and-pricing-breakdown"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Fee & Pricing Breakdown
                 </Link>
@@ -473,21 +473,21 @@ export default function Navigation() {
                 <Link
                   href="/activities"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Activities
                 </Link>
                 <Link
                   href="/gallery"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Gallery
                 </Link>
                 <Link
                   href="/knowledge-hub"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Knowledge Hub
                 </Link>
@@ -495,7 +495,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-[#E67E5A] transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
                   Contact Us
                 </Link>

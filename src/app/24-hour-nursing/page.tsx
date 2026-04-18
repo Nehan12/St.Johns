@@ -18,20 +18,15 @@ export default function TwentyFourHourNursing() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
@@ -53,18 +48,12 @@ export default function TwentyFourHourNursing() {
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               24-Hour Nursing Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               Expert-led medical oversight with compassionate, bespoke support
               meticulously curated around your needs. Experience nursing care
               redefined.
@@ -76,23 +65,11 @@ export default function TwentyFourHourNursing() {
       {/* What is 24-Hour Nursing Care? */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="border-l-4 pl-8" style={{ borderColor: "#E7A98B" }}>
-            <h2
-              className="text-4xl font-semibold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+          <div className="border-l-4 pl-8 border-[var(--primary)]">
+            <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is 24-Hour Nursing Care?
             </h2>
-            <p
-              className="text-xl leading-relaxed max-w-4xl"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
-            >
+            <p className="text-xl leading-relaxed max-w-4xl">
               24-hour nursing care is a specialised service that provides
               round-the-clock medical supervision for those with complex medical
               needs. At Heritage Care, you receive the highest level of care,
@@ -104,29 +81,19 @@ export default function TwentyFourHourNursing() {
       </section>
 
       {/* Who is 24-Hour Nursing Care For? */}
-      {/* Who is 24-Hour Nursing Care For? */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-white via-[#F8F9FA] to-[#E8F4FD] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         {/* Background Decorations */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#D2C1B6] via-[#456882]/30 to-transparent rounded-full -translate-y-48 translate-x-48"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[#456882] via-[#1B3C53]/20 to-transparent rounded-full translate-y-40 -translate-x-40"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-[#D2C1B6]/20 to-[#456882]/20 rounded-full -translate-x-32 -translate-y-32"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[var(--primary)] via-[var(--primary)]/30 to-transparent rounded-full -translate-y-48 translate-x-48"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-[var(--primary)] via-[var(--primary)]/20 to-transparent rounded-full translate-y-40 -translate-x-40"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r [var(--primary)]/20 to-[var(--primary)]]/20 rounded-full -translate-x-32 -translate-y-32"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Section */}
           <div className="animate-slideInLeft space-y-6">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Who is 24-Hour Nursing Care For?
             </h2>
-            <p
-              className="text-lg md:text-xl text-[#5A3A2E] mb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-main mb-6">
               Our 24-hour nursing care is designed for individuals who require
               ongoing medical supervision due to chronic illnesses,
               post-surgical recovery, neurological conditions, or complex needs
@@ -134,7 +101,7 @@ export default function TwentyFourHourNursing() {
             </p>
 
             {/* List with Modern Icons */}
-            <div className="bg-white rounded-3xl p-10 border border-[#E7A98B]/40 shadow-sm">
+            <div className="bg-white rounded-3xl p-10 border border-[var(--primary)]/40 shadow-sm">
               <div className="space-y-6">
                 {[
                   "Chronic illness management",
@@ -144,20 +111,10 @@ export default function TwentyFourHourNursing() {
                 ].map((point, i) => {
                   return (
                     <div key={i} className="flex items-start">
-                      <span
-                        className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white shadow-lg"
-                        style={{ backgroundColor: "#E7A98B" }}
-                      >
+                      <span className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white shadow-lg bg-secondary">
                         ✓
                       </span>
-                      <span
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#5A3A2E",
-                        }}
-                      >
-                        {point}
-                      </span>
+                      <span className="text-main">{point}</span>
                     </div>
                   );
                 })}
@@ -178,24 +135,13 @@ export default function TwentyFourHourNursing() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-12 md:py-20 bg-[#E7A98B]/30 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-[#456882]/20 to-transparent rounded-full -translate-x-36 -translate-y-36"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-[#1B3C53]/15 to-transparent rounded-full translate-x-40 translate-y-40"></div>
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Approach to 24-Hour Nursing Care
             </h2>
-            <p
-              className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-main max-w-3xl mx-auto px-4">
               A refined approach combining world-class clinical expertise with
               exceptional hospitality
             </p>
@@ -203,7 +149,7 @@ export default function TwentyFourHourNursing() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-[#B85C2E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -218,21 +164,10 @@ export default function TwentyFourHourNursing() {
                   />
                 </svg>
               </div>
-              <h3
-                className="text-xl font-bold mb-4"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-bold mb-4 text-primary">
                 Individuality Honoured
               </h3>
-              <p
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#5A3A2E",
-                }}
-              >
+              <p>
                 Your choices, personal journey and voice guide your care. Every
                 detail is tailored with thoughtfulness and intuition,
                 anticipating your every need and preference.
@@ -240,7 +175,7 @@ export default function TwentyFourHourNursing() {
             </div>
 
             <div className="text-center group">
-              <div className="w-16 h-16 bg-[#B85C2E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -255,22 +190,10 @@ export default function TwentyFourHourNursing() {
                   />
                 </svg>
               </div>
-              <h3
-                className="text-xl font-bold text-gray-900 mb-4"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-bold text-primary mb-4 ">
                 Clinical Excellence
               </h3>
-              <p
-                className="text-gray-600"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#5A3A2E",
-                }}
-              >
+              <p>
                 Your care is informed by the latest advancements in healthcare,
                 delivered by highly skilled professionals and underpinned by our
                 commitment to continual refinement.
@@ -278,7 +201,7 @@ export default function TwentyFourHourNursing() {
             </div>
 
             <div className="text-center group">
-              <div className="w-16 h-16 bg-[#B85C2E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -293,22 +216,10 @@ export default function TwentyFourHourNursing() {
                   />
                 </svg>
               </div>
-              <h3
-                className="text-xl font-bold text-gray-900 mb-4"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Holistic Wellbeing
               </h3>
-              <p
-                className="text-gray-600"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#5A3A2E",
-                }}
-              >
+              <p>
                 Every experience is curated to inspire joy, stimulate the senses
                 and nurture both body and mind, ensuring daily life is enriched
                 with purpose and fulfilment.
@@ -319,22 +230,13 @@ export default function TwentyFourHourNursing() {
       </section>
 
       {/* What We Offer */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FDF5F0] to-[#FFF6EE] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               What We Offer in 24-Hour Nursing Care
             </h2>
-            <p
-              className="text-lg md:text-xl text-[#5A3A2E] max-w-3xl mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-main max-w-3xl mx-auto px-4">
               Heritage Care provides a fully comprehensive care experience
               tailored to you
             </p>
@@ -363,29 +265,18 @@ export default function TwentyFourHourNursing() {
                 desc: "Exquisite, chef-inspired cuisine tailored to your dietary preferences and health needs.",
               },
               {
-                title: "Bespoke Experiences",
+                title: "Tailored Experiences",
                 desc: "Personalized activities and programs designed to enrich your wellbeing and quality of life.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className={`bg-["#E7A98B"] rounded-3xl p-8 border border-[#E7A98B]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105`}
+                className={`rounded-3xl p-8 border border-[var(--primary)]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105`}
               >
-                <h3
-                  className="text-xl font-bold mb-4"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   {item.title}
                 </h3>
-                <p
-                  className="text-[#5A3A2E]"
-                  style={{ fontFamily: "Poppins, sans-serif" }}
-                >
-                  {item.desc}
-                </p>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -393,16 +284,10 @@ export default function TwentyFourHourNursing() {
       </section>
 
       {/* Why Choose Heritage Care */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-[#FFF6EE] via-[#FDF5F0] to-[#FFEDE0] relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Why Choose Heritage Care for 24-Hour Nursing Care?
             </h2>
           </div>
@@ -448,7 +333,7 @@ export default function TwentyFourHourNursing() {
                 ),
               },
               {
-                title: "Bespoke Experiences",
+                title: "Tailored Experiences",
                 desc: "Tailored programmes to enrich your lifestyle and enhance your wellbeing.",
                 icon: (
                   <svg
@@ -472,26 +357,15 @@ export default function TwentyFourHourNursing() {
                 className="flex flex-col items-center text-center relative md:flex-1"
               >
                 {/* Circle Icon */}
-                <div className="w-16 h-16 bg-[#B85C2E] rounded-full flex items-center justify-center shadow-lg mb-4 transition-transform duration-300 hover:scale-110">
+                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg mb-4 transition-transform duration-300 hover:scale-110">
                   {item.icon}
                 </div>
 
                 {/* Title & Description */}
-                <h3
-                  className="text-lg font-bold mb-2"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-lg font-bold mb-2 text-primary">
                   {item.title}
                 </h3>
-                <p
-                  className="text-sm text-[#5A3A2E]"
-                  style={{ fontFamily: "Poppins, sans-serif" }}
-                >
-                  {item.desc}
-                </p>
+                <p className="text-sm">{item.desc}</p>
               </div>
             ))}
           </div>

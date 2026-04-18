@@ -18,20 +18,15 @@ export default function Respite() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
@@ -54,23 +49,15 @@ export default function Respite() {
         }
       >
         {/* Colorful Overlay */}
-        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#1B3C53]/80 via-[#456882]/70 to-[#D2C1B6]/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B3C53]/40 via-transparent to-[#D2C1B6]/30"></div> */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Respite Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               At Heritage Care, we recognise that respite care can be a
               transformative experience, elevating your overall wellbeing,
               promoting recovery and enriching your quality of life.
@@ -80,32 +67,16 @@ export default function Respite() {
       </section>
 
       {/* What is Respite Care? */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
-        {/* Decorative accents */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#E7A98B]/30 rounded-full -translate-x-48 -translate-y-48"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#B85C2E]/20 rounded-full translate-x-40 translate-y-40"></div>
-
+      <section className="py-12 md:py-20  relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* Content */}
             <div className="animate-fadeInUp">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-6"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 What is Respite Care?
               </h2>
 
-              <p
-                className="text-lg mb-8"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#5A3A2E",
-                }}
-              >
+              <p className="text-lg mb-8">
                 Respite care provides short-term support, allowing individuals
                 to benefit from professional nursing while giving carers time to
                 rest and recharge. Whether for recovery following surgery,
@@ -127,7 +98,7 @@ export default function Respite() {
                     className="flex items-start group transition-all duration-300 hover:translate-x-2"
                     style={{ transitionDelay: `${i * 0.08}s` }}
                   >
-                    <div className="w-7 h-7 rounded-full flex items-center justify-center mr-4 mt-1 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] shadow-md group-hover:scale-110 transition-all duration-300">
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center mr-4 mt-1 bg-secondary shadow-md group-hover:scale-110 transition-all duration-300">
                       <svg
                         className="w-4 h-4 text-white"
                         fill="currentColor"
@@ -141,15 +112,7 @@ export default function Respite() {
                       </svg>
                     </div>
 
-                    <span
-                      className="text-sm md:text-base"
-                      style={{
-                        fontFamily: "Poppins, sans-serif",
-                        color: "#5A3A2E",
-                      }}
-                    >
-                      {item}
-                    </span>
+                    <span className="text-sm md:text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -161,7 +124,7 @@ export default function Respite() {
                 className="aspect-[4/3] bg-cover bg-center rounded-3xl shadow-xl transition-all duration-700 hover:scale-105"
                 style={{ backgroundImage: "url(/nunrse1.jpg)" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#B85C2E]/25 to-transparent rounded-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#primary]/25 to-transparent rounded-3xl"></div>
               </div>
             </div>
           </div>
@@ -169,31 +132,19 @@ export default function Respite() {
       </section>
 
       {/* Our Approach to Quality Respite Care */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         {/* Ambient accents */}
-        <div className="absolute top-0 left-0 w-80 h-80 bg-[#E7A98B]/30 rounded-full -translate-x-40 -translate-y-40"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B85C2E]/20 rounded-full translate-x-48 translate-y-48"></div>
+        <div className="absolute top-0 left-0 w-80 h-80 bg-[var(--primary)]/30 rounded-full -translate-x-40 -translate-y-40"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--primary)]/20 rounded-full translate-x-48 translate-y-48"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Heading */}
           <div className="text-center mb-14 md:mb-18 animate-fadeInUp">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Approach to Quality Respite Care
             </h2>
 
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
-            >
+            <p className="text-lg md:text-xl max-w-3xl mx-auto">
               At Heritage Care, we are dedicated to delivering excellence in
               respite care through a bespoke approach that combines medical
               expertise with refined hospitality.
@@ -218,10 +169,10 @@ export default function Respite() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white/70 backdrop-blur rounded-3xl p-8 border border-[#E7A98B]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="group bg-white/70 backdrop-blur rounded-3xl p-8 border border-[var(--primary)]/40 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-all duration-300">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -238,25 +189,11 @@ export default function Respite() {
                 </div>
 
                 {/* Text */}
-                <h3
-                  className="text-xl font-semibold mb-3"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-semibold mb-3 text-primary">
                   {item.title}
                 </h3>
 
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#5A3A2E",
-                  }}
-                >
-                  {item.desc}
-                </p>
+                <p className="text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -264,30 +201,14 @@ export default function Respite() {
       </section>
 
       {/* What's Included in Our Respite Services */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
-        {/* Ambient accents */}
-        <div className="absolute top-0 right-0 w-72 h-72 bg-[#E7A98B]/30 rounded-full -translate-y-36 translate-x-36"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#B85C2E]/20 rounded-full translate-y-40 -translate-x-40"></div>
-
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-14 md:mb-18">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               What&apos;s Included in Our Respite Services
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#5A3A2E",
-              }}
-            >
+            <p className="text-lg md:text-xl max-w-3xl mx-auto">
               Heritage Care’s respite services deliver an elevated experience,
               thoughtfully tailored to your medical, personal and lifestyle
               needs.
@@ -334,10 +255,10 @@ export default function Respite() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white/70 backdrop-blur rounded-3xl p-8 border border-[#E7A98B]/40 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+                className="group bg-white/70 backdrop-blur rounded-3xl p-8 border border-[var(--primary)]/40 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
               >
                 {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition">
+                <div className="w-14 h-14 bg-primary rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition">
                   <svg
                     className="w-7 h-7 text-white"
                     fill="none"
@@ -349,25 +270,11 @@ export default function Respite() {
                   </svg>
                 </div>
 
-                <h3
-                  className="text-xl font-semibold mb-3"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-semibold mb-3 text-primary">
                   {item.title}
                 </h3>
 
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#5A3A2E",
-                  }}
-                >
-                  {item.desc}
-                </p>
+                <p className="text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -375,21 +282,15 @@ export default function Respite() {
       </section>
 
       {/* Why Choose Heritage Care for Respite Care */}
-      <section className="py-14 md:py-24 bg-gradient-to-br from-[#FFF6EE] via-[#FDF5F0] to-[#FFEDE0] relative overflow-hidden">
+      <section className="py-14 md:py-24 bg-gradient-to-br from-[#FFF6EE] to-[var(--light)] relative overflow-hidden">
         {/* Ambient shapes */}
-        <div className="absolute top-0 left-0 w-80 h-80 bg-[#E7A98B]/30 rounded-full -translate-x-40 -translate-y-40" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B85C2E]/20 rounded-full translate-x-48 translate-y-48" />
+        <div className="absolute top-0 left-0 w-80 h-80 bg-[var(--primary)]/30 rounded-full -translate-x-40 -translate-y-40" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--primary)]/20 rounded-full translate-x-48 translate-y-48" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-14 md:mb-18">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Why Choose Heritage Care for 24-Hour Nursing Care?
             </h2>
           </div>
@@ -421,10 +322,10 @@ export default function Respite() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="group bg-white/70 backdrop-blur rounded-3xl p-10 border border-[#E7A98B]/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
+                className="group bg-white/70 backdrop-blur rounded-3xl p-10 border border-[var(--primary)]/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 text-center"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -436,25 +337,11 @@ export default function Respite() {
                   </svg>
                 </div>
 
-                <h3
-                  className="text-xl font-semibold mb-4"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-semibold mb-4 text-primary">
                   {item.title}
                 </h3>
 
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    color: "#5A3A2E",
-                  }}
-                >
-                  {item.desc}
-                </p>
+                <p className="text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

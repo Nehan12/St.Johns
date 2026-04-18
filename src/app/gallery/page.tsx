@@ -55,9 +55,11 @@ export default function Gallery() {
   ];
 
   useEffect(() => {
+    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -65,13 +67,8 @@ export default function Gallery() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
@@ -127,10 +124,7 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
           {/* Type I Rooms */}
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6 text-center"
-              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
-            >
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
               Type I Rooms
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -149,16 +143,10 @@ export default function Gallery() {
 
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
-                    <h3
-                      className="text-white text-lg md:text-xl font-bold mb-2"
-                      style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
+                    <h3 className="text-white text-lg md:text-xl font-bold mb-2">
                       {room.name}
                     </h3>
-                    <p
-                      className="text-white/90 text-sm md:text-base"
-                      style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
+                    <p className="text-white/90 text-sm md:text-base">
                       {room.details}
                     </p>
                   </div>
@@ -169,10 +157,7 @@ export default function Gallery() {
 
           {/* Type II Rooms */}
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6 text-center"
-              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
-            >
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
               Type II Rooms
             </h2>
             <div>
@@ -193,16 +178,10 @@ export default function Gallery() {
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
-                      <h3
-                        className="text-white text-lg md:text-xl font-bold mb-2"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <h3 className="text-white text-lg md:text-xl font-bold mb-2">
                         {room.name}
                       </h3>
-                      <p
-                        className="text-white/90 text-sm md:text-base mb-4"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <p className="text-white/90 text-sm md:text-base mb-4">
                         {room.details.substring(0, 50)}...
                       </p>
 
@@ -270,7 +249,7 @@ export default function Gallery() {
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 rounded-lg bg-[#E67E5A] text-white font-semibold shadow-md hover:bg-[#D86A45] transition"
+            className="inline-block mt-6 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:birghtness-95 transition"
           >
             View Room Plan PDF
           </a>

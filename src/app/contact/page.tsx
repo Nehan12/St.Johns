@@ -89,6 +89,28 @@ export default function Contact() {
     }
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -120,7 +142,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-[#F6F0D7]">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Details */}
@@ -168,7 +190,7 @@ export default function Contact() {
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#89986D] rounded-lg flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-md">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -205,7 +227,7 @@ export default function Contact() {
             </div>
 
             {/* Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#C5D89D]">
+            <div className="rounded-2xl p-8 shadow-lg border border-[var(--primary)] bg-light">
               <h2
                 className="text-2xl font-bold mb-6"
                 style={{ color: "#3A2A23", fontFamily: "Poppins, sans-serif" }}
@@ -232,7 +254,7 @@ export default function Contact() {
                       name={field.id}
                       value={formData[field.id as keyof FormData]}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#C5D89D] focus:ring-2 focus:ring-[#9CAB84] focus:outline-none"
+                      className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     />
                   </div>
                 ))}
@@ -250,7 +272,7 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#C5D89D] focus:ring-2 focus:ring-[#9CAB84] focus:outline-none"
+                    className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -258,7 +280,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={!isValid || loading}
-                  className={`w-full bg-[#9CAB84] hover:bg-[#89986D] text-white py-3 rounded-lg font-semibold shadow-md transition flex justify-center items-center gap-2 ${
+                  className={`w-full bg-primary hover:brightness-90 text-white py-3 rounded-lg font-semibold shadow-md transition flex justify-center items-center gap-2 ${
                     !isValid || loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >

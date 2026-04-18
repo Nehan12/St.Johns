@@ -19,8 +19,8 @@ export default function Blog() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p className="text-[#B85C2E] text-lg">Loading...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
@@ -55,7 +55,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#B85C2E]">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Latest Articles
             </h2>
             <p className="text-lg text-[#372e29] mt-4 max-w-2xl mx-auto">
@@ -84,7 +84,7 @@ export default function Blog() {
                 <div className="p-6">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
 
-                  <h3 className="text-xl font-bold text-[#B85C2E] mb-3">
+                  <h3 className="text-xl font-bold text-primary mb-3">
                     {post.title}
                   </h3>
 
@@ -94,7 +94,7 @@ export default function Blog() {
 
                   <Link
                     href={`/knowledge-hub/${post.slug}`}
-                    className="inline-block text-[#B85C2E] font-semibold hover:underline"
+                    className="inline-block text-primary font-semibold hover:underline"
                   >
                     Read More →
                   </Link>

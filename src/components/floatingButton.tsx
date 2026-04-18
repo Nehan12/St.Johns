@@ -18,7 +18,7 @@ export default function FloatingContactButtons() {
     <div className="fixed bottom-5 right-5 z-[999] flex flex-col items-center gap-3 md:hidden">
       {/* Email Button */}
       <a href={mailtoUrl} aria-label="Contact via Email">
-        <div className="w-14 h-14 rounded-full bg-[#89986D] flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
           <svg
             viewBox="0 0 24 24"
             className="w-8 h-8 text-white"
@@ -36,7 +36,7 @@ export default function FloatingContactButtons() {
         rel="noopener noreferrer"
         aria-label="Contact on WhatsApp"
       >
-        <div className="w-14 h-14 rounded-full bg-[#89986D] flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+        <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
           <svg
             viewBox="0 0 24 24"
             className="w-8 h-8 text-white"
