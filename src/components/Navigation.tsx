@@ -51,14 +51,14 @@ export default function Navigation() {
             <div className="hidden lg:flex flex-1 justify-center gap-10 text-sm font-semibold text-gray-700">
               <Link
                 href="/"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[#9CAB84] transition-colors duration-200"
               >
                 Home
               </Link>
 
               <Link
                 href="/about"
-                className="hover:text-[#E67E5A] transition-colors duration-200"
+                className="hover:text-[#9CAB84] transition-colors duration-200"
               >
                 About Us
               </Link>
@@ -250,7 +250,7 @@ export default function Navigation() {
             <div className="hidden lg:block ml-auto">
               <Link
                 href="/contact"
-                className="bg-[#D46A1F] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#E67E5A] transition-colors duration-200 flex items-center gap-2"
+                className="bg-[#89986D] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#9CAB84] transition-colors duration-200 flex items-center gap-2"
               >
                 <FaPhone />
                 Speak to Our Care Team
@@ -267,7 +267,7 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-      <div className="fixed top-20 md:top-20 w-full z-40 bg-gradient-to-r from-[#D46A1F] to-[#E67E5A] text-white text-center px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+      <div className="fixed top-20 md:top-20 w-full z-40 bg-gradient-to-r from-[#89986D] to-[#9CAB84] text-white text-center px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
         Senior residential, nursing, memory & rehabilitation care
       </div>
 

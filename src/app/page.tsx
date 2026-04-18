@@ -101,12 +101,12 @@ export default function Home() {
               <Link
                 href="/about"
                 className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                style={{ backgroundColor: "#D46A1F" }}
+                style={{ backgroundColor: "#89986D" }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#E7A98B")
+                  (e.currentTarget.style.backgroundColor = "#9CAB84")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#D46A1F")
+                  (e.currentTarget.style.backgroundColor = "#89986D")
                 }
               >
                 About
@@ -115,12 +115,12 @@ export default function Home() {
               <Link
                 href="/services"
                 className="text-white font-semibold py-3 px-8 rounded-lg transition-all hover:scale-105"
-                style={{ backgroundColor: "#D46A1F" }}
+                style={{ backgroundColor: "#89986D" }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#E7A98B")
+                  (e.currentTarget.style.backgroundColor = "#9CAB84")
                 }
                 onMouseLeave={(e) =>
-                  (e.currentTarget.style.backgroundColor = "#D46A1F")
+                  (e.currentTarget.style.backgroundColor = "#89986D")
                 }
               >
                 Services
@@ -189,12 +189,12 @@ export default function Home() {
                   href="#"
                   key={index}
                   className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full`}
-                  style={{ color: "#E7A98B" }}
+                  style={{ color: "#9CAB84" }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = "#D46A1F";
+                    e.currentTarget.style.color = "#89986D";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = "#E7A98B";
+                    e.currentTarget.style.color = "#9CAB84";
                   }}
                 >
                   <div
@@ -203,7 +203,7 @@ export default function Home() {
                   >
                     <div
                       className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors"
-                      style={{ backgroundColor: "#D46A1F" }}
+                      style={{ backgroundColor: "#89986D" }}
                     >
                       <Image
                         src={card.icon}
@@ -270,7 +270,7 @@ export default function Home() {
               <h1
                 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                   fontWeight: 700,
                 }}
@@ -298,7 +298,7 @@ export default function Home() {
       {/* Core Values Section */}
       <section
         className="py-20 relative overflow-hidden"
-        style={{ backgroundColor: "#FBF3EE" }}
+        style={{ backgroundColor: "#F6F0D7" }}
         ref={coreValuesRef}
       >
         {/* Background Pattern */}
@@ -307,25 +307,25 @@ export default function Home() {
             className={`absolute top-10 left-10 w-32 h-32 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#FBF3EE", animationDelay: "0.1s" }}
+            style={{ backgroundColor: "#C5D89D", animationDelay: "0.1s" }}
           ></div>
           <div
             className={`absolute top-32 right-20 w-24 h-24 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#E7A98B", animationDelay: "0.3s" }}
+            style={{ backgroundColor: "#C5D89D", animationDelay: "0.3s" }}
           ></div>
           <div
             className={`absolute bottom-20 left-1/4 w-20 h-20 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#E7A98B", animationDelay: "0.5s" }}
+            style={{ backgroundColor: "#C5D89D", animationDelay: "0.5s" }}
           ></div>
           <div
             className={`absolute bottom-32 right-1/3 w-28 h-28 rounded-full transition-all duration-1000 ${
               isVisible.coreValues ? "animate-bounce" : "opacity-0 scale-0"
             }`}
-            style={{ backgroundColor: "#E7A98B", animationDelay: "0.7s" }}
+            style={{ backgroundColor: "#C5D89D", animationDelay: "0.7s" }}
           ></div>
         </div>
 
@@ -339,7 +339,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#E7A98B" }}
+                  style={{ backgroundColor: "#C5D89D" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -360,7 +360,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -386,7 +386,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#E7A98B" }}
+                  style={{ backgroundColor: "#C5D89D" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -407,7 +407,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -433,7 +433,7 @@ export default function Home() {
               <div className="mb-8">
                 <div
                   className="w-24 h-24 mx-auto rounded-full flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg"
-                  style={{ backgroundColor: "#E7A98B" }}
+                  style={{ backgroundColor: "#C5D89D" }}
                 >
                   <svg
                     className="w-12 h-12 transition-all duration-500 group-hover:scale-110"
@@ -454,7 +454,7 @@ export default function Home() {
               <h3
                 className="text-2xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -489,7 +489,7 @@ export default function Home() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-4"
               style={{
-                color: "#B85C2E",
+                color: "#89986D",
                 fontFamily: "Poppins, sans-serif",
               }}
             >
@@ -525,13 +525,13 @@ export default function Home() {
             ].map((item, i) => (
               <div
                 key={i}
-                className={`text-center p-6 rounded-xl shadow-md border border-[#F1D1C4] transition-transform duration-500 hover:scale-105 ${
+                className={`text-center p-6 rounded-xl shadow-md border border-[#C5D89D] transition-transform duration-500 hover:scale-105 ${
                   isVisible.whyChoose
                     ? "animate-fadeInUp"
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+                <h3 className="text-xl font-semibold mb-2 text-[#89986D]">
                   {item.title}
                 </h3>
                 <p className="text-[#5A3A2E]">{item.text}</p>
@@ -542,7 +542,7 @@ export default function Home() {
           {/* Certification Logos */}
           <div className="mt-16 text-center">
             {/* Heading */}
-            <h3 className="text-xl font-semibold mb-2 text-[#B85C2E]">
+            <h3 className="text-xl font-semibold mb-2 text-[#89986D]">
               Certified & Trusted
             </h3>
 
@@ -591,7 +591,7 @@ export default function Home() {
             <h2
               className="text-3xl md:text-4xl font-bold mb-6 text-center"
               style={{
-                color: "#B85C2E",
+                color: "#89986D",
                 fontFamily: "Poppins, sans-serif",
               }}
             >
@@ -615,7 +615,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -650,7 +650,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -684,7 +684,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -720,7 +720,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -754,7 +754,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -788,7 +788,7 @@ export default function Home() {
               <h3
                 className="text-xl font-bold mb-4 transform transition-all duration-300 group-hover:scale-105"
                 style={{
-                  color: "#B85C2E",
+                  color: "#89986D",
                   fontFamily: "Poppins, sans-serif",
                 }}
               >
@@ -812,12 +812,12 @@ export default function Home() {
             <Link
               href="/services"
               className="text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              style={{ backgroundColor: "#B85C2E" }}
+              style={{ backgroundColor: "#89986D" }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#E7A98B";
+                e.currentTarget.style.backgroundColor = "#9CAB84";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#B85C2E";
+                e.currentTarget.style.backgroundColor = "#89986D";
               }}
             >
               View All Services

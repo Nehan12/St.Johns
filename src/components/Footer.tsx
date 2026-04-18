@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="py-6" style={{ backgroundColor: "#D46A1F" }}>
+    <footer className="py-6" style={{ backgroundColor: "#89986D" }}>
       {" "}
       {/**E67E5A */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

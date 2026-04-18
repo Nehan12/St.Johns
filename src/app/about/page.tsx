@@ -20,9 +20,9 @@ export default function About() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#89986D] border-t-transparent mx-auto mb-4"></div>
           <p
-            className="text-[#B85C2E] text-lg"
+            className="text-[#89986D] text-lg"
             style={{ fontFamily: "Poppins, sans-serif" }}
           >
             Loading...
@@ -94,9 +94,9 @@ export default function About() {
       {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden border border-[#F1D1C4] shadow-sm">
+          <div className="relative rounded-3xl overflow-hidden border border-[#C5D89D] shadow-sm">
             {/* Accent strip */}
-            <div className="absolute inset-y-0 left-0 w-2 bg-[#E67E5A]" />
+            <div className="absolute inset-y-0 left-0 w-2 bg-[#89986D]" />
 
             <div className="p-10 md:p-14 pl-12 md:pl-16">
               <h2
@@ -121,7 +121,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-[#FFF4EE]">
+      <section className="py-24 bg-[#F6F0D7]">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-3xl mb-20">
@@ -147,7 +147,7 @@ export default function About() {
             {/* Timeline */}
             <div className="relative pl-8">
               {/* Vertical line */}
-              <div className="absolute left-2 top-0 bottom-0 w-px bg-[#E67E5A]/40" />
+              <div className="absolute left-2 top-0 bottom-0 w-px bg-[#89986D]/40" />
 
               {[
                 {
@@ -164,7 +164,7 @@ export default function About() {
                 },
               ].map((item, index) => (
                 <div key={index} className="relative mb-14 flex gap-6">
-                  <div className="w-4 h-4 mt-2 rounded-full bg-[#E67E5A]" />
+                  <div className="w-4 h-4 mt-2 rounded-full bg-[#89986D]" />
                   <div>
                     <h3
                       className="text-xl font-semibold mb-2"
