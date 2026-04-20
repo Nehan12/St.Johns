@@ -60,7 +60,7 @@ export default function AlzheimersCare() {
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             Understanding Alzheimer’s Disease
           </h2>
-          <p className="text-xl leading-relaxed max-w-4xl">
+          <p className="text-lg leading-relaxed max-w-4xl">
             Alzheimer’s disease is the most common cause of dementia, affecting
             memory, cognition, and daily living skills. Heritage Care provides
             bespoke Alzheimer’s care tailored to every stage, helping you enjoy

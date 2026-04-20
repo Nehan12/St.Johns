@@ -57,7 +57,7 @@ export default function PalliativeCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               At Heritage Care, palliative care is our calling. We offer
               comfort, respect, and emotional support to individuals and
               families during life’s most delicate moments.

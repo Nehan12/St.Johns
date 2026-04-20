@@ -40,7 +40,8 @@ export default function CostsPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Fee and Pricing Breakdown
           </h1>
-
+          <div className="underline mx-auto mt-2"></div>
+          <br />
           <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
             Transparent pricing, personalised care, and a lifestyle designed for
             comfort and dignity.
@@ -51,7 +52,7 @@ export default function CostsPage() {
       {/* Intro */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-lg md:text-xl leading-relaxed">
+          <p className="text-lg md:text-lg leading-relaxed">
             At Heritage Care, choosing to join one of our homes means investing
             in a high standard of living, personalised support, and a warm,
             nurturing environment where you can truly feel at home.

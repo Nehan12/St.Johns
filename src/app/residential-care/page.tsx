@@ -73,7 +73,7 @@ export default function ResidentialCare() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 bg-[#E7A98B]/10">
+      <section className="py-24 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">

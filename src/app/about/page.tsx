@@ -28,7 +28,7 @@ export default function About() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section with Image */}
@@ -86,20 +86,9 @@ export default function About() {
             <div className="absolute inset-y-0 left-0 w-2 bg-primary" />
 
             <div className="p-10 md:p-14 pl-12 md:pl-16">
-              <h2
-                className="text-3xl font-bold mb-6"
-                style={{
-                  color: "#3A2A23",
-                  fontFamily: "Poppins, sans-serif",
-                }}
-              >
-                Our Mission
-              </h2>
+              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
 
-              <p
-                className="text-lg md:text-xl leading-relaxed max-w-4xl"
-                style={{ color: "#5C4033", fontFamily: "Poppins, sans-serif" }}
-              >
+              <p className="text-lg md:text-xl leading-relaxed max-w-4xl">
                 To provide personalised, compassionate care that enhances
                 everyday living while preserving dignity, independence, and a
                 strong sense of identity.
@@ -108,7 +97,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <section className="py-24 bg-light">
+      <section className="py-24 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-3xl mb-20">

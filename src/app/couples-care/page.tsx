@@ -26,7 +26,7 @@ export default function CouplesCare() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
@@ -45,11 +45,11 @@ export default function CouplesCare() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
-              Luxury Couples Care
+              Couples Care
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               Continue living together with bespoke support, comfort and
               meaningful experiences in a beautifully appointed environment.
             </p>
@@ -64,7 +64,7 @@ export default function CouplesCare() {
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Couples Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className="text-lg leading-relaxed max-w-4xl">
               Couples care ensures both partners can continue living together
               while receiving tailored support. Heritage Care provides
               personalised care plans, luxurious private suites, and enriching

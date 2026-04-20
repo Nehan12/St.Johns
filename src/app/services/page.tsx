@@ -43,7 +43,7 @@ export default function Services() {
         "
         style={
           {
-            backgroundImage: "url(/services.jpeg)",
+            backgroundImage: "url(/new1.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -237,7 +237,7 @@ export default function Services() {
               <ul className="space-y-3 text-sm text-left max-w-xs mx-auto">
                 {[
                   "Customized meal planning",
-                  "Personalized dietary consultation",
+                  "Personalised dietary consultation",
                   "Support for special dietary needs",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -375,10 +375,7 @@ export default function Services() {
               </p>
 
               {/* Benefits */}
-              <ul
-                className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <ul className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto">
                 {[
                   "Daily living skills",
                   "Cognitive rehabilitation",
@@ -619,7 +616,7 @@ export default function Services() {
           </div>
 
           {/* Why Choose Heritage Care */}
-          <div className="bg-[var(--primary)]/10 rounded-lg p-8 border border-[var(--primary)]/30">
+          <div className="bg-white rounded-lg p-8 border border-[var(--primary)]/10">
             <h2 className="text-3xl font-bold mb-8 text-center text-primary">
               Why Choose Heritage Care?
             </h2>
@@ -708,7 +705,7 @@ export default function Services() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-primary">
-                        Personalized Care Plans
+                        Personalised Care Plans
                       </h3>
                       <p
                         className="text-gray-600"
@@ -716,7 +713,7 @@ export default function Services() {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        Every resident receives a customized care plan tailored
+                        Every resident receives a customised care plan tailored
                         to their unique needs, preferences, and health
                         conditions, ensuring optimal outcomes.
                       </p>

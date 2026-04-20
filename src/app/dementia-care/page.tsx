@@ -49,7 +49,7 @@ export default function DementiaCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
               Bespoke, person-centred memory care designed to enrich life,
               preserve dignity, and promote wellbeing.
             </p>
@@ -59,18 +59,20 @@ export default function DementiaCare() {
 
       {/* What is Dementia Care */}
       <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 border-l-4 pl-8 border-[var(--primary)]">
-          <h2 className="text-4xl font-semibold mb-6 text-primary">
-            What is Dementia Care?
-          </h2>
-          <p className="text-xl leading-relaxed max-w-4xl">
-            {`Heritage Care's dementia care, under the Luminare philosophy, is a
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="border-l-4 pl-8 border-[var(--primary)]">
+            <h2 className="text-4xl font-semibold mb-6 text-primary">
+              What is Dementia Care?
+            </h2>
+            <p className="text-xl leading-relaxed max-w-4xl">
+              {`Heritage Care's dementia care, under the Luminare philosophy, is a
             personalised approach designed to enhance daily life, provide
             comfort, support cognitive function, and nurture emotional
             wellbeing. Each plan is carefully tailored to the individual,
             promoting independence, meaningful engagement, and continuity of
             care.`}
-          </p>
+            </p>
+          </div>
         </div>
       </section>
 

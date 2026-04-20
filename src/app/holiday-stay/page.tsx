@@ -64,7 +64,7 @@ export default function HolidayRespite() {
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Holiday Respite at Heritage Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className="text-lg leading-relaxed max-w-4xl">
               Heritage Care Holiday Respite offers short-term stays in Ragama’s
               most distinguished residences, combining luxury living,
               professional care and enriching experiences. Ideal for
@@ -116,7 +116,7 @@ export default function HolidayRespite() {
                 "Luxury private suites with ensuite bathrooms",
                 "24/7 nursing and holistic wellness support",
                 "Daily enrichment and cultural activities",
-                "Optional rehabilitation packages including physiotherapy & hydrotherapy",
+                "Optional rehabilitation packages including physiotherapy",
               ].map((point, i) => (
                 <div key={i} className="flex items-start">
                   <span className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white bg-secondary">
@@ -167,7 +167,7 @@ export default function HolidayRespite() {
               },
               {
                 title: "Optional Rehabilitation",
-                desc: "Access to physiotherapy, hydrotherapy, and specialist therapy packages.",
+                desc: "Access to physiotherapy and specialist therapy packages.",
               },
             ].map((s, i) => (
               <div

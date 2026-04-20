@@ -46,6 +46,7 @@ export default function ActivitiesPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Activities at Heritage Care
           </h1>
+          <div className="underline mx-auto mt-2"></div>
           <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
             A vibrant programme designed to support engagement, wellbeing, and
             connection.
@@ -75,7 +76,7 @@ export default function ActivitiesPage() {
       </section>
 
       {/* Main Section */}
-      <section className="relative py-20 bg-light overflow-hidden">
+      <section className="relative py-20 bg-[var(--primary)]/10 overflow-hidden">
         {/* Floating background */}
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl opacity-40 animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl opacity-40 animate-pulse"></div>

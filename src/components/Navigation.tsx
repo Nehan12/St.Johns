@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa";
 
 export default function Navigation() {
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
   const [scrolled, setScrolled] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [desktopResidentialOpen, setDesktopResidentialOpen] = useState(false);
@@ -22,6 +24,23 @@ export default function Navigation() {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setDesktopServicesOpen(false);
+        setDesktopResidentialOpen(false);
+        setDesktopRespiteOpen(false);
+        setDesktopSpecialOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -64,19 +83,24 @@ export default function Navigation() {
               </Link>
 
               {/* Services Dropdown */}
-              <div
-                className="relative"
-                onClick={() => {
-                  setDesktopServicesOpen((prev) => !prev);
-                }}
-              >
+              <div className="relative flex items-center gap-2" ref={menuRef}>
                 <Link
                   href="/services"
-                  className="hover:text-[var(--primary)] flex items-center gap-5 transition-colors duration-200"
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
                 >
-                  Services ▾
+                  Services
                 </Link>
-
+                {/* Dropdown toggle button */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setDesktopServicesOpen((prev) => !prev);
+                  }}
+                  className="hover:text-[var(--primary)] transition-colors duration-200"
+                >
+                  ▾
+                </button>
                 <AnimatePresence>
                   {desktopServicesOpen && (
                     <motion.div

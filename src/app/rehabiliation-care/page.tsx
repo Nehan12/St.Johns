@@ -49,7 +49,7 @@ export default function RehabilitationCare() {
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
-              Personalized rehabilitation programmes with clinical excellence,
+              Personalised rehabilitation programmes with clinical excellence,
               world-class hospitality, and holistic support to restore your
               strength, confidence, and independence.
             </p>
@@ -64,7 +64,7 @@ export default function RehabilitationCare() {
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Rehabilitation Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className="text-lg leading-relaxed max-w-4xl">
               Rehabilitation care at Heritage Care provides structured,
               specialist support for recovery after surgery, illness, or injury.
               Each stay combines clinical excellence, personalised therapy plans
@@ -143,10 +143,6 @@ export default function RehabilitationCare() {
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                title: "Hydrotherapy & Hydro Treadmill",
-                desc: "Advanced water-based therapy to rebuild strength, improve balance, and support recovery from surgery or neurological conditions.",
-              },
-              {
                 title: "Physiotherapy & Occupational Therapy",
                 desc: "Specialist rehabilitation sessions tailored to your mobility, strength and daily living goals.",
               },
@@ -182,7 +178,7 @@ export default function RehabilitationCare() {
       </section>
 
       {/* Structured Care Plans */}
-      <section className="py-24 bg-[#FDF5F0]/70">
+      <section className="py-24 bg-[var(--primary)]/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Structured Care Plans

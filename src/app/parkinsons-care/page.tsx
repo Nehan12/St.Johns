@@ -60,7 +60,7 @@ export default function ParkinsonsCare() {
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             Understanding Parkinson&apos;s Disease
           </h2>
-          <p className="text-xl leading-relaxed max-w-4xl">
+          <p className="text-lg leading-relaxed max-w-4xl">
             Parkinson&apos;s disease (PD) is a progressive neurological
             condition affecting movement, cognition, and emotional wellbeing.
             Symptoms evolve over time and can include tremors, rigidity, balance

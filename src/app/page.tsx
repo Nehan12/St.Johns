@@ -59,7 +59,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden bg-normal">
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg-normal text-main">
       <Navigation />
 
       {/* Hero Section - Carousel with Navigation Anchors */}
@@ -165,13 +165,13 @@ export default function Home() {
                 <a
                   href="#"
                   key={index}
-                  className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full text-[var(--primary)] hover:brightness-90`}
+                  className={`transform transition-all duration-300 ${offsets[index]} max-w-xs w-full hover:brightness-90`}
                 >
                   <div
                     className="flex flex-col items-center text-center p-4 rounded-2xl cursor-pointer 
                             hover:scale-105 group"
                   >
-                    <div className="w-20 h-20 mt-6 mb-6 flex items-center justify-center rounded-full transition-colors bg-primary">
+                    <div className="w-20 h-20 mt-6 mb-6 flex items-center text-[var(--primary)] justify-center rounded-full transition-colors bg-primary">
                       <Image
                         src={card.icon}
                         alt={card.title}
@@ -180,21 +180,10 @@ export default function Home() {
                         className="w-12 h-12 group-hover:filter group-hover:brightness-125 transition-all"
                       />
                     </div>
-                    <h3 className="text-xl font-bold mb-2 transition-colors break-words">
+                    <h3 className="text-xl text-[var(--primary)] font-bold mb-2 transition-colors break-words">
                       {card.title}
                     </h3>
-                    <p
-                      className="mb-4 transition-colors break-words "
-                      style={{ color: "#3F2A1E" }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#060606";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#3F2A1E";
-                      }}
-                    >
-                      {card.description}
-                    </p>
+                    <p className="mb-4 break-words ">{card.description}</p>
                   </div>
                 </a>
               );
@@ -263,7 +252,7 @@ export default function Home() {
 
       {/* Core Values Section */}
       <section
-        className="py-20 relative overflow-hidden bg-light"
+        className="py-20 relative overflow-hidden bg-[var(--primary)]/20"
         ref={coreValuesRef}
       >
         {/* Background Pattern */}
@@ -442,7 +431,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold mb-2 text-primary">
                   {item.title}
                 </h3>
-                <p className="text-[#5A3A2E]">{item.text}</p>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>
@@ -455,7 +444,7 @@ export default function Home() {
             </h3>
 
             {/* Catchy line */}
-            <p className="text-lg md:text-xl text-[#5A3A2E] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               Recognised and approved by leading authorities, giving you
               complete confidence in the quality, safety, and standards of care
               we provide.
@@ -551,7 +540,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/es3.png)" }}
+                  style={{ backgroundImage: "url(/es3.jpeg)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -654,7 +643,7 @@ export default function Home() {
         }}
       >
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0" />
+        <div className="absolute inset-0 bg-black/60 z-0" />
 
         {/* TOP DOWNWARD ARC */}
         <div className="absolute -top-[0.5px] left-0 w-full z-10 pointer-events-none">
@@ -672,7 +661,7 @@ export default function Home() {
         </div>
 
         {/* CONTENT */}
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-secondary">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           {/* Heading */}
           <div
             className={`mb-12 text-center transition-all duration-1000 ${

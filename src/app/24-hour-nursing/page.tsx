@@ -69,7 +69,7 @@ export default function TwentyFourHourNursing() {
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is 24-Hour Nursing Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className="text-lg leading-relaxed max-w-4xl">
               24-hour nursing care is a specialised service that provides
               round-the-clock medical supervision for those with complex medical
               needs. At Heritage Care, you receive the highest level of care,
@@ -93,7 +93,7 @@ export default function TwentyFourHourNursing() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Who is 24-Hour Nursing Care For?
             </h2>
-            <p className="text-lg md:text-xl text-main mb-6">
+            <p className="text-lg md:text-lg text-main mb-6">
               Our 24-hour nursing care is designed for individuals who require
               ongoing medical supervision due to chronic illnesses,
               post-surgical recovery, neurological conditions, or complex needs
@@ -266,7 +266,7 @@ export default function TwentyFourHourNursing() {
               },
               {
                 title: "Tailored Experiences",
-                desc: "Personalized activities and programs designed to enrich your wellbeing and quality of life.",
+                desc: "Personalised activities and programs designed to enrich your wellbeing and quality of life.",
               },
             ].map((item, i) => (
               <div
