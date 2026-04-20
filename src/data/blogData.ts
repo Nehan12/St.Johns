@@ -70,7 +70,7 @@ We are always happy to discuss your care needs and provide more details on how w
     slug: "difference-between-residential-and-nursing-care",
     title: "What is the Difference Between Residential Care and Nursing Care?",
     date: "April 17, 2026",
-    image: "/es2.png",
+    image: "/es22.png",
     excerpt:
       "Understand the key differences between residential care and nursing care, and find out which option is best for your loved one.",
     content: `

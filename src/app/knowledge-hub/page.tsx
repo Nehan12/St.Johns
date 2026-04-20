@@ -34,7 +34,7 @@ export default function Blog() {
       <section
         className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[80vh]"
         style={{
-          backgroundImage: "url(/services.jpg)",
+          backgroundImage: "url(/blog.jpeg)",
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>

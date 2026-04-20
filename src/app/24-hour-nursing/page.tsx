@@ -39,7 +39,7 @@ export default function TwentyFourHourNursing() {
           min-h-[60vh] md:min-h-[85vh]
         "
         style={{
-          backgroundImage: "url(/new7.jpg)",
+          backgroundImage: "url(/nursing.jpeg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

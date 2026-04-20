@@ -43,7 +43,7 @@ export default function Services() {
         "
         style={
           {
-            backgroundImage: "url(/services.jpg)",
+            backgroundImage: "url(/services.jpeg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

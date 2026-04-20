@@ -89,7 +89,7 @@ export default function Gallery() {
         "
         style={
           {
-            backgroundImage: "url(/gallery.jpg)",
+            backgroundImage: "url(/gallery.jpeg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

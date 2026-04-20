@@ -32,7 +32,7 @@ export default function CostsPage() {
       {/* Hero */}
       <section
         className="relative flex items-center pt-32 md:pt-24 min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url(/fees.jpg)" }}
+        style={{ backgroundImage: "url(/costs.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
 

@@ -506,7 +506,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/es1.jpg)" }}
+                  style={{ backgroundImage: "url(/es1.jpeg)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
@@ -529,7 +529,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg mb-6 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
                 <div
                   className="aspect-[4/3] bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: "url(/es2.png)" }}
+                  style={{ backgroundImage: "url(/es2.jpeg)" }}
                 ></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
