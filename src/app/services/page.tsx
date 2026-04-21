@@ -239,7 +239,7 @@ export default function Services() {
                   "Support for special dietary needs",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
                         className="w-3 h-3 text-primary"
                         fill="none"

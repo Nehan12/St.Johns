@@ -296,7 +296,6 @@ export default function Navigation() {
       </div>
 
       {/* MOBILE MENU */}
-      {/* MOBILE MENU */}
       <AnimatePresence>
         {mobileOpen && (
           <>
@@ -319,7 +318,7 @@ export default function Navigation() {
             >
               {/* Header */}
               <div className="flex items-center justify-between border-b p-5">
-                <h2 className="text-lg font-semibold">Menu</h2>
+                <h2 className="text-lg font-semibold">☰</h2>
 
                 <button
                   className="text-2xl"
