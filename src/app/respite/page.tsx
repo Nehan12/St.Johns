@@ -32,21 +32,13 @@ export default function Respite() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/new4.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/respite.jpeg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -57,7 +49,13 @@ export default function Respite() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               At Heritage Care, we recognise that respite care can be a
               transformative experience, elevating your overall wellbeing,
               promoting recovery and enriching your quality of life.
@@ -69,14 +67,14 @@ export default function Respite() {
       {/* What is Respite Care? */}
       <section className="py-12 md:py-20  relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Content */}
             <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 What is Respite Care?
               </h2>
 
-              <p className="text-lg mb-8">
+              <p className="mb-8 px-2">
                 Respite care provides short-term support, allowing individuals
                 to benefit from professional nursing while giving carers time to
                 rest and recharge. Whether for recovery following surgery,
@@ -144,7 +142,7 @@ export default function Respite() {
               Our Approach to Quality Respite Care
             </h2>
 
-            <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto">
               At Heritage Care, we are dedicated to delivering excellence in
               respite care through a bespoke approach that combines medical
               expertise with refined hospitality.
@@ -208,7 +206,7 @@ export default function Respite() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               What&apos;s Included in Our Respite Services
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto">
               Heritage Care’s respite services deliver an elevated experience,
               thoughtfully tailored to your medical, personal and lifestyle
               needs.
@@ -296,7 +294,7 @@ export default function Respite() {
           </div>
 
           {/* Cards */}
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Unparalleled Luxury",

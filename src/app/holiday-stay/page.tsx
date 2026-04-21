@@ -31,15 +31,14 @@ export default function HolidayRespite() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/hoilday-respite.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/holiday-stay.png)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -49,7 +48,13 @@ export default function HolidayRespite() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Short-term luxury stays with expert care, tailored support and
               enriching experiences for older adults or couples.
             </p>
@@ -58,13 +63,13 @@ export default function HolidayRespite() {
       </section>
 
       {/* What is Holiday Respite */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8 border-[var(--primary)]">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Holiday Respite at Heritage Care?
             </h2>
-            <p className="text-lg leading-relaxed max-w-4xl">
+            <p className="leading-relaxed max-w-4xl">
               Heritage Care Holiday Respite offers short-term stays in Ragama’s
               most distinguished residences, combining luxury living,
               professional care and enriching experiences. Ideal for
@@ -76,13 +81,13 @@ export default function HolidayRespite() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Is Holiday Respite Right for You?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Perfect for older adults needing short-term care or temporary
               support. Whether recovering from illness, requiring memory care,
               or seeking a luxury break, Heritage Care provides expert support
@@ -131,19 +136,19 @@ export default function HolidayRespite() {
       </section>
 
       {/* Services / Features */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What’s Included in Luxury Holiday Respite
             </h2>
-            <p className="text-lg">
+            <p>
               Every stay includes all the elegance of a luxury hotel standard,
               underpinned by expert care and tailored support.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Private Suites",
@@ -185,12 +190,12 @@ export default function HolidayRespite() {
       </section>
 
       {/* Short Term Care Details */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Short Term & Flexible Care
           </h2>
-          <p className="text-lg mb-12 text-center">
+          <p className="mb-12 text-center">
             Heritage Care Holiday Respite can be as short as two weeks or
             several months. Perfect for exploring residential care options,
             bridging between hospital and home, or simply enjoying a luxury

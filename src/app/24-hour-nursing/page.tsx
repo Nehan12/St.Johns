@@ -32,17 +32,12 @@ export default function TwentyFourHourNursing() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{
           backgroundImage: "url(/nursing.jpeg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -53,7 +48,13 @@ export default function TwentyFourHourNursing() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Expert-led medical oversight with compassionate, bespoke support
               meticulously curated around your needs. Experience nursing care
               redefined.

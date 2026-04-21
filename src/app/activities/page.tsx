@@ -37,17 +37,27 @@ export default function ActivitiesPage() {
 
       {/* Hero */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{ backgroundImage: "url(/activities.png)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Activities at Heritage Care
+            Activities
           </h1>
           <div className="underline mx-auto mt-2"></div>
-          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
+          <p
+            className="
+                hidden landscape:block md:block
+                 md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+          >
             A vibrant programme designed to support engagement, wellbeing, and
             connection.
           </p>
@@ -57,14 +67,14 @@ export default function ActivitiesPage() {
       {/* Intro */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
-          <p className="text-lg md:text-xl text-main leading-relaxed">
+          <p className="md:text-lg text-main leading-relaxed">
             At Heritage Care, we offer a wide range of activities designed to
             suit all interests, abilities, and preferences. While participation
             is always optional, we actively encourage residents to get involved,
             as social interaction, mental stimulation, and enjoyment are
             essential to overall wellbeing.
           </p>
-          <p className="text-lg md:text-xl text-main leading-relaxed">
+          <p className="md:text-lg text-main leading-relaxed">
             Activities are delivered in a variety of formats, including group
             sessions, small group engagements, and one-to-one interactions. Our
             dedicated Activities Coordinator plays a key role in ensuring that
@@ -169,9 +179,7 @@ export default function ActivitiesPage() {
                 {section.title}
               </h2>
 
-              <p className="text-lg text-main mb-6 leading-relaxed">
-                {section.text}
-              </p>
+              <p className="text-main mb-6 leading-relaxed">{section.text}</p>
 
               {/* TAG STYLE (same as your holistic section) */}
               <div className="flex flex-wrap gap-3">

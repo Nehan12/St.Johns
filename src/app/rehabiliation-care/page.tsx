@@ -30,15 +30,14 @@ export default function RehabilitationCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/rehabiliation.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/rehabiliation.jpg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -48,7 +47,13 @@ export default function RehabilitationCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Personalised rehabilitation programmes with clinical excellence,
               world-class hospitality, and holistic support to restore your
               strength, confidence, and independence.
@@ -58,13 +63,13 @@ export default function RehabilitationCare() {
       </section>
 
       {/* What is Rehabilitation Care */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8 border-[var(--primary)]">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Rehabilitation Care?
             </h2>
-            <p className="text-lg leading-relaxed max-w-4xl">
+            <p className="leading-relaxed max-w-4xl">
               Rehabilitation care at Heritage Care provides structured,
               specialist support for recovery after surgery, illness, or injury.
               Each stay combines clinical excellence, personalised therapy plans
@@ -76,13 +81,13 @@ export default function RehabilitationCare() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Who is Rehabilitation Care for?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Suitable for older adults recovering from orthopaedic or
               neurological conditions, post-operative care, or hospital
               discharge. It’s also ideal for temporary respite stays, caregiver
@@ -128,13 +133,13 @@ export default function RehabilitationCare() {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               Our Rehabilitation Services
             </h2>
-            <p className="text-lg">
+            <p>
               Heritage Care combines world-class hospitality with clinical
               excellence for a truly restorative experience.
             </p>
@@ -156,7 +161,7 @@ export default function RehabilitationCare() {
               },
               {
                 title: "Luxury Accommodation",
-                desc: "Private suites with en-suite bathrooms, award-winning meals, concierge and chauffeur services.",
+                desc: "Private en-suite rooms with bathrooms, Chef made meals and Concierge.",
               },
               {
                 title: "Wellbeing & Social Engagement",
@@ -178,12 +183,12 @@ export default function RehabilitationCare() {
       </section>
 
       {/* Structured Care Plans */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Structured Care Plans
           </h2>
-          <p className="text-lg mb-12 text-center">
+          <p className="mb-12 text-center">
             Every rehabilitation plan at Heritage Care is tailored to your pace,
             needs, and personal goals, combining clinical guidance with
             emotional and social support.

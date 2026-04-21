@@ -12,7 +12,6 @@ export default function Footer() {
   return (
     <footer className="py-6 bg-primary text-main">
       {" "}
-      {/**E67E5A */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* MAIN FOOTER CONTENT — HIDDEN ON MOBILE */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -21,7 +20,7 @@ export default function Footer() {
             <Image
               height={90}
               width={200}
-              src="/mainlogo-white.png"
+              src="/mainLogo-green.png"
               alt="Heritage Care Logo"
               className="mb-3"
             />
@@ -128,7 +127,7 @@ export default function Footer() {
         {/* COPYRIGHT — ALWAYS VISIBLE */}
         <div className="pt-0 md:pt-4 border-t-0 md:border-t border-[rgba(255,244,230,0.3)]">
           <p className="text-center text-xs text-main">
-            © 2026 Heritage Care - Nursing & Wellness. All rights reserved.
+            © 2026 Heritage Care. All rights reserved.
           </p>
         </div>
       </div>

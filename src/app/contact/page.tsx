@@ -117,7 +117,11 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{ backgroundImage: "url(/contactPage.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -127,7 +131,13 @@ export default function Contact() {
               Contact Us
             </h1>
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               We&apos;re here to help. Contact us to learn more about our
               services or to schedule a visit.
             </p>
@@ -141,10 +151,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Details */}
             <div>
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-10"
-                style={{ color: "#3A2A23", fontFamily: "Poppins, sans-serif" }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold mb-10">
                 Get in Touch
               </h2>
 
@@ -196,24 +203,10 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3
-                        className="text-lg font-semibold mb-1"
-                        style={{
-                          color: "#3A2A23",
-                          fontFamily: "Poppins, sans-serif",
-                        }}
-                      >
+                      <h3 className="text-lg font-semibold mb-1">
                         {item.title}
                       </h3>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{
-                          color: "#5C4033",
-                          fontFamily: "Poppins, sans-serif",
-                        }}
-                      >
-                        {item.content}
-                      </p>
+                      <p className="text-sm leading-relaxed">{item.content}</p>
                     </div>
                   </div>
                 ))}
@@ -222,12 +215,7 @@ export default function Contact() {
 
             {/* Form */}
             <div className="rounded-2xl p-8 shadow-lg border border-[var(--primary)] bg-light">
-              <h2
-                className="text-2xl font-bold mb-6"
-                style={{ color: "#3A2A23", fontFamily: "Poppins, sans-serif" }}
-              >
-                Send us a Message
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6 relative">
                 {[
@@ -236,10 +224,7 @@ export default function Contact() {
                   { id: "phone", label: "Phone Number", type: "tel" },
                 ].map((field) => (
                   <div key={field.id}>
-                    <label
-                      className="block text-sm font-medium mb-2"
-                      style={{ color: "#3A2A23" }}
-                    >
+                    <label className="block text-sm font-medium mb-2">
                       {field.label}
                     </label>
                     <input
@@ -254,10 +239,7 @@ export default function Contact() {
                 ))}
 
                 <div>
-                  <label
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: "#3A2A23" }}
-                  >
+                  <label className="block text-sm font-medium mb-2">
                     Message *
                   </label>
                   <textarea

@@ -31,7 +31,11 @@ export default function CostsPage() {
 
       {/* Hero */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{ backgroundImage: "url(/costs.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -42,7 +46,13 @@ export default function CostsPage() {
           </h1>
           <div className="underline mx-auto mt-2"></div>
           <br />
-          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
+          <p
+            className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+          >
             Transparent pricing, personalised care, and a lifestyle designed for
             comfort and dignity.
           </p>
@@ -50,9 +60,9 @@ export default function CostsPage() {
       </section>
 
       {/* Intro */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-lg md:text-lg leading-relaxed">
+          <p className="leading-relaxed">
             At Heritage Care, choosing to join one of our homes means investing
             in a high standard of living, personalised support, and a warm,
             nurturing environment where you can truly feel at home.
@@ -61,7 +71,7 @@ export default function CostsPage() {
       </section>
 
       {/* Sections */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="max-w-6xl mx-auto px-6 space-y-20">
           {/* Section Block */}
           <div>
@@ -69,14 +79,14 @@ export default function CostsPage() {
               Personalised Pre-Admission Assessment
             </h2>
 
-            <p className="text-lg md:text-lg leading-relaxed">
+            <p className="leading-relaxed">
               Before you move in, we carry out a comprehensive pre-admission
               assessment to understand your individual care needs, preferences,
               and daily routines. This ensures that the care you receive is
               fully tailored to you.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className=" leading-relaxed mt-4">
               Based on this assessment, we determine the most appropriate
               Monthly fee, taking into account the level of support required and
               your preferred room choice. Whether you require residential care,
@@ -84,7 +94,7 @@ export default function CostsPage() {
               carefully designed around your needs and wishes.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               You will also have the opportunity to personalise your living
               space, helping you feel comfortable and settled from day one.
             </p>
@@ -96,23 +106,17 @@ export default function CostsPage() {
               Clear and Open Conversations
             </h2>
 
-            <p className="text-lg md:text-lg leading-relaxed">
+            <p className="leading-relaxed">
               We understand that moving into care is both an emotional and
               financial decision. At Heritage Care, we prioritise transparency
               and open communication with you and your family.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               To guide you effectively, we may ask for an overview of the
               financial resources available to support your care. This helps us
               ensure that your care plan is both suitable and sustainable in the
               long term.
-            </p>
-
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
-              We do not charge any administration or joining fees. Our goal is
-              to make your transition into our home as smooth, supportive, and
-              stress-free as possible.
             </p>
           </div>
 
@@ -136,7 +140,7 @@ export default function CostsPage() {
                   key={i}
                   className="bg-white p-6 rounded-xl border border-[var(--secondary)] shadow-sm"
                 >
-                  <p className="text-lg md:text-lg leading-relaxed">{item}</p>
+                  <p className="leading-relaxed">{item}</p>
                 </div>
               ))}
             </div>
@@ -148,12 +152,12 @@ export default function CostsPage() {
               Additional Services
             </h2>
 
-            <p className="text-lg md:text-lg leading-relaxed">
+            <p className="leading-relaxed">
               At Heritage Care, we believe in creating a vibrant and engaging
               lifestyle for our residents.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               Our activities programme includes a variety of options such as
               music sessions, arts and crafts, gardening, light exercise, and
               organised outings. Our dedicated activities coordinators take time
@@ -161,13 +165,13 @@ export default function CostsPage() {
               meaningful and enjoyable.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               We also hold regular residents’ meetings, giving you the
               opportunity to share ideas and shape the activities offered within
               the home.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               Some optional services may incur an additional cost. These will
               always be clearly explained in advance, allowing you to make
               informed choices.
@@ -180,12 +184,12 @@ export default function CostsPage() {
               Deposits & Payment Terms
             </h2>
 
-            <p className="text-lg md:text-lg leading-relaxed">
+            <p className="leading-relaxed">
               At Heritage Care, we keep our payment processes simple and
               transparent, so you can focus on settling in and feeling at home.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className=" leading-relaxed mt-4">
               We do charge administration and joining fees. Deposits are
               generally not required; however, if you wish to reserve a room,
               this can be discussed directly with the care home manager.
@@ -193,21 +197,17 @@ export default function CostsPage() {
 
             <div className="mt-6 space-y-4">
               <div className="p-6 bg-white rounded-xl border">
-                <h3 className="text-lg md:text-lg font-semibold text-primary mb-2 ">
+                <h3 className="font-semibold text-primary mb-2 ">
                   Respite Care
                 </h3>
-                <p className="text-lg md:text-lg">
-                  Fees payable in advance at the home.
-                </p>
+                <p>Fees payable in advance at the home.</p>
               </div>
 
               <div className="p-6 bg-white rounded-xl border">
-                <h3 className="text-lg md:text-lg font-semibold text-primary mb-2">
+                <h3 className="font-semibold text-primary mb-2">
                   Permanent Care
                 </h3>
-                <p className="text-lg md:text-lg">
-                  Monthly payments via direct debit.
-                </p>
+                <p>Monthly payments via direct debit.</p>
               </div>
             </div>
           </div>
@@ -218,13 +218,13 @@ export default function CostsPage() {
               Preferred Payment Method
             </h2>
 
-            <p className="text-lg md:text-lg leading-relaxed">
+            <p className=" leading-relaxed">
               Our preferred method of payment for permanent care is direct
               debit, as it provides a secure and convenient way to manage
               monthly fees.
             </p>
 
-            <p className="text-lg md:text-lg leading-relaxed mt-4">
+            <p className="leading-relaxed mt-4">
               If an alternative arrangement is needed, our team will be happy to
               discuss options that best suit your circumstances.
             </p>

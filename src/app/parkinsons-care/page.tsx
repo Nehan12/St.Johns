@@ -29,14 +29,14 @@ export default function ParkinsonsCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/parkinson-care.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/parkinson-care.jpg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -46,7 +46,13 @@ export default function ParkinsonsCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Personalised, compassionate care designed to support mobility,
               cognition, and overall wellbeing.
             </p>
@@ -55,30 +61,32 @@ export default function ParkinsonsCare() {
       </section>
 
       {/* What is Parkinson’s Care */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 border-l-4 pl-8 border-[var(--primary)]">
-          <h2 className="text-4xl font-semibold mb-6 text-primary">
-            Understanding Parkinson&apos;s Disease
-          </h2>
-          <p className="text-lg leading-relaxed max-w-4xl">
-            Parkinson&apos;s disease (PD) is a progressive neurological
-            condition affecting movement, cognition, and emotional wellbeing.
-            Symptoms evolve over time and can include tremors, rigidity, balance
-            challenges, cognitive changes, anxiety, depression, and disrupted
-            sleep. At Heritage Care, our approach evolves with your needs,
-            ensuring personalised, compassionate care at every stage.
-          </p>
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="border-l-4 pl-8 border-[var(--primary)]">
+            <h2 className="text-4xl font-semibold mb-6 text-primary">
+              What is Parkinson&apos;s Disease ?
+            </h2>
+            <p className="leading-relaxed max-w-4xl">
+              Parkinson&apos;s disease (PD) is a progressive neurological
+              condition affecting movement, cognition, and emotional wellbeing.
+              Symptoms evolve over time and can include tremors, rigidity,
+              balance challenges, cognitive changes, anxiety, depression, and
+              disrupted sleep. At Heritage Care, our approach evolves with your
+              needs, ensuring personalised, compassionate care at every stage.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Who it’s for / Expertise */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Who is Parkinson’s Care For?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Heritage Care&apos;s Parkinson&apos;s care is tailored for
               individuals at all stages of the condition. Whether you need
               assistance with daily routines, medication, cognitive support, or
@@ -127,7 +135,7 @@ export default function ParkinsonsCare() {
       </section>
 
       {/* Parkinson’s Care Services */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             Parkinson’s Care Services
@@ -138,7 +146,7 @@ export default function ParkinsonsCare() {
             supportive and stimulating environment.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 pt-4">
             {[
               "Medication management under expert supervision",
               "Physiotherapy, speech therapy and movement-focused exercises",
@@ -148,7 +156,7 @@ export default function ParkinsonsCare() {
               "Support and guidance for families",
             ].map((service, i) => (
               <div key={i} className="flex items-start">
-                <span className="w-8 h-8 flex items-center justify-center rounded-full mr-4 text-white bg-secondary">
+                <span className="w-8 h-8 flex items-center justify-center mr-4 text-main ">
                   ✓
                 </span>
                 <span>{service}</span>
@@ -159,19 +167,19 @@ export default function ParkinsonsCare() {
       </section>
 
       {/* Parkinson’s Care Plan */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Bespoke Parkinson’s Care Plans
           </h2>
-          <p className="text-lg text-center mb-12">
+          <p className="text-center mb-12">
             Every resident receives a personalised care plan developed with
             medical professionals, family and specialist staff. Plans are
             continuously refined as your needs evolve, ensuring dynamic,
             responsive care every day.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               "Tailored therapeutic interventions",
               "Medication and symptom management",
@@ -184,7 +192,7 @@ export default function ParkinsonsCare() {
                 key={i}
                 className="group bg-white rounded-2xl p-6 border border-[var(--primary)]/40 hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold mb-2">{point}</h3>
+                <h3 className="font-semibold mb-2">{point}</h3>
               </div>
             ))}
           </div>

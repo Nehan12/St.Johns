@@ -183,7 +183,9 @@ export default function Home() {
                     <h3 className="text-xl text-[var(--primary)] font-bold mb-2 transition-colors break-words">
                       {card.title}
                     </h3>
-                    <p className="mb-4 break-words ">{card.description}</p>
+                    <p className="mb-4 break-words text-lg">
+                      {card.description}
+                    </p>
                   </div>
                 </a>
               );
@@ -223,23 +225,10 @@ export default function Home() {
                   : "opacity-0 translate-x-[50px]"
               }`}
             >
-              <h1
-                className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105 text-primary"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 700,
-                }}
-              >
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight transform transition-all duration-500 hover:scale-105 text-primary">
                 Care, Rooted in Compassion
               </h1>
-              <p
-                className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2"
-                style={{
-                  color: "#6B6B6B",
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 400,
-                }}
-              >
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed transform transition-all duration-500 hover:translate-x-2">
                 Our commitment to care is unwavering and continuous. We are
                 deeply dedicated to delivering the highest standards of 24-hour
                 residential care, respite services, day programmes, and memory

@@ -32,21 +32,13 @@ export default function PalliativeCare() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/new8.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/palliative-care.jpg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -57,7 +49,13 @@ export default function PalliativeCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               At Heritage Care, palliative care is our calling. We offer
               comfort, respect, and emotional support to individuals and
               families during life’s most delicate moments.
@@ -76,7 +74,7 @@ export default function PalliativeCare() {
                 What is Palliative Care?
               </h2>
 
-              <p className="text-lg mb-8 max-w-xl">
+              <p className="mb-8 max-w-xl">
                 Palliative care is a highly specialised and compassionate
                 approach to supporting individuals with illnesses that cannot be
                 cured. It focuses on comfort, dignity and enhancing quality of
@@ -108,14 +106,7 @@ export default function PalliativeCare() {
                       </svg>
                     </div>
 
-                    <span
-                      style={{
-                        fontFamily: "Poppins, sans-serif",
-                        color: "#5A3A2E",
-                      }}
-                    >
-                      {item}
-                    </span>
+                    <span>{item}</span>
                   </div>
                 ))}
               </div>
@@ -146,7 +137,7 @@ export default function PalliativeCare() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Approach to Quality Palliative Care
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto">
               At Heritage Care, we uphold the highest standards of palliative
               care, following the accredited Gold Standards Framework.
             </p>
@@ -227,7 +218,7 @@ export default function PalliativeCare() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Why Choose Heritage Care for Palliative Care?
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            <p className=" max-w-3xl mx-auto">
               Our reputation is built on compassionate expertise, refined
               environments, and a deeply personal approach to end-of-life care.
             </p>

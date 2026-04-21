@@ -29,15 +29,14 @@ export default function ResidentialCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/residential-care.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/residential-care.png)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -47,7 +46,13 @@ export default function ResidentialCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Experience a supportive, safe, and welcoming environment designed
               for comfort, independence, and a vibrant community life.
             </p>
@@ -56,13 +61,13 @@ export default function ResidentialCare() {
       </section>
 
       {/* What is Residential Care */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8 border-[var(--primary)]">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Residential Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className="leading-relaxed max-w-4xl">
               Residential care provides a safe, comfortable, and nurturing
               environment where residents receive personalised support for daily
               living. Heritage Care focuses on maintaining dignity,
@@ -73,13 +78,13 @@ export default function ResidentialCare() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 bg-[var(--primary)]/10">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
+      <section className="py-12 bg-[var(--primary)]/10">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Who is Residential Care for?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Ideal for individuals who need support with daily living, memory
               care, or recovery after hospital stays. Our residential care
               ensures personalised routines, privacy, and compassionate support.
@@ -123,19 +128,19 @@ export default function ResidentialCare() {
       </section>
 
       {/* Residential Care Services */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16 max-w-3xl">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               Our Residential Care Services
             </h2>
-            <p className="text-lg">
+            <p>
               Comprehensive support designed to ensure comfort, safety, and a
               fulfilling daily life.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "Tailored Living Plans",

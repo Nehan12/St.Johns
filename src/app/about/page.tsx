@@ -34,12 +34,10 @@ export default function About() {
       {/* Hero Section with Image */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{
           backgroundImage: "url(/about.jpeg)",
         }}
@@ -53,7 +51,13 @@ export default function About() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Care that feels like home, rooted in dignity and meaningful
               living.
             </p>
@@ -62,7 +66,7 @@ export default function About() {
       </section>
       <section className="pt-20 bg-white">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-lg md:text-xl text-main leading-relaxed">
+          <p className="md:text-lg text-main leading-relaxed">
             Heritage Care was created on the belief that growing older should
             never mean losing the essence of who you are. We provide thoughtful,
             personalised care in an environment that prioritises comfort,
@@ -86,9 +90,11 @@ export default function About() {
             <div className="absolute inset-y-0 left-0 w-2 bg-primary" />
 
             <div className="p-10 md:p-14 pl-12 md:pl-16">
-              <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-6 text-primary">
+                Our Mission
+              </h2>
 
-              <p className="text-lg md:text-xl leading-relaxed max-w-4xl">
+              <p className="md:text-lg leading-relaxed max-w-4xl">
                 To provide personalised, compassionate care that enhances
                 everyday living while preserving dignity, independence, and a
                 strong sense of identity.
@@ -101,19 +107,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="max-w-3xl mb-20">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-4"
-              style={{
-                color: "#3A2A23",
-                fontFamily: "Poppins, sans-serif",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
               Our Approach to Care
             </h2>
-            <p
-              className="text-lg"
-              style={{ color: "#5C4033", fontFamily: "Poppins, sans-serif" }}
-            >
+            <p>
               A carefully guided process designed to ensure comfort, trust, and
               continuous support at every stage.
             </p>
@@ -142,23 +139,8 @@ export default function About() {
                 <div key={index} className="relative mb-14 flex gap-6">
                   <div className="w-4 h-4 mt-2 rounded-full bg-primary" />
                   <div>
-                    <h3
-                      className="text-xl font-semibold mb-2"
-                      style={{
-                        color: "#3A2A23",
-                        fontFamily: "Poppins, sans-serif",
-                      }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p
-                      style={{
-                        color: "#5C4033",
-                        fontFamily: "Poppins, sans-serif",
-                      }}
-                    >
-                      {item.text}
-                    </p>
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p>{item.text}</p>
                   </div>
                 </div>
               ))}

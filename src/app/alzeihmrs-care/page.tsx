@@ -29,14 +29,14 @@ export default function AlzheimersCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/alzeihmrs-care.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/alzeihmrs-care.jpg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -46,7 +46,13 @@ export default function AlzheimersCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Personalised, compassionate care in luxury surroundings,
               supporting cognition, wellbeing and daily life.
             </p>
@@ -55,28 +61,31 @@ export default function AlzheimersCare() {
       </section>
 
       {/* What is Alzheimer’s Care */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6 border-l-4 pl-8 border-[var(--primary)]">
-          <h2 className="text-4xl font-semibold mb-6 text-primary">
-            Understanding Alzheimer’s Disease
-          </h2>
-          <p className="text-lg leading-relaxed max-w-4xl">
-            Alzheimer’s disease is the most common cause of dementia, affecting
-            memory, cognition, and daily living skills. Heritage Care provides
-            bespoke Alzheimer’s care tailored to every stage, helping you enjoy
-            enriched, meaningful days while supporting both you and your family.
-          </p>
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="border-l-4 pl-8 border-[var(--primary)]">
+            <h2 className="text-4xl font-semibold mb-6 text-primary">
+              What is Alzheimer’s Disease
+            </h2>
+            <p className="leading-relaxed max-w-4xl">
+              Alzheimer’s disease is the most common cause of dementia,
+              affecting memory, cognition, and daily living skills. Heritage
+              Care provides bespoke Alzheimer’s care tailored to every stage,
+              helping you enjoy enriched, meaningful days while supporting both
+              you and your family.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Who it’s for / Expertise */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-16 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Who is Alzheimer&apos;s Care For?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Heritage Care&apos;s specialist Alzheimer&apos;s care is designed
               for all stages, from early diagnosis to advanced progression.
               Whether you require daily living assistance, cognitive engagement,
@@ -130,7 +139,7 @@ export default function AlzheimersCare() {
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             Our Alzheimer&apos;s Care Services
           </h2>
-          <p className="text-lg mb-12">
+          <p className=" mb-12">
             Heritage Care&apos;s services blend clinical excellence with luxury
             living. Every resident benefits from bespoke memory care,
             therapeutic engagement, nutritional support, and an enriched
@@ -163,7 +172,7 @@ export default function AlzheimersCare() {
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Personalised Alzheimer’s Care Plans
           </h2>
-          <p className="text-lg text-center mb-12">
+          <p className="text-center mb-12">
             Each resident receives a bespoke care plan, continuously refined to
             adapt to evolving needs. Heritage Care integrates medical expertise
             with therapeutic engagement to ensure meaningful, fulfilling days.
@@ -182,7 +191,7 @@ export default function AlzheimersCare() {
                 key={i}
                 className="group bg-white rounded-2xl p-6 border border-[var(--primary)]/40 hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold mb-2">{point}</h3>
+                <h3 className="font-semibold mb-2">{point}</h3>
               </div>
             ))}
           </div>

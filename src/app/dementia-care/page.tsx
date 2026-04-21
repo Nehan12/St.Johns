@@ -31,15 +31,14 @@ export default function DementiaCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/dementia-care.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/dementia-care.jpg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -49,7 +48,13 @@ export default function DementiaCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Bespoke, person-centred memory care designed to enrich life,
               preserve dignity, and promote wellbeing.
             </p>
@@ -58,13 +63,13 @@ export default function DementiaCare() {
       </section>
 
       {/* What is Dementia Care */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8 border-[var(--primary)]">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Dementia Care?
             </h2>
-            <p className="text-xl leading-relaxed max-w-4xl">
+            <p className=" leading-relaxed max-w-4xl">
               {`Heritage Care's dementia care, under the Luminare philosophy, is a
             personalised approach designed to enhance daily life, provide
             comfort, support cognitive function, and nurture emotional
@@ -77,13 +82,13 @@ export default function DementiaCare() {
       </section>
 
       {/* Who it’s for / Expertise */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Our Dementia Care Professionals
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               {`Heritage Care's expert team includes specialist dementia nurses,
               therapists, and hospitality professionals, all trained to deliver
               a world-class, personalised care experience. Their goal is to
@@ -132,12 +137,12 @@ export default function DementiaCare() {
       </section>
 
       {/* Dementia Care Plans */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             Personalised Dementia Care Plans
           </h2>
-          <p className="text-lg mb-12">
+          <p className="mb-12">
             Each plan is curated with meticulous attention to detail, ensuring
             care evolves alongside your needs and preferences.
           </p>
@@ -163,7 +168,7 @@ export default function DementiaCare() {
       </section>
 
       {/* Types & Stages of Dementia */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-center text-primary">
             Types & Stages of Dementia
@@ -207,12 +212,12 @@ export default function DementiaCare() {
       </section>
 
       {/* Luxury Features */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-4xl font-semibold mb-6 text-primary">
             What’s Included in Our Dementia Care
           </h2>
-          <div className="grid md:grid-cols-3 gap-10 mt-10">
+          <div className="grid md:grid-cols-3 gap-8 mt-8">
             {[
               "Private luxury suites for comfort and ease",
               "24-hour specialist nursing care",
@@ -226,9 +231,9 @@ export default function DementiaCare() {
             ].map((feature, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 border border-[var(--primary)]/40 hover:shadow-xl transition-all duration-300"
+                className="group bg-white rounded-2xl p-4 border border-[var(--primary)]/40 hover:shadow-xl transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold mb-2">{feature}</h3>
+                <p className=" font-semibold mb-2">{feature}</p>
               </div>
             ))}
           </div>

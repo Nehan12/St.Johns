@@ -32,21 +32,13 @@ export default function SpecialistConditions() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/new3.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/new3.jpg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -57,7 +49,13 @@ export default function SpecialistConditions() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               At Heritage Care, specialised care means so much more than
               clinical support – it&apos;s the art of delivering exceptional,
               personalised care with warmth and professionalism.
@@ -76,7 +74,7 @@ export default function SpecialistConditions() {
                 Specialised Memory Care – Luminare
               </h2>
 
-              <p className="text-lg mb-8">
+              <p className="mb-8">
                 Our pioneering memory care programme, Luminare, blends
                 personalised therapies, leading healthcare technology, and a
                 compassionate approach to support those living with memory loss
@@ -129,7 +127,7 @@ export default function SpecialistConditions() {
       </section>
 
       {/* Our Specialist Memory Care Programme - Luminare */}
-      <section className="py-14 md:py-24 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         {/* Ambient layers */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-[var(--primary)]/20 rounded-full -translate-x-36 -translate-y-36" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--primary)]/20 rounded-full translate-x-48 translate-y-48" />
@@ -140,7 +138,7 @@ export default function SpecialistConditions() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Specialist Memory Care Programme – Luminare
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto">
               Our pioneering memory care programme, Luminare, blends
               personalised therapies, leading healthcare technology and a
               compassionate approach to support those living with memory loss –
@@ -210,7 +208,7 @@ export default function SpecialistConditions() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Private Care Specialists for Complex Conditions
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+            <p className="max-w-3xl mx-auto px-4">
               You might benefit from private care specialists if you&apos;re
               managing conditions such as Alzheimer&apos;s, Parkinson&apos;s,
               stroke recovery, heart disease, multiple sclerosis, cancer or
@@ -437,9 +435,7 @@ export default function SpecialistConditions() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-primary">
-                  {item.title}
-                </h3>
+                <h3 className="font-bold mb-2 text-primary">{item.title}</h3>
                 <p>{item.text}</p>
               </div>
             ))}

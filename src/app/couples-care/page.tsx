@@ -31,15 +31,14 @@ export default function CouplesCare() {
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[85vh]"
-        style={
-          {
-            backgroundImage: "url(/couples-care.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/couples-care.jpg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
@@ -49,7 +48,13 @@ export default function CouplesCare() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-lg text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Continue living together with bespoke support, comfort and
               meaningful experiences in a beautifully appointed environment.
             </p>
@@ -58,13 +63,13 @@ export default function CouplesCare() {
       </section>
 
       {/* What is Couples Care */}
-      <section className="py-24 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="border-l-4 pl-8 border-[var(--primary)]">
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               What is Couples Care?
             </h2>
-            <p className="text-lg leading-relaxed max-w-4xl">
+            <p className=" leading-relaxed max-w-4xl">
               Couples care ensures both partners can continue living together
               while receiving tailored support. Heritage Care provides
               personalised care plans, luxurious private suites, and enriching
@@ -75,13 +80,13 @@ export default function CouplesCare() {
       </section>
 
       {/* Who it's for */}
-      <section className="py-24 bg-[var(--primary)]/10">
+      <section className="py-12 bg-[var(--primary)]/10">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-14 items-start">
           <div className="lg:col-span-2">
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-primary">
               Who is Couples Care for?
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-3xl">
+            <p className="leading-relaxed mb-10 max-w-3xl">
               Ideal for partners with varying care needs, from mild support to
               complex conditions including memory care. Heritage Care ensures
               each couple’s routine, privacy and preferences are fully
@@ -132,10 +137,10 @@ export default function CouplesCare() {
             <h2 className="text-4xl font-semibold mb-6 text-primary">
               Our Couples Care Services
             </h2>
-            <p className="text-lg">
+            <h4>
               Comprehensive services designed to support wellbeing, comfort, and
               togetherness.
-            </p>
+            </h4>
           </div>
 
           <div className="grid md:grid-cols-3 gap-10">

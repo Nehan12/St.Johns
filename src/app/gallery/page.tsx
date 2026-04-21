@@ -81,36 +81,28 @@ export default function Gallery() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/gallery.jpeg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/gallery.jpeg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Gallery
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
             >
               Explore our comfortable and modern rooms designed for your
               wellbeing and peace of mind.
@@ -221,19 +213,10 @@ export default function Gallery() {
 
                     {/* Details */}
                     <div className="p-6">
-                      <h3
-                        className="text-2xl font-bold mb-4"
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#3A2A23",
-                        }}
-                      >
+                      <h3 className="text-2xl font-bold mb-4">
                         {selectedRoom.name}
                       </h3>
-                      <p
-                        className="text-gray-700 text-base md:text-lg"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <p className="text-gray-700 text-base md:text-lg">
                         {selectedRoom.details}
                       </p>
                     </div>

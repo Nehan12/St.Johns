@@ -35,21 +35,13 @@ export default function Services() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/new1.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/new1.jpg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
@@ -60,7 +52,13 @@ export default function Services() {
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Comprehensive care services designed to meet the unique needs of
               each resident at Heritage Care.
             </p>
@@ -78,7 +76,7 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Core Services
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+            <p className="max-w-3xl mx-auto px-4">
               At Heritage Care, we provide comprehensive care services tailored
               to meet the unique needs of each resident.
             </p>
@@ -187,7 +185,7 @@ export default function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Additional Services
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto px-4">
+            <p className="max-w-3xl mx-auto px-4">
               Supporting services that enhance the quality of life and
               well-being of our residents.
             </p>
