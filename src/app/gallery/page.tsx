@@ -55,9 +55,11 @@ export default function Gallery() {
   ];
 
   useEffect(() => {
+    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -65,13 +67,8 @@ export default function Gallery() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
@@ -84,36 +81,28 @@ export default function Gallery() {
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/gallery.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/gallery.jpeg)",
+        }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Gallery
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
             >
               Explore our comfortable and modern rooms designed for your
               wellbeing and peace of mind.
@@ -127,10 +116,7 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
           {/* Type I Rooms */}
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6 text-center"
-              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
-            >
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
               Type I Rooms
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -149,16 +135,10 @@ export default function Gallery() {
 
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
-                    <h3
-                      className="text-white text-lg md:text-xl font-bold mb-2"
-                      style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
+                    <h3 className="text-white text-lg md:text-xl font-bold mb-2">
                       {room.name}
                     </h3>
-                    <p
-                      className="text-white/90 text-sm md:text-base"
-                      style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
+                    <p className="text-white/90 text-sm md:text-base">
                       {room.details}
                     </p>
                   </div>
@@ -169,10 +149,7 @@ export default function Gallery() {
 
           {/* Type II Rooms */}
           <div>
-            <h2
-              className="text-2xl md:text-3xl font-bold mb-6 text-center"
-              style={{ fontFamily: "Poppins, sans-serif", color: "#B85C2E" }}
-            >
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
               Type II Rooms
             </h2>
             <div>
@@ -193,16 +170,10 @@ export default function Gallery() {
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4">
-                      <h3
-                        className="text-white text-lg md:text-xl font-bold mb-2"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <h3 className="text-white text-lg md:text-xl font-bold mb-2">
                         {room.name}
                       </h3>
-                      <p
-                        className="text-white/90 text-sm md:text-base mb-4"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <p className="text-white/90 text-sm md:text-base mb-4">
                         {room.details.substring(0, 50)}...
                       </p>
 
@@ -242,19 +213,10 @@ export default function Gallery() {
 
                     {/* Details */}
                     <div className="p-6">
-                      <h3
-                        className="text-2xl font-bold mb-4"
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#3A2A23",
-                        }}
-                      >
+                      <h3 className="text-2xl font-bold mb-4">
                         {selectedRoom.name}
                       </h3>
-                      <p
-                        className="text-gray-700 text-base md:text-lg"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
+                      <p className="text-gray-700 text-base md:text-lg">
                         {selectedRoom.details}
                       </p>
                     </div>
@@ -270,7 +232,7 @@ export default function Gallery() {
             href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 rounded-lg bg-[#E67E5A] text-white font-semibold shadow-md hover:bg-[#D86A45] transition"
+            className="inline-block mt-6 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:birghtness-95 transition"
           >
             View Room Plan PDF
           </a>

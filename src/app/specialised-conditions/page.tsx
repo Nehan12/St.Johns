@@ -18,56 +18,43 @@ export default function SpecialistConditions() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Allrounder Monument Regular, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/new3.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/new3.jpg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Specialised Conditions
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
             <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Allrounder Monument Medium, sans-serif" }}
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
             >
               At Heritage Care, specialised care means so much more than
               clinical support – it&apos;s the art of delivering exceptional,
@@ -78,29 +65,16 @@ export default function SpecialistConditions() {
       </section>
 
       {/* Specialist Care Designed Around You */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
-        {/* Decorative accents */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#E7A98B]/30 rounded-full -translate-x-48 -translate-y-48"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#B85C2E]/20 rounded-full translate-x-40 translate-y-40"></div>
-
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* LEFT – Content */}
             <div className="animate-fadeInUp">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-6"
-                style={{
-                  fontFamily: "Allrounder Monument Regular, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
                 Specialised Memory Care – Luminare
               </h2>
 
-              <p
-                className="text-lg mb-8"
-                style={{ fontFamily: "Rosehot, sans-serif", color: "#5A3A2E" }}
-              >
+              <p className="mb-8">
                 Our pioneering memory care programme, Luminare, blends
                 personalised therapies, leading healthcare technology, and a
                 compassionate approach to support those living with memory loss
@@ -119,7 +93,7 @@ export default function SpecialistConditions() {
                     className="flex items-start group transition-all duration-300 hover:translate-x-2"
                     style={{ transitionDelay: `${i * 0.08}s` }}
                   >
-                    <div className="w-7 h-7 rounded-full flex items-center justify-center mr-4 mt-1 bg-gradient-to-br from-[#B85C2E] to-[#E7A98B] shadow-md group-hover:scale-110 transition-all duration-300">
+                    <div className="w-7 h-7 rounded-full flex items-center justify-center mr-4 mt-1 bg-secondary shadow-md group-hover:scale-110 transition-all duration-300">
                       <svg
                         className="w-4 h-4 text-white"
                         fill="currentColor"
@@ -133,15 +107,7 @@ export default function SpecialistConditions() {
                       </svg>
                     </div>
 
-                    <span
-                      className="text-sm md:text-base"
-                      style={{
-                        fontFamily: "Rosehot, sans-serif",
-                        color: "#5A3A2E",
-                      }}
-                    >
-                      {item}
-                    </span>
+                    <span className="text-sm md:text-base">{item}</span>
                   </div>
                 ))}
               </div>
@@ -153,7 +119,7 @@ export default function SpecialistConditions() {
                 className="aspect-[4/3] bg-cover bg-center rounded-3xl shadow-xl transition-all duration-700 hover:scale-105"
                 style={{ backgroundImage: "url(/nunrse1.jpg)" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#B85C2E]/25 to-transparent rounded-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/25 to-transparent rounded-3xl"></div>
               </div>
             </div>
           </div>
@@ -161,30 +127,18 @@ export default function SpecialistConditions() {
       </section>
 
       {/* Our Specialist Memory Care Programme - Luminare */}
-      <section className="py-14 md:py-24 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         {/* Ambient layers */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-[#E7A98B]/20 rounded-full -translate-x-36 -translate-y-36" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#B85C2E]/20 rounded-full translate-x-48 translate-y-48" />
+        <div className="absolute top-0 left-0 w-72 h-72 bg-[var(--primary)]/20 rounded-full -translate-x-36 -translate-y-36" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[var(--primary)]/20 rounded-full translate-x-48 translate-y-48" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* HEADER */}
           <div className="text-center mb-14 md:mb-20 animate-fadeInUp">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Specialist Memory Care Programme – Luminare
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto"
-              style={{
-                fontFamily: "Libre Baskerville Regular, serif",
-                color: "#5A3A2E",
-              }}
-            >
+            <p className="max-w-3xl mx-auto">
               Our pioneering memory care programme, Luminare, blends
               personalised therapies, leading healthcare technology and a
               compassionate approach to support those living with memory loss –
@@ -198,20 +152,17 @@ export default function SpecialistConditions() {
               {
                 title: "Personalised Cognitive Therapies",
                 text: "Tailored cognitive stimulation programmes designed to maintain mental acuity and provide meaningful engagement.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 iconPath:
                   "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
               },
               {
                 title: "Advanced Technology",
                 text: "Leading healthcare technology and innovative tools to support memory care and enhance daily living experiences.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 iconPath: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
               },
               {
                 title: "Compassionate Support",
                 text: "A compassionate approach ensuring every moment is met with warmth, understanding and tailored engagement.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 iconPath:
                   "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
               },
@@ -221,7 +172,7 @@ export default function SpecialistConditions() {
                 className="group bg-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition`}
+                  className={`w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition`}
                 >
                   <svg
                     className="w-8 h-8 text-white"
@@ -238,25 +189,11 @@ export default function SpecialistConditions() {
                   </svg>
                 </div>
 
-                <h3
-                  className="text-xl font-bold mb-4"
-                  style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   {item.title}
                 </h3>
 
-                <p
-                  className="text-gray-600"
-                  style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
-                    color: "#5A3A2E",
-                  }}
-                >
-                  {item.text}
-                </p>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>
@@ -264,30 +201,14 @@ export default function SpecialistConditions() {
       </section>
 
       {/* Private Care Specialists for Complex Conditions */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
-        {/* Ambient circles */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#E7A98B]/20 to-transparent rounded-full -translate-y-32 translate-x-32" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#B85C2E]/15 to-transparent rounded-full translate-y-36 -translate-x-36" />
-
+      <section className="py-12 md:py-20  relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* HEADER */}
           <div className="text-center mb-12 md:mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Private Care Specialists for Complex Conditions
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto px-4"
-              style={{
-                fontFamily: "Libre Baskerville Regular, serif",
-                color: "#5A3A2E",
-              }}
-            >
+            <p className="max-w-3xl mx-auto px-4">
               You might benefit from private care specialists if you&apos;re
               managing conditions such as Alzheimer&apos;s, Parkinson&apos;s,
               stroke recovery, heart disease, multiple sclerosis, cancer or
@@ -301,7 +222,6 @@ export default function SpecialistConditions() {
               {
                 title: "24-Hour Medical Care",
                 text: "Highly tailored medical care delivered by specialised teams with expertise in complex neurological and medical conditions.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -321,7 +241,6 @@ export default function SpecialistConditions() {
               {
                 title: "Therapeutic Engagement",
                 text: "Specialised therapeutic programmes designed to enhance mobility, cognitive function and overall quality of life.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -341,7 +260,6 @@ export default function SpecialistConditions() {
               {
                 title: "Couples Care",
                 text: "Supporting couples to remain together even when their care needs differ, ensuring they can stay connected.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -361,7 +279,6 @@ export default function SpecialistConditions() {
               {
                 title: "Short-term Rehabilitation",
                 text: "Expert rehabilitation services for those transitioning from hospital or requiring intensive recovery support.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -381,7 +298,6 @@ export default function SpecialistConditions() {
               {
                 title: "Long-term Support",
                 text: "Comprehensive long-term care plans tailored to your evolving needs and designed to honour your wishes.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -401,7 +317,6 @@ export default function SpecialistConditions() {
               {
                 title: "Family Partnership",
                 text: "Open communication with families, regular updates and guidance at every stage of the care journey.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 icon: (
                   <svg
                     className="w-6 h-6 text-white"
@@ -424,28 +339,14 @@ export default function SpecialistConditions() {
                 className="group p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
-                  className={`w-14 h-14 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-4 shadow-lg`}
+                  className={`w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-4 shadow-lg`}
                 >
                   {item.icon}
                 </div>
-                <h3
-                  className="text-xl font-bold mb-2"
-                  style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
+                <h3 className="text-xl font-bold mb-2 text-primary">
                   {item.title}
                 </h3>
-                <p
-                  className="text-gray-600"
-                  style={{
-                    fontFamily: "Libre Baskerville Regular, serif",
-                    color: "#5A3A2E",
-                  }}
-                >
-                  {item.text}
-                </p>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>
@@ -453,21 +354,15 @@ export default function SpecialistConditions() {
       </section>
 
       {/* Why Choose Heritage Care for Specialist Conditions */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-[#FFF6EE] to-[#FFEDE0] relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
         {/* Ambient circles */}
-        <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[#E7A98B]/15 to-transparent rounded-full -translate-x-40 -translate-y-40" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#B85C2E]/10 to-transparent rounded-full translate-x-48 translate-y-48" />
+        <div className="absolute top-0 left-0 w-80 h-80 bg-gradient-to-br from-[var(--primary)]]/15 to-transparent rounded-full -translate-x-40 -translate-y-40" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[var(--primary)]/10 to-transparent rounded-full translate-x-48 translate-y-48" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* HEADER */}
           <div className="text-center mb-12 md:mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                fontFamily: "Allrounder Monument Regular, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Why Choose Heritage Care for Specialised Conditions?
             </h2>
           </div>
@@ -478,7 +373,6 @@ export default function SpecialistConditions() {
               {
                 title: "Clinical Excellence",
                 text: "Expert teams specialising in complex conditions with years of experience and clinical precision.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 icon: (
                   <path
                     strokeLinecap="round"
@@ -491,7 +385,6 @@ export default function SpecialistConditions() {
               {
                 title: "Personalised Care Plans",
                 text: "Fully bespoke care plans including 24-hour nursing, memory care, therapies and enriching experiences.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 icon: (
                   <path
                     strokeLinecap="round"
@@ -504,7 +397,6 @@ export default function SpecialistConditions() {
               {
                 title: "Luxurious Surroundings",
                 text: "Elegant residences with premium amenities designed for comfort, dignity and enhanced quality of life.",
-                gradient: "from-[#B85C2E] to-[#E7A98B]",
                 icon: (
                   <path
                     strokeLinecap="round"
@@ -517,7 +409,6 @@ export default function SpecialistConditions() {
               {
                 title: "Family Support",
                 text: "Comprehensive family support with regular updates, guidance and partnership throughout the care journey.",
-                gradient: "from-[#E7A98B] to-[#B85C2E]",
                 icon: (
                   <path
                     strokeLinecap="round"
@@ -533,7 +424,7 @@ export default function SpecialistConditions() {
                 className="group p-6 rounded-2xl bg-white/70 backdrop-blur-md border border-white/30 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center"
               >
                 <div
-                  className={`w-16 h-16 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110`}
+                  className={`w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110`}
                 >
                   <svg
                     className="w-8 h-8 text-white"
@@ -544,21 +435,8 @@ export default function SpecialistConditions() {
                     {item.icon}
                   </svg>
                 </div>
-                <h3
-                  className="text-lg font-bold mb-2"
-                  style={{
-                    fontFamily: "Allrounder Monument Regular, sans-serif",
-                    color: "#B85C2E",
-                  }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  className="text-sm text-[#5A3A2E]"
-                  style={{ fontFamily: "Poppins, sans-serif" }}
-                >
-                  {item.text}
-                </p>
+                <h3 className="font-bold mb-2 text-primary">{item.title}</h3>
+                <p>{item.text}</p>
               </div>
             ))}
           </div>

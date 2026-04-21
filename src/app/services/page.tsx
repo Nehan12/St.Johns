@@ -21,54 +21,44 @@ export default function Services() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p
-            className="text-[#B85C2E] text-lg"
-            style={{ fontFamily: "Poppins, sans-serif" }}
-          >
-            Loading...
-          </p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
       <section
         className="
-          relative
-          flex items-center
-          pt-32 md:pt-24
-          bg-cover bg-center bg-no-repeat
-          min-h-[60vh] md:min-h-[85vh]
-        "
-        style={
-          {
-            backgroundImage: "url(/services.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            imageRendering: "crisp-edges",
-          } as React.CSSProperties
-        }
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: "url(/new1.jpg)",
+        }}
       >
         {/* Colorful Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Our Services
             </h1>
             <br />
             <div className="underline mx-auto mt-2"></div>
-            <p className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4">
+            <p
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+            >
               Comprehensive care services designed to meet the unique needs of
               each resident at Heritage Care.
             </p>
@@ -77,26 +67,16 @@ export default function Services() {
       </section>
 
       {/* Main Services */}
-      <section className="py-20 bg-gradient-to-br from-white via-[#F8F9FA] to-[#E8F4FD] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#456882]/20 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[#B85C2E]/15 to-transparent rounded-full translate-y-36 -translate-x-36"></div>
+      <section className="py-20 bg-gradient-to-br from-white to-[var(--light)] relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[var(--primary)]/20 to-transparent rounded-full -translate-y-32 translate-x-32"></div>
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-[var(--primary)]/15 to-transparent rounded-full translate-y-36 -translate-x-36"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Our Core Services
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto px-4"
-              style={{
-                color: "#372e29",
-              }}
-            >
+            <p className="max-w-3xl mx-auto px-4">
               At Heritage Care, we provide comprehensive care services tailored
               to meet the unique needs of each resident.
             </p>
@@ -104,8 +84,8 @@ export default function Services() {
           <section className="max-w-7xl mx-auto px-4 mb-20">
             <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
               {/* Residential Care */}
-              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+              <div className="bg-white rounded-lg p-8 border border-[var(--primary)]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-primary">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -120,24 +100,24 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   Residential Care
                 </h3>
-                <p className="mb-6 text-[#372e29]">
+                <p className="mb-6">
                   Long-term residential care with full support for daily living
                   and medical needs.
                 </p>
                 <Link
                   href="/residential-care"
-                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   Learn More
                 </Link>
               </div>
 
               {/* Respite Care */}
-              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+              <div className="bg-white rounded-lg p-8 border border-[var(--primary)]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-primary">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -152,24 +132,24 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   Respite Care
                 </h3>
-                <p className="mb-6 text-[#372e29]">
+                <p className="mb-6">
                   Short-term professional care giving carers time to rest and
                   recharge.
                 </p>
                 <Link
                   href="/respite"
-                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   Learn More
                 </Link>
               </div>
 
               {/* Specialist Conditions Care */}
-              <div className="bg-white rounded-lg p-8 border border-[#B85C2E]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-[#B85C2E]">
+              <div className="bg-white rounded-lg p-8 border border-[var(--primary)]/30 text-center transition-all duration-300 hover:shadow-lg hover:scale-105">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg bg-primary">
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -184,16 +164,16 @@ export default function Services() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-[#B85C2E]">
+                <h3 className="text-xl font-bold mb-4 text-primary">
                   Specialised Conditions Care
                 </h3>
-                <p className="mb-6 text-[#372e29]">
+                <p className="mb-6">
                   Expert care for dementia, Alzheimer’s, Parkinson’s, and
                   complex conditions.
                 </p>
                 <Link
                   href="/specialised-conditions"
-                  className="inline-block bg-[#B85C2E] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  className="inline-block bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   Learn More
                 </Link>
@@ -202,20 +182,10 @@ export default function Services() {
           </section>
           {/* Additional Services */}
           <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              style={{
-                color: "#B85C2E",
-              }}
-            >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               Additional Services
             </h2>
-            <p
-              className="text-lg md:text-xl max-w-3xl mx-auto px-4"
-              style={{
-                color: "#372e29",
-              }}
-            >
+            <p className="max-w-3xl mx-auto px-4">
               Supporting services that enhance the quality of life and
               well-being of our residents.
             </p>
@@ -224,14 +194,11 @@ export default function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {/* Nutrition Services */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               {/* Icon */}
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -248,45 +215,33 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 Nutrition Services
               </h3>
 
               {/* Short intro */}
-              <p
-                className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <p className="text-sm text-gray-500 mb-5">
                 Thoughtfully planned meals for healthier living
               </p>
 
               {/* Description */}
-              <p
-                className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <p className="text-[15px] leading-relaxed mb-6">
                 Our nutrition services focus on creating balanced, enjoyable
                 meal plans tailored to individual health goals, preferences, and
                 medical needs.
               </p>
 
               {/* Benefits */}
-              <ul className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto">
+              <ul className="space-y-3 text-sm text-left max-w-xs mx-auto">
                 {[
                   "Customized meal planning",
-                  "Personalized dietary consultation",
+                  "Personalised dietary consultation",
                   "Support for special dietary needs",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -299,9 +254,7 @@ export default function Services() {
                         />
                       </svg>
                     </span>
-                    <span style={{ fontFamily: "Poppins, sans-serif" }}>
-                      {item}
-                    </span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -309,14 +262,11 @@ export default function Services() {
 
             {/* Physiotherapy */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               {/* Icon */}
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -333,48 +283,33 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 Physiotherapy
               </h3>
 
               {/* Short intro */}
-              <p
-                className="text-sm text-gray-500 mb-5"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <p className="text-sm mb-5">
                 Restoring strength, balance, and everyday mobility
               </p>
 
               {/* Main description */}
-              <p
-                className="text-[15px] leading-relaxed text-gray-600 mb-6"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <p className="text-[15px] leading-relaxed mb-6">
                 Our physiotherapy services are designed to support recovery,
                 reduce discomfort, and improve movement through guided,
                 personalized care.
               </p>
 
               {/* Benefits */}
-              <ul
-                className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <ul className="space-y-3 text-sm text-left max-w-xs mx-auto">
                 {[
                   "Improves mobility and flexibility",
                   "Supports pain relief and recovery",
                   "Enhances balance and fall prevention",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -395,14 +330,11 @@ export default function Services() {
 
             {/* Occupational Therapy */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
               {/* Icon */}
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -419,13 +351,7 @@ export default function Services() {
               </div>
 
               {/* Title */}
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 Occupational Therapy
               </h3>
 
@@ -447,19 +373,16 @@ export default function Services() {
               </p>
 
               {/* Benefits */}
-              <ul
-                className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto"
-                style={{ fontFamily: "Poppins, sans-serif" }}
-              >
+              <ul className="space-y-3 text-sm text-gray-700 text-left max-w-xs mx-auto">
                 {[
                   "Daily living skills",
                   "Cognitive rehabilitation",
                   "Adaptive equipment",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -480,13 +403,10 @@ export default function Services() {
 
             {/* Pharmacy Services */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -502,12 +422,7 @@ export default function Services() {
                 </svg>
               </div>
 
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 Pharmacy Services
               </h3>
 
@@ -534,9 +449,9 @@ export default function Services() {
                   "Prescription coordination",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -559,13 +474,10 @@ export default function Services() {
 
             {/* Recreation Therapy */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -581,13 +493,7 @@ export default function Services() {
                 </svg>
               </div>
 
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 Recreation Therapy
               </h3>
 
@@ -613,9 +519,9 @@ export default function Services() {
                   "Creative arts programs",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -638,13 +544,10 @@ export default function Services() {
 
             {/* 24/7 Support */}
             <div
-              className="bg-white rounded-2xl p-8 border border-[#B85C2E]/20 text-center
+              className="bg-white rounded-2xl p-8 border border-[var(--primary)]/20 text-center
                 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
             >
-              <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md"
-                style={{ backgroundColor: "#B85C2E" }}
-              >
+              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto shadow-md bg-primary">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -660,13 +563,7 @@ export default function Services() {
                 </svg>
               </div>
 
-              <h3
-                className="text-xl font-semibold mb-2 tracking-wide"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  color: "#B85C2E",
-                }}
-              >
+              <h3 className="text-xl font-semibold mb-2 tracking-wide text-primary">
                 24/7 Support
               </h3>
 
@@ -692,9 +589,9 @@ export default function Services() {
                   "Crisis intervention",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[#B85C2E]/15">
+                    <span className="mt-1 w-5 h-5 rounded-full flex items-center justify-center bg-[var(--primary)]/15">
                       <svg
-                        className="w-3 h-3 text-[#B85C2E]"
+                        className="w-3 h-3 text-primary"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -717,24 +614,15 @@ export default function Services() {
           </div>
 
           {/* Why Choose Heritage Care */}
-          <div className="bg-[#FBF3EE] rounded-lg p-8 border border-[#D2C1B6]/30">
-            <h2
-              className="text-3xl font-bold mb-8 text-center"
-              style={{
-                fontFamily: "Poppins, sans-serif",
-                color: "#B85C2E",
-              }}
-            >
+          <div className="bg-white rounded-lg p-8 border border-[var(--primary)]/10">
+            <h2 className="text-3xl font-bold mb-8 text-center text-primary">
               Why Choose Heritage Care?
             </h2>
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: "#B85C2E" }}
-                    >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-primary">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -750,13 +638,7 @@ export default function Services() {
                       </svg>
                     </div>
                     <div>
-                      <h3
-                        className="text-xl font-bold mb-2"
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#B85C2E",
-                        }}
-                      >
+                      <h3 className="text-xl font-bold mb-2 text-primary">
                         Experienced Professional Team
                       </h3>
                       <p
@@ -772,10 +654,7 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: "#B85C2E" }}
-                    >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-primary">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -791,13 +670,7 @@ export default function Services() {
                       </svg>
                     </div>
                     <div>
-                      <h3
-                        className="text-xl font-bold mb-2"
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#B85C2E",
-                        }}
-                      >
+                      <h3 className="text-xl font-bold mb-2 text-primary">
                         Compassionate Care Approach
                       </h3>
                       <p
@@ -813,10 +686,7 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
-                      style={{ backgroundColor: "#B85C2E" }}
-                    >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 bg-primary">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -832,14 +702,8 @@ export default function Services() {
                       </svg>
                     </div>
                     <div>
-                      <h3
-                        className="text-xl font-bold mb-2"
-                        style={{
-                          fontFamily: "Poppins, sans-serif",
-                          color: "#B85C2E",
-                        }}
-                      >
-                        Personalized Care Plans
+                      <h3 className="text-xl font-bold mb-2 text-primary">
+                        Personalised Care Plans
                       </h3>
                       <p
                         className="text-gray-600"
@@ -847,7 +711,7 @@ export default function Services() {
                           fontFamily: "Poppins, sans-serif",
                         }}
                       >
-                        Every resident receives a customized care plan tailored
+                        Every resident receives a customised care plan tailored
                         to their unique needs, preferences, and health
                         conditions, ensuring optimal outcomes.
                       </p>
@@ -865,7 +729,7 @@ export default function Services() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#B85C2E]/20 to-transparent rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/20 to-transparent rounded-lg"></div>
               </div>
             </div>
           </div>

@@ -10,9 +10,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="py-6" style={{ backgroundColor: "#D46A1F" }}>
+    <footer className="py-6 bg-primary text-main">
       {" "}
-      {/**E67E5A */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* MAIN FOOTER CONTENT — HIDDEN ON MOBILE */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -21,14 +20,11 @@ export default function Footer() {
             <Image
               height={90}
               width={200}
-              src="/mainlogo-white.png"
+              src="/mainLogo-green.png"
               alt="Heritage Care Logo"
               className="mb-3"
             />
-            <p
-              className="text-sm leading-relaxed text-white"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <p className="text-sm leading-relaxed">
               Providing compassionate care with medical expertise and heartfelt
               dedication.
             </p>
@@ -36,9 +32,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-base font-semibold mb-3 text-white">
-              Quick Links
-            </h4>
+            <h4 className="text-base font-semibold mb-3">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { href: "/about", label: "About Us" },
@@ -50,7 +44,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white hover:underline"
+                    className="text-sm text-[#2F3E2F] hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -61,9 +55,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-bold font-semibold mb-3 text-white">
-              Services
-            </h4>
+            <h4 className="text-bold font-semibold mb-3">Services</h4>
             <ul className="space-y-2">
               {[
                 { href: "/residential-care", label: "Residential Care" },
@@ -76,7 +68,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white hover:underline"
+                    className="text-sm text-main hover:underline"
                   >
                     {link.label}
                   </Link>
@@ -87,11 +79,11 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-base font-semibold mb-3 text-white">
+            <h4 className="text-base font-semibold mb-3 text-main">
               Contact Us
             </h4>
 
-            <ul className="space-y-2 text-sm text-white">
+            <ul className="space-y-2 text-sm text-main">
               <li className="flex items-center gap-2">
                 <FaPhone />
                 <a href="tel:+94771654202">+94 77 165 4202 /+94 77 725 3873</a>
@@ -110,7 +102,7 @@ export default function Footer() {
             </ul>
 
             {/* Social Icons */}
-            <div className="flex gap-6 mt-8 text-white">
+            <div className="flex gap-6 mt-8 text-main">
               <a
                 href="https://www.facebook.com/share/1FcQ1eSrEM/?mibextid=wwXIfr"
                 target="_blank"
@@ -134,8 +126,8 @@ export default function Footer() {
 
         {/* COPYRIGHT — ALWAYS VISIBLE */}
         <div className="pt-0 md:pt-4 border-t-0 md:border-t border-[rgba(255,244,230,0.3)]">
-          <p className="text-center text-xs text-white">
-            © 2026 Heritage Care - Nursing & Wellness. All rights reserved.
+          <p className="text-center text-xs text-main">
+            © 2026 Heritage Care. All rights reserved.
           </p>
         </div>
       </div>

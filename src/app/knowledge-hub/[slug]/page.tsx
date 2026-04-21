@@ -25,9 +25,9 @@ export default async function BlogDetail({
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center px-4">
-        <p className="text-[#B85C2E] text-lg mb-4">Post not found.</p>
-        <Link href="/knowledge-hub" className="text-[#B85C2E] font-semibold">
-          ← Back to Blog
+        <p className="text-primary text-lg mb-4">Post not found.</p>
+        <Link href="/knowledge-hub" className="text-primary font-semibold">
+          ← Back to Knowledge Hub
         </Link>
       </div>
     );
@@ -60,7 +60,7 @@ export default async function BlogDetail({
         <div className="max-w-4xl mx-auto px-4">
           <Link
             href="/knowledge-hub"
-            className="text-[#B85C2E] font-semibold mb-8 inline-block"
+            className="text-primary font-semibold mb-8 inline-block"
           >
             ← Back to Knowledge Hub
           </Link>

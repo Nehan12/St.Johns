@@ -89,28 +89,54 @@ export default function Contact() {
     }
   };
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero Section */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center bg-no-repeat min-h-[60vh] md:min-h-[85vh]"
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{ backgroundImage: "url(/contactPage.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center w-full">
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white pb-4 md:pb-6"
-              style={{ fontFamily: "Poppins, sans-serif" }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white pb-4 md:pb-6">
               Contact Us
             </h1>
             <div className="underline mx-auto mt-2"></div>
             <p
-              className="text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto px-4"
-              style={{ fontFamily: "Poppins, sans-serif" }}
+              className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
             >
               We&apos;re here to help. Contact us to learn more about our
               services or to schedule a visit.
@@ -120,15 +146,12 @@ export default function Contact() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-[#FFF4EE]">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Details */}
             <div>
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-10"
-                style={{ color: "#3A2A23", fontFamily: "Poppins, sans-serif" }}
-              >
+              <h2 className="text-3xl md:text-4xl font-bold mb-10">
                 Get in Touch
               </h2>
 
@@ -168,7 +191,7 @@ export default function Contact() {
                   },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#E67E5A] rounded-lg flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-md">
                       <svg
                         className="w-6 h-6 text-white"
                         fill="none"
@@ -180,24 +203,10 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3
-                        className="text-lg font-semibold mb-1"
-                        style={{
-                          color: "#3A2A23",
-                          fontFamily: "Poppins, sans-serif",
-                        }}
-                      >
+                      <h3 className="text-lg font-semibold mb-1">
                         {item.title}
                       </h3>
-                      <p
-                        className="text-sm leading-relaxed"
-                        style={{
-                          color: "#5C4033",
-                          fontFamily: "Poppins, sans-serif",
-                        }}
-                      >
-                        {item.content}
-                      </p>
+                      <p className="text-sm leading-relaxed">{item.content}</p>
                     </div>
                   </div>
                 ))}
@@ -205,13 +214,8 @@ export default function Contact() {
             </div>
 
             {/* Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#F1D1C4]">
-              <h2
-                className="text-2xl font-bold mb-6"
-                style={{ color: "#3A2A23", fontFamily: "Poppins, sans-serif" }}
-              >
-                Send us a Message
-              </h2>
+            <div className="rounded-2xl p-8 shadow-lg border border-[var(--primary)] bg-light">
+              <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
 
               <form onSubmit={handleSubmit} className="space-y-6 relative">
                 {[
@@ -220,10 +224,7 @@ export default function Contact() {
                   { id: "phone", label: "Phone Number", type: "tel" },
                 ].map((field) => (
                   <div key={field.id}>
-                    <label
-                      className="block text-sm font-medium mb-2"
-                      style={{ color: "#3A2A23" }}
-                    >
+                    <label className="block text-sm font-medium mb-2">
                       {field.label}
                     </label>
                     <input
@@ -232,16 +233,13 @@ export default function Contact() {
                       name={field.id}
                       value={formData[field.id as keyof FormData]}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-lg border border-[#F1D1C4] focus:ring-2 focus:ring-[#E67E5A] focus:outline-none"
+                      className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     />
                   </div>
                 ))}
 
                 <div>
-                  <label
-                    className="block text-sm font-medium mb-2"
-                    style={{ color: "#3A2A23" }}
-                  >
+                  <label className="block text-sm font-medium mb-2">
                     Message *
                   </label>
                   <textarea
@@ -250,7 +248,7 @@ export default function Contact() {
                     rows={4}
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#F1D1C4] focus:ring-2 focus:ring-[#E67E5A] focus:outline-none"
+                    className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     placeholder="How can we help you?"
                   />
                 </div>
@@ -258,7 +256,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={!isValid || loading}
-                  className={`w-full bg-[#E67E5A] hover:bg-[#D86A45] text-white py-3 rounded-lg font-semibold shadow-md transition flex justify-center items-center gap-2 ${
+                  className={`w-full bg-primary hover:brightness-90 text-white py-3 rounded-lg font-semibold shadow-md transition flex justify-center items-center gap-2 ${
                     !isValid || loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >

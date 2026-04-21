@@ -19,22 +19,26 @@ export default function Blog() {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[#B85C2E] border-t-transparent mx-auto mb-4"></div>
-          <p className="text-[#B85C2E] text-lg">Loading...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-4 border-[var(--primary)] border-t-transparent mx-auto mb-4"></div>
+          <p className="text-primary text-lg">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-main">
       <Navigation />
 
       {/* Hero */}
       <section
-        className="relative flex items-center pt-32 md:pt-24 bg-cover bg-center min-h-[60vh] md:min-h-[80vh]"
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
         style={{
-          backgroundImage: "url(/services.jpg)",
+          backgroundImage: "url(/blog.jpeg)",
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -43,7 +47,15 @@ export default function Blog() {
           <h1 className="text-4xl md:text-6xl font-bold text-white">
             News & Insights
           </h1>
-          <p className="text-lg md:text-xl text-white mt-6 max-w-2xl mx-auto">
+          <br />
+          <div className="underline mx-auto mt-2"></div>
+          <p
+            className="
+                hidden landscape:block md:block
+                text-lg md:text-xl text-white
+                max-w-3xl mt-6 md:mt-10 mx-auto
+              "
+          >
             Stay updated with the latest news, insights, and stories from
             Heritage Care.
           </p>
@@ -55,10 +67,10 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#B85C2E]">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
               Latest Articles
             </h2>
-            <p className="text-lg text-[#372e29] mt-4 max-w-2xl mx-auto">
+            <p className="mt-4 max-w-2xl mx-auto">
               Explore helpful resources, care tips, and updates from our team.
             </p>
           </div>
@@ -84,7 +96,7 @@ export default function Blog() {
                 <div className="p-6">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
 
-                  <h3 className="text-xl font-bold text-[#B85C2E] mb-3">
+                  <h3 className="text-xl font-bold text-primary mb-3">
                     {post.title}
                   </h3>
 
@@ -94,7 +106,7 @@ export default function Blog() {
 
                   <Link
                     href={`/knowledge-hub/${post.slug}`}
-                    className="inline-block text-[#B85C2E] font-semibold hover:underline"
+                    className="inline-block text-primary font-semibold hover:underline"
                   >
                     Read More →
                   </Link>
