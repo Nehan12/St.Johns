@@ -16,40 +16,63 @@ export default function Gallery() {
     details: string;
   };
 
-  const pdfUrl = "/room-plan.pdf";
+  const commonArea = [
+    {
+      image: "/ca-1.jpeg",
+    },
+    {
+      image: "/ca-2.jpeg",
+    },
+    {
+      image: "/ca-3.jpeg",
+    },
+    {
+      image: "/ca-4.jpeg",
+    },
+    {
+      image: "/ca-5.jpeg",
+    },
+    {
+      image: "/ca-6.jpeg",
+    },
+    {
+      image: "/ca-7.jpeg",
+    },
+    {
+      image: "/ca-8.jpeg",
+    },
+    {
+      image: "/ca-9.jpeg",
+    },
+  ];
 
   const typeIRooms = [
     {
-      name: "Type I Room A",
-      image: "/type1-room1.jpeg",
+      name: "Type I Room",
+      image: "/t1-r1.jpeg",
       details: "Single bed, shared bathroom facility, city view, free Wi-Fi.",
     },
     {
-      name: "Type I Room B",
-      image: "/type1-room2.jpeg",
+      name: "Type I Room",
+      image: "/t1-r2.jpeg",
       details: "Single bed, shared bathroom facility, garden view, free Wi-Fi.",
-    },
-    {
-      name: "Type I Room C",
-      image: "/type1-room3.jpeg",
-      details: "Single bed, shared bathroom facility, city view, free Wi-Fi.",
     },
   ];
 
   const typeIIRooms = [
     {
-      name: "Type II Room A",
-      image: "/room1.jpeg",
+      name: "Type II Room",
+      image: "/t2-r1.jpeg",
       details: "Double bed, ensuite bathroom, garden view, free Wi-Fi.",
     },
     {
-      name: "Type II Room B",
-      image: "/room2.jpeg",
+      name: "Type II Room",
+      image: "/t2-r2.jpeg",
       details: "Double bed, ensuite bathroom, garden view, free Wi-Fi.",
     },
     {
-      name: "Type II Room C",
-      image: "/room3.jpeg",
+      name: "Type II Room",
+      image: "/t2-r3.jpeg",
       details: "Double bed, ensuite bathroom, modern interiors.",
     },
   ];
@@ -114,7 +137,29 @@ export default function Gallery() {
       {/* Gallery Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 space-y-12">
-          {/* Type I Rooms */}
+          {/*Common Area */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
+              Common Area
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {commonArea.map((room, i) => (
+                <div
+                  key={i}
+                  className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+                >
+                  <Image
+                    width={100}
+                    height={64}
+                    src={room.image}
+                    alt={"Image of Common Area"}
+                    className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          -{/* Type I Rooms */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
               Type I Rooms
@@ -146,7 +191,6 @@ export default function Gallery() {
               ))}
             </div>
           </div>
-
           {/* Type II Rooms */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
@@ -225,17 +269,6 @@ export default function Gallery() {
               )}
             </div>
           </div>
-        </div>
-
-        <div className="text-center w-full">
-          <a
-            href={pdfUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-6 px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-md hover:birghtness-95 transition"
-          >
-            View Room Plan PDF
-          </a>
         </div>
       </section>
 
