@@ -164,7 +164,7 @@ export default function Contact() {
                         Heritage Care Residence
                         <br />
                         Diyagala Boys Town <br />
-                        Ragama, Sri Lanka
+                        Ragama, Sri Lanka 11350
                       </>
                     ),
                     icon: (
