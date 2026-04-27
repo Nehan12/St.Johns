@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloatingButton from "@/components/floatingButton";
+import JsonLd from "@/components/JsonLd";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -10,27 +11,52 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Heritage Care - Nursing & Wellness",
+  metadataBase: new URL("https://heritagecare.lk"),
+  title: {
+    default: "Heritage Care | Senior Nursing & Residential Care in Sri Lanka",
+    template: "%s | Heritage Care",
+  },
   description:
-    "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
+    "Heritage Care provides 24/7 nursing, memory care, rehabilitation and senior residential care in Sri Lanka. Government certified and NHRC approved.",
+  keywords: [
+    "nursing home Sri Lanka",
+    "elder care Sri Lanka",
+    "memory care Sri Lanka",
+    "senior residential care Colombo",
+    "rehabilitation care Sri Lanka",
+    "dementia care Sri Lanka",
+    "24 hour nursing care",
+    "palliative care Sri Lanka",
+    "care home Ragama",
+  ],
   icons: {
     icon: "/logo4.png",
     shortcut: "/logo4.png",
     apple: "/logo4.png",
   },
   openGraph: {
-    title: "Heritage Care - Nursing & Wellness",
-    description:
-      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-    images: ["/logo4.png"],
     type: "website",
+    locale: "en_LK",
+    url: "https://heritagecare.lk",
+    siteName: "Heritage Care",
+    title: "Heritage Care | Senior Nursing & Residential Care in Sri Lanka",
+    description:
+      "Heritage Care provides 24/7 nursing, memory care, rehabilitation and senior residential care in Sri Lanka. Government certified and NHRC approved.",
+    images: [
+      {
+        url: "/og-image.jpg", // create a 1200x630px image and save to /public/og-image.jpg
+        width: 1200,
+        height: 630,
+        alt: "Heritage Care - Senior Nursing & Residential Care Sri Lanka",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Heritage Care - Nursing & Wellness",
+    title: "Heritage Care | Senior Nursing & Residential Care in Sri Lanka",
     description:
-      "Premium care facility in Sri Lanka providing compassionate palliative and long-term residential care with 24/7 nursing and personalized care plans.",
-    images: ["/logo4.png"],
+      "Heritage Care provides 24/7 nursing, memory care, rehabilitation and senior residential care in Sri Lanka. Government certified and NHRC approved.",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -41,6 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <JsonLd />
+      </head>
       <body className={`${poppins.variable} antialiased`}>
         {children}
         <WhatsAppFloatingButton />

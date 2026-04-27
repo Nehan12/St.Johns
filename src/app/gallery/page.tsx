@@ -5,6 +5,12 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Gallery",
+  description:
+    "Take a look inside Heritage Care — our facilities, activities and the warm environment we provide for our residents.",
+};
+
 export default function Gallery() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
