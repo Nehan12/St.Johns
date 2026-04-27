@@ -10,6 +10,7 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "firebase-admin": "^13.6.0",
     "firebase-functions": "^7.0.4",
     "framer-motion": "^12.23.24",
