@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -45,44 +46,41 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (!isValid) return; // Do not submit if fields are empty
+    if (!isValid) return;
 
     setLoading(true);
     setAlert(null);
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+      await emailjs.send(
+        "service_ks635ew", //service id
+        "template_52yguaa", // template id
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone || "N/A",
+          message: formData.message,
+          inquiry_type: formData.inquiryType,
+        },
+        "0yFoQkadMtGQe6Gyf", // public key
+      );
+
+      setAlert({
+        type: "success",
+        message: "Thank you! Your message has been sent.",
       });
-
-      const data = await res.json();
-
-      if (data.success) {
-        setAlert({
-          type: "success",
-          message: "Thank you! Your message has been sent.",
-        });
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-          inquiryType: "general",
-        });
-      } else {
-        setAlert({
-          type: "error",
-          message: "Failed to send email. Please try again.",
-        });
-      }
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        inquiryType: "general",
+      });
     } catch (err) {
       console.error(err);
       setAlert({
         type: "error",
-        message: "An error occurred. Please try again later.",
+        message: "Failed to send message. Please try again.",
       });
     } finally {
       setLoading(false);
@@ -164,7 +162,7 @@ export default function Contact() {
                         Heritage Care Residence
                         <br />
                         Diyagala Boys Town <br />
-                        Ragama, Sri Lanka 11350
+                        Ragama, Sri Lanka
                       </>
                     ),
                     icon: (
