@@ -15,7 +15,7 @@ export default function FloatingContactButtons() {
   const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
 
   return (
-    <div className="fixed bottom-5 right-5 z-[999] flex flex-col items-center gap-3 md:hidden">
+    <div className="fixed bottom-28 right-5 z-[999] flex flex-col items-center gap-3 md:hidden">
       {/* Email Button */}
       <a href={mailtoUrl} aria-label="Contact via Email">
         <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import WhatsAppFloatingButton from "@/components/floatingButton";
+import FloatingButton from "@/components/floatingButton";
+import ChatBot from "@/components/ChatBot";
 import JsonLd from "@/components/JsonLd";
 
 const poppins = Poppins({
@@ -72,7 +73,8 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} antialiased`}>
         {children}
-        <WhatsAppFloatingButton />
+        <FloatingButton />
+        <ChatBot />
       </body>
     </html>
   );

@@ -52,6 +52,7 @@ export default function FAQ() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white relative inline-block pb-4 md:pb-6">
               Frequently Asked Questions
             </h1>
+            <div className="underline mx-auto mt-2"></div>
             <p
               className="
                 hidden landscape:block md:block
