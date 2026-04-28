@@ -5,12 +5,6 @@ import emailjs from "@emailjs/browser";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Contact Us",
-  description:
-    "Get in touch with Heritage Care. Located in Ragama, Sri Lanka. Call +94 77 165 4202 or send us a message.",
-};
-
 export default function Contact() {
   type FormData = {
     name: string;

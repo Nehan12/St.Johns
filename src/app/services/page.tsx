@@ -7,12 +7,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Our Services",
-  description:
-    "Explore Heritage Care's full range of services including residential care, 24/7 nursing, memory care, physiotherapy and more.",
-};
-
 export default function Services() {
   const [isLoading, setIsLoading] = useState(true);
 

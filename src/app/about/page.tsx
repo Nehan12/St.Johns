@@ -4,12 +4,6 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "About Us",
-  description:
-    "Learn about Heritage Care's mission, values and certified care team providing compassionate senior care in Sri Lanka.",
-};
-
 export default function About() {
   const [isLoading, setIsLoading] = useState(true);
 
