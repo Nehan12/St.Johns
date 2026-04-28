@@ -70,11 +70,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <JsonLd />
+        <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js" async />
+        <script
+          src="https://files.bpcontent.cloud/2026/04/28/10/20260428100559-7MGP3CLO.js"
+          defer
+        />
       </head>
       <body className={`${poppins.variable} antialiased`}>
         {children}
         <FloatingButton />
-        <ChatBot />
+        {/* <ChatBot /> */}
       </body>
     </html>
   );
