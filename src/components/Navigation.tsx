@@ -51,7 +51,7 @@ export default function Navigation() {
           scrolled ? "bg-white shadow-md" : "bg-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-2">
           <div className="flex items-center h-20">
             {/* Logo */}
             <Link
@@ -268,6 +268,12 @@ export default function Navigation() {
               >
                 Knowledge Hub
               </Link>
+              <Link
+                href="/faq"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                FAQ
+              </Link>
             </div>
 
             {/* CTA */}
@@ -441,6 +447,11 @@ export default function Navigation() {
                 <MobileLink
                   href="/knowledge-hub"
                   label="Knowledge Hub"
+                  setMobileOpen={setMobileOpen}
+                />
+                <MobileLink
+                  href="/faq"
+                  label="FAQ"
                   setMobileOpen={setMobileOpen}
                 />
                 <MobileLink

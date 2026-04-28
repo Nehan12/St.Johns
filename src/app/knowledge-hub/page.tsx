@@ -7,12 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogData";
 
-export const metadata = {
-  title: "Knowledge Hub",
-  description:
-    "Expert articles and guides on senior care, dementia, rehabilitation and family support from the Heritage Care team.",
-};
-
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(true);
 

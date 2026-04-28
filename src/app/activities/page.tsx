@@ -5,12 +5,6 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Activities",
-  description:
-    "Discover the enriching daily activities and programs at Heritage Care designed for resident wellbeing and social engagement.",
-};
-
 export default function ActivitiesPage() {
   const [isLoading, setIsLoading] = useState(true);
 
