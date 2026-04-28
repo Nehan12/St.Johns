@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogData";
+import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 
 export default function Blog() {
   const [isLoading, setIsLoading] = useState(true);
@@ -116,7 +117,7 @@ export default function Blog() {
           </div>
         </div>
       </section>
-
+      <NewsletterSubscribe />
       <Footer />
     </div>
   );
