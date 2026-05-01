@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import FloatingButton from "@/components/floatingButton";
-import ChatBot from "@/components/ChatBot";
+// import ChatBot from "@/components/ChatBot";
 import JsonLd from "@/components/JsonLd";
 
 const poppins = Poppins({

@@ -29,7 +29,6 @@ export default function Contact() {
   } | null>(null);
   const [isValid, setIsValid] = useState(false);
 
-  // Enable button only if required fields are filled
   useEffect(() => {
     const { name, email, message } = formData;
     setIsValid(
@@ -53,8 +52,8 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        "service_ks635ew", //service id
-        "template_52yguaa", // template id
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACTUS_TEMPLATE_ID!,
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -62,13 +61,14 @@ export default function Contact() {
           message: formData.message,
           inquiry_type: formData.inquiryType,
         },
-        "0yFoQkadMtGQe6Gyf", // public key
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
       setAlert({
         type: "success",
-        message: "Thank you! Your message has been sent.",
+        message: "Thank you! Your message and CV have been sent.",
       });
+
       setFormData({
         name: "",
         email: "",
@@ -80,7 +80,7 @@ export default function Contact() {
       console.error(err);
       setAlert({
         type: "error",
-        message: "Failed to send message. Please try again.",
+        message: "Submission failed.",
       });
     } finally {
       setLoading(false);
@@ -88,13 +88,8 @@ export default function Contact() {
   };
 
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -115,11 +110,7 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section
-        className="
-        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
-        bg-cover bg-no-repeat
-        bg-center
-        md:min-h-[85vh]"
+        className="relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8 bg-cover bg-no-repeat bg-center md:min-h-[85vh]"
         style={{ backgroundImage: "url(/contactPage.jpg)" }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -129,13 +120,7 @@ export default function Contact() {
               Contact Us
             </h1>
             <div className="underline mx-auto mt-2"></div>
-            <p
-              className="
-                hidden landscape:block md:block
-                text-lg md:text-xl text-white
-                max-w-3xl mt-6 md:mt-10 mx-auto
-              "
-            >
+            <p className="hidden landscape:block md:block text-lg md:text-xl text-white max-w-3xl mt-6 md:mt-10 mx-auto">
               We&apos;re here to help. Contact us to learn more about our
               services or to schedule a visit.
             </p>
@@ -143,7 +128,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
@@ -152,39 +136,26 @@ export default function Contact() {
               <h2 className="text-3xl md:text-4xl font-bold mb-10">
                 Get in Touch
               </h2>
-
               <div className="space-y-8">
                 {[
                   {
                     title: "Location",
-                    content: (
-                      <>
-                        Heritage Care Residence
-                        <br />
-                        Diyagala Boys Town <br />
-                        Ragama, Sri Lanka
-                      </>
-                    ),
+                    content:
+                      "Heritage Care Residence, Diyagala Boys Town, Ragama, Sri Lanka",
                     icon: (
                       <path d="M12 11a3 3 0 100-6 3 3 0 000 6zM12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z" />
                     ),
                   },
                   {
                     title: "Phone",
-                    content: (
-                      <>
-                        +94 77 165 4202
-                        <br />
-                        +94 77 725 3873
-                      </>
-                    ),
+                    content: "+94 77 165 4202 / +94 77 725 3873",
                     icon: (
                       <path d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 005 5l1-2 5 2v3a2 2 0 01-2 2C9 21 3 15 3 7V5z" />
                     ),
                   },
                   {
                     title: "Email",
-                    content: <>heritagecarelk@gmail.com</>,
+                    content: "heritagecarelk@gmail.com",
                     icon: <path d="M3 7l9 6 9-6v10H3V7zM3 7l9-5 9 5" />,
                   },
                 ].map((item, i) => (
@@ -214,7 +185,6 @@ export default function Contact() {
             {/* Form */}
             <div className="rounded-2xl p-8 shadow-lg border border-[var(--primary)] bg-light">
               <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-
               <form onSubmit={handleSubmit} className="space-y-6 relative">
                 {[
                   { id: "name", label: "Full Name *", type: "text" },
@@ -229,7 +199,11 @@ export default function Contact() {
                       type={field.type}
                       id={field.id}
                       name={field.id}
-                      value={formData[field.id as keyof FormData]}
+                      value={
+                        formData[
+                          field.id as keyof Omit<FormData, "cv">
+                        ] as string
+                      }
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     />
@@ -258,32 +232,9 @@ export default function Contact() {
                     !isValid || loading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >
-                  {loading && (
-                    <svg
-                      className="animate-spin h-5 w-5 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                      ></path>
-                    </svg>
-                  )}
                   {loading ? "Sending..." : "Send Message"}
                 </button>
 
-                {/* Alert */}
                 {alert && (
                   <div
                     className={`mt-4 p-4 rounded-lg text-white ${alert.type === "success" ? "bg-green-500" : "bg-red-500"}`}

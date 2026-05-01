@@ -51,7 +51,7 @@ export default function Navigation() {
           scrolled ? "bg-white shadow-md" : "bg-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-2">
+        <div className="max-w-7xl mx-auto">
           <div className="flex items-center h-20">
             {/* Logo */}
             <Link
@@ -248,7 +248,7 @@ export default function Navigation() {
                 href="/fee-and-pricing-breakdown"
                 className="hover:text-[var(--primary)] transition-colors duration-200"
               >
-                Fee & Pricing Breakdown
+                Fee & Pricing
               </Link>
               <Link
                 href="/activities"
@@ -273,6 +273,12 @@ export default function Navigation() {
                 className="hover:text-[var(--primary)] transition-colors duration-200"
               >
                 FAQ
+              </Link>
+              <Link
+                href="/careers"
+                className="hover:text-[var(--primary)] transition-colors duration-200"
+              >
+                Careers
               </Link>
             </div>
 
@@ -452,6 +458,11 @@ export default function Navigation() {
                 <MobileLink
                   href="/faq"
                   label="FAQ"
+                  setMobileOpen={setMobileOpen}
+                />
+                <MobileLink
+                  href="/careers"
+                  label="Careers"
                   setMobileOpen={setMobileOpen}
                 />
                 <MobileLink
