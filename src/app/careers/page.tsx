@@ -28,7 +28,16 @@ export default function Careers() {
   }, [selectedRole]);
   const formRef = useRef<HTMLDivElement | null>(null);
 
-  const jobs = [
+  type Job = {
+    title: string;
+    type: string;
+    role: string;
+    location: string;
+    shift: string;
+    description: string;
+  };
+
+  const jobs: Job[] = [
     {
       title: "Registered Nurse — Residential Care",
       type: "Full Time",
@@ -204,7 +213,7 @@ export default function Careers() {
 
     // We use "raw" for PDFs to ensure they are handled correctly
     const response = await fetch(
-      `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`, // Use 'auto' here
+      `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`,
       { method: "POST", body: data },
     );
 
@@ -339,9 +348,9 @@ export default function Careers() {
           Careers at Heritage Care
         </h2>
         <p className="text-main max-w-3xl mx-auto">
-          Heritage Care is Sri Lanka's most compassionate senior care provider.
-          We're looking for dedicated professionals who believe that great care
-          changes lives.
+          Heritage Care is Sri Lanka&apos;s most compassionate senior care
+          provider. We&apos;re looking for dedicated professionals who believe
+          that great care changes lives.
         </p>
       </section>
 
@@ -539,7 +548,8 @@ export default function Careers() {
             Apply to join Heritage Care
           </h2>
           <p className="text-main max-w-3xl mb-4 text-center mx-auto">
-            Tell us about yourself — we'll be in touch within 3 business days.
+            Tell us about yourself — we&apos;ll be in touch within 3 business
+            days.
           </p>
           <div className="max-w-3xl mx-auto bg-[var(--primary)]/20 p-8 rounded-2xl border border-[var(--primary)]/40">
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -607,7 +617,7 @@ export default function Careers() {
               {/* Role */}
               <div>
                 <label className="block mb-1 text-sm font-medium">
-                  Role you're applying for{" "}
+                  Role you&apos;re applying for{" "}
                   <span className="text-red-500">*</span>
                 </label>
                 <select
@@ -617,7 +627,7 @@ export default function Careers() {
                   className="w-full p-3 rounded-lg border border-[var(--primary)]/40 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
                 >
                   <option value="">Select a position...</option>
-                  {jobs.map((job: any, i: number) => (
+                  {jobs.map((job, i) => (
                     <option key={i} value={job.title}>
                       {job.title}
                     </option>

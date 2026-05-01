@@ -5,10 +5,6 @@ import emailjs from "@emailjs/browser";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-// Replace these with your actual Cloudinary details
-const CLOUDINARY_UPLOAD_PRESET = "heritage-care-resumes";
-const CLOUDINARY_CLOUD_NAME = "dcxv1iqij";
-
 export default function Contact() {
   type FormData = {
     name: string;
