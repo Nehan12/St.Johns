@@ -16,7 +16,6 @@ export default function Contact() {
     phone: string;
     message: string;
     inquiryType: string;
-    cv: File | null;
   };
 
   const [formData, setFormData] = useState<FormData>({
@@ -25,7 +24,6 @@ export default function Contact() {
     phone: "",
     message: "",
     inquiryType: "general",
-    cv: null,
   });
 
   const [loading, setLoading] = useState(false);
@@ -49,34 +47,6 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      if (file.type !== "application/pdf") {
-        setAlert({ type: "error", message: "Please upload a PDF file." });
-        return;
-      }
-      setFormData((prev) => ({ ...prev, cv: file }));
-    }
-  };
-
-  // Helper to upload to Cloudinary (Free & No Credit Card Required)
-  const uploadToCloudinary = async (file: File) => {
-    const data = new FormData();
-    data.append("file", file);
-    data.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
-
-    // We use "raw" for PDFs to ensure they are handled correctly
-    const response = await fetch(
-      `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`, // Use 'auto' here
-      { method: "POST", body: data },
-    );
-
-    if (!response.ok) throw new Error("Cloudinary upload failed");
-    const result = await response.json();
-    return result.secure_url;
-  };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!isValid) return;
@@ -85,26 +55,17 @@ export default function Contact() {
     setAlert(null);
 
     try {
-      let cvUrl = "No file attached";
-
-      // 1. Upload CV to Cloudinary if it exists
-      if (formData.cv) {
-        cvUrl = await uploadToCloudinary(formData.cv);
-      }
-
-      // 2. Send Email via EmailJS with the link
       await emailjs.send(
-        "service_ks635ew",
-        "template_52yguaa",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACTUS_TEMPLATE_ID!,
         {
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.phone || "N/A",
           message: formData.message,
           inquiry_type: formData.inquiryType,
-          cv_link: cvUrl, // Make sure {{cv_link}} is in your EmailJS template!
         },
-        "0yFoQkadMtGQe6Gyf",
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
       setAlert({
@@ -112,26 +73,18 @@ export default function Contact() {
         message: "Thank you! Your message and CV have been sent.",
       });
 
-      // Reset form (note: file input needs manual reset or key change)
       setFormData({
         name: "",
         email: "",
         phone: "",
         message: "",
         inquiryType: "general",
-        cv: null,
       });
-
-      // Clear file input manually
-      const fileInput = document.getElementById(
-        "cv-upload",
-      ) as HTMLInputElement;
-      if (fileInput) fileInput.value = "";
     } catch (err) {
       console.error(err);
       setAlert({
         type: "error",
-        message: "Submission failed. Please check file size or try again.",
+        message: "Submission failed.",
       });
     } finally {
       setLoading(false);
@@ -274,26 +227,6 @@ export default function Contact() {
                     className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] focus:ring-2 focus:ring-[var(--primary)] focus:outline-none"
                     placeholder="How can we help you?"
                   />
-                </div>
-
-                {/* CV Upload Field */}
-                <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Upload CV (PDF only) *
-                  </label>
-                  <input
-                    type="file"
-                    id="cv-upload"
-                    accept=".pdf"
-                    onChange={handleFileChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[var(--secondary)] cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-opacity-80"
-                    required
-                  />
-                  {formData.cv && (
-                    <p className="text-xs text-green-600 mt-2">
-                      Selected: {formData.cv.name}
-                    </p>
-                  )}
                 </div>
 
                 <button

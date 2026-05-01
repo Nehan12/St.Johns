@@ -144,8 +144,10 @@ export default function Careers() {
   const filteredJobs =
     activeRole === "All" ? jobs : jobs.filter((job) => job.role === activeRole);
 
-  const CLOUDINARY_UPLOAD_PRESET = "heritage-care-cvs";
-  const CLOUDINARY_CLOUD_NAME = "dchpilhbp";
+  const CLOUDINARY_UPLOAD_PRESET =
+    process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET!;
+
+  const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME!;
 
   type FormData = {
     firstName: string;
@@ -237,8 +239,8 @@ export default function Careers() {
 
       // 2. Send Email via EmailJS with the link
       await emailjs.send(
-        "service_27nawdf",
-        "template_se88dym",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_RESUME_TEMPLATE_ID!,
         {
           from_name: `${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
@@ -246,9 +248,9 @@ export default function Careers() {
           experience: formData.experience,
           about: formData.about,
           role: formData.role,
-          cv_link: cvUrl, // Make sure {{cv_link}} is in your EmailJS template!
+          cv_link: cvUrl,
         },
-        "KMqsetZBd24s9nGQY",
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
       );
 
       setAlert({
