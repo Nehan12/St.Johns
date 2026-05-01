@@ -343,7 +343,7 @@ export default function Careers() {
       </section>
 
       {/* Intro */}
-      <section className="py-16 bg-white text-center">
+      <section className="py-16 bg-white text-center px-4">
         <h2 className="text-3xl font-bold text-primary mb-4">
           Careers at Heritage Care
         </h2>
@@ -372,7 +372,7 @@ export default function Careers() {
 
       {/* Why Work Section */}
       <section className="bg-[var(--primary)]/20 py-20">
-        <div className="max-w-7xl mx-auto px-2">
+        <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-semibold text-primary mb-4">
             Why work at Heritage Care?
           </h2>
@@ -403,7 +403,7 @@ export default function Careers() {
 
       {/* Jobs */}
       <section className="py-12 bg-gradient-to-br from-white to-[var(--secondary)]/20">
-        <div className="max-w-7xl mx-auto px-2">
+        <div className="max-w-7xl mx-auto px-8">
           <h3 className="text-4xl font-bold text-primary text-center mb-10">
             Current Openings
           </h3>
@@ -543,7 +543,7 @@ export default function Careers() {
 
       {/* Form */}
       <section ref={formRef} className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-2r">
+        <div className="max-w-7xl mx-auto px-8">
           <h2 className="text-4xl font-semibold text-primary mb-4 text-center">
             Apply to join Heritage Care
           </h2>

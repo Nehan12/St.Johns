@@ -51,7 +51,7 @@ export default function Navigation() {
           scrolled ? "bg-white shadow-md" : "bg-white"
         }`}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
           <div className="flex items-center h-20">
             {/* Logo */}
             <Link
