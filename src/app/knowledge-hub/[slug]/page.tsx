@@ -38,13 +38,16 @@ export default async function BlogDetail({
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          className="object-cover"
-        />
+      <section
+        className="
+        relative flex items-center justify-center md:py-24 pt-40 md:pt-36 pb-8
+        bg-cover bg-no-repeat
+        bg-center
+        md:min-h-[85vh]"
+        style={{
+          backgroundImage: `url(${post.image})`,
+        }}
+      >
         <div className="absolute inset-0 bg-black/50"></div>
 
         <div className="relative text-center px-4">

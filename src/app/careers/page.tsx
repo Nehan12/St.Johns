@@ -372,7 +372,7 @@ export default function Careers() {
 
       {/* Why Work Section */}
       <section className="bg-[var(--primary)]/20 py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-8">
           <h2 className="text-4xl font-semibold text-primary mb-4">
             Why work at Heritage Care?
           </h2>
