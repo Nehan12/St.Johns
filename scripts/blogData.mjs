@@ -1,4 +1,12 @@
 export const blogPosts = [
+  {
+  slug: "five-signs-loved-one-needs-professional-nursing-care",
+      title: "Five Signs That a Loved One May Need Professional Nursing Care",
+  date: "June 13, 2026",
+  image: "/es6.png",
+  excerpt:
+    "Recognise the early signs that a loved one may benefit from professional nursing care and discover how the right support can improve their quality of life.",
+},
       {
     slug: "difference-between-residential-and-nursing-care",
     title: "What is the Difference Between Residential Care and Nursing Care?",
