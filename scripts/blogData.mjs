@@ -1,4 +1,12 @@
 export const blogPosts = [
+    {
+  slug: "the-conversation-we-keep-putting-off",
+      title: "The Conversation We Keep Putting Off",
+  date: "July 30, 2026",
+  image: "/blog4.jpeg",
+  excerpt:
+    "In Sri Lanka, we call it love when we simply don't bring it up. Here's why that silence isn't love — and how families can start the conversation early, calmly, and together.",
+},
   {
   slug: "five-signs-loved-one-needs-professional-nursing-care",
       title: "Five Signs That a Loved One May Need Professional Nursing Care",

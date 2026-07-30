@@ -4,10 +4,12 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { Play } from "lucide-react";
 
 export default function Gallery() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   type Room = {
     name: string;
@@ -15,6 +17,20 @@ export default function Gallery() {
 
     details: string;
   };
+
+  type Video = {
+    title: string;
+    video: string;
+    poster: string;
+  };
+
+  const videos: Video[] = [
+    {
+      title: "Take a Tour of Heritage Care",
+      video: "/tour-video.mp4",
+      poster: "/ca-1.jpeg",
+    },
+  ];
 
   const commonArea = [
     {
@@ -158,6 +174,88 @@ export default function Gallery() {
                 </div>
               ))}
             </div>
+          </div>
+          {/* Videos */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">
+              Videos
+            </h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {videos.map((vid, i) => (
+                <div
+                  key={i}
+                  onClick={() => setSelectedVideo(vid)}
+                  className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer"
+                >
+                  <Image
+                    width={100}
+                    height={64}
+                    src={vid.poster}
+                    alt={vid.title}
+                    className="w-full h-64 object-cover transform transition duration-500 group-hover:scale-105"
+                  />
+
+                  {/* Play overlay */}
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition duration-300 flex flex-col justify-center items-center text-center px-4">
+                    <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                      <Play
+                        className="w-7 h-7 text-primary ml-1"
+                        fill="currentColor"
+                      />
+                    </div>
+                    <h3 className="text-white text-lg md:text-xl font-bold">
+                      {vid.title}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Video Modal */}
+            {selectedVideo && (
+              <div
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+                onClick={() => setSelectedVideo(null)}
+              >
+                <div
+                  className="relative w-full max-w-3xl"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Close Button */}
+                  <button
+                    onClick={() => setSelectedVideo(null)}
+                    aria-label="Close video"
+                    className="absolute -top-12 right-0 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+                    </svg>
+                  </button>
+
+                  <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black">
+                    <video
+                      src={selectedVideo.video}
+                      poster={selectedVideo.poster}
+                      controls
+                      autoPlay
+                      playsInline
+                      className="w-full max-h-[80vh] object-contain"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <p className="text-white text-center mt-4 text-lg font-semibold">
+                    {selectedVideo.title}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
           -{/* Type I Rooms */}
           <div>
