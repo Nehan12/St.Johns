@@ -1,10 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { PersonStanding } from "lucide-react";
+import { Play } from "lucide-react";
 
 export default function FloatingContactButtons() {
   const [isTourOpen, setIsTourOpen] = useState(false);
+  const [isTourExpanded, setIsTourExpanded] = useState(true);
+
+  // Shrink the "Take a Tour" button to just the play icon after a few seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setIsTourExpanded(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const phoneNumber = "94771654202";
   const whatsappMessage = encodeURIComponent(
@@ -39,15 +46,27 @@ export default function FloatingContactButtons() {
   return (
     <>
       <div className="fixed bottom-5 right-5 z-[999] flex flex-col items-center gap-3">
-        {/* Take a Tour Button - visible on all screen sizes */}
+        {/* Take a Tour Button - visible on all screen sizes, shrinks to icon-only */}
         <button
           onClick={() => setIsTourOpen(true)}
+          onMouseEnter={() => setIsTourExpanded(true)}
           aria-label="Take a video tour of Heritage Care"
+          className={`flex items-center bg-primary rounded-full shadow-lg hover:brightness-90 transition-all duration-500 ease-in-out overflow-hidden h-14 ${
+            isTourExpanded
+              ? "pl-4 pr-5 gap-2 max-w-[220px]"
+              : "w-14 justify-center px-0"
+          }`}
         >
-          <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-            {/* Tour icon */}
-            <PersonStanding className="w-7 h-7 text-white" />
-          </div>
+          <span className="w-6 h-6 flex items-center justify-center shrink-0">
+            <Play className="w-6 h-6 text-white" fill="white" />
+          </span>
+          <span
+            className={`whitespace-nowrap text-white font-semibold text-sm transition-all duration-500 ${
+              isTourExpanded ? "opacity-100 max-w-[160px]" : "opacity-0 max-w-0"
+            }`}
+          >
+            Take a Tour
+          </span>
         </button>
 
         {/* Email Button - mobile only */}

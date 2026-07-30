@@ -1,4 +1,45 @@
 export const blogPosts = [
+  {
+  slug: "the-conversation-we-keep-putting-off",
+  title: "The Conversation We Keep Putting Off",
+  date: "July 30, 2026",
+  image: "/blog4.jpeg",
+  excerpt:
+    "In Sri Lanka, we call it love when we simply don't bring it up. Here's why that silence isn't love — and how families can start the conversation early, calmly, and together.",
+  content: `
+In Sri Lanka, we call it love when we simply don't bring it up. A parent's changing needs go unspoken for years — not out of neglect, but because raising the subject can feel disrespectful, even unlucky, while someone is still doing fine. So families wait. And by the time the conversation finally happens, it's in a hospital corridor, under pressure, with no time to think and the person it's actually about pushed to the edge of the room.
+
+That's not love. That's avoidance, dressed up as respect. And it's not the only option.
+
+<b>Ask What They Want to Keep, Not What They've Lost</b>
+
+Most of these conversations start from the wrong place — a fall, a missed dose, a diagnosis. Understandably, everyone jumps straight to logistics. But logistics without listening will always feel like something being decided about a person, not with them.
+
+Ask instead: what does a good day actually look like for you? The morning walk. Tea with the neighbour. Sunday lunch with the grandchildren. Whatever it is, that's the real brief. Everything that follows should protect it, not replace it.
+
+<b>Separate the Guilt From the Decision</b>
+
+Sri Lankan families carry a particular weight here. So many adult children are working abroad, or in Colombo while parents stay in the hometown, and many still feel that bringing in professional care is a kind of failure — a break from duty.
+
+It isn't. The right support is often what makes devotion sustainable. It's what lets a daughter be a daughter again at the dinner table, instead of an exhausted, unpaid nurse. Good care doesn't replace family. It gives family room to actually show up.
+
+<b>Make It Familiar Long Before It's Urgent</b>
+
+Almost no one makes a good decision about a place they've only heard about. The single most useful thing a family can do — long before there's any need — is visit. Walk the corridors. Meet the people who'd actually be doing the caring. Watch how residents are spoken to when no one's performing for a guest.
+
+At Heritage Care in Ragama, we'd rather families come for tea and ask us hard questions today than meet us for the first time during a crisis. Once a place is familiar, it stops being a frightening unknown and becomes one option among others — chosen calmly, if and when it's needed.
+
+<b>Let It Be Many Conversations, Not One</b>
+
+This was never going to be a single sit-down with a tidy conclusion. It's closer to an ongoing thread — a comment after a check-up, a quiet chat after Sunday lunch, revisited every few months as things shift. Treating it as one conversation puts enormous pressure on getting it right immediately. Treating it as many small ones lets understanding build slowly, so whatever the family eventually decides feels like something they arrived at together — not something sprung on anyone.
+
+<b>Come See Us First</b>
+
+We didn't build a 40-bed home in Ragama for families to discover only once the decision had already been made for them. We built it so the decision could be made early, calmly, with the person who matters most still fully part of the conversation.
+
+If your family is even beginning to think about this, come see us first — not the standard we're meeting, but the one we're setting. Bring every question you have. There's no obligation. Just tea, honesty, and Care Beyond Compare, in practice.
+`,
+},
    {
   slug: "five-signs-loved-one-needs-professional-nursing-care",
   title: "Five Signs That a Loved One May Need Professional Nursing Care",
